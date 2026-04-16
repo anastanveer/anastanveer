@@ -1,4 +1,4 @@
-# 🚀 Anas Tanveer | Full Stack Laravel Developer
+# 🚀 Anas Tanveer | Full Stack Web Developer | Laravel | PHP | JavaScript
 
 ### Building scalable SaaS platforms, admin dashboards, APIs, and custom business systems
 
