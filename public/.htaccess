@@ -40,6 +40,12 @@ ServerSignature Off
   Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self' https://formsubmit.co; connect-src 'self' https://formsubmit.co; img-src 'self' data: blob: https:; font-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; upgrade-insecure-requests"
   Header unset X-Powered-By
 
+  # Allow AI crawlers and search engines to fetch sitemap/robots cross-origin (no CORS block)
+  <FilesMatch "(sitemap\.xml|robots\.txt|\.json)$">
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "GET, OPTIONS"
+  </FilesMatch>
+
   <FilesMatch "\.(html|htm)$">
     Header set Cache-Control "public, max-age=0, must-revalidate"
   </FilesMatch>

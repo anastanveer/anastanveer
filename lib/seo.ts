@@ -215,12 +215,8 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
         addressRegion: "Dubai",
         addressCountry: "AE"
       },
-      worksFor: {
-        "@type": "Organization",
-        "@id": "https://arsdeveloper.co.uk/#organization",
-        name: "ARS Developer Ltd",
-        url: "https://arsdeveloper.co.uk"
-      },
+      worksFor: { "@id": "https://arsdeveloper.co.uk/#organization" },
+      affiliation: { "@id": "https://torontobytes.ca/#organization" },
       hasCredential: [
         { "@type": "EducationalOccupationalCredential", credentialCategory: "degree", name: "Full-Stack Web Development" },
         { "@type": "EducationalOccupationalCredential", credentialCategory: "certification", name: "Laravel Application Development" }
@@ -228,7 +224,8 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       sameAs: [
         "https://www.linkedin.com/in/anas-fullstackdev/",
         siteUrl,
-        "https://arsdeveloper.co.uk"
+        "https://arsdeveloper.co.uk",
+        "https://torontobytes.ca"
       ],
       knowsAbout: [
         ...keywords,
@@ -346,6 +343,43 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       ],
       currenciesAccepted: "AED, GBP, USD, CAD",
       paymentAccepted: "Bank Transfer, Online Payment"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://arsdeveloper.co.uk/#organization",
+      name: "ARS Developer Ltd",
+      alternateName: "ARS Developer",
+      url: "https://arsdeveloper.co.uk",
+      description: "UK-based web development company providing Laravel, WordPress, Shopify and custom business web solutions for clients across the United Kingdom and Europe.",
+      founder: { "@id": absoluteUrl("/#person") },
+      employee: { "@id": absoluteUrl("/#person") },
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "GB"
+      },
+      areaServed: [
+        { "@type": "Country", name: "United Kingdom" },
+        { "@type": "Country", name: "United Arab Emirates" }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://torontobytes.ca/#organization",
+      name: "TorontoBytes",
+      url: "https://torontobytes.ca",
+      description: "Canadian web development company serving businesses across Canada and North America with Laravel, WordPress, Shopify, dashboards and custom web solutions.",
+      founder: { "@id": absoluteUrl("/#person") },
+      employee: { "@id": absoluteUrl("/#person") },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Toronto",
+        addressRegion: "Ontario",
+        addressCountry: "CA"
+      },
+      areaServed: [
+        { "@type": "Country", name: "Canada" },
+        { "@type": "AdministrativeArea", name: "North America" }
+      ]
     },
     {
       "@type": "WebSite",
