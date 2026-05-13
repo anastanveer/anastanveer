@@ -19,8 +19,8 @@ export function VisualPanel({
       <Image
         src={src}
         alt={alt}
-        width={1600}
-        height={900}
+        width={760}
+        height={428}
         priority={priority}
         className="aspect-[16/10] h-auto w-full rounded-2xl object-cover transition duration-700 group-hover:scale-[1.018] sm:h-56 sm:aspect-auto md:aspect-[16/9] md:h-auto"
         sizes="(max-width: 768px) 100vw, 50vw"

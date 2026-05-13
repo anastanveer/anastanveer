@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Hero } from "@/components/sections/Hero";
 import { TechMarquee } from "@/components/sections/TechMarquee";
 import { CTASection } from "@/components/sections/CTASection";
@@ -12,12 +13,23 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { VisualPanel } from "@/components/ui/VisualPanel";
 import { blogs, caseStudies, pricing, projects, services, skills } from "@/data/site";
-import { jsonLdForPage } from "@/lib/seo";
+import { seoServicePages } from "@/data/seo-pages";
+import { jsonLdForPage, faqSchema } from "@/lib/seo";
+
+const homeFaqs = [
+  { question: "How do you understand the real problem before coding?", answer: "I ask about the business goal, users, current pain, platform, workflow, integrations, SEO needs, timeline, and what success should look like. Then I suggest the simplest reliable path." },
+  { question: "Do you work with UAE, UK, Canada, and international clients?", answer: "Yes. I support Dubai, UAE, UK, Canada and remote clients, agencies, recruiters, founders, ecommerce stores, service businesses, SaaS teams and local companies." },
+  { question: "Can you handle both design and development?", answer: "Yes. I can plan UX, structure conversion copy, build the frontend, develop Laravel/WordPress/Shopify features, and prepare the site for speed, SEO and launch." },
+  { question: "Do you build custom dashboards and ERP systems?", answer: "Yes. I build Laravel dashboards, admin panels, ERP/CRM modules, reports, user roles, API integrations, automation workflows and business-specific tools." },
+  { question: "Is SEO included in development?", answer: "Technical SEO foundations are planned in premium builds: semantic headings, metadata, schema, page speed, responsive UX, internal structure and crawl-friendly content architecture." },
+  { question: "What makes your work different from a normal template setup?", answer: "I do not just place sections on a page. I connect design, content, performance, backend logic, integrations and business workflow so the final product solves a real problem." }
+];
 
 export default function HomePage() {
   return (
     <>
       <JsonLd data={jsonLdForPage("/")} id="home-json-ld" />
+      <JsonLd data={faqSchema(homeFaqs)} id="faq-json-ld" />
       <Hero />
       <TechMarquee />
 
@@ -38,6 +50,17 @@ export default function HomePage() {
           <div className="mobile-rail grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {services.slice(0, 8).map((service, index) => (
               <ServiceCard key={service.title} service={service} index={index} />
+            ))}
+          </div>
+          <div className="mt-8 flex flex-wrap gap-2">
+            {seoServicePages.slice(0, 6).map((page) => (
+              <Link
+                className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-sm font-medium text-silver/72 transition hover:border-cyan/35 hover:text-cyan light:border-slate-900/10 light:bg-white light:text-slate-700"
+                href={`/${page.slug}`}
+                key={page.slug}
+              >
+                {page.navLabel}
+              </Link>
             ))}
           </div>
         </div>

@@ -12,15 +12,19 @@ ServerSignature Off
   RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
   RewriteRule ^index\.html$ / [R=301,L]
 
+  RewriteRule ^index\.php$ / [R=301,L,NC]
+  RewriteRule ^home/?$ / [R=301,L,NC]
+  RewriteRule ^works/?$ /portfolio/ [R=301,L,NC]
+  RewriteRule ^contact-us/?$ /contact/ [R=301,L,NC]
+
   RewriteRule ^(wp-admin|wp-includes|wp-content)(/.*)?$ - [G,L,NC]
   RewriteRule ^(wp-login\.php|xmlrpc\.php|wp-config\.php)$ - [G,L,NC]
+  RewriteRule ^(feed|comments/feed)(/.*)?$ - [G,L,NC]
 
   RewriteRule ^about-us/?$ /about/ [R=301,L,NC]
   RewriteRule ^projects/?$ /portfolio/ [R=301,L,NC]
   RewriteRule ^portfolio-category/.*$ /portfolio/ [R=301,L,NC]
-  RewriteRule ^category/.*$ /blog/ [R=301,L,NC]
-  RewriteRule ^tag/.*$ /blog/ [R=301,L,NC]
-  RewriteRule ^author/.*$ /about/ [R=301,L,NC]
+  RewriteRule ^(category|tag|author)(/.*)?$ - [G,L,NC]
 </IfModule>
 
 <FilesMatch "(^\.|\.env|\.git|\.gitignore|\.gitattributes|composer\.(json|lock)|package(-lock)?\.json|pnpm-lock\.yaml|yarn\.lock|tsconfig\.json|tailwind\.config\.(js|ts)|postcss\.config\.(js|mjs)|next\.config\.(js|mjs)|README|readme|config\.php|phpunit\.xml|\.sql|\.bak|\.backup|\.old|\.log)$">

@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
@@ -22,16 +23,21 @@ export function MagneticButton({
   const y = useMotionValue(0);
   const springX = useSpring(x, { stiffness: 180, damping: 18 });
   const springY = useSpring(y, { stiffness: 180, damping: 18 });
+  const rectRef = useRef<DOMRect | null>(null);
 
   return (
     <motion.span
       style={{ x: springX, y: springY }}
+      onMouseEnter={(event) => {
+        rectRef.current = event.currentTarget.getBoundingClientRect();
+      }}
       onMouseMove={(event) => {
-        const rect = event.currentTarget.getBoundingClientRect();
+        const rect = rectRef.current ?? event.currentTarget.getBoundingClientRect();
         x.set((event.clientX - rect.left - rect.width / 2) * 0.14);
         y.set((event.clientY - rect.top - rect.height / 2) * 0.14);
       }}
       onMouseLeave={() => {
+        rectRef.current = null;
         x.set(0);
         y.set(0);
       }}

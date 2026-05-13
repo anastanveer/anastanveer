@@ -25,7 +25,8 @@ export const profile = {
   portfolio: "https://anastanveer.com",
   companyUrl: "https://arsdeveloper.co.uk",
   linkedin: "https://www.linkedin.com/in/anas-fullstackdev/",
-  email: "anastanveer557@gmail.com",
+  email: "info@anastanveer.com",
+  secondaryEmail: "anastanveer557@gmail.com",
   whatsapp: "+971 542435418"
 };
 
@@ -167,7 +168,7 @@ export const projects = [
     solution: "Structured the Laravel foundation around calculators, account flows, dashboards, admin controls, payment readiness, and scalable backend logic.",
     stack: ["Laravel", "PHP", "JavaScript", "MySQL", "Dashboard UX"],
     accent: "from-cyan-400 to-violet-500",
-    image: "/images/projects-suite-760.webp"
+    image: "/images/projects-suite-520.webp"
   },
   {
     title: "Business Finance Dashboard & Analytics System",
@@ -176,7 +177,7 @@ export const projects = [
     solution: "Designed dashboard modules with analytics cards, filters, exports, role-aware views, and clear reporting flows.",
     stack: ["Laravel", "Charts", "MySQL", "Tailwind", "Reports"],
     accent: "from-emerald-400 to-cyan-400",
-    image: "/images/projects-suite-760.webp"
+    image: "/images/projects-suite-520.webp"
   },
   {
     title: "Shopify Size Mapping & Conversion Optimization System",
@@ -185,7 +186,7 @@ export const projects = [
     solution: "Created a Shopify size selector and product-specific mapping workflow using theme logic, metafields, and mobile-friendly UX.",
     stack: ["Shopify", "Liquid", "JavaScript", "Metafields", "UX"],
     accent: "from-violet-400 to-fuchsia-500",
-    image: "/images/projects-suite-760.webp"
+    image: "/images/projects-suite-520.webp"
   },
   {
     title: "SEO-Optimized Laravel Blog CMS",
@@ -194,7 +195,7 @@ export const projects = [
     solution: "Built a Laravel CMS with metadata fields, clean slugs, structured content, schema readiness, fast rendering, and admin publishing.",
     stack: ["Laravel", "SEO", "CMS", "MySQL", "Schema"],
     accent: "from-cyan-300 to-emerald-400",
-    image: "/images/services-architecture-760.webp"
+    image: "/images/services-architecture-520.webp"
   },
   {
     title: "Fuel Distribution ERP System for Business Operations",
@@ -212,7 +213,7 @@ export const projects = [
     solution: "Integrated Livewire and Leaflet with location storage, map rendering, filters, markers, and geo-based interactions.",
     stack: ["Laravel", "Livewire", "Leaflet", "Maps", "Geo"],
     accent: "from-blue-400 to-emerald-400",
-    image: "/images/services-architecture-760.webp"
+    image: "/images/services-architecture-520.webp"
   },
   {
     title: "Premium Software Agency Brand Website",
@@ -608,8 +609,8 @@ export const caseStudies = [
       "/images/Portfolio/Custom/4.avif",
       "/images/Portfolio/Custom/5.avif",
       "/images/Portfolio/Custom/6.avif",
-      "/images/projects-suite-760.webp",
-      "/images/services-architecture-760.webp"
+      "/images/projects-suite-520.webp",
+      "/images/services-architecture-520.webp"
     ]
   },
   {
@@ -631,8 +632,8 @@ export const caseStudies = [
       "/images/Portfolio/Crm/continentdispo/crm-main.avif",
       "/images/Portfolio/Crm/continentdispo/crm-1.avif",
       "/images/Portfolio/Crm/continentdispo/crm-2.avif",
-      "/images/projects-suite-760.webp",
-      "/images/services-architecture-760.webp"
+      "/images/projects-suite-520.webp",
+      "/images/services-architecture-520.webp"
     ]
   },
   {
@@ -679,7 +680,7 @@ export const caseStudies = [
       "/images/Portfolio/ERP/2.avif",
       "/images/Portfolio/Crm/continentdispo/crm-main.avif",
       "/images/Portfolio/Crm/continentdispo/crm-1.avif",
-      "/images/services-architecture-760.webp"
+      "/images/services-architecture-520.webp"
     ]
   }
 ];
@@ -751,7 +752,7 @@ export const blogs: BlogPost[] = [
     slug: "choose-laravel-instead-of-plugin",
     excerpt: "A practical guide for companies that need dashboards, portals, ERP workflows, API integrations, or scalable backend logic.",
     tag: "Laravel",
-    image: "/images/services-architecture-760.webp",
+    image: "/images/services-architecture-520.webp",
     publishedAt: "2026-04-30",
     updatedAt: "2026-04-30",
     readingTime: "6 min read",
@@ -823,7 +824,7 @@ export const blogs: BlogPost[] = [
     slug: "shopify-conversion-fixes",
     excerpt: "Practical improvements for product pages, size selectors, mobile UX, trust signals, speed, and checkout confidence.",
     tag: "Shopify",
-    image: "/images/projects-suite-760.webp",
+    image: "/images/projects-suite-520.webp",
     publishedAt: "2026-04-30",
     updatedAt: "2026-04-30",
     readingTime: "5 min read",
@@ -895,7 +896,7 @@ export const blogs: BlogPost[] = [
     slug: "seo-friendly-development-before-marketing",
     excerpt: "Why schema, speed, clean headings, service pages, metadata, internal links, and crawlable content matter before campaigns.",
     tag: "SEO",
-    image: "/images/services-architecture-760.webp",
+    image: "/images/services-architecture-520.webp",
     publishedAt: "2026-04-30",
     updatedAt: "2026-04-30",
     readingTime: "6 min read",
@@ -967,7 +968,7 @@ export const blogs: BlogPost[] = [
     slug: "ai-chatbots-laravel-wordpress-shopify",
     excerpt: "A practical guide to AI chatbot and automation ideas for lead qualification, support, product questions and internal workflows.",
     tag: "AI Automation",
-    image: "/images/projects-suite-760.webp",
+    image: "/images/projects-suite-520.webp",
     publishedAt: "2026-04-30",
     updatedAt: "2026-04-30",
     readingTime: "7 min read",

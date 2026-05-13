@@ -12,8 +12,8 @@ export function BlogCard({ post, index = 0 }: { post: BlogPost; index?: number }
           <Image
             src={post.image}
             alt={`${post.title} blog visual`}
-            width={900}
-            height={520}
+            width={640}
+            height={370}
             className="h-full w-full object-cover opacity-90 transition duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 33vw"
           />

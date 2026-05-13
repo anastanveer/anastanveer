@@ -87,6 +87,7 @@ export function Hero() {
               width={1100}
               height={619}
               priority
+              fetchPriority="high"
               className="h-[18rem] w-full rounded-2xl object-cover sm:h-[24rem] lg:h-[30rem] xl:h-[33rem]"
             />
             <motion.div
@@ -109,12 +110,12 @@ export function Hero() {
 
             <div className="absolute bottom-3 left-3 right-3 rounded-2xl border border-white/14 bg-black/50 p-3 backdrop-blur-xl light:border-white/30 light:bg-slate-950/70 sm:bottom-5 sm:left-5 sm:right-5 sm:p-4 sm:shadow-premium">
               <div className="grid grid-cols-3 gap-3">
-              {stats.slice(0, 3).map(([value, label]) => (
-                <div key={label}>
-                  <p className="font-display text-base font-semibold leading-tight text-white sm:text-xl">{value}</p>
-                  <p className="mt-1 line-clamp-1 text-[10px] text-white/68 sm:text-xs">{label}</p>
-                </div>
-              ))}
+                {stats.slice(0, 3).map(([value, label]) => (
+                  <div key={label}>
+                    <p className="font-display text-base font-semibold leading-tight text-white sm:text-xl">{value}</p>
+                    <p className="mt-1 line-clamp-1 text-[10px] text-white/68 sm:text-xs">{label}</p>
+                  </div>
+                ))}
               </div>
               <div className="mt-3 flex w-max max-w-full items-center gap-2 rounded-full border border-cyan/25 bg-cyan/10 px-3 py-1.5 text-xs font-semibold text-cyan sm:mt-4 sm:py-2">
                 <MapPin size={15} />

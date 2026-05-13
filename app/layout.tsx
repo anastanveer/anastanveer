@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Providers } from "@/components/layout/Providers";
+import { FloatingAssistant } from "@/components/ai/FloatingAssistant";
 import { CursorGlow } from "@/components/animations/CursorGlow";
 import { MobileRailEffects } from "@/components/animations/MobileRailEffects";
 import { ScrollProgress } from "@/components/animations/ScrollProgress";
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           <main>{children}</main>
           <Footer />
+          <FloatingAssistant />
         </Providers>
       </body>
     </html>

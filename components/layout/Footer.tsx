@@ -1,15 +1,33 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Building2, ExternalLink, FileText, Home, Linkedin, Mail, MapPin, MessageCircle, Sparkles } from "lucide-react";
+import { seoServicePages } from "@/data/seo-pages";
 import { navItems, profile } from "@/data/site";
 
 export function Footer() {
   const pageIcons = [Home, Sparkles, Building2, FileText, ExternalLink, MessageCircle];
+  const featuredServices = seoServicePages.slice(0, 8);
 
   return (
     <footer className="border-t border-white/10 bg-ink/80 light:bg-white">
       <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 md:grid-cols-[1.15fr_1fr] lg:grid-cols-[1.2fr_0.9fr_0.9fr] lg:py-14">
         <div>
-          <p className="font-display text-2xl font-semibold premium-text">Anas Tanveer</p>
+          <Link href="/" className="inline-flex h-16 w-40 items-center" aria-label="Anas Tanveer home">
+            <Image
+              src="/images/logo-dark.webp"
+              alt="Anas Tanveer"
+              width={520}
+              height={414}
+              className="h-full w-auto object-contain light:hidden"
+            />
+            <Image
+              src="/images/logo-light.webp"
+              alt="Anas Tanveer"
+              width={520}
+              height={392}
+              className="hidden h-full w-auto object-contain light:block"
+            />
+          </Link>
           <p className="mt-4 max-w-xl text-sm leading-7 text-silver/72 light:text-slate-600">
             Dubai-based full-stack web problem solver for Laravel platforms, WordPress business websites, Shopify stores,
             dashboards, ERP workflows, APIs, website speed, and SEO-ready digital systems.
@@ -41,6 +59,25 @@ export function Footer() {
             <a href={profile.companyUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-cyan"><Building2 size={14} className="text-cyan/80" />ARS Developer Ltd</a>
             <a href={profile.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-cyan"><Linkedin size={14} className="text-cyan/80" />LinkedIn Profile</a>
             <a href={profile.portfolio} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-cyan"><ExternalLink size={14} className="text-cyan/80" />anastanveer.com</a>
+          </div>
+        </div>
+      </div>
+      <div className="mx-auto max-w-7xl px-5 pb-10">
+        <div className="border-t border-white/10 pt-7 light:border-slate-900/10">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60 light:text-slate-500">
+              Popular services
+            </span>
+            {featuredServices.map((item) => (
+              <Link
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5 text-xs font-medium text-silver/68 transition hover:border-cyan/35 hover:text-cyan light:border-slate-900/10 light:bg-slate-50 light:text-slate-600"
+                href={`/${item.slug}`}
+                key={item.slug}
+              >
+                <Sparkles size={12} className="text-cyan/80" />
+                {item.navLabel}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

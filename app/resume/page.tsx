@@ -180,7 +180,7 @@ export default function ResumePage() {
                 </a>
               </div>
               <div className="mt-8 grid gap-3 text-sm text-silver/72 light:text-slate-600 sm:grid-cols-2">
-                <span className="inline-flex items-center gap-2"><Mail size={16} className="text-cyan" /> anastanveer557@gmail.com</span>
+                <span className="inline-flex items-center gap-2"><Mail size={16} className="text-cyan" /> info@anastanveer.com</span>
                 <span className="inline-flex items-center gap-2"><Phone size={16} className="text-cyan" /> +971 542435418</span>
                 <span className="inline-flex items-center gap-2"><MapPin size={16} className="text-cyan" /> Dubai, UAE</span>
                 <span className="inline-flex items-center gap-2"><BriefcaseBusiness size={16} className="text-cyan" /> ARS Developer Ltd</span>

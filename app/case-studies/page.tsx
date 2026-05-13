@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { CTASection } from "@/components/sections/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PageHero } from "@/components/ui/PageHero";
 import { caseStudies } from "@/data/site";
 import { jsonLdForPage, pageMetadata } from "@/lib/seo";
+
+const relatedCaseStudyLinks = [
+  { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+  { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+  { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" }
+];
 
 export const metadata: Metadata = pageMetadata({
   title: "Case Studies | Web Problems Solved by Anas Tanveer",
@@ -59,6 +68,20 @@ export default function CaseStudiesPage() {
                         ))}
                       </div>
                     </div>
+                    <div>
+                      <p className="font-semibold text-white light:text-slate-950">Related service paths:</p>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {relatedCaseStudyLinks.map((link) => (
+                          <Link
+                            className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-silver/72 transition hover:border-cyan/35 hover:text-cyan light:border-slate-900/10 light:bg-slate-50 light:text-slate-700"
+                            href={link.href}
+                            key={link.href}
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -67,8 +90,8 @@ export default function CaseStudiesPage() {
                       <Image
                         src={image}
                         alt={`${study.title} case study visual ${imageIndex + 1}`}
-                        width={900}
-                        height={560}
+                        width={640}
+                        height={400}
                         className="aspect-[16/10] h-full w-full object-cover"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />

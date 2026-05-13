@@ -1,7 +1,10 @@
 import { skills } from "@/data/site";
 
 export function TechMarquee() {
-  const items = Object.values(skills).flat();
+  const items = Object.values(skills).reduce<string[]>((all, group) => {
+    all.push(...group);
+    return all;
+  }, []);
   const loop = [...items, ...items];
 
   return (

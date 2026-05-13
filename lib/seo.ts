@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { seoServicePages } from "@/data/seo-pages";
 import { absoluteUrl, siteUrl } from "@/lib/utils";
 
 const keywords = [
+  // Dubai / UAE local market
   "Full Stack Developer Dubai",
   "Laravel Developer Dubai",
   "PHP Developer Dubai",
@@ -11,7 +13,7 @@ const keywords = [
   "Freelance Web Developer Dubai",
   "Custom Website Development Dubai",
   "Ecommerce Website Developer Dubai",
-  "Business Dashboard Developer",
+  "Business Dashboard Developer Dubai",
   "ERP Developer UAE",
   "Website Speed Optimization Dubai",
   "SEO Friendly Website Development Dubai",
@@ -24,8 +26,41 @@ const keywords = [
   "API Integration Developer Dubai",
   "Trading Platform Developer Dubai",
   "Core Web Vitals Optimization UAE",
-  "Technical SEO Web Developer Dubai"
+  "Technical SEO Web Developer Dubai",
+  // Global IT industry high-volume terms
+  "Hire Full Stack Developer",
+  "Hire Laravel Developer",
+  "Remote Laravel Developer",
+  "Freelance PHP Developer",
+  "Hire Web Developer Online",
+  "Custom Web Application Developer",
+  "Business Web Solutions Developer",
+  "Shopify Expert Developer",
+  "WordPress Developer for Hire",
+  "Laravel Application Development Services",
+  "Full Stack Developer for Hire",
+  "Ecommerce Developer for Hire",
+  "Web Application Development Services",
+  "Professional Full Stack Developer",
+  "Remote Full Stack Developer",
+  "Custom Dashboard Development Services",
+  "PHP Laravel Developer",
+  "Business Automation Web Developer",
+  "API Integration Development Services",
+  "ERP Development Services",
+  "CRM Development Services",
+  "SaaS Web Application Developer",
+  "Web Performance Optimization Services",
+  "Technical SEO Developer",
+  "WordPress Custom Development Services"
 ];
+
+const seoRoutes = seoServicePages.map((page) => ({
+  path: `/${page.slug}`,
+  name: page.navLabel,
+  priority: 0.78,
+  changeFrequency: "monthly" as const
+}));
 
 export const routes = [
   { path: "/", name: "Home", priority: 1, changeFrequency: "weekly" },
@@ -37,7 +72,8 @@ export const routes = [
   { path: "/pricing", name: "Pricing", priority: 0.8, changeFrequency: "monthly" },
   { path: "/resume", name: "Resume", priority: 0.9, changeFrequency: "monthly" },
   { path: "/blog", name: "Blog", priority: 0.75, changeFrequency: "weekly" },
-  { path: "/contact", name: "Contact", priority: 0.9, changeFrequency: "monthly" }
+  { path: "/contact", name: "Contact", priority: 0.9, changeFrequency: "monthly" },
+  ...seoRoutes
 ] as const;
 
 export function pageMetadata({
@@ -62,6 +98,15 @@ export function pageMetadata({
     description,
     applicationName: "Anas Tanveer Portfolio",
     authors: [{ name: "Anas Tanveer", url: siteUrl }],
+    icons: {
+      icon: [
+        { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+        { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+        { url: "/icon-512.png", sizes: "512x512", type: "image/png" }
+      ],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+      shortcut: ["/favicon-32.png"]
+    },
     creator: "Anas Tanveer",
     publisher: "ARS Developer Ltd",
     category: "Web Development",
@@ -72,6 +117,8 @@ export function pageMetadata({
       canonical: url,
       languages: {
         "en-AE": url,
+        "en-US": url,
+        "en-GB": url,
         "x-default": url
       }
     },
@@ -97,7 +144,7 @@ export function pageMetadata({
       url,
       siteName: "Anas Tanveer",
       type: "website",
-      locale: "en_US",
+      locale: "en_AE",
       images: [
         {
           url: imageUrl,
@@ -139,13 +186,29 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       "@type": "Person",
       "@id": absoluteUrl("/#person"),
       name: "Anas Tanveer",
-      alternateName: "Anas Full Stack Developer",
-      jobTitle: ["Full-Stack Web Developer", "Laravel Developer", "WordPress Developer", "Shopify Developer", "Business Web Problem Solver"],
+      alternateName: ["Anas Full Stack Developer", "Anas Laravel Developer", "Anas Web Developer Dubai"],
+      jobTitle: [
+        "Full-Stack Web Developer",
+        "Laravel Developer",
+        "PHP Developer",
+        "WordPress Developer",
+        "Shopify Developer",
+        "Business Web Problem Solver",
+        "Freelance Web Developer",
+        "Custom Web Application Developer"
+      ],
       url: siteUrl,
-      image: absoluteUrl("/images/anas-resume.webp"),
+      image: {
+        "@type": "ImageObject",
+        url: absoluteUrl("/images/anas-resume.webp"),
+        width: 400,
+        height: 400,
+        caption: "Anas Tanveer – Full-Stack Developer Dubai"
+      },
       email: "mailto:info@anastanveer.com",
       telephone: "+971542435418",
       nationality: "Pakistani",
+      knowsLanguage: ["en"],
       address: {
         "@type": "PostalAddress",
         addressLocality: "Dubai",
@@ -158,7 +221,15 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
         name: "ARS Developer Ltd",
         url: "https://arsdeveloper.co.uk"
       },
-      sameAs: ["https://www.linkedin.com/in/anas-fullstackdev/"],
+      hasCredential: [
+        { "@type": "EducationalOccupationalCredential", credentialCategory: "degree", name: "Full-Stack Web Development" },
+        { "@type": "EducationalOccupationalCredential", credentialCategory: "certification", name: "Laravel Application Development" }
+      ],
+      sameAs: [
+        "https://www.linkedin.com/in/anas-fullstackdev/",
+        siteUrl,
+        "https://arsdeveloper.co.uk"
+      ],
       knowsAbout: [
         ...keywords,
         "REST API Integration",
@@ -170,7 +241,17 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
         "Business Automation",
         "Website Problem Solving",
         "Shopify Conversion Optimization",
-        "Laravel Dashboard Development"
+        "Laravel Dashboard Development",
+        "MySQL Database Design",
+        "React Frontend Development",
+        "Next.js Web Development",
+        "Tailwind CSS",
+        "Vue.js Development",
+        "Git Version Control",
+        "AWS Cloud Services",
+        "Docker Containerization",
+        "Redis Caching",
+        "Web Security Best Practices"
       ]
     },
     {
@@ -187,8 +268,14 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
         { "@type": "City", name: "Dubai" },
         { "@type": "Country", name: "United Arab Emirates" },
         { "@type": "Country", name: "United Kingdom" },
-        { "@type": "Country", name: "Canada" }
+        { "@type": "Country", name: "Canada" },
+        { "@type": "AdministrativeArea", name: "Worldwide" }
       ],
+      availableChannel: {
+        "@type": "ServiceChannel",
+        serviceType: "Remote and On-site",
+        availableLanguage: { "@type": "Language", name: "English" }
+      },
       serviceType: [
         "Laravel Web Application Development",
         "PHP Web Development",
@@ -203,7 +290,11 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
         "Business Web Problem Solving",
         "Shopify Conversion Optimization",
         "Custom Dashboard Development",
-        "Business Automation Development"
+        "Business Automation Development",
+        "SaaS Platform Development",
+        "Custom Web Application Development",
+        "Trading Platform Development",
+        "Business Workflow Automation"
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -244,7 +335,17 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
         "@type": "GeoCoordinates",
         latitude: 25.2048,
         longitude: 55.2708
-      }
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "09:00",
+          closes: "18:00"
+        }
+      ],
+      currenciesAccepted: "AED, GBP, USD, CAD",
+      paymentAccepted: "Bank Transfer, Online Payment"
     },
     {
       "@type": "WebSite",
@@ -301,6 +402,21 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
         }
       : null
     ].filter(Boolean)
+  };
+}
+
+export function faqSchema(faqs: Array<{ question: string; answer: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(({ question, answer }) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer
+      }
+    }))
   };
 }
 

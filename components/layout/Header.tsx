@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { BriefcaseBusiness, FileText, Home, Linkedin, Menu, Send, X } from "lucide-react";
 import { useState } from "react";
@@ -25,8 +26,23 @@ export function Header() {
     <header className="fixed inset-x-3 top-3 z-50 rounded-2xl border border-white/10 bg-ink/82 shadow-[0_18px_50px_rgba(0,0,0,0.22)] backdrop-blur-xl light:border-slate-900/10 light:bg-white/90 lg:inset-x-0 lg:top-0 lg:rounded-none lg:border-x-0 lg:border-t-0 lg:bg-ink/72 lg:shadow-none lg:light:bg-white/80">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 lg:h-20 lg:px-5">
         <Link href="/" className="group flex min-w-0 items-center gap-3" aria-label="Anas Tanveer home">
-          <span className="grid h-9 w-9 place-items-center rounded-xl border border-cyan/30 bg-white/10 font-display text-xs font-bold text-white light:bg-slate-900 light:text-white lg:h-10 lg:w-10 lg:rounded-lg lg:text-sm">
-            AT
+          <span className="grid h-10 w-12 shrink-0 place-items-center rounded-xl border border-cyan/20 bg-white/[0.06] px-1.5 light:border-slate-900/10 light:bg-slate-900/[0.04] lg:h-11 lg:w-14">
+            <Image
+              src="/images/logo-mark-dark.webp"
+              alt=""
+              width={180}
+              height={112}
+              priority
+              className="h-8 w-auto object-contain light:hidden lg:h-9"
+            />
+            <Image
+              src="/images/logo-mark-light.webp"
+              alt=""
+              width={180}
+              height={106}
+              priority
+              className="hidden h-8 w-auto object-contain light:block lg:h-9"
+            />
           </span>
           <span className="min-w-0 leading-tight">
             <span className="block truncate font-display text-sm font-semibold text-white light:text-slate-950 lg:text-base">Anas Tanveer</span>
