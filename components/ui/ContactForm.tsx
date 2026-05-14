@@ -7,8 +7,8 @@ import { CheckCircle2, ChevronDown, Loader2, Send, Sparkles, XCircle } from "luc
 const fieldClass =
   "peer w-full rounded-xl border border-white/12 bg-black/18 px-4 pb-3 pt-6 text-sm text-white outline-none transition duration-300 placeholder:text-transparent focus:border-cyan/55 focus:bg-white/[0.06] focus:shadow-[0_0_0_4px_rgba(38,217,255,0.08)] light:border-slate-900/12 light:bg-white light:text-slate-950 light:focus:border-blue-500/55";
 
-const primaryEmail = "info@anastanveer.com";
-const secondaryEmail = "anastanveer557@gmail.com";
+const primaryEmail = "anastanveer557@gmail.com";
+const secondaryEmail = "info@anastanveer.com";
 const rateLimitKey = "anas-contact-form-submissions";
 const rateLimitWindow = 10 * 60 * 1000;
 const minimumSubmitGap = 20 * 1000;
@@ -139,18 +139,24 @@ export function ContactForm() {
 
     let recaptchaToken = "";
     try {
-      recaptchaToken = await new Promise<string>((resolve, reject) => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (window as any).grecaptcha.ready(() => {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (window as any).grecaptcha
-            .execute("6Lf_8-ksAAAAAJt3RbumC-30_Y6CrVfo5u_uvx7f", { action: "contact_form" })
-            .then(resolve)
-            .catch(reject);
-        });
-      });
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      if (typeof (window as any).grecaptcha !== "undefined") {
+        recaptchaToken = await Promise.race([
+          new Promise<string>((resolve, reject) => {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            (window as any).grecaptcha.ready(() => {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              (window as any).grecaptcha
+                .execute("6Lf_8-ksAAAAAJt3RbumC-30_Y6CrVfo5u_uvx7f", { action: "contact_form" })
+                .then(resolve)
+                .catch(reject);
+            });
+          }),
+          new Promise<string>((_, reject) => setTimeout(() => reject(new Error("timeout")), 3000))
+        ]);
+      }
     } catch {
-      // reCAPTCHA failed to load — proceed without it
+      // reCAPTCHA failed or timed out — proceed without it
     }
 
     const submittedAt = new Date().toLocaleString("en-AE", {
