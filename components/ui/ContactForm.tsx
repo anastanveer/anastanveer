@@ -173,7 +173,7 @@ export function ContactForm() {
         },
         body: JSON.stringify({
           access_key: web3formsKey,
-          subject: "New Project Inquiry – anastanveer.com",
+          subject: "New Project Inquiry - anastanveer.com",
           from_name: "Anas Tanveer Portfolio",
           name,
           email,
@@ -182,12 +182,11 @@ export function ContactForm() {
           budget: budget || "Not selected",
           message,
           source: "anastanveer.com",
-          timestamp: submittedAt,
-          ...(recaptchaToken && { "g-recaptcha-response": recaptchaToken })
+          timestamp: submittedAt
         })
       });
 
-      const result = await response.json();
+      const result = await response.json() as { success: boolean };
       if (!result.success) throw new Error("Web3Forms error");
 
       form.reset();
