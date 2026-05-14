@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight, CheckCircle2, Clock } from "lucide-react";
 import { Hero } from "@/components/sections/Hero";
 import { TechMarquee } from "@/components/sections/TechMarquee";
 import { CTASection } from "@/components/sections/CTASection";
@@ -28,13 +29,6 @@ const homeFaqs = [
   { question: "What makes your work different from a normal template setup?", answer: "I do not just place sections on a page. I connect design, content, performance, backend logic, integrations and business workflow so the final product solves a real problem." }
 ];
 
-const statsStrip = [
-  { value: "7+", label: "Years building web systems" },
-  { value: "100+", label: "Projects delivered" },
-  { value: "4.9★", label: "Average client rating" },
-  { value: "3", label: "Global markets served" },
-];
-
 export default function HomePage() {
   return (
     <>
@@ -43,17 +37,20 @@ export default function HomePage() {
       <Hero />
       <TechMarquee />
 
-      {/* Stats strip */}
-      <section className="relative overflow-hidden border-y border-white/6 bg-white/[0.018] py-10 light:border-slate-200 light:bg-slate-50/60">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(38,217,255,0.07),transparent_60%)]" />
+      {/* ── Stats strip ─────────────────────────────────────── */}
+      <section className="relative overflow-hidden border-y border-white/8 py-10 light:border-slate-200">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan/5 via-violet/5 to-emerald/5 light:from-blue-50 light:via-violet-50/50 light:to-emerald-50/50" />
         <div className="mx-auto max-w-7xl px-5">
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-            {statsStrip.map((s, i) => (
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            {[
+              { value: "7+", label: "Years Experience", color: "text-cyan light:text-blue-600" },
+              { value: "100+", label: "Projects Delivered", color: "text-violet light:text-violet-600" },
+              { value: "4.9★", label: "Client Rating", color: "text-amber-400 light:text-amber-500" },
+              { value: "3", label: "Global Markets", color: "text-emerald light:text-emerald-600" },
+            ].map((s, i) => (
               <Reveal key={s.label} delay={i * 0.07}>
                 <div className="text-center">
-                  <p className="font-display text-4xl font-semibold text-white md:text-5xl light:text-slate-950">
-                    <span className="premium-text">{s.value}</span>
-                  </p>
+                  <p className={`font-display text-4xl font-bold md:text-5xl ${s.color}`}>{s.value}</p>
                   <p className="mt-2 text-sm text-silver/60 light:text-slate-500">{s.label}</p>
                 </div>
               </Reveal>
@@ -62,16 +59,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services */}
-      <section className="section-pad relative overflow-hidden pt-20">
-        <div className="absolute -left-40 top-0 h-[32rem] w-[32rem] rounded-full bg-violet/7 blur-3xl" />
-        <div className="absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-cyan/6 blur-3xl" />
+      {/* ── 01 / Services ────────────────────────────────────── */}
+      <section className="section-pad relative overflow-hidden">
+        <div className="absolute -left-48 top-10 h-[36rem] w-[36rem] rounded-full bg-violet/8 blur-[100px] light:bg-violet-200/40" />
+        <div className="absolute -right-24 bottom-0 h-64 w-64 rounded-full bg-cyan/7 blur-3xl light:bg-blue-200/40" />
         <div className="mx-auto max-w-7xl px-5">
           <div className="mb-12 grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
             <SectionHeader
-              eyebrow="Problems I solve"
+              eyebrow="01 / Problems I Solve"
               title="Websites, stores, dashboards, and platforms built around real business pain."
-              description="I help companies replace slow pages, weak conversion flows, plugin limits, manual admin work, disconnected tools, and poor SEO foundations with practical solutions."
+              description="I help companies replace slow pages, weak conversion flows, plugin limits, manual admin work, disconnected tools, and poor SEO foundations."
             />
             <VisualPanel
               src="/images/services-architecture-760.webp"
@@ -87,7 +84,7 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap gap-2">
             {seoServicePages.slice(0, 6).map((page) => (
               <Link
-                className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-sm font-medium text-silver/72 transition hover:border-cyan/35 hover:text-cyan light:border-slate-900/10 light:bg-white light:text-slate-700"
+                className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-sm font-medium text-silver/72 transition hover:border-cyan/35 hover:text-cyan light:border-slate-200 light:bg-white light:text-slate-600 light:hover:border-blue-400 light:hover:text-blue-700"
                 href={`/${page.slug}`}
                 key={page.slug}
               >
@@ -98,16 +95,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Projects */}
+      {/* ── 02 / Projects ────────────────────────────────────── */}
       <section className="section-pad relative overflow-hidden">
-        <div className="absolute -right-32 top-20 h-[28rem] w-[28rem] rounded-full bg-cyan/7 blur-3xl" />
-        <div className="absolute bottom-0 left-1/3 h-48 w-96 rounded-full bg-violet/6 blur-3xl" />
+        <div className="absolute -right-32 top-20 h-[30rem] w-[30rem] rounded-full bg-cyan/8 blur-[100px] light:bg-blue-200/40" />
+        <div className="absolute bottom-0 left-1/4 h-48 w-80 rounded-full bg-violet/6 blur-3xl light:bg-violet-200/30" />
         <div className="mx-auto max-w-7xl px-5">
-          <SectionHeader
-            eyebrow="Proof of problem solving"
-            title="Selected work shaped around business outcomes."
-            description="A practical view of platform, dashboard, ecommerce, CMS, ERP and SEO-ready website work where the focus is clarity, reliability, speed and better user experience."
-          />
+          <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
+            <SectionHeader
+              eyebrow="02 / Portfolio"
+              title="Selected work shaped around business outcomes."
+            />
+            <Reveal>
+              <Link href="/work" className="inline-flex items-center gap-2 text-sm font-semibold text-cyan transition hover:text-white light:text-blue-700 light:hover:text-blue-900">
+                View all work <ArrowUpRight size={15} />
+              </Link>
+            </Reveal>
+          </div>
           <div className="mobile-rail grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {projects.slice(0, 6).map((project, index) => (
               <ProjectCard key={project.title} project={project} index={index} />
@@ -116,84 +119,80 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Skills — bento asymmetric */}
+      {/* ── 03 / Skills bento ────────────────────────────────── */}
       <section className="section-pad relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(139,92,246,0.09),transparent_55%),radial-gradient(ellipse_at_80%_20%,rgba(38,217,255,0.07),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.028)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.028)_1px,transparent_1px)] bg-[size:52px_52px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.032)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.032)_1px,transparent_1px)] bg-[size:52px_52px] light:bg-[linear-gradient(rgba(15,23,42,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.05)_1px,transparent_1px)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_60%,rgba(139,92,246,0.1),transparent_50%),radial-gradient(ellipse_at_80%_20%,rgba(38,217,255,0.08),transparent_50%)] light:bg-[radial-gradient(ellipse_at_20%_60%,rgba(139,92,246,0.06),transparent_50%),radial-gradient(ellipse_at_80%_20%,rgba(37,99,235,0.06),transparent_50%)]" />
         <div className="mx-auto max-w-7xl px-5">
-          <SectionHeader eyebrow="Skills ecosystem" title="The stack I use to solve frontend, backend, ecommerce, SEO and operations problems." />
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {Object.entries(skills).map(([group, items], i) => (
-              <Reveal key={group} delay={i * 0.06} className={i === 0 ? "md:col-span-2 lg:col-span-1" : ""}>
-                <div className="premium-card glass group h-full rounded-2xl p-6">
-                  <div className="mb-1 flex items-center gap-2">
-                    <span className="h-1.5 w-4 rounded-full bg-gradient-to-r from-cyan to-violet" />
-                    <h3 className="font-display text-lg font-semibold text-white light:text-slate-950">{group}</h3>
+          <SectionHeader eyebrow="03 / Skills Ecosystem" title="The stack I use to solve frontend, backend, ecommerce, SEO and operations problems." />
+          <div className="grid gap-4 md:grid-cols-6">
+            {Object.entries(skills).map(([group, items], i) => {
+              const spans = [4, 2, 2, 4, 3, 3];
+              return (
+                <Reveal key={group} delay={i * 0.06} className={`md:col-span-${spans[i] ?? 3}`}>
+                  <div className="premium-card glass group h-full rounded-2xl p-6 light:bg-white/90">
+                    <div className="mb-3 flex items-center gap-2">
+                      <span className="h-1 w-6 rounded-full bg-gradient-to-r from-cyan to-violet" />
+                      <h3 className="font-display text-base font-semibold text-white light:text-slate-900">{group}</h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {items.map((item) => (
+                        <span key={item} className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs text-silver/75 transition group-hover:border-cyan/25 group-hover:text-silver/90 light:border-slate-200 light:bg-slate-50 light:text-slate-600 light:group-hover:border-blue-300 light:group-hover:text-slate-800">{item}</span>
+                      ))}
+                    </div>
                   </div>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {items.map((item) => (
-                      <span key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-silver/72 transition group-hover:border-cyan/20 group-hover:text-silver/85 light:border-slate-900/10 light:bg-slate-50 light:text-slate-600">{item}</span>
-                    ))}
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Process */}
+      {/* ── 04 / Process ─────────────────────────────────────── */}
       <section className="section-pad relative overflow-hidden">
-        <div className="absolute left-1/2 top-0 h-48 w-[60rem] -translate-x-1/2 rounded-full bg-cyan/5 blur-3xl" />
+        <div className="absolute left-1/2 top-0 h-40 w-[56rem] -translate-x-1/2 rounded-full bg-cyan/5 blur-3xl light:bg-blue-200/30" />
         <div className="mx-auto max-w-7xl px-5">
-          <div className="mb-12 grid items-end gap-8 lg:grid-cols-[1fr_0.72fr]">
-            <SectionHeader eyebrow="Work process" title="How I turn a business problem into a launch-ready web solution." />
-            <p className="max-w-xl text-sm leading-7 text-silver/72 light:text-slate-600">
-              A clear workflow for recruiters, agencies, founders and clients: understand the problem, plan the user flow, build cleanly, test carefully, optimize speed and SEO, then support the launch.
-            </p>
+          <div className="mb-12 grid items-end gap-8 lg:grid-cols-[1fr_0.65fr]">
+            <SectionHeader eyebrow="04 / Work Process" title="How I turn a business problem into a launch-ready web solution." />
+            <Reveal>
+              <p className="text-sm leading-7 text-silver/65 light:text-slate-600">
+                A clear workflow for recruiters, agencies, founders and clients: understand the problem, plan, build, test, optimize and support.
+              </p>
+            </Reveal>
           </div>
           <Process />
         </div>
       </section>
 
-      {/* Why hire */}
+      {/* ── 05 / Case Studies ─────────────────────────────────── */}
       <section className="section-pad relative overflow-hidden">
-        <div className="absolute -left-20 bottom-10 h-72 w-72 rounded-full bg-emerald/6 blur-3xl" />
-        <div className="absolute -right-20 top-10 h-72 w-72 rounded-full bg-violet/8 blur-3xl" />
-        <div className="mx-auto max-w-7xl px-5">
-          <SectionHeader eyebrow="Why hire Anas Tanveer" title="A developer profile for teams that need execution, clarity, and practical solutions." />
-          <ValueGrid />
-        </div>
-      </section>
-
-      {/* Case studies — numbered cards */}
-      <section className="section-pad relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_40%,rgba(38,217,255,0.06),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,rgba(38,217,255,0.07),transparent_50%),radial-gradient(ellipse_at_20%_80%,rgba(52,211,153,0.07),transparent_50%)] light:bg-[radial-gradient(ellipse_at_70%_30%,rgba(37,99,235,0.05),transparent_50%),radial-gradient(ellipse_at_20%_80%,rgba(16,185,129,0.05),transparent_50%)]" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan/30 to-transparent" />
         <div className="mx-auto max-w-7xl px-5">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
-            <SectionHeader eyebrow="Case study highlights" title="How selected projects moved from pain point to usable system." />
+            <SectionHeader eyebrow="05 / Case Studies" title="How selected projects moved from pain point to usable system." />
             <Reveal>
-              <Link href="/case-studies" className="inline-flex items-center gap-2 text-sm font-semibold text-cyan transition hover:text-white">
-                View all case studies <ArrowUpRight size={15} />
+              <Link href="/case-studies" className="inline-flex items-center gap-2 text-sm font-semibold text-cyan transition hover:text-white light:text-blue-700 light:hover:text-blue-900">
+                All case studies <ArrowUpRight size={15} />
               </Link>
             </Reveal>
           </div>
           <div className="grid gap-5 lg:grid-cols-2">
             {caseStudies.slice(0, 4).map((study, i) => (
               <Reveal key={study.title} delay={i * 0.07}>
-                <article className="premium-card glass group relative overflow-hidden rounded-2xl p-7">
-                  <div className="absolute right-5 top-5 font-display text-7xl font-bold leading-none text-white/[0.04] select-none">
+                <article className="premium-card glass group relative overflow-hidden rounded-2xl p-7 light:bg-white/90 light:border-slate-200">
+                  <div className="pointer-events-none absolute right-6 top-4 select-none font-display text-[6rem] font-bold leading-none text-white/[0.05] light:text-slate-900/[0.04]">
                     {String(i + 1).padStart(2, "0")}
                   </div>
                   <div className="mb-4 flex items-center gap-3">
-                    <span className="h-0.5 w-8 rounded-full bg-gradient-to-r from-cyan to-violet" />
-                    <span className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan">Case Study {String(i + 1).padStart(2, "0")}</span>
+                    <span className="h-0.5 w-6 rounded-full bg-gradient-to-r from-cyan to-violet" />
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan light:text-blue-700">Case {String(i + 1).padStart(2, "0")}</span>
                   </div>
                   <h3 className="font-display text-xl font-semibold text-white light:text-slate-950">{study.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-silver/70 light:text-slate-600">{study.impact}</p>
-                  <div className="mt-5 flex items-center gap-2 rounded-xl border border-emerald/20 bg-emerald/8 px-4 py-2.5">
-                    <CheckCircle2 size={15} className="shrink-0 text-emerald" />
-                    <p className="text-sm font-medium text-emerald">{study.result}</p>
+                  <p className="mt-3 text-sm leading-7 text-silver/68 light:text-slate-600">{study.impact}</p>
+                  <div className="mt-5 flex items-center gap-2 rounded-xl border border-emerald/25 bg-emerald/8 px-4 py-2.5 light:border-emerald-200 light:bg-emerald-50">
+                    <CheckCircle2 size={14} className="shrink-0 text-emerald light:text-emerald-600" />
+                    <p className="text-sm font-medium text-emerald light:text-emerald-700">{study.result}</p>
                   </div>
                 </article>
               </Reveal>
@@ -202,50 +201,94 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pricing */}
+      {/* ── 06 / Why hire ─────────────────────────────────────── */}
       <section className="section-pad relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(139,92,246,0.1),transparent_55%)]" />
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-violet/40 to-transparent" />
+        <div className="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-emerald/6 blur-3xl light:bg-emerald-200/30" />
+        <div className="absolute -right-24 top-10 h-72 w-72 rounded-full bg-violet/8 blur-3xl light:bg-violet-200/30" />
         <div className="mx-auto max-w-7xl px-5">
-          <SectionHeader eyebrow="Engagement options" title="Choose the level of support based on the problem you need solved." />
+          <SectionHeader eyebrow="06 / Why Work With Me" title="A developer profile for teams that need execution, clarity, and practical solutions." />
+          <ValueGrid />
+        </div>
+      </section>
+
+      {/* ── 07 / Pricing ─────────────────────────────────────── */}
+      <section className="section-pad relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(139,92,246,0.12),transparent_55%)] light:bg-[radial-gradient(ellipse_at_50%_100%,rgba(124,58,237,0.06),transparent_55%)]" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-violet/45 to-transparent" />
+        <div className="mx-auto max-w-7xl px-5">
+          <SectionHeader eyebrow="07 / Pricing" title="Choose the level of support based on the problem you need solved." />
           <div className="mobile-rail grid gap-5 lg:grid-cols-3">
             {pricing.slice(1, 4).map((plan, index) => (
               <PricingCard key={plan.title} plan={plan} index={index} />
             ))}
           </div>
-          <p className="mt-6 text-sm text-silver/55 light:text-slate-500">
+          <p className="mt-6 text-sm text-silver/50 light:text-slate-500">
             Final pricing depends on scope, features, integrations, timeline, and platform.
           </p>
         </div>
       </section>
 
-      {/* Blog */}
+      {/* ── 08 / Blog — featured layout ───────────────────────── */}
       <section className="section-pad relative overflow-hidden">
-        <div className="absolute -right-20 top-10 h-80 w-80 rounded-full bg-cyan/6 blur-3xl" />
+        <div className="absolute -right-24 top-0 h-80 w-80 rounded-full bg-cyan/6 blur-3xl light:bg-blue-200/30" />
         <div className="mx-auto max-w-7xl px-5">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
-            <SectionHeader eyebrow="Writing" title="Decision-focused notes for Laravel, WordPress, Shopify, SEO and performance." />
+            <SectionHeader eyebrow="08 / Writing" title="Decision-focused notes for Laravel, WordPress, Shopify, SEO and performance." />
             <Reveal>
-              <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-cyan transition hover:text-white">
+              <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-cyan transition hover:text-white light:text-blue-700 light:hover:text-blue-900">
                 All articles <ArrowUpRight size={15} />
               </Link>
             </Reveal>
           </div>
-          <div className="mobile-rail grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {blogs.slice(0, 3).map((post, index) => (
-              <BlogCard key={post.title} post={post} index={index} />
-            ))}
+
+          {/* Featured post large + 2 side */}
+          <div className="grid gap-5 lg:grid-cols-[1.4fr_1fr]">
+            {/* Large featured */}
+            <Reveal>
+              <Link href={`/blog/${blogs[0].slug}`} className="premium-card glass group relative block overflow-hidden rounded-2xl light:bg-white/90 light:border-slate-200">
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={blogs[0].image}
+                    alt={blogs[0].title}
+                    width={760}
+                    height={428}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    sizes="(max-width: 1024px) 100vw, 56vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <span className="absolute bottom-4 left-4 rounded-full border border-cyan/30 bg-cyan/15 px-3 py-1 text-xs font-semibold text-cyan backdrop-blur-md">
+                    {blogs[0].tag}
+                  </span>
+                </div>
+                <div className="p-7">
+                  <h3 className="font-display text-2xl font-semibold leading-tight text-white light:text-slate-950">{blogs[0].title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-silver/70 light:text-slate-600">{blogs[0].excerpt}</p>
+                  <div className="mt-5 flex items-center justify-between text-xs text-silver/50 light:text-slate-400">
+                    <span className="flex items-center gap-1.5"><Clock size={12} /> {blogs[0].readingTime}</span>
+                    <span className="flex items-center gap-1.5 font-semibold text-cyan light:text-blue-700">Read article <ArrowUpRight size={13} /></span>
+                  </div>
+                </div>
+              </Link>
+            </Reveal>
+
+            {/* 2 side posts */}
+            <div className="flex flex-col gap-5">
+              {blogs.slice(1, 3).map((post, index) => (
+                <BlogCard key={post.slug} post={post} index={index + 1} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
+      {/* ── 09 / Testimonials ─────────────────────────────────── */}
       <Testimonials />
 
-      {/* FAQ */}
+      {/* ── 10 / FAQ ─────────────────────────────────────────── */}
       <section className="section-pad relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(38,217,255,0.06),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(38,217,255,0.06),transparent_50%)] light:bg-[radial-gradient(ellipse_at_30%_50%,rgba(37,99,235,0.04),transparent_50%)]" />
         <div className="mx-auto max-w-7xl px-5">
-          <SectionHeader eyebrow="Client FAQs" title="Straight answers before trusting me with a project." />
+          <SectionHeader eyebrow="10 / FAQs" title="Straight answers before trusting me with a project." />
           <FAQ />
         </div>
       </section>
