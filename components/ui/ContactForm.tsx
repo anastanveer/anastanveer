@@ -137,6 +137,22 @@ export function ContactForm() {
     setStatus("sending");
     setFeedback("");
 
+    let recaptchaToken = "";
+    try {
+      recaptchaToken = await new Promise<string>((resolve, reject) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).grecaptcha.ready(() => {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (window as any).grecaptcha
+            .execute("6Lf_8-ksAAAAAJt3RbumC-30_Y6CrVfo5u_uvx7f", { action: "contact_form" })
+            .then(resolve)
+            .catch(reject);
+        });
+      });
+    } catch {
+      // reCAPTCHA failed to load — proceed without it
+    }
+
     const submittedAt = new Date().toLocaleString("en-AE", {
       dateStyle: "medium",
       timeStyle: "short",
@@ -163,7 +179,8 @@ export function ContactForm() {
           budget: budget || "Not selected",
           message,
           source: "anastanveer.com",
-          timestamp: submittedAt
+          timestamp: submittedAt,
+          ...(recaptchaToken && { recaptcha_token: recaptchaToken })
         })
       });
 
