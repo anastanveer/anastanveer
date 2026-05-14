@@ -1653,7 +1653,7 @@ export const blogs: BlogPost[] = [
     slug: "freelance-web-developer-dubai",
     excerpt: "A guide for Dubai businesses considering a freelance web developer — covering rates, expectations, risks and how to structure the engagement.",
     tag: "Hiring",
-    image: "/images/services-architecture-520.webp",
+    image: "/images/blog/blog-8-640.webp",
     publishedAt: "2026-05-21",
     updatedAt: "2026-05-21",
     readingTime: "6 min read",
