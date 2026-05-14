@@ -5,7 +5,7 @@ import { Hero } from "@/components/sections/Hero";
 import { TechMarquee } from "@/components/sections/TechMarquee";
 import { CTASection } from "@/components/sections/CTASection";
 import { FAQ } from "@/components/sections/FAQ";
-import { allFaqs } from "@/data/faqs";
+import { homeFaqItems, allFaqs } from "@/data/faqs";
 import { Process } from "@/components/sections/Process";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { ValueGrid } from "@/components/sections/ValueGrid";
@@ -21,7 +21,7 @@ import { blogs, caseStudies, pricing, projects, services, skills } from "@/data/
 import { seoServicePages } from "@/data/seo-pages";
 import { jsonLdForPage, faqSchema } from "@/lib/seo";
 
-const homeFaqs = allFaqs.map(({ q, a }) => ({ question: q, answer: a }));
+const homeFaqs = homeFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
 export default function HomePage() {
   return (
@@ -347,7 +347,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(38,217,255,0.06),transparent_50%)] light:bg-[radial-gradient(ellipse_at_30%_50%,rgba(37,99,235,0.04),transparent_50%)]" />
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="10 / FAQs" title="Straight answers before trusting me with a project." />
-          <FAQ />
+          <FAQ items={homeFaqItems} />
         </div>
       </section>
 

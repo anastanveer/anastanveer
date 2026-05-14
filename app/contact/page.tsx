@@ -6,11 +6,11 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { allFaqs } from "@/data/faqs";
+import { contactFaqItems } from "@/data/faqs";
 import { profile } from "@/data/site";
 import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
 
-const contactFaqs = allFaqs.map(({ q, a }) => ({ question: q, answer: a }));
+const contactFaqs = contactFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
 export const metadata: Metadata = pageMetadata({
   title: "Contact Anas Tanveer | Hire Web Problem Solver in Dubai",
@@ -72,7 +72,7 @@ export default function ContactPage() {
       <section className="section-pad pt-0">
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="FAQs" title="What clients ask before sending the first message." />
-          <FAQ limit={10} />
+          <FAQ items={contactFaqItems} />
         </div>
       </section>
       <CTASection title="Ready to fix the problem properly?" text="Send the project details, desired outcome, timeline, platform, and current blockers. I’ll respond with practical direction, not generic promises." />

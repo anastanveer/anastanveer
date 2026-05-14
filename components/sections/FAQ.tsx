@@ -3,25 +3,21 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, X } from "lucide-react";
+import type { FaqItem } from "@/data/faqs";
 import { allFaqs } from "@/data/faqs";
 
-export function FAQ({ limit }: { limit?: number }) {
-  const items = limit ? allFaqs.slice(0, limit) : allFaqs;
+export function FAQ({ items = allFaqs }: { items?: FaqItem[] }) {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
     <div className="grid gap-3 md:grid-cols-2">
       {items.map((faq, i) => (
-        <motion.div
+        <div
           key={i}
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.5, delay: Math.min(i * 0.04, 0.18), ease: [0.22, 1, 0.36, 1] }}
-          className={`rounded-2xl border transition-colors duration-300 ${
+          className={`rounded-2xl border transition-all duration-300 ${
             open === i
               ? "border-cyan/30 bg-cyan/[0.05] shadow-[0_0_28px_rgba(38,217,255,0.07)] light:border-blue-300/60 light:bg-blue-50/60"
-              : "border-white/[0.08] bg-white/[0.03] hover:border-white/15 light:border-slate-200 light:bg-white light:hover:border-blue-200"
+              : "border-white/[0.08] bg-white/[0.03] hover:border-white/16 light:border-slate-200 light:bg-white light:hover:border-blue-200"
           }`}
         >
           <button
@@ -43,6 +39,7 @@ export function FAQ({ limit }: { limit?: number }) {
               {open === i ? <X size={12} /> : <Plus size={12} />}
             </span>
           </button>
+
           <AnimatePresence initial={false}>
             {open === i && (
               <motion.div
@@ -59,7 +56,7 @@ export function FAQ({ limit }: { limit?: number }) {
               </motion.div>
             )}
           </AnimatePresence>
-        </motion.div>
+        </div>
       ))}
     </div>
   );

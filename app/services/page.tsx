@@ -5,8 +5,11 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ServiceCard } from "@/components/ui/ServiceCard";
+import { allFaqs } from "@/data/faqs";
 import { services } from "@/data/site";
-import { jsonLdForPage, pageMetadata } from "@/lib/seo";
+import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
+
+const servicesFaqs = allFaqs.map(({ q, a }) => ({ question: q, answer: a }));
 
 export const metadata: Metadata = pageMetadata({
   title: "Services | Laravel, WordPress, Shopify Developer Dubai",
@@ -18,6 +21,7 @@ export default function ServicesPage() {
   return (
     <>
       <JsonLd data={jsonLdForPage("/services")} id="services-json-ld" />
+      <JsonLd data={faqSchema(servicesFaqs)} id="services-faq-json-ld" />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <PageHero
@@ -39,7 +43,7 @@ export default function ServicesPage() {
       <section className="section-pad">
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="Questions" title="What clients, agencies, recruiters, and founders usually ask before hiring." />
-          <FAQ />
+          <FAQ items={allFaqs} />
         </div>
       </section>
       <CTASection

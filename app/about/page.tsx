@@ -6,11 +6,11 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { allFaqs } from "@/data/faqs";
+import { aboutFaqItems } from "@/data/faqs";
 import { profile } from "@/data/site";
 import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
 
-const aboutFaqs = allFaqs.map(({ q, a }) => ({ question: q, answer: a }));
+const aboutFaqs = aboutFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
 export const metadata: Metadata = pageMetadata({
   title: "About Anas Tanveer | Premium Full-Stack Developer in Dubai",
@@ -123,7 +123,7 @@ export default function AboutPage() {
       <section className="section-pad pt-0">
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="FAQs" title="Common questions about my background, process, and technical approach." />
-          <FAQ limit={10} />
+          <FAQ items={aboutFaqItems} />
         </div>
       </section>
     </>

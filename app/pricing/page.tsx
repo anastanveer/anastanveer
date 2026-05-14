@@ -5,11 +5,11 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { PageHero } from "@/components/ui/PageHero";
 import { PricingCard } from "@/components/ui/PricingCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { allFaqs } from "@/data/faqs";
+import { pricingFaqItems } from "@/data/faqs";
 import { pricing } from "@/data/site";
 import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
 
-const pricingFaqs = allFaqs.map(({ q, a }) => ({ question: q, answer: a }));
+const pricingFaqs = pricingFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
 export const metadata: Metadata = pageMetadata({
   title: "Pricing | Laravel, WordPress, Shopify Web Packages Dubai",
@@ -46,7 +46,7 @@ export default function PricingPage() {
       <section className="section-pad">
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="FAQs" title="Questions about pricing, scope, deliverables, and what’s included." />
-          <FAQ limit={10} />
+          <FAQ items={pricingFaqItems} />
         </div>
       </section>
       <CTASection
