@@ -1599,7 +1599,7 @@ export const blogs: BlogPost[] = [
     slug: "laravel-vs-nodejs",
     excerpt: "A direct comparison of Laravel and Node.js for business web applications — covering speed, cost, team requirements and when each makes sense.",
     tag: "Laravel",
-    image: "/images/services-architecture-520.webp",
+    image: "/images/blog/blog-5-640.webp",
     publishedAt: "2026-05-18",
     updatedAt: "2026-05-18",
     readingTime: "6 min read",
