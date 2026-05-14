@@ -85,8 +85,9 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "Laravel and dashboard services", href: "/services" },
-      { label: "Portfolio examples", href: "/portfolio" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "View pricing", href: "/pricing" },
       { label: "Discuss a Laravel project", href: "/contact" }
     ]
   },
@@ -158,9 +159,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "Compare services", href: "/services" },
-      { label: "View work", href: "/portfolio" },
-      { label: "Resume and stack", href: "/resume" }
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "View pricing", href: "/pricing" },
+      { label: "Start a project", href: "/contact" }
     ]
   },
   "shopify-conversion-fixes": {
@@ -231,9 +233,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "Shopify service details", href: "/services" },
-      { label: "Ecommerce portfolio", href: "/portfolio" },
-      { label: "Start a Shopify inquiry", href: "/contact" }
+      { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+      { label: "Ecommerce Development Dubai", href: "/ecommerce-website-development-dubai" },
+      { label: "Portfolio examples", href: "/work" },
+      { label: "Start a Shopify project", href: "/contact" }
     ]
   },
   "website-speed-checklist-before-ads": {
@@ -304,9 +307,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "Performance services", href: "/services" },
-      { label: "Request a speed review", href: "/contact" },
-      { label: "Technical resume", href: "/resume" }
+      { label: "Website Speed Optimisation Dubai", href: "/website-speed-optimization-dubai" },
+      { label: "SEO-Friendly Website Development", href: "/seo-friendly-website-development" },
+      { label: "View case studies", href: "/case-studies" },
+      { label: "Fix my site speed", href: "/contact" }
     ]
   },
   "seo-friendly-development-before-marketing": {
@@ -377,9 +381,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "SEO-friendly services", href: "/services" },
-      { label: "Blog resources", href: "/blog" },
-      { label: "Contact Anas", href: "/contact" }
+      { label: "SEO-Friendly Website Development", href: "/seo-friendly-website-development" },
+      { label: "Website Speed Optimisation Dubai", href: "/website-speed-optimization-dubai" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Start an SEO project", href: "/contact" }
     ]
   },
   "ai-search-seo-dubai-businesses": {
@@ -450,9 +455,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "SEO and speed services", href: "/services" },
-      { label: "AI audit article", href: "/blog/ai-website-audit-speed-seo-conversion" },
-      { label: "Start an SEO review", href: "/contact" }
+      { label: "SEO-Friendly Website Development", href: "/seo-friendly-website-development" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
+      { label: "Start an SEO project", href: "/contact" }
     ]
   },
   "ai-chatbots-laravel-wordpress-shopify": {
@@ -523,9 +529,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "API and automation services", href: "/services" },
-      { label: "Laravel vs plugin article", href: "/blog/choose-laravel-instead-of-plugin" },
-      { label: "Discuss automation", href: "/contact" }
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+      { label: "Discuss your project", href: "/contact" }
     ]
   },
   "ai-website-audit-speed-seo-conversion": {
@@ -596,9 +603,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "Speed checklist article", href: "/blog/website-speed-checklist-before-ads" },
-      { label: "Request a website audit", href: "/contact" },
-      { label: "View technical services", href: "/services" }
+      { label: "Website Speed Optimisation Dubai", href: "/website-speed-optimization-dubai" },
+      { label: "SEO-Friendly Website Development", href: "/seo-friendly-website-development" },
+      { label: "View case studies", href: "/case-studies" },
+      { label: "Audit my website", href: "/contact" }
     ]
   },
 
@@ -653,11 +661,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "Laravel developer Dubai", href: "/laravel-developer-dubai" },
-      { label: "View case studies", href: "/case-studies" },
-      { label: "ARS Developer Ltd – UK Laravel", href: "https://arsdeveloper.co.uk" },
-      { label: "TorontoBytes – Canada Laravel", href: "https://torontobytes.ca" },
-      { label: "Discuss a project", href: "/contact" }
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "View pricing", href: "/pricing" },
+      { label: "Hire Anas Tanveer", href: "/contact" }
     ]
   },
 
@@ -712,11 +719,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "Freelance web developer Dubai", href: "/freelance-web-developer-dubai" },
-      { label: "View portfolio work", href: "/portfolio" },
-      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
-      { label: "TorontoBytes – Canada", href: "https://torontobytes.ca" },
-      { label: "Hire Me", href: "/contact" }
+      { label: "Freelance Web Developer Dubai", href: "/freelance-web-developer-dubai" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "About Anas Tanveer", href: "/about" },
+      { label: "Start a project", href: "/contact" }
     ]
   },
 
@@ -771,11 +777,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "Shopify developer Dubai", href: "/shopify-developer-dubai" },
-      { label: "Ecommerce development Dubai", href: "/ecommerce-website-development-dubai" },
-      { label: "ARS Developer Ltd – UK Shopify", href: "https://arsdeveloper.co.uk" },
-      { label: "TorontoBytes – Canada Shopify", href: "https://torontobytes.ca" },
-      { label: "View Shopify case studies", href: "/case-studies" }
+      { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+      { label: "Ecommerce Development Dubai", href: "/ecommerce-website-development-dubai" },
+      { label: "Ecommerce portfolio", href: "/work" },
+      { label: "Hire a Shopify developer", href: "/contact" }
     ]
   },
 
@@ -830,11 +835,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
-      { label: "ERP development UAE", href: "/erp-development-uae" },
-      { label: "ARS Developer Ltd – UK Dashboards", href: "https://arsdeveloper.co.uk" },
-      { label: "TorontoBytes – Canada Dashboards", href: "https://torontobytes.ca" },
-      { label: "View dashboard case studies", href: "/case-studies" }
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "ERP Development UAE", href: "/erp-development-uae" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Start a dashboard project", href: "/contact" }
     ]
   },
 
@@ -889,11 +893,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "WordPress developer Dubai", href: "/wordpress-developer-dubai" },
-      { label: "SEO-friendly web development", href: "/seo-friendly-website-development" },
-      { label: "ARS Developer Ltd – UK WordPress", href: "https://arsdeveloper.co.uk" },
-      { label: "TorontoBytes – Canada WordPress", href: "https://torontobytes.ca" },
-      { label: "View WordPress portfolio", href: "/portfolio" }
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Website Speed Optimisation Dubai", href: "/website-speed-optimization-dubai" },
+      { label: "WordPress portfolio", href: "/work" },
+      { label: "Hire a WordPress developer", href: "/contact" }
     ]
   },
 
@@ -948,11 +951,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       }
     ],
     relatedLinks: [
-      { label: "Laravel developer Dubai", href: "/laravel-developer-dubai" },
-      { label: "API integration services", href: "/api-integration-services" },
-      { label: "ARS Developer Ltd – UK Web Apps", href: "https://arsdeveloper.co.uk" },
-      { label: "TorontoBytes – Canada Web Apps", href: "https://torontobytes.ca" },
-      { label: "View case studies", href: "/case-studies" }
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "ERP Development UAE", href: "/erp-development-uae" },
+      { label: "Start a web application project", href: "/contact" }
     ]
   },
 
@@ -1120,11 +1122,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "How much does a senior PHP developer charge?", answer: "Senior PHP Laravel developers typically charge AED 80 to 200 per hour or AED 8,000 to 25,000 per project depending on scope. UK rates range from GBP 400 to 900 per day." }
     ],
     relatedLinks: [
-      { label: "PHP developer Dubai", href: "/php-developer-dubai" },
-      { label: "Laravel developer Dubai", href: "/laravel-developer-dubai" },
-      { label: "ARS Developer Ltd – UK PHP", href: "https://arsdeveloper.co.uk" },
-      { label: "TorontoBytes – Canada PHP", href: "https://torontobytes.ca" },
-      { label: "View case studies", href: "/case-studies" }
+      { label: "PHP Developer Dubai", href: "/php-developer-dubai" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "View portfolio", href: "/work" },
+      { label: "Hire a PHP developer", href: "/contact" }
     ]
   },
 
@@ -1163,11 +1164,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "Can an ecommerce developer also handle SEO?", answer: "A strong ecommerce developer should handle technical SEO — page speed, schema markup, metadata, canonical URLs, product structured data and crawlable category architecture." }
     ],
     relatedLinks: [
-      { label: "Shopify developer Dubai", href: "/shopify-developer-dubai" },
-      { label: "Ecommerce development Dubai", href: "/ecommerce-website-development-dubai" },
-      { label: "ARS Developer Ltd – UK Ecommerce", href: "https://arsdeveloper.co.uk" },
-      { label: "TorontoBytes – Canada Ecommerce", href: "https://torontobytes.ca" },
-      { label: "View portfolio", href: "/portfolio" }
+      { label: "Ecommerce Development Dubai", href: "/ecommerce-website-development-dubai" },
+      { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+      { label: "Ecommerce portfolio", href: "/work" },
+      { label: "Start an ecommerce project", href: "/contact" }
     ]
   },
 
@@ -1206,11 +1206,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "Will speed optimization affect my website design?", answer: "Properly done, speed optimization should not visibly change the design. It works on the technical layer — file formats, loading order, caching and server configuration — not on visual elements." }
     ],
     relatedLinks: [
-      { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
-      { label: "Speed checklist before ads", href: "/blog/website-speed-checklist-before-ads" },
-      { label: "ARS Developer Ltd – UK Speed", href: "https://arsdeveloper.co.uk" },
-      { label: "TorontoBytes – Canada Speed", href: "https://torontobytes.ca" },
-      { label: "Request an audit", href: "/contact" }
+      { label: "Website Speed Optimisation Dubai", href: "/website-speed-optimization-dubai" },
+      { label: "SEO-Friendly Website Development", href: "/seo-friendly-website-development" },
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Fix my site speed", href: "/contact" }
     ]
   },
 
@@ -1249,11 +1248,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "What is the cost of custom ERP development?", answer: "Custom ERP development starts at AED 25,000 for a focused first phase. Full multi-department implementations range from AED 80,000 to 200,000+ depending on complexity and integration scope." }
     ],
     relatedLinks: [
-      { label: "ERP development UAE", href: "/erp-development-uae" },
-      { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
-      { label: "ARS Developer Ltd – UK ERP", href: "https://arsdeveloper.co.uk" },
-      { label: "TorontoBytes – Canada ERP", href: "https://torontobytes.ca" },
-      { label: "View ERP case studies", href: "/case-studies" }
+      { label: "ERP Development UAE", href: "/erp-development-uae" },
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Start an ERP project", href: "/contact" }
     ]
   },
 
@@ -1292,11 +1290,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "What should a web developer proposal include?", answer: "A professional proposal should include project scope, milestone timeline, deliverables list, revision policy, post-launch support terms and clear pricing. Anything missing is a risk." }
     ],
     relatedLinks: [
-      { label: "Full stack developer portfolio", href: "/work" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "Freelance Web Developer Dubai", href: "/freelance-web-developer-dubai" },
       { label: "About Anas Tanveer", href: "/about" },
-      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
-      { label: "TorontoBytes – Canada", href: "https://torontobytes.ca" },
-      { label: "Start a project", href: "/contact" }
+      { label: "Contact Anas Tanveer", href: "/contact" }
     ]
   },
   "nextjs-developer-for-hire": {
@@ -1313,10 +1310,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "Can a Next.js developer also handle the backend?", answer: "Many handle API routes within Next.js. For complex backend logic, a full-stack developer pairing Next.js with Laravel or Node is the better hire." }
     ],
     relatedLinks: [
-      { label: "Web development services", href: "/services" },
-      { label: "Portfolio of live projects", href: "/work" },
-      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
-      { label: "Start a project", href: "/contact" }
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "View portfolio", href: "/work" },
+      { label: "Hire a Next.js developer", href: "/contact" }
     ]
   },
   "react-developer-for-hire": {
@@ -1333,10 +1330,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "Can a React developer also build the backend?", answer: "A full-stack developer using React on the frontend and Laravel or Node on the backend is the most practical hire for most business projects." }
     ],
     relatedLinks: [
-      { label: "Full stack development services", href: "/services" },
-      { label: "Project portfolio", href: "/work" },
-      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
-      { label: "Start a project", href: "/contact" }
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "View portfolio", href: "/work" },
+      { label: "Hire a React developer", href: "/contact" }
     ]
   },
   "api-integration-services": {
@@ -1353,11 +1350,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "Do I need ongoing maintenance for API integrations?", answer: "Yes. Third-party APIs change, authentication tokens expire and rate limit policies update. Budget for quarterly maintenance reviews on business-critical integrations." }
     ],
     relatedLinks: [
-      { label: "Web application development", href: "/services" },
-      { label: "Project portfolio", href: "/work" },
-      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
-      { label: "TorontoBytes – Canada", href: "https://torontobytes.ca" },
-      { label: "Contact for API project", href: "/contact" }
+      { label: "API Integration Services", href: "/api-integration-services" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "Start an API project", href: "/contact" }
     ]
   },
   "laravel-vs-nodejs": {
@@ -1374,9 +1370,9 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "Which has better long-term support?", answer: "Both are mature with active communities. Laravel follows a predictable release cycle with LTS versions. Node.js has clear LTS schedules from the OpenJS Foundation." }
     ],
     relatedLinks: [
-      { label: "Laravel development services", href: "/services" },
-      { label: "Project portfolio", href: "/work" },
-      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "View pricing", href: "/pricing" },
       { label: "Start a Laravel project", href: "/contact" }
     ]
   },
@@ -1394,9 +1390,9 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "Can I edit a custom theme myself after launch?", answer: "Yes. A well-built custom theme uses Shopify's section and block system so store owners can manage content through the editor without touching code." }
     ],
     relatedLinks: [
-      { label: "Shopify development services", href: "/services" },
+      { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+      { label: "Ecommerce Development Dubai", href: "/ecommerce-website-development-dubai" },
       { label: "Ecommerce portfolio", href: "/work" },
-      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
       { label: "Start a Shopify project", href: "/contact" }
     ]
   },
@@ -1414,10 +1410,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "Can I start with a website and add application features later?", answer: "You can, but it is more expensive to retrofit application architecture. If you know you will need application features within 12 months, plan for them now." }
     ],
     relatedLinks: [
-      { label: "Custom web application development", href: "/services" },
-      { label: "Project portfolio", href: "/work" },
-      { label: "TorontoBytes – Canada", href: "https://torontobytes.ca" },
-      { label: "Start a project", href: "/contact" }
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "View pricing", href: "/pricing" },
+      { label: "Discuss your project", href: "/contact" }
     ]
   },
   "freelance-web-developer-dubai": {
@@ -1434,9 +1430,9 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "How do I verify a developer's skill level before hiring?", answer: "Ask them to review your project brief and return with a technical approach document. The quality of that document reveals experience more accurately than any interview question." }
     ],
     relatedLinks: [
+      { label: "Freelance Web Developer Dubai", href: "/freelance-web-developer-dubai" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
       { label: "About Anas Tanveer", href: "/about" },
-      { label: "Web development services Dubai", href: "/services" },
-      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
       { label: "Contact for Dubai projects", href: "/contact" }
     ]
   },
@@ -1454,10 +1450,10 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "How much does WordPress speed optimisation cost?", answer: "A professional service costs between $300 and $1,500 depending on complexity. Sites with poor hosting, bloated themes and 20+ plugins take longer." }
     ],
     relatedLinks: [
-      { label: "Website speed optimisation services", href: "/services" },
-      { label: "Project portfolio", href: "/work" },
-      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
-      { label: "Contact for speed audit", href: "/contact" }
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Website Speed Optimisation Dubai", href: "/website-speed-optimization-dubai" },
+      { label: "View case studies", href: "/case-studies" },
+      { label: "Fix my WordPress site", href: "/contact" }
     ]
   },
   "ecommerce-shopify-vs-woocommerce": {
@@ -1474,10 +1470,9 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "Can I migrate from one to the other later?", answer: "Yes but it is costly. Plan your platform choice carefully upfront to avoid a $3,000 to $8,000 migration project later." }
     ],
     relatedLinks: [
-      { label: "Shopify and ecommerce development", href: "/services" },
-      { label: "Ecommerce portfolio", href: "/work" },
-      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
-      { label: "TorontoBytes – Canada", href: "https://torontobytes.ca" },
+      { label: "Ecommerce Development Dubai", href: "/ecommerce-website-development-dubai" },
+      { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
       { label: "Start an ecommerce project", href: "/contact" }
     ]
   },
@@ -1495,9 +1490,9 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { question: "What is the best way to test a Laravel API?", answer: "Laravel's HTTP testing tools allow you to make requests and assert response structure, status codes and database state. Feature tests covering the full request-to-response cycle are most valuable." }
     ],
     relatedLinks: [
-      { label: "Laravel development services", href: "/services" },
-      { label: "Project portfolio", href: "/work" },
-      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "API Integration Services", href: "/api-integration-services" },
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
       { label: "Start a Laravel API project", href: "/contact" }
     ]
   }

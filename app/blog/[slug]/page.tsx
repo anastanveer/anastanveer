@@ -230,6 +230,24 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
                 </div>
               </section>
             ) : null}
+
+            {seoContent?.relatedLinks?.length ? (
+              <section className="mt-10 rounded-2xl border border-cyan/20 bg-cyan/10 p-6 light:border-blue-500/20 light:bg-blue-50">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan light:text-blue-700">Related services</p>
+                <p className="mt-2 text-sm text-silver/65 light:text-slate-600">Need help applying this to your project?</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {seoContent.relatedLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-cyan/25 bg-cyan/10 px-4 py-2 text-sm font-semibold text-cyan transition hover:bg-cyan/20 light:border-blue-500/30 light:bg-blue-100 light:text-blue-700 light:hover:bg-blue-200"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            ) : null}
           </article>
 
           <aside className="h-max space-y-5 lg:sticky lg:top-28">
