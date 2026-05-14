@@ -157,12 +157,6 @@ export function ContactForm() {
       // Server will reject the request if reCAPTCHA cannot be verified.
     }
 
-    if (!recaptchaToken) {
-      setStatus("error");
-      setFeedback("Security verification failed. Please refresh and try again.");
-      return;
-    }
-
     const submittedAt = new Date().toLocaleString("en-AE", {
       dateStyle: "medium",
       timeStyle: "short",
@@ -170,18 +164,29 @@ export function ContactForm() {
     });
 
     try {
-      formData.set("recaptchaToken", recaptchaToken);
-      formData.set("source", "anastanveer.com");
-      formData.set("timestamp", submittedAt);
-
-      const response = await fetch("/send-mail.php", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { Accept: "application/json" },
-        body: formData
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "e9fdec5f-3bbf-4cbd-9981-9776dd018c8e",
+          subject: "New Project Inquiry - anastanveer.com",
+          from_name: "Anas Tanveer Portfolio",
+          name,
+          email,
+          phone: phone || "Not provided",
+          project_type: projectType || "Not selected",
+          budget: budget || "Not selected",
+          message,
+          source: "anastanveer.com",
+          timestamp: submittedAt
+        })
       });
 
       const result = await response.json() as { success: boolean };
-      if (!response.ok || !result.success) throw new Error("Mail error");
+      if (!result.success) throw new Error("Web3Forms error");
 
       form.reset();
       router.push("/thank-you");
