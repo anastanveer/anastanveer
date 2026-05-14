@@ -15,6 +15,7 @@ import { ProjectCard } from "@/components/ui/ProjectCard";
 import { Reveal } from "@/components/animations/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ServiceCard } from "@/components/ui/ServiceCard";
+import { SkillsVisual } from "@/components/sections/SkillsVisual";
 import { VisualPanel } from "@/components/ui/VisualPanel";
 import { blogs, caseStudies, pricing, projects, services, skills } from "@/data/site";
 import { seoServicePages } from "@/data/seo-pages";
@@ -119,32 +120,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 03 / Skills bento ────────────────────────────────── */}
+      {/* ── 03 / Skills Visual ───────────────────────────────── */}
       <section className="section-pad relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.032)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.032)_1px,transparent_1px)] bg-[size:52px_52px] light:bg-[linear-gradient(rgba(15,23,42,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.05)_1px,transparent_1px)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_60%,rgba(139,92,246,0.1),transparent_50%),radial-gradient(ellipse_at_80%_20%,rgba(38,217,255,0.08),transparent_50%)] light:bg-[radial-gradient(ellipse_at_20%_60%,rgba(139,92,246,0.06),transparent_50%),radial-gradient(ellipse_at_80%_20%,rgba(37,99,235,0.06),transparent_50%)]" />
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="03 / Skills Ecosystem" title="The stack I use to solve frontend, backend, ecommerce, SEO and operations problems." />
-          <div className="grid gap-4 md:grid-cols-6">
-            {Object.entries(skills).map(([group, items], i) => {
-              const spans = [4, 2, 2, 4, 3, 3];
-              return (
-                <Reveal key={group} delay={i * 0.06} className={`md:col-span-${spans[i] ?? 3}`}>
-                  <div className="premium-card glass group h-full rounded-2xl p-6 light:bg-white/90">
-                    <div className="mb-3 flex items-center gap-2">
-                      <span className="h-1 w-6 rounded-full bg-gradient-to-r from-cyan to-violet" />
-                      <h3 className="font-display text-base font-semibold text-white light:text-slate-900">{group}</h3>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {items.map((item) => (
-                        <span key={item} className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs text-silver/75 transition group-hover:border-cyan/25 group-hover:text-silver/90 light:border-slate-200 light:bg-slate-50 light:text-slate-600 light:group-hover:border-blue-300 light:group-hover:text-slate-800">{item}</span>
-                      ))}
-                    </div>
-                  </div>
-                </Reveal>
-              );
-            })}
-          </div>
+          <SkillsVisual />
         </div>
       </section>
 
