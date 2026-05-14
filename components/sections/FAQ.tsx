@@ -1,22 +1,59 @@
+"use client";
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Plus, X } from "lucide-react";
 import { Reveal } from "@/components/animations/Reveal";
+import { allFaqs } from "@/data/faqs";
 
-const faqs = [
-  ["How do you understand the real problem before coding?", "I ask about the business goal, users, current pain, platform, workflow, integrations, SEO needs, timeline, and what success should look like. Then I suggest the simplest reliable path."],
-  ["Do you work with UAE, UK, Canada, and international clients?", "Yes. I support Dubai, UAE, UK, Canada and remote clients, agencies, recruiters, founders, ecommerce stores, service businesses, SaaS teams and local companies."],
-  ["Can you handle both design and development?", "Yes. I can plan UX, structure conversion copy, build the frontend, develop Laravel/WordPress/Shopify features, and prepare the site for speed, SEO and launch."],
-  ["Do you build custom dashboards and ERP systems?", "Yes. I build Laravel dashboards, admin panels, ERP/CRM modules, reports, user roles, API integrations, automation workflows and business-specific tools."],
-  ["Is SEO included in development?", "Technical SEO foundations are planned in premium builds: semantic headings, metadata, schema, page speed, responsive UX, internal structure and crawl-friendly content architecture."],
-  ["What makes your work different from a normal template setup?", "I do not just place sections on a page. I connect design, content, performance, backend logic, integrations and business workflow so the final product solves a real problem."]
-];
+export function FAQ({ limit }: { limit?: number }) {
+  const items = limit ? allFaqs.slice(0, limit) : allFaqs;
+  const [open, setOpen] = useState<number | null>(null);
 
-export function FAQ() {
   return (
-    <div className="mobile-rail grid gap-4 md:grid-cols-2">
-      {faqs.map(([question, answer], index) => (
-        <Reveal key={question} delay={index * 0.04}>
-          <div className="premium-card glass h-full rounded-lg p-6">
-            <h3 className="font-display text-lg font-semibold text-white light:text-slate-950">{question}</h3>
-            <p className="mt-3 text-sm leading-7 text-silver/72 light:text-slate-600">{answer}</p>
+    <div className="grid gap-3 md:grid-cols-2">
+      {items.map((faq, i) => (
+        <Reveal key={faq.q} delay={Math.min(i * 0.03, 0.18)}>
+          <div
+            className={`rounded-2xl border transition-all duration-300 ${
+              open === i
+                ? "border-cyan/30 bg-cyan/[0.05] shadow-[0_0_24px_rgba(38,217,255,0.06)] light:border-blue-300/60 light:bg-blue-50/60"
+                : "border-white/[0.08] bg-white/[0.03] hover:border-white/14 light:border-slate-200 light:bg-white light:hover:border-blue-200"
+            }`}
+          >
+            <button
+              onClick={() => setOpen(open === i ? null : i)}
+              className="flex w-full items-start justify-between gap-4 p-6 text-left"
+              aria-expanded={open === i}
+            >
+              <span className="font-display text-[15px] font-semibold leading-snug text-white light:text-slate-950">
+                {faq.q}
+              </span>
+              <span
+                className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
+                  open === i
+                    ? "border-cyan/40 bg-cyan/15 text-cyan light:border-blue-300 light:bg-blue-100 light:text-blue-700"
+                    : "border-white/15 text-silver/50 light:border-slate-300 light:text-slate-400"
+                }`}
+              >
+                {open === i ? <X size={12} /> : <Plus size={12} />}
+              </span>
+            </button>
+            <AnimatePresence initial={false}>
+              {open === i && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
+                  className="overflow-hidden"
+                >
+                  <p className="px-6 pb-6 text-sm leading-7 text-silver/70 light:text-slate-600">
+                    {faq.a}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </Reveal>
       ))}
