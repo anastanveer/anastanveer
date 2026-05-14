@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Linkedin, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Clock, Linkedin, Mail, MapPin, MessageCircle } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ContactForm } from "@/components/ui/ContactForm";
@@ -28,7 +28,19 @@ export default function ContactPage() {
             label="Available for Laravel, WordPress, Shopify, dashboards, ecommerce, API, ERP, SEO and speed problem solving."
             visualClassName="hidden md:block"
           />
-          <div className="mt-9 grid gap-5 lg:mt-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+          <div className="mt-8 flex flex-wrap items-center gap-4 rounded-2xl border border-emerald/20 bg-emerald/8 px-5 py-4 light:border-emerald-600/20 light:bg-emerald-50">
+            <span className="relative flex h-2.5 w-2.5 shrink-0">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald opacity-70 light:bg-emerald-500" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald light:bg-emerald-500" />
+            </span>
+            <p className="text-sm font-semibold text-emerald light:text-emerald-700">Currently available for new projects</p>
+            <span className="hidden text-silver/30 light:text-slate-300 sm:block">|</span>
+            <span className="flex items-center gap-2 text-sm text-silver/62 light:text-slate-500">
+              <Clock size={14} /> Usually replies within 4 hours
+            </span>
+          </div>
+
+          <div className="mt-6 grid gap-5 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
             <ContactForm />
             <aside className="mobile-rail order-first grid gap-4 lg:order-none lg:block lg:space-y-4">
               <a className="premium-card glass group flex items-center gap-4 rounded-2xl p-4 md:gap-5 md:p-5" href="https://wa.me/971542435418">

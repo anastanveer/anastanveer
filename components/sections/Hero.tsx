@@ -65,7 +65,16 @@ export function Hero() {
               <MagneticButton href="/work">View Portfolio</MagneticButton>
               <MagneticButton href="/contact" variant="secondary">Hire Me</MagneticButton>
             </div>
-            <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-silver/72 light:text-slate-600">
+            <div className="mt-4 inline-flex items-center gap-2.5 rounded-full border border-emerald/25 bg-emerald/10 px-4 py-2 text-sm font-semibold text-emerald light:border-emerald-600/25 light:bg-emerald-50 light:text-emerald-700">
+              <span className="relative flex h-2 w-2 shrink-0">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald opacity-70 light:bg-emerald-500" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald light:bg-emerald-500" />
+              </span>
+              Available for new projects
+              <span className="text-silver/55 light:text-slate-500">·</span>
+              <span className="font-normal text-silver/65 light:text-slate-500">Replies within 4 hours</span>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-silver/72 light:text-slate-600">
               {trustItems.map((badge) => (
                 <span key={badge} className="inline-flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-cyan shadow-[0_0_16px_rgba(38,217,255,0.75)]" />
