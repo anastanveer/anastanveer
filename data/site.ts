@@ -1707,7 +1707,7 @@ export const blogs: BlogPost[] = [
     slug: "laravel-api-development",
     excerpt: "A practical guide to building production REST APIs with Laravel — covering structure, authentication, versioning and performance for real business applications.",
     tag: "Laravel",
-    image: "/images/services-architecture-520.webp",
+    image: "/images/blog/blog-11-640.webp",
     publishedAt: "2026-05-24",
     updatedAt: "2026-05-24",
     readingTime: "7 min read",
