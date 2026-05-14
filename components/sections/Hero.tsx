@@ -9,6 +9,7 @@ import {
   Sparkles,
   Workflow
 } from "lucide-react";
+import { CountUp } from "@/components/ui/CountUp";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { stats } from "@/data/site";
 
@@ -119,9 +120,15 @@ export function Hero() {
 
             <div className="absolute bottom-3 left-3 right-3 rounded-2xl border border-white/14 bg-black/50 p-3 backdrop-blur-xl light:border-white/30 light:bg-slate-950/70 sm:bottom-5 sm:left-5 sm:right-5 sm:p-4 sm:shadow-premium">
               <div className="grid grid-cols-3 gap-3">
-                {stats.slice(0, 3).map(([value, label]) => (
+                {[
+                  { num: 7, suffix: "+", label: "Years Experience" },
+                  { num: 100, suffix: "+", label: "Projects Delivered" },
+                  { num: 3, suffix: " Markets", label: "UAE / UK / Canada" }
+                ].map(({ num, suffix, label }) => (
                   <div key={label}>
-                    <p className="font-display text-base font-semibold leading-tight text-white sm:text-xl">{value}</p>
+                    <p className="font-display text-base font-semibold leading-tight text-white sm:text-xl">
+                      <CountUp value={num} suffix={suffix} duration={1400} />
+                    </p>
                     <p className="mt-1 line-clamp-1 text-[10px] text-white/68 sm:text-xs">{label}</p>
                   </div>
                 ))}

@@ -40,14 +40,24 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" }
         },
+        "marquee-reverse": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" }
+        },
         grid: {
           "0%": { backgroundPosition: "0 0" },
           "100%": { backgroundPosition: "48px 48px" }
+        },
+        "count-up": {
+          "0%": { opacity: "0", transform: "translateY(8px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" }
         }
       },
       animation: {
-        marquee: "marquee 58s linear infinite",
-        grid: "grid 14s linear infinite"
+        marquee: "marquee 52s linear infinite",
+        "marquee-reverse": "marquee-reverse 48s linear infinite",
+        grid: "grid 14s linear infinite",
+        "count-up": "count-up 0.6s ease-out both"
       }
     }
   },
