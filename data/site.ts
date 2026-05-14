@@ -752,7 +752,7 @@ export const blogs: BlogPost[] = [
     slug: "choose-laravel-instead-of-plugin",
     excerpt: "A practical guide for companies that need dashboards, portals, ERP workflows, API integrations, or scalable backend logic.",
     tag: "Laravel",
-    image: "/images/services-architecture-520.webp",
+    image: "/images/blog/blog-1-640.webp",
     publishedAt: "2026-04-30",
     updatedAt: "2026-04-30",
     readingTime: "6 min read",
