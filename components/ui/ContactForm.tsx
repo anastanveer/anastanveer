@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { useRouter } from "next/navigation";
 import { CheckCircle2, ChevronDown, Loader2, Send, Sparkles, XCircle } from "lucide-react";
 
 const fieldClass =
@@ -83,6 +84,7 @@ function SelectField({
 }
 
 export function ContactForm() {
+  const router = useRouter();
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [feedback, setFeedback] = useState("");
 
@@ -167,9 +169,8 @@ export function ContactForm() {
 
       if (!response.ok) throw new Error("FormSubmit request failed");
 
-      setStatus("success");
-      setFeedback("Thank you! Your message has been sent successfully.");
       form.reset();
+      router.push("/thank-you");
     } catch {
       setStatus("error");
       setFeedback("Message could not be sent right now. Please try again or email me directly.");
