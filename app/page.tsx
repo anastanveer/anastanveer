@@ -4,6 +4,7 @@ import { TechMarquee } from "@/components/sections/TechMarquee";
 import { CTASection } from "@/components/sections/CTASection";
 import { FAQ } from "@/components/sections/FAQ";
 import { Process } from "@/components/sections/Process";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { ValueGrid } from "@/components/sections/ValueGrid";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { BlogCard } from "@/components/ui/BlogCard";
@@ -157,6 +158,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <Testimonials />
 
       <section className="section-pad">
         <div className="mx-auto max-w-7xl px-5">

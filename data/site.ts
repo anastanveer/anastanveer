@@ -1746,6 +1746,73 @@ export const resume = [
   "Freelance Web Developer"
 ];
 
+export type Testimonial = {
+  name: string;
+  location: string;
+  flag: string;
+  rating: number;
+  text: string;
+  service: string;
+  isRepeat: boolean;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "stevebarlow265",
+    location: "United States",
+    flag: "🇺🇸",
+    rating: 5,
+    text: "Another fantastic project update from Anas. It is great working with him. He understands the requirements, provides fully functional updates, makes changes quickly, and delivers a truly excellent product. I highly recommend Anas and look forward to working with him again in the future.",
+    service: "Full Stack Web Application",
+    isRepeat: true
+  },
+  {
+    name: "rushilc",
+    location: "United States",
+    flag: "🇺🇸",
+    rating: 4.7,
+    text: "I had an excellent experience working with Anas Tanveer on my software development project. His professionalism, attention to detail, and ability to deliver bug-free work were exceptional. His polite demeanor and efforts to go above and beyond made collaborating a pleasure.",
+    service: "Full Stack Web Application",
+    isRepeat: false
+  },
+  {
+    name: "stevebarlow265",
+    location: "United States",
+    flag: "🇺🇸",
+    rating: 5,
+    text: "Anas was extremely responsive and easy to work with. He understood my requirements and quickly delivered a sample project that had significant functionality. I requested a few changes and he updated the project and delivered well within the expected delivery time. My web page had complex coding and he handled it perfectly.",
+    service: "Bug Fixes",
+    isRepeat: true
+  },
+  {
+    name: "stevebarlow265",
+    location: "United States",
+    flag: "🇺🇸",
+    rating: 4.7,
+    text: "My project needed a quick change and Anas delivered as usual. He has exceptional technical talent and is quick to understand requirements. His communication skills are outstanding. Great job!",
+    service: "Full Stack Web Application",
+    isRepeat: true
+  },
+  {
+    name: "saidbt2a",
+    location: "France",
+    flag: "🇫🇷",
+    rating: 5,
+    text: "2nd collaboration with Anas — fast, precise and high quality work. As usual, excellent results delivered on time. Will definitely work together again.",
+    service: "Full Stack Web Application",
+    isRepeat: true
+  },
+  {
+    name: "jdnagle",
+    location: "United States",
+    flag: "🇺🇸",
+    rating: 5,
+    text: "Anas did a great job as per usual. Reliable, fast and always delivers exactly what is needed. Highly recommended.",
+    service: "Full Stack Web Application",
+    isRepeat: true
+  }
+];
+
 export const valueBlocks = [
   { icon: ShieldCheck, title: "I start with the business problem", text: "Before code, I look at the workflow, users, trust issues, speed problems, SEO gaps, and the outcome the project must create." },
   { icon: BriefcaseBusiness, title: "I communicate like a delivery partner", text: "Clear scope, realistic decisions, practical updates, testing, and handover so clients and agencies know what is happening." },
