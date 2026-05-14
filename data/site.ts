@@ -1635,7 +1635,7 @@ export const blogs: BlogPost[] = [
     slug: "web-app-vs-website",
     excerpt: "A practical guide for business owners deciding between a marketing website and a web application — what each does and when you need which.",
     tag: "Web Development",
-    image: "/images/contact-pricing-520.webp",
+    image: "/images/blog/blog-7-640.webp",
     publishedAt: "2026-05-30",
     updatedAt: "2026-06-02",
     readingTime: "5 min read",
