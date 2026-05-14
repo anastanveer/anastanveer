@@ -33,7 +33,7 @@ export default function HomePage() {
 
       {/* ── Stats strip ─────────────────────────────────────── */}
       <section className="relative overflow-hidden border-y border-white/8 py-10 light:border-slate-200">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan/5 via-violet/5 to-emerald/5 light:from-blue-50 light:via-violet-50/50 light:to-emerald-50/50" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-cyan/5 via-violet/5 to-emerald/5 light:from-blue-50 light:via-violet-50/50 light:to-emerald-50/50" />
         <div className="mx-auto max-w-7xl px-5">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {[
@@ -115,8 +115,8 @@ export default function HomePage() {
 
       {/* ── 03 / Skills Visual ───────────────────────────────── */}
       <section className="section-pad relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.032)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.032)_1px,transparent_1px)] bg-[size:52px_52px] light:bg-[linear-gradient(rgba(15,23,42,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.05)_1px,transparent_1px)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_60%,rgba(139,92,246,0.1),transparent_50%),radial-gradient(ellipse_at_80%_20%,rgba(38,217,255,0.08),transparent_50%)] light:bg-[radial-gradient(ellipse_at_20%_60%,rgba(139,92,246,0.06),transparent_50%),radial-gradient(ellipse_at_80%_20%,rgba(37,99,235,0.06),transparent_50%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.032)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.032)_1px,transparent_1px)] bg-[size:52px_52px] light:bg-[linear-gradient(rgba(15,23,42,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.05)_1px,transparent_1px)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_60%,rgba(139,92,246,0.1),transparent_50%),radial-gradient(ellipse_at_80%_20%,rgba(38,217,255,0.08),transparent_50%)] light:bg-[radial-gradient(ellipse_at_20%_60%,rgba(139,92,246,0.06),transparent_50%),radial-gradient(ellipse_at_80%_20%,rgba(37,99,235,0.06),transparent_50%)]" />
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="03 / Skills Ecosystem" title="The stack I use to solve frontend, backend, ecommerce, SEO and operations problems." />
           <SkillsVisual />
@@ -141,7 +141,7 @@ export default function HomePage() {
 
       {/* ── 05 / Case Studies ─────────────────────────────────── */}
       <section className="section-pad relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,rgba(38,217,255,0.07),transparent_50%),radial-gradient(ellipse_at_20%_80%,rgba(52,211,153,0.07),transparent_50%)] light:bg-[radial-gradient(ellipse_at_70%_30%,rgba(37,99,235,0.05),transparent_50%),radial-gradient(ellipse_at_20%_80%,rgba(16,185,129,0.05),transparent_50%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,rgba(38,217,255,0.07),transparent_50%),radial-gradient(ellipse_at_20%_80%,rgba(52,211,153,0.07),transparent_50%)] light:bg-[radial-gradient(ellipse_at_70%_30%,rgba(37,99,235,0.05),transparent_50%),radial-gradient(ellipse_at_20%_80%,rgba(16,185,129,0.05),transparent_50%)]" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan/30 to-transparent" />
         <div className="mx-auto max-w-7xl px-5">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
@@ -188,7 +188,7 @@ export default function HomePage() {
 
       {/* ── 07 / Pricing ─────────────────────────────────────── */}
       <section className="section-pad relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(139,92,246,0.12),transparent_55%)] light:bg-[radial-gradient(ellipse_at_50%_100%,rgba(124,58,237,0.06),transparent_55%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(139,92,246,0.12),transparent_55%)] light:bg-[radial-gradient(ellipse_at_50%_100%,rgba(124,58,237,0.06),transparent_55%)]" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-violet/45 to-transparent" />
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="07 / Pricing" title="Choose the level of support based on the problem you need solved." />
@@ -344,7 +344,7 @@ export default function HomePage() {
 
       {/* ── 10 / FAQ ─────────────────────────────────────────── */}
       <section className="section-pad relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(38,217,255,0.06),transparent_50%)] light:bg-[radial-gradient(ellipse_at_30%_50%,rgba(37,99,235,0.04),transparent_50%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(38,217,255,0.06),transparent_50%)] light:bg-[radial-gradient(ellipse_at_30%_50%,rgba(37,99,235,0.04),transparent_50%)]" />
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="10 / FAQs" title="Straight answers before trusting me with a project." />
           <FAQ items={homeFaqItems} />
