@@ -1545,7 +1545,7 @@ export const blogs: BlogPost[] = [
     slug: "nextjs-developer-for-hire",
     excerpt: "A practical breakdown of when Next.js is the right choice for your web project and what to look for when hiring a Next.js developer.",
     tag: "Next.js",
-    image: "/images/services-architecture-520.webp",
+    image: "/images/blog/blog-2-640.webp",
     publishedAt: "2026-05-15",
     updatedAt: "2026-05-27",
     readingTime: "5 min read",
