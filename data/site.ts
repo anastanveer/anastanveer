@@ -1581,7 +1581,7 @@ export const blogs: BlogPost[] = [
     slug: "api-integration-services",
     excerpt: "A practical guide to API integration for business owners — what it costs, how long it takes, and what can go wrong if not planned correctly.",
     tag: "API",
-    image: "/images/contact-pricing-520.webp",
+    image: "/images/blog/blog-4-640.webp",
     publishedAt: "2026-06-02",
     updatedAt: "2026-06-14",
     readingTime: "6 min read",
