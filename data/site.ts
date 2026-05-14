@@ -1689,7 +1689,7 @@ export const blogs: BlogPost[] = [
     slug: "ecommerce-shopify-vs-woocommerce",
     excerpt: "A direct comparison of Shopify and WooCommerce for businesses planning an ecommerce build — covering cost, control, speed and long-term ownership.",
     tag: "Ecommerce",
-    image: "/images/contact-pricing-520.webp",
+    image: "/images/blog/blog-10-640.webp",
     publishedAt: "2026-06-08",
     updatedAt: "2026-06-11",
     readingTime: "6 min read",
