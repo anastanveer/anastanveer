@@ -1617,7 +1617,7 @@ export const blogs: BlogPost[] = [
     slug: "shopify-custom-theme-development",
     excerpt: "A clear breakdown of when a custom Shopify theme is worth the cost versus using a premium template, and what the development process involves.",
     tag: "Shopify",
-    image: "/images/projects-suite-520.webp",
+    image: "/images/blog/blog-6-640.webp",
     publishedAt: "2026-05-27",
     updatedAt: "2026-05-30",
     readingTime: "5 min read",
