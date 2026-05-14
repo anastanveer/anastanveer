@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import { Clock, Linkedin, Mail, MapPin, MessageCircle } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
+import { FAQ } from "@/components/sections/FAQ";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { PageHero } from "@/components/ui/PageHero";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { allFaqs } from "@/data/faqs";
 import { profile } from "@/data/site";
-import { jsonLdForPage, pageMetadata } from "@/lib/seo";
+import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
+
+const contactFaqs = allFaqs.map(({ q, a }) => ({ question: q, answer: a }));
 
 export const metadata: Metadata = pageMetadata({
   title: "Contact Anas Tanveer | Hire Web Problem Solver in Dubai",
@@ -17,6 +22,7 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={jsonLdForPage("/contact")} id="contact-json-ld" />
+      <JsonLd data={faqSchema(contactFaqs)} id="contact-faq-json-ld" />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <PageHero
@@ -61,6 +67,12 @@ export default function ContactPage() {
               </div>
             </aside>
           </div>
+        </div>
+      </section>
+      <section className="section-pad pt-0">
+        <div className="mx-auto max-w-7xl px-5">
+          <SectionHeader eyebrow="FAQs" title="What clients ask before sending the first message." />
+          <FAQ limit={10} />
         </div>
       </section>
       <CTASection title="Ready to fix the problem properly?" text="Send the project details, desired outcome, timeline, platform, and current blockers. I’ll respond with practical direction, not generic promises." />

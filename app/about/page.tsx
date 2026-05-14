@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import { Code2, Database, Gauge, Linkedin, Mail, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
+import { FAQ } from "@/components/sections/FAQ";
 import { ValueGrid } from "@/components/sections/ValueGrid";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { allFaqs } from "@/data/faqs";
 import { profile } from "@/data/site";
-import { jsonLdForPage, pageMetadata } from "@/lib/seo";
+import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
+
+const aboutFaqs = allFaqs.map(({ q, a }) => ({ question: q, answer: a }));
 
 export const metadata: Metadata = pageMetadata({
   title: "About Anas Tanveer | Premium Full-Stack Developer in Dubai",
@@ -25,6 +29,7 @@ export default function AboutPage() {
   return (
     <>
       <JsonLd data={jsonLdForPage("/about")} id="about-json-ld" />
+      <JsonLd data={faqSchema(aboutFaqs)} id="about-faq-json-ld" />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <PageHero
@@ -113,6 +118,12 @@ export default function AboutPage() {
               </span>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="section-pad pt-0">
+        <div className="mx-auto max-w-7xl px-5">
+          <SectionHeader eyebrow="FAQs" title="Common questions about my background, process, and technical approach." />
+          <FAQ limit={10} />
         </div>
       </section>
     </>

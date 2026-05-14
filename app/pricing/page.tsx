@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/sections/CTASection";
+import { FAQ } from "@/components/sections/FAQ";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PageHero } from "@/components/ui/PageHero";
 import { PricingCard } from "@/components/ui/PricingCard";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { allFaqs } from "@/data/faqs";
 import { pricing } from "@/data/site";
-import { jsonLdForPage, pageMetadata } from "@/lib/seo";
+import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
+
+const pricingFaqs = allFaqs.map(({ q, a }) => ({ question: q, answer: a }));
 
 export const metadata: Metadata = pageMetadata({
   title: "Pricing | Laravel, WordPress, Shopify Web Packages Dubai",
@@ -16,6 +21,7 @@ export default function PricingPage() {
   return (
     <>
       <JsonLd data={jsonLdForPage("/pricing")} id="pricing-json-ld" />
+      <JsonLd data={faqSchema(pricingFaqs)} id="pricing-faq-json-ld" />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <PageHero
@@ -35,6 +41,12 @@ export default function PricingPage() {
           <p className="mt-8 rounded-lg border border-white/10 bg-white/5 p-5 text-sm leading-7 text-silver/72 light:border-slate-900/10 light:bg-white light:text-slate-600">
             Final pricing depends on scope, features, integrations, timeline, and platform.
           </p>
+        </div>
+      </section>
+      <section className="section-pad">
+        <div className="mx-auto max-w-7xl px-5">
+          <SectionHeader eyebrow="FAQs" title="Questions about pricing, scope, deliverables, and what’s included." />
+          <FAQ limit={10} />
         </div>
       </section>
       <CTASection
