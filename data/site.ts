@@ -1671,7 +1671,7 @@ export const blogs: BlogPost[] = [
     slug: "wordpress-speed-optimization",
     excerpt: "A technical guide to WordPress speed optimisation covering hosting, caching, images, plugins and Core Web Vitals without breaking your site.",
     tag: "WordPress",
-    image: "/images/projects-suite-520.webp",
+    image: "/images/blog/blog-9-640.webp",
     publishedAt: "2026-06-05",
     updatedAt: "2026-06-08",
     readingTime: "7 min read",
