@@ -141,16 +141,16 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
           </div>
         </div>
 
-        <div className="mx-auto mt-10 max-w-3xl px-5">
+        <div className="mx-auto mt-10 max-w-6xl px-5">
           <div className="relative overflow-hidden rounded-2xl">
             <Image
               src={post.image}
               alt={`${post.title} article visual`}
-              width={1280}
-              height={800}
+              width={1440}
+              height={806}
               priority
-              className="w-full object-cover"
-              sizes="(max-width: 768px) 100vw, 768px"
+              className="aspect-[16/9] w-full object-cover"
+              sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/46 via-transparent to-transparent" />
           </div>
