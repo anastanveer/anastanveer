@@ -1563,7 +1563,7 @@ export const blogs: BlogPost[] = [
     slug: "react-developer-for-hire",
     excerpt: "A clear guide for businesses evaluating React developers — what to test, what to ignore, and how to match skills to your actual project needs.",
     tag: "React",
-    image: "/images/projects-suite-520.webp",
+    image: "/images/blog/blog-3-640.webp",
     publishedAt: "2026-06-11",
     updatedAt: "2026-06-05",
     readingTime: "5 min read",
