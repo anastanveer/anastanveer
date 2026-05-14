@@ -7,7 +7,6 @@ import { CheckCircle2, ChevronDown, Loader2, Send, Sparkles, XCircle } from "luc
 const fieldClass =
   "peer w-full rounded-xl border border-white/12 bg-black/18 px-4 pb-3 pt-6 text-sm text-white outline-none transition duration-300 placeholder:text-transparent focus:border-cyan/55 focus:bg-white/[0.06] focus:shadow-[0_0_0_4px_rgba(38,217,255,0.08)] light:border-slate-900/12 light:bg-white light:text-slate-950 light:focus:border-blue-500/55";
 
-const web3formsKey = "e9fdec5f-3bbf-4cbd-9981-9776dd018c8e";
 const rateLimitKey = "anas-contact-form-submissions";
 const rateLimitWindow = 10 * 60 * 1000;
 const minimumSubmitGap = 20 * 1000;
@@ -155,7 +154,13 @@ export function ContactForm() {
         ]);
       }
     } catch {
-      // reCAPTCHA failed or timed out — proceed without it
+      // Server will reject the request if reCAPTCHA cannot be verified.
+    }
+
+    if (!recaptchaToken) {
+      setStatus("error");
+      setFeedback("Security verification failed. Please refresh and try again.");
+      return;
     }
 
     const submittedAt = new Date().toLocaleString("en-AE", {
@@ -165,29 +170,18 @@ export function ContactForm() {
     });
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      formData.set("recaptchaToken", recaptchaToken);
+      formData.set("source", "anastanveer.com");
+      formData.set("timestamp", submittedAt);
+
+      const response = await fetch("/send-mail.php", {
         method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          access_key: web3formsKey,
-          subject: "New Project Inquiry - anastanveer.com",
-          from_name: "Anas Tanveer Portfolio",
-          name,
-          email,
-          phone: phone || "Not provided",
-          project_type: projectType || "Not selected",
-          budget: budget || "Not selected",
-          message,
-          source: "anastanveer.com",
-          timestamp: submittedAt
-        })
+        headers: { Accept: "application/json" },
+        body: formData
       });
 
       const result = await response.json() as { success: boolean };
-      if (!result.success) throw new Error("Web3Forms error");
+      if (!response.ok || !result.success) throw new Error("Mail error");
 
       form.reset();
       router.push("/thank-you");
