@@ -2,7 +2,7 @@ name: Daily Build & Deploy to Namecheap
 
 on:
   schedule:
-    - cron: "0 20 * * *"  # Runs at 20:00 UTC = midnight UAE time (UTC+4)
+    - cron: "0 5 * * *"   # Runs at 05:00 UTC = 09:00 UAE time (UTC+4) — best time for Google indexing
   workflow_dispatch:       # Allows manual trigger from GitHub UI
 
 jobs:
