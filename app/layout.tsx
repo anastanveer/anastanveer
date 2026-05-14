@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className={`${inter.variable} ${display.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${display.variable} font-sans antialiased`} suppressHydrationWarning>
         <JsonLd data={jsonLd} id="site-json-ld" />
         <Providers>
           <ScrollProgress />
