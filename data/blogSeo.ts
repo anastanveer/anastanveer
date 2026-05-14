@@ -1298,5 +1298,207 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
       { label: "TorontoBytes – Canada", href: "https://torontobytes.ca" },
       { label: "Start a project", href: "/contact" }
     ]
+  },
+  "nextjs-developer-for-hire": {
+    focusKeywords: ["Next.js developer for hire", "hire Next.js developer", "Next.js web developer Dubai"],
+    intro: ["Next.js has become the standard for production React applications that need SEO and performance.", "Here is what to look for when hiring a Next.js developer for your project."],
+    expandedSections: [
+      { heading: "App Router vs Pages Router experience", body: [""] },
+      { heading: "Deployment and infrastructure knowledge", body: [""] }
+    ],
+    checklist: ["Confirm experience with Next.js App Router and server components.", "Ask for live URLs of Next.js projects they have shipped.", "Verify they understand ISR and when to use it versus SSG or SSR.", "Check Core Web Vitals scores on their existing Next.js work.", "Confirm they can handle API routes and backend integration."],
+    faqs: [
+      { question: "Is Next.js better than plain React for business websites?", answer: "Yes for any site that needs search engine visibility. Next.js produces server-rendered or statically generated HTML that search engines can index without JavaScript execution." },
+      { question: "How much does a Next.js developer charge?", answer: "Experienced Next.js developers charge between $50 and $120 per hour. Fixed-price projects start around $3,000 for a standard marketing site." },
+      { question: "Can a Next.js developer also handle the backend?", answer: "Many handle API routes within Next.js. For complex backend logic, a full-stack developer pairing Next.js with Laravel or Node is the better hire." }
+    ],
+    relatedLinks: [
+      { label: "Web development services", href: "/services" },
+      { label: "Portfolio of live projects", href: "/work" },
+      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
+      { label: "Start a project", href: "/contact" }
+    ]
+  },
+  "react-developer-for-hire": {
+    focusKeywords: ["React developer for hire", "hire React developer", "React web developer Dubai"],
+    intro: ["React is the most widely used frontend library for business web applications.", "Hiring the right React developer requires understanding what the role actually demands on production projects."],
+    expandedSections: [
+      { heading: "Testing knowledge as a quality signal", body: [""] },
+      { heading: "Performance optimisation in React", body: [""] }
+    ],
+    checklist: ["Request a live URL of a React project they built and own.", "Ask how they manage global state in a large application.", "Verify they understand component composition vs prop drilling.", "Ask about their approach to API error handling in React.", "Confirm they can work with TypeScript alongside React."],
+    faqs: [
+      { question: "Should I hire a React developer or a Next.js developer?", answer: "If SEO matters, hire someone who knows Next.js. If you are building an internal dashboard or authenticated tool, plain React is sufficient." },
+      { question: "What is the difference between a junior and senior React developer?", answer: "Senior developers design component architecture that scales. Ask them to design a data table with sorting, pagination and filters — the answer reveals the gap." },
+      { question: "Can a React developer also build the backend?", answer: "A full-stack developer using React on the frontend and Laravel or Node on the backend is the most practical hire for most business projects." }
+    ],
+    relatedLinks: [
+      { label: "Full stack development services", href: "/services" },
+      { label: "Project portfolio", href: "/work" },
+      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
+      { label: "Start a project", href: "/contact" }
+    ]
+  },
+  "api-integration-services": {
+    focusKeywords: ["API integration services", "API integration developer", "third-party API integration Dubai"],
+    intro: ["API integration connects your business systems and removes manual data entry.", "Getting it right requires planning before a single line of code is written."],
+    expandedSections: [
+      { heading: "Webhook vs polling: choosing the right pattern", body: [""] },
+      { heading: "Documentation quality predicts integration difficulty", body: [""] }
+    ],
+    checklist: ["Map every data field that needs to move between systems before development starts.", "Confirm the third-party API has a sandbox environment for testing.", "Define error handling behaviour for every failure scenario.", "Agree on logging and monitoring requirements before launch.", "Plan for API versioning changes from the third party."],
+    faqs: [
+      { question: "How long does an API integration take?", answer: "Simple integrations like payment gateways take one to three days. Complex two-way syncs with multiple systems take two to four weeks." },
+      { question: "What happens when the third-party API changes?", answer: "A well-built integration includes version pinning and clear documentation so updates can be applied without rebuilding from scratch." },
+      { question: "Do I need ongoing maintenance for API integrations?", answer: "Yes. Third-party APIs change, authentication tokens expire and rate limit policies update. Budget for quarterly maintenance reviews on business-critical integrations." }
+    ],
+    relatedLinks: [
+      { label: "Web application development", href: "/services" },
+      { label: "Project portfolio", href: "/work" },
+      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
+      { label: "TorontoBytes – Canada", href: "https://torontobytes.ca" },
+      { label: "Contact for API project", href: "/contact" }
+    ]
+  },
+  "laravel-vs-nodejs": {
+    focusKeywords: ["Laravel vs Node.js", "Laravel or Node.js for business", "best backend framework"],
+    intro: ["Both Laravel and Node.js can build production web applications.", "The right choice depends on your project type, team and long-term maintenance model."],
+    expandedSections: [
+      { heading: "Ecosystem maturity and developer availability", body: [""] },
+      { heading: "When Node.js is the better choice", body: [""] }
+    ],
+    checklist: ["List your project's core features and check which framework has built-in support.", "Estimate the long-term maintenance team — Laravel developers are easier to find.", "Identify any real-time requirements that would favour Node.js.", "Check if your team already has JavaScript expertise across the full stack.", "Factor in the cost of a custom Node.js stack vs Laravel conventions."],
+    faqs: [
+      { question: "Is Laravel faster than Node.js?", answer: "Node.js handles more concurrent connections due to its non-blocking architecture. For standard business applications with database queries, the performance difference is irrelevant." },
+      { question: "Can you use both together?", answer: "Yes. A common pattern is a Laravel API backend with a React or Next.js frontend, with some real-time features handled by Laravel WebSockets." },
+      { question: "Which has better long-term support?", answer: "Both are mature with active communities. Laravel follows a predictable release cycle with LTS versions. Node.js has clear LTS schedules from the OpenJS Foundation." }
+    ],
+    relatedLinks: [
+      { label: "Laravel development services", href: "/services" },
+      { label: "Project portfolio", href: "/work" },
+      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
+      { label: "Start a Laravel project", href: "/contact" }
+    ]
+  },
+  "shopify-custom-theme-development": {
+    focusKeywords: ["Shopify custom theme development", "custom Shopify theme developer", "Shopify theme Dubai"],
+    intro: ["A custom Shopify theme can significantly improve conversion rates and brand differentiation.", "Here is how to evaluate whether the investment is right for your store."],
+    expandedSections: [
+      { heading: "Liquid templating and what your developer must know", body: [""] },
+      { heading: "App conflicts and performance testing", body: [""] }
+    ],
+    checklist: ["Verify the developer has live Shopify stores in their portfolio.", "Ask how they handle metafields and custom data in themes.", "Confirm they will test Core Web Vitals before handover.", "Agree on an app integration audit as part of the project scope.", "Establish post-launch support terms in writing."],
+    faqs: [
+      { question: "How much does a custom Shopify theme cost?", answer: "Custom Shopify themes start at around $2,000 for a simple store and increase to $8,000 or more for complex stores with custom sections and app integrations." },
+      { question: "How long does custom Shopify theme development take?", answer: "A standard custom theme takes three to six weeks. Complex themes with animations and multiple templates take six to ten weeks." },
+      { question: "Can I edit a custom theme myself after launch?", answer: "Yes. A well-built custom theme uses Shopify's section and block system so store owners can manage content through the editor without touching code." }
+    ],
+    relatedLinks: [
+      { label: "Shopify development services", href: "/services" },
+      { label: "Ecommerce portfolio", href: "/work" },
+      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
+      { label: "Start a Shopify project", href: "/contact" }
+    ]
+  },
+  "web-app-vs-website": {
+    focusKeywords: ["web app vs website", "do I need a web application", "website or web app for business"],
+    intro: ["The distinction between a website and a web application determines your budget, timeline and technology choice.", "Here is how to decide correctly from the start."],
+    expandedSections: [
+      { heading: "The authentication test", body: [""] },
+      { heading: "Hybrid projects: website plus web app", body: [""] }
+    ],
+    checklist: ["List every feature users need and mark which ones require login or data storage.", "Identify whether staff or clients need to interact with the system.", "Determine if any business process runs in spreadsheets that should move to a system.", "Separate marketing requirements from operational requirements.", "Budget for both if your business needs both."],
+    faqs: [
+      { question: "Can WordPress handle web application features?", answer: "WordPress can handle basic membership features via plugins. It is not suitable for complex business logic, custom workflows or multi-role dashboards." },
+      { question: "How much does a web application cost compared to a website?", answer: "A standard marketing website costs $1,500 to $5,000. A custom web application starts at $5,000 for an MVP and scales to $20,000 or more for complex platforms." },
+      { question: "Can I start with a website and add application features later?", answer: "You can, but it is more expensive to retrofit application architecture. If you know you will need application features within 12 months, plan for them now." }
+    ],
+    relatedLinks: [
+      { label: "Custom web application development", href: "/services" },
+      { label: "Project portfolio", href: "/work" },
+      { label: "TorontoBytes – Canada", href: "https://torontobytes.ca" },
+      { label: "Start a project", href: "/contact" }
+    ]
+  },
+  "freelance-web-developer-dubai": {
+    focusKeywords: ["freelance web developer Dubai", "web developer for hire Dubai", "Dubai freelance developer rates"],
+    intro: ["Dubai has a strong pool of freelance web developers.", "Knowing what to expect and how to structure the engagement protects your budget and your project."],
+    expandedSections: [
+      { heading: "Red flags when hiring a freelance developer in Dubai", body: [""] },
+      { heading: "Contract and IP ownership in Dubai", body: [""] }
+    ],
+    checklist: ["Request three live URLs of completed projects before any meeting.", "Get a written scope document before any payment.", "Confirm IP ownership transfer clause in the contract.", "Agree on communication frequency and preferred channels.", "Define post-launch bug support duration in writing."],
+    faqs: [
+      { question: "What is a fair hourly rate for a freelance web developer in Dubai?", answer: "AED 150 to AED 250 per hour for WordPress and Shopify. AED 250 to AED 500 per hour for Laravel and custom application development." },
+      { question: "Should I hire a freelancer or an agency in Dubai?", answer: "For projects under $10,000, a senior freelancer usually offers better value. For projects over $20,000 with multiple workstreams, an agency provides better project management." },
+      { question: "How do I verify a developer's skill level before hiring?", answer: "Ask them to review your project brief and return with a technical approach document. The quality of that document reveals experience more accurately than any interview question." }
+    ],
+    relatedLinks: [
+      { label: "About Anas Tanveer", href: "/about" },
+      { label: "Web development services Dubai", href: "/services" },
+      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
+      { label: "Contact for Dubai projects", href: "/contact" }
+    ]
+  },
+  "wordpress-speed-optimization": {
+    focusKeywords: ["WordPress speed optimization", "WordPress performance optimization", "improve WordPress loading speed"],
+    intro: ["WordPress speed optimisation requires fixing the foundation before adding any tools.", "Most sites can achieve significant Core Web Vitals improvements without a redesign."],
+    expandedSections: [
+      { heading: "Database optimisation for mature WordPress sites", body: [""] },
+      { heading: "Critical CSS and render-blocking resources", body: [""] }
+    ],
+    checklist: ["Measure baseline performance with PageSpeed Insights before any changes.", "Switch to a host with LiteSpeed or Nginx and PHP 8.2.", "Disable and remove all unused plugins.", "Convert all images to WebP and add explicit dimensions.", "Set up Redis object caching.", "Test Core Web Vitals after each change, not all at once."],
+    faqs: [
+      { question: "Which caching plugin is best for WordPress?", answer: "WP Rocket is the most reliable paid option. LiteSpeed Cache is excellent on LiteSpeed servers. The hosting environment matters more than which plugin you choose." },
+      { question: "Will speed optimisation break my site?", answer: "If done correctly, no. Make changes one at a time and test after each. Never apply aggressive CSS or JavaScript minification without checking the site visually." },
+      { question: "How much does WordPress speed optimisation cost?", answer: "A professional service costs between $300 and $1,500 depending on complexity. Sites with poor hosting, bloated themes and 20+ plugins take longer." }
+    ],
+    relatedLinks: [
+      { label: "Website speed optimisation services", href: "/services" },
+      { label: "Project portfolio", href: "/work" },
+      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
+      { label: "Contact for speed audit", href: "/contact" }
+    ]
+  },
+  "ecommerce-shopify-vs-woocommerce": {
+    focusKeywords: ["Shopify vs WooCommerce", "ecommerce platform comparison", "Shopify or WooCommerce for business"],
+    intro: ["Shopify and WooCommerce are the two dominant ecommerce platforms.", "The right choice depends on your ownership preference, product complexity and long-term cost model."],
+    expandedSections: [
+      { heading: "Migration costs if you choose wrong", body: [""] },
+      { heading: "Checkout customisation differences", body: [""] }
+    ],
+    checklist: ["List all apps or plugins your store will need and check availability on both platforms.", "Calculate total monthly cost including platform fee, apps, hosting and transaction fees.", "Evaluate your team's technical comfort level with each platform.", "Confirm your payment gateway is supported on your chosen platform.", "Consider your product catalogue complexity and variant requirements."],
+    faqs: [
+      { question: "Which platform is better for SEO?", answer: "WooCommerce on a well-configured WordPress install gives more SEO control. Shopify is adequate for most stores. Content and link strategy matter far more than platform choice." },
+      { question: "Which platform handles high traffic better?", answer: "Shopify scales automatically. WooCommerce performance under high traffic depends entirely on your hosting configuration." },
+      { question: "Can I migrate from one to the other later?", answer: "Yes but it is costly. Plan your platform choice carefully upfront to avoid a $3,000 to $8,000 migration project later." }
+    ],
+    relatedLinks: [
+      { label: "Shopify and ecommerce development", href: "/services" },
+      { label: "Ecommerce portfolio", href: "/work" },
+      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
+      { label: "TorontoBytes – Canada", href: "https://torontobytes.ca" },
+      { label: "Start an ecommerce project", href: "/contact" }
+    ]
+  },
+  "laravel-api-development": {
+    focusKeywords: ["Laravel API development", "Laravel REST API", "build API with Laravel"],
+    intro: ["Laravel provides everything needed to build production REST APIs cleanly and quickly.", "The key is following conventions that make the codebase maintainable as requirements grow."],
+    expandedSections: [
+      { heading: "API resource transformers and why they matter", body: [""] },
+      { heading: "Rate limiting and security best practices", body: [""] }
+    ],
+    checklist: ["Version all API routes from day one using /api/v1/ prefix.", "Use Laravel Sanctum for SPA and mobile token authentication.", "Implement API Resources for all model transformations.", "Add rate limiting to all public endpoints.", "Write feature tests for every endpoint before considering it complete.", "Document all endpoints with request and response examples."],
+    faqs: [
+      { question: "Should I use Laravel Sanctum or Passport?", answer: "Sanctum for SPAs and mobile apps you control. Passport for third-party OAuth integrations where external developers authenticate on behalf of users." },
+      { question: "How do I handle API versioning in Laravel?", answer: "Use route group prefixes (/api/v1/, /api/v2/) and separate controller namespaces per version. Copy and modify v1 controllers when creating v2 rather than adding version conditionals." },
+      { question: "What is the best way to test a Laravel API?", answer: "Laravel's HTTP testing tools allow you to make requests and assert response structure, status codes and database state. Feature tests covering the full request-to-response cycle are most valuable." }
+    ],
+    relatedLinks: [
+      { label: "Laravel development services", href: "/services" },
+      { label: "Project portfolio", href: "/work" },
+      { label: "ARS Developer Ltd – UK", href: "https://arsdeveloper.co.uk" },
+      { label: "Start a Laravel API project", href: "/contact" }
+    ]
   }
 };

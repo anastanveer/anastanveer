@@ -4,6 +4,8 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { BlogCard } from "@/components/ui/BlogCard";
 import { PageHero } from "@/components/ui/PageHero";
 import { blogs } from "@/data/site";
+
+export const revalidate = 86400;
 import { absoluteUrl } from "@/lib/utils";
 import { jsonLdForPage, pageMetadata } from "@/lib/seo";
 
@@ -14,7 +16,9 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function BlogPage() {
-  const blogPostingJson = blogs.map((post) => ({
+  const today = new Date().toISOString().slice(0, 10);
+  const published = blogs.filter((b) => b.publishedAt <= today);
+  const blogPostingJson = published.map((post) => ({
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
@@ -43,7 +47,7 @@ export default function BlogPage() {
             points={["Platform decisions", "Conversion fixes", "Speed and SEO", "Business systems"]}
           />
           <div className="mobile-rail mt-10 grid gap-5 md:mt-12 md:grid-cols-2 lg:grid-cols-3">
-            {blogs.map((post, index) => (
+            {published.map((post, index) => (
               <BlogCard key={post.title} post={post} index={index} />
             ))}
           </div>

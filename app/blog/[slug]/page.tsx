@@ -10,10 +10,11 @@ import { blogs } from "@/data/site";
 import { pageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
-export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateStaticParams() {
-  return blogs.map((post) => ({ slug: post.slug }));
+  const today = new Date().toISOString().slice(0, 10);
+  return blogs.filter((post) => post.publishedAt <= today).map((post) => ({ slug: post.slug }));
 }
 
 type BlogPageProps = {
