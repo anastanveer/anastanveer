@@ -250,6 +250,12 @@ export function ContactForm() {
           <Send className="transition group-hover:translate-x-1 group-hover:-translate-y-1" size={16} />
         )}
       </button>
+      <p className="text-center text-xs text-white/20">
+        Protected by reCAPTCHA —{" "}
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" className="underline hover:text-white/40">Privacy</a>
+        {" & "}
+        <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer" className="underline hover:text-white/40">Terms</a>
+      </p>
     </form>
   );
 }

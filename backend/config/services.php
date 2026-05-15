@@ -42,6 +42,7 @@ return [
 
     'contact' => [
         'to' => env('CONTACT_MAIL_TO', 'info@anastanveer.com'),
+        'cc' => env('CONTACT_MAIL_CC', 'anastanveer557@gmail.com'),
     ],
 
 ];

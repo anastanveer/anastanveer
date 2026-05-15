@@ -842,3 +842,7 @@ html.light body::after,
     transform: none !important;
   }
 }
+
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
