@@ -12,6 +12,8 @@ ServerSignature Off
   RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
   RewriteRule ^index\.html$ / [R=301,L]
 
+  RewriteRule ^api/contact/?$ backend/public/index.php [QSA,L]
+
   RewriteRule ^index\.php$ / [R=301,L,NC]
   RewriteRule ^home/?$ / [R=301,L,NC]
   RewriteRule ^works/?$ /portfolio/ [R=301,L,NC]
