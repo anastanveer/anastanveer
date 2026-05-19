@@ -39,7 +39,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "For UAE companies, agencies and growing businesses, the practical question is simple: is this feature a normal website feature, or is it part of how the business operates every day?"
         ],
         image: {
-          src: "/images/blog/choose-laravel-instead-of-plugin.png",
+          src: "/images/blog/choose-laravel-instead-of-plugin.webp",
           alt: "Plugin complexity vs clean Laravel application structure"
         }
       },
@@ -125,7 +125,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "If the platform will handle business operations, Laravel usually gives more control and fewer compromises."
         ],
         image: {
-          src: "/images/blog/wordpress-vs-custom-laravel.png",
+          src: "/images/blog/wordpress-vs-custom-laravel.webp",
           alt: "WordPress vs custom Laravel application comparison"
         }
       },
@@ -211,7 +211,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "A cleaner mobile-first layout often improves the buying experience more than a new visual redesign."
         ],
         image: {
-          src: "/images/blog/shopify-conversion-fixes.png",
+          src: "/images/blog/shopify-conversion-fixes.webp",
           alt: "Shopify store speed and mobile UX optimisation"
         }
       },
@@ -297,7 +297,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "The priority is not to chase a perfect score blindly. The priority is to remove the bottlenecks that affect real visitors."
         ],
         image: {
-          src: "/images/blog/website-speed-checklist-before-ads.png",
+          src: "/images/blog/website-speed-checklist-before-ads.webp",
           alt: "Website speed audit checklist before running ads"
         }
       }
@@ -375,7 +375,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "That combination is what makes SEO useful for business, not just traffic."
         ],
         image: {
-          src: "/images/blog/seo-friendly-development-before-marketing.png",
+          src: "/images/blog/seo-friendly-development-before-marketing.webp",
           alt: "SEO-friendly development structure before marketing campaigns"
         }
       }
@@ -453,7 +453,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "The goal is not to chase every trend. The goal is to make the website easier to understand, easier to trust and easier to recommend."
         ],
         image: {
-          src: "/images/blog/ai-search-seo-dubai-businesses.png",
+          src: "/images/blog/ai-search-seo-dubai-businesses.webp",
           alt: "AI search SEO strategy for Dubai businesses"
         }
       }
@@ -531,7 +531,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "This keeps the project practical and prevents adding AI only because it sounds modern."
         ],
         image: {
-          src: "/images/blog/ai-chatbots-laravel-wordpress-shopify.png",
+          src: "/images/blog/ai-chatbots-laravel-wordpress-shopify.webp",
           alt: "AI chatbot integration for Laravel, WordPress and Shopify platforms"
         }
       }
@@ -609,7 +609,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "This makes the audit useful for business owners, agencies and recruiters who need clear direction."
         ],
         image: {
-          src: "/images/blog/ai-website-audit-speed-seo-conversion.png",
+          src: "/images/blog/ai-website-audit-speed-seo-conversion.webp",
           alt: "AI website audit covering speed, SEO and conversion priorities"
         }
       }
@@ -671,7 +671,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "A confident Laravel developer will answer these with specifics, not general statements. If they cannot explain their database design decisions or their approach to error handling and logging, the project may create maintenance problems later."
         ],
         image: {
-          src: "/images/blog/hire-laravel-developer-guide.png",
+          src: "/images/blog/hire-laravel-developer-guide.webp",
           alt: "Guide to hiring a Laravel developer for your business"
         }
       }
@@ -733,7 +733,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "ARS Developer Ltd (arsdeveloper.co.uk) operates from the UK with flexibility for Dubai and European clients. TorontoBytes (torontobytes.ca) serves the Canadian and North American market with local timezone availability. Both provide dedicated full stack development without agency overhead."
         ],
         image: {
-          src: "/images/blog/remote-full-stack-developer-vs-agency.png",
+          src: "/images/blog/remote-full-stack-developer-vs-agency.webp",
           alt: "Remote full stack developer vs agency comparison"
         }
       }
@@ -795,7 +795,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "ARS Developer Ltd (arsdeveloper.co.uk) has delivered Shopify development for UK-based ecommerce businesses with proven speed and conversion improvements. For Canadian Shopify store owners, TorontoBytes (torontobytes.ca) provides the same technical depth with North American market understanding."
         ],
         image: {
-          src: "/images/blog/shopify-developer-for-hire-checklist.png",
+          src: "/images/blog/shopify-developer-for-hire-checklist.webp",
           alt: "Shopify developer for hire checklist and evaluation guide"
         }
       }
@@ -857,7 +857,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "ARS Developer Ltd (arsdeveloper.co.uk) has built custom dashboards for trading firms, ecommerce operations and service businesses across the UK. TorontoBytes (torontobytes.ca) delivers the same capability for Canadian enterprises and North American businesses needing operational clarity."
         ],
         image: {
-          src: "/images/blog/custom-business-dashboard-development.png",
+          src: "/images/blog/custom-business-dashboard-development.webp",
           alt: "Custom business dashboard development with Laravel"
         }
       }
@@ -919,7 +919,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "ARS Developer Ltd (arsdeveloper.co.uk) provides WordPress development for UK business websites, corporate platforms and WooCommerce stores with full technical accountability. TorontoBytes (torontobytes.ca) delivers the same service quality for Canadian businesses and organizations needing professional WordPress development."
         ],
         image: {
-          src: "/images/blog/wordpress-developer-for-hire-guide.png",
+          src: "/images/blog/wordpress-developer-for-hire-guide.webp",
           alt: "WordPress developer for hire guide and evaluation"
         }
       }
@@ -981,7 +981,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "ARS Developer Ltd (arsdeveloper.co.uk) provides custom web application development for UK businesses, from SaaS MVPs to internal operational platforms and client-facing portals. TorontoBytes (torontobytes.ca) delivers the same structured development approach for Canadian businesses and North American startups building their first custom platform."
         ],
         image: {
-          src: "/images/blog/web-application-development-services-guide.png",
+          src: "/images/blog/web-application-development-services-guide.webp",
           alt: "Web application development services guide for businesses"
         }
       }
@@ -1036,7 +1036,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Also ask about post-launch support. The best web developers plan for ongoing improvements because they understand that a launched website is the beginning of the project, not the end."
         ],
         image: {
-          src: "/images/blog/web-developer-for-hire.png",
+          src: "/images/blog/web-developer-for-hire.webp",
           alt: "How to hire the right web developer for your project"
         }
       }
@@ -1083,7 +1083,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Businesses that skip this step often find themselves in scope disputes or with a launched website that no one knows how to update. A professional web developer will welcome this structure because it protects both parties."
         ],
         image: {
-          src: "/images/blog/hire-web-developer-for-business.png",
+          src: "/images/blog/hire-web-developer-for-business.webp",
           alt: "Hiring a web developer for your business project"
         }
       }
@@ -1130,7 +1130,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "This makes Laravel a strong foundation for SaaS MVPs that need to go from zero to paying customers quickly without sacrificing the architectural quality required for long-term growth."
         ],
         image: {
-          src: "/images/blog/saas-web-application-developer.png",
+          src: "/images/blog/saas-web-application-developer.webp",
           alt: "SaaS web application developer and Laravel foundation"
         }
       }
@@ -1177,7 +1177,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "When evaluating a PHP developer, ask specifically: do you write feature tests? How do you document API endpoints? What does your project handover include? The answers separate developers who build for the long term from those who build for the deadline."
         ],
         image: {
-          src: "/images/blog/php-developer-for-hire.png",
+          src: "/images/blog/php-developer-for-hire.webp",
           alt: "PHP developer for hire evaluation and quality signals"
         }
       }
@@ -1223,7 +1223,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Ask any ecommerce developer: what is the highest conversion improvement you have achieved on a product page, and how did you achieve it? The answer reveals whether they think about outcomes or only about implementation."
         ],
         image: {
-          src: "/images/blog/ecommerce-website-developer-for-hire.png",
+          src: "/images/blog/ecommerce-website-developer-for-hire.webp",
           alt: "Ecommerce website developer for hire and conversion expertise"
         }
       }
@@ -1269,7 +1269,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Each finding has a specific technical fix. Image issues require format conversion, lazy loading and srcset implementation. JavaScript issues require deferral, tree shaking or replacement. Server issues require hosting review, database query optimisation or CDN implementation. A professional speed service addresses all relevant findings, not just the easy ones."
         ],
         image: {
-          src: "/images/blog/website-speed-optimization-services.png",
+          src: "/images/blog/website-speed-optimization-services.webp",
           alt: "Professional website speed optimization services and Core Web Vitals"
         }
       }
@@ -1315,7 +1315,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Common first modules for UAE trading and services businesses include procurement and supplier management, job or project tracking, inventory with reorder alerts and financial reporting with approval chains. For UK businesses, project billing, resource scheduling and client portal access are frequent priority modules."
         ],
         image: {
-          src: "/images/blog/erp-software-development-guide.png",
+          src: "/images/blog/erp-software-development-guide.webp",
           alt: "Custom ERP software development module planning guide"
         }
       }
@@ -1361,7 +1361,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Also be cautious of portfolios that show only visual design without any explanation of the business problem solved, the technical approach used or the outcome achieved. Beautiful screenshots do not reveal whether the site loads fast, ranks in search or converts visitors."
         ],
         image: {
-          src: "/images/blog/how-to-choose-web-developer.png",
+          src: "/images/blog/how-to-choose-web-developer.webp",
           alt: "How to choose the right web developer for your business"
         }
       }
@@ -1403,7 +1403,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Ask whether the developer has deployed Next.js outside of Vercel, how they handle environment variables across staging and production, and whether they have experience optimising cold start performance on edge or serverless environments. For Dubai and UAE-based projects, CDN configuration and regional edge caching can significantly affect real-user performance — ask whether the developer considers this in their deployment setup."
         ],
         image: {
-          src: "/images/blog/nextjs-developer-for-hire.png",
+          src: "/images/blog/nextjs-developer-for-hire.webp",
           alt: "Next.js developer for hire deployment and infrastructure knowledge"
         }
       }
@@ -1439,7 +1439,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Ask the developer how they diagnose re-render problems, when they use React.memo versus useMemo versus useCallback, and how they approach bundle size analysis. A strong candidate will know React DevTools Profiler, will understand when memoisation helps versus when it adds overhead and will have experience using dynamic imports for code splitting on route boundaries. For dashboard or data-heavy applications, ask specifically how they handle large lists — virtual scrolling is often necessary but frequently overlooked."
         ],
         image: {
-          src: "/images/blog/react-developer-for-hire.png",
+          src: "/images/blog/react-developer-for-hire.webp",
           alt: "React developer for hire performance optimisation guide"
         }
       }
@@ -1475,7 +1475,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "For Dubai and UAE business integrations, common systems include payment gateways like Telr, Network International and Stripe, ERP connectors for Oracle NetSuite or SAP, property listing platforms, government portals and local logistics APIs. Each has a different documentation quality level. A developer who has worked with these systems before has already absorbed the undocumented edge cases — which is why domain-specific experience matters more than general API development skill in most integration projects."
         ],
         image: {
-          src: "/images/blog/api-integration-services.png",
+          src: "/images/blog/api-integration-services.webp",
           alt: "API integration services documentation and technical planning"
         }
       }
@@ -1511,7 +1511,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Node.js is also the natural choice when the entire team works in JavaScript — sharing types, validation logic and utilities between frontend and backend reduces duplication. For most standard business web applications — CRMs, dashboards, ecommerce platforms, portals, APIs and management systems — this advantage does not apply and Laravel delivers more functionality per development hour."
         ],
         image: {
-          src: "/images/blog/laravel-vs-nodejs.png",
+          src: "/images/blog/laravel-vs-nodejs.webp",
           alt: "Laravel vs Node.js comparison for business web applications"
         }
       }
@@ -1547,7 +1547,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Before handover, the developer should run a PageSpeed Insights test with all apps active, identify which apps are adding render-blocking scripts and either configure them for async loading or recommend removal if they are not essential. Core Web Vitals pass rates on mobile correlate directly with conversion rates on Shopify stores. An optimised Shopify theme that fails Core Web Vitals because of an unoptimised review app or live chat widget has not been properly delivered."
         ],
         image: {
-          src: "/images/blog/shopify-custom-theme-development.png",
+          src: "/images/blog/shopify-custom-theme-development.webp",
           alt: "Shopify custom theme development app conflicts and performance testing"
         }
       }
@@ -1583,7 +1583,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "The most common mistake in hybrid projects is trying to build both layers with the same technology. A WordPress site with WooCommerce and a bolt-on membership plugin is not a viable foundation for a serious client portal. A proper hybrid project uses a headless or decoupled architecture — Next.js or a similar framework for the public layer and Laravel or another backend framework for the application layer. Planning this separation at the start saves significant rebuilding cost later."
         ],
         image: {
-          src: "/images/blog/web-app-vs-website.png",
+          src: "/images/blog/web-app-vs-website.webp",
           alt: "Web application vs website hybrid project architecture"
         }
       }
@@ -1619,7 +1619,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "A proper freelance contract for Dubai projects should include: full IP ownership transfer to the client upon final payment, source code delivery as a project deliverable, a confidentiality clause covering business data and processes, a post-launch support period with defined scope and response time and explicit terms around what constitutes a revision versus a new feature. A developer who objects to any of these terms is signalling that the engagement may not be structured in your interest."
         ],
         image: {
-          src: "/images/blog/freelance-web-developer-dubai.png",
+          src: "/images/blog/freelance-web-developer-dubai.webp",
           alt: "Freelance web developer Dubai contract and IP ownership guide"
         }
       }
@@ -1655,7 +1655,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "The solution has two components. First, identify and inline the critical CSS — the styles needed to render the visible portion of the page before the user scrolls. WP Rocket and Flying Pages offer automated approaches, but manual critical CSS extraction produces better results on custom themes. Second, defer all non-critical JavaScript using the defer attribute, and move Google Analytics, Facebook Pixel and other tracking scripts to load after the page becomes interactive. These two changes alone typically improve Largest Contentful Paint by one to two seconds on WordPress sites."
         ],
         image: {
-          src: "/images/blog/wordpress-speed-optimization.png",
+          src: "/images/blog/wordpress-speed-optimization.webp",
           alt: "WordPress speed optimization critical CSS and render-blocking fixes"
         }
       }
@@ -1691,7 +1691,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Shopify's standard checkout is highly optimised for conversion out of the box but has historically restricted deep customisation to Shopify Plus merchants. The introduction of Checkout Extensibility gives non-Plus merchants more options, but significant structural customisation still requires a Plus plan or a custom checkout alternative. If your store's conversion strategy depends on a non-standard checkout experience — split payments, staged forms, account-based pricing or custom delivery scheduling — verify Shopify's current customisation limits before choosing the platform."
         ],
         image: {
-          src: "/images/blog/ecommerce-shopify-vs-woocommerce.png",
+          src: "/images/blog/ecommerce-shopify-vs-woocommerce.webp",
           alt: "Shopify vs WooCommerce checkout customisation comparison"
         }
       }
@@ -1727,7 +1727,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Beyond rate limiting, a production Laravel API should enforce HTTPS on all routes, validate every request with Form Request classes rather than inline validation, sanitise all inputs before database operations, use parameterised queries through Eloquent rather than raw SQL, apply API authentication via Sanctum or Passport and log authentication failures for monitoring. These are not advanced security practices — they are the minimum standard for any API handling real business data. A developer who is not doing all of these by default is not ready for a production engagement."
         ],
         image: {
-          src: "/images/blog/laravel-api-development.png",
+          src: "/images/blog/laravel-api-development.webp",
           alt: "Laravel API development rate limiting and security best practices"
         }
       }
