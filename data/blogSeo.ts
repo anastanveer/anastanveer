@@ -529,7 +529,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "A useful AI feature should reduce repeated work, improve response speed, increase inquiry quality or help customers make decisions.",
           "Before building, define the outcome: fewer support questions, faster lead qualification, better product guidance or improved internal productivity.",
           "This keeps the project practical and prevents adding AI only because it sounds modern."
-        ]
+        ],
+        image: {
+          src: "/images/blog/ai-chatbots-laravel-wordpress-shopify.png",
+          alt: "AI chatbot integration for Laravel, WordPress and Shopify platforms"
+        }
       }
     ],
     checklist: [
