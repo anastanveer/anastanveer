@@ -1034,7 +1034,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Ask the developer to explain how they would approach your specific requirement. A skilled developer will ask clarifying questions, suggest an approach and identify potential risks before quoting. A less experienced developer will quote immediately without fully understanding the scope.",
           "Also ask about post-launch support. The best web developers plan for ongoing improvements because they understand that a launched website is the beginning of the project, not the end."
-        ]
+        ],
+        image: {
+          src: "/images/blog/web-developer-for-hire.png",
+          alt: "How to hire the right web developer for your project"
+        }
       }
     ],
     checklist: [
