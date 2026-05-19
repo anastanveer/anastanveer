@@ -1725,7 +1725,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Laravel includes a built-in rate limiter that can be applied to any route group with a single line of configuration. For public API endpoints, rate limiting prevents abuse, protects server resources and provides a baseline of protection against automated attacks. The default Throttle middleware limits by IP, but custom rate limiters can apply per-user limits, per-API-key limits and different thresholds for different endpoint types.",
           "Beyond rate limiting, a production Laravel API should enforce HTTPS on all routes, validate every request with Form Request classes rather than inline validation, sanitise all inputs before database operations, use parameterised queries through Eloquent rather than raw SQL, apply API authentication via Sanctum or Passport and log authentication failures for monitoring. These are not advanced security practices — they are the minimum standard for any API handling real business data. A developer who is not doing all of these by default is not ready for a production engagement."
-        ]
+        ],
+        image: {
+          src: "/images/blog/laravel-api-development.png",
+          alt: "Laravel API development rate limiting and security best practices"
+        }
       }
     ],
     checklist: ["Version all API routes from day one using /api/v1/ prefix.", "Use Laravel Sanctum for SPA and mobile token authentication.", "Implement API Resources for all model transformations.", "Add rate limiting to all public endpoints.", "Write feature tests for every endpoint before considering it complete.", "Document all endpoints with request and response examples."],
