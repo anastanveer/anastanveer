@@ -1081,7 +1081,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Before starting any web development engagement, agree on: project milestones and delivery dates, what is included and explicitly what is not, how revisions are handled, what handover materials will be provided, and what post-launch support looks like.",
           "Businesses that skip this step often find themselves in scope disputes or with a launched website that no one knows how to update. A professional web developer will welcome this structure because it protects both parties."
-        ]
+        ],
+        image: {
+          src: "/images/blog/hire-web-developer-for-business.png",
+          alt: "Hiring a web developer for your business project"
+        }
       }
     ],
     checklist: [
