@@ -216,7 +216,7 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
         height: 400,
         caption: "Anas Tanveer – Full-Stack Developer Dubai"
       },
-      email: "mailto:info@anastanveer.com",
+      email: "info@anastanveer.com",
       telephone: "+971542435418",
       nationality: "Pakistani",
       knowsLanguage: ["en"],
@@ -273,7 +273,7 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       url: siteUrl,
       image: absoluteUrl("/images/anas-premium-hero.webp"),
       telephone: "+971542435418",
-      email: "mailto:info@anastanveer.com",
+      email: "info@anastanveer.com",
       priceRange: "$$",
       founder: { "@id": absoluteUrl("/#person") },
       areaServed: [
@@ -336,6 +336,7 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       image: absoluteUrl("/images/anas-premium-hero.webp"),
       url: siteUrl,
       telephone: "+971542435418",
+      email: "info@anastanveer.com",
       priceRange: "$$",
       address: {
         "@type": "PostalAddress",
@@ -351,9 +352,15 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          opens: "09:00",
-          closes: "18:00"
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"],
+          opens: "08:00",
+          closes: "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Friday", "Saturday"],
+          opens: "10:00",
+          closes: "20:00"
         }
       ],
       aggregateRating: {
@@ -406,6 +413,12 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       name: "ARS Developer Ltd",
       alternateName: "ARS Developer",
       url: "https://arsdeveloper.co.uk",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://arsdeveloper.co.uk/logo.png",
+        width: 200,
+        height: 60
+      },
       description: "UK-based web development company providing Laravel, WordPress, Shopify and custom business web solutions for clients across the United Kingdom and Europe.",
       founder: { "@id": absoluteUrl("/#person") },
       employee: { "@id": absoluteUrl("/#person") },
@@ -423,6 +436,12 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       "@id": "https://torontobytes.ca/#organization",
       name: "TorontoBytes",
       url: "https://torontobytes.ca",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://torontobytes.ca/logo.png",
+        width: 200,
+        height: 60
+      },
       description: "Canadian web development company serving businesses across Canada and North America with Laravel, WordPress, Shopify, dashboards and custom web solutions.",
       founder: { "@id": absoluteUrl("/#person") },
       employee: { "@id": absoluteUrl("/#person") },
