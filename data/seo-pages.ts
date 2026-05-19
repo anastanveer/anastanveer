@@ -492,6 +492,126 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "AI search SEO for Dubai businesses", href: "/blog/ai-search-seo-dubai-businesses" },
       ...coreRelated
     ]
+  },
+  {
+    slug: "web-developer-abu-dhabi",
+    navLabel: "Web Developer Abu Dhabi",
+    title: "Web Developer Abu Dhabi for Business Websites and Custom Platforms",
+    metaTitle: "Web Developer Abu Dhabi | Laravel, WordPress, Shopify",
+    metaDescription: "Web developer serving Abu Dhabi businesses with Laravel platforms, WordPress websites, Shopify stores, dashboards, API integrations and speed optimization.",
+    keywords: ["Web Developer Abu Dhabi", "Website Developer Abu Dhabi", "Laravel Developer Abu Dhabi", "WordPress Developer Abu Dhabi", "Freelance Web Developer Abu Dhabi"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "Web developer Abu Dhabi business website and platform development",
+    intro: [
+      "Abu Dhabi businesses need websites and platforms that work for operations, not just for appearance. A web developer who understands UAE business context, Arabic-English content, local payment gateways, government portal integrations, and performance for UAE networks will save time and reduce rework after launch.",
+      "Anas Tanveer works with Abu Dhabi companies, government-adjacent businesses, hospitality groups, retail operators, and professional services firms that need reliable web development. The work covers Laravel custom platforms, WordPress business websites, Shopify ecommerce stores, dashboards, API connections, ERP modules, and website speed improvements.",
+      "Whether the business is based in Abu Dhabi, Al Ain, or operates across Abu Dhabi and Dubai, the service covers the full build from planning to launch and post-launch support."
+    ],
+    bestFor: ["Abu Dhabi SMEs and startups", "Hospitality and retail businesses", "Professional services firms", "Ecommerce brands in UAE", "Government-adjacent projects"],
+    problems: [
+      "The current website looks outdated and does not reflect business quality.",
+      "Booking, inquiry, or order forms are not converting visitors into leads.",
+      "The website is slow on UAE mobile networks and losing potential customers.",
+      "Manual reporting and operations need a custom dashboard or automation system."
+    ],
+    features: ["Laravel custom web applications", "WordPress business websites", "Shopify store setup and customization", "UAE payment gateway integration", "Arabic-English bilingual support", "SEO-ready page structure", "Mobile-first responsive design", "Dashboard and reporting systems"],
+    delivery: [
+      "Every project starts with understanding the business goal, target audience, and operational workflow. The development covers platform selection, architecture, frontend, backend, integrations, testing, and launch.",
+      "Abu Dhabi clients benefit from a developer who understands UAE business culture, operates in the same timezone, communicates clearly in English, and delivers production-ready platforms without hidden scope creep."
+    ],
+    faqs: [
+      { question: "Do you work with Abu Dhabi businesses remotely?", answer: "Yes. All projects are handled remotely with clear communication, regular updates, and structured delivery. Being based in Dubai means the same timezone, same market knowledge, and easy availability." },
+      { question: "Can you build bilingual Arabic and English websites?", answer: "Yes. WordPress, Laravel, and Shopify platforms can be built with full RTL Arabic and LTR English support, including content management for both languages." },
+      { question: "What types of businesses in Abu Dhabi do you work with?", answer: "SMEs, retail, hospitality, professional services, ecommerce brands, real estate, logistics, and any business that needs a custom web platform or a better-performing website." }
+    ],
+    related: [
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+      { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "web-developer-sharjah",
+    navLabel: "Web Developer Sharjah",
+    title: "Web Developer Sharjah for Business Websites and Web Applications",
+    metaTitle: "Web Developer Sharjah | Laravel, WordPress, Custom Platforms",
+    metaDescription: "Web developer for Sharjah businesses — Laravel platforms, WordPress websites, Shopify stores, ecommerce, dashboards and API integrations across UAE.",
+    keywords: ["Web Developer Sharjah", "Website Developer Sharjah", "Laravel Developer Sharjah", "WordPress Developer Sharjah", "Web Development Sharjah UAE"],
+    image: "/images/projects-suite-760.webp",
+    imageAlt: "Web developer Sharjah business website and application development",
+    intro: [
+      "Sharjah businesses, manufacturers, educational institutions, trading companies, and retail operators need websites and platforms that function reliably, load fast on UAE networks, and convert visitors into customers or enquiries. Generic templates and shared hosting setups often break under real business load.",
+      "Anas Tanveer provides web development services for Sharjah-based businesses across Laravel custom applications, WordPress business websites, Shopify ecommerce stores, internal dashboards, REST API connections, and ERP or CRM modules. The focus is on practical delivery that matches the actual workflow of each business.",
+      "Sharjah clients benefit from working with a UAE-based developer who understands local market expectations, operates in the same timezone, and builds platforms that are maintainable after handover."
+    ],
+    bestFor: ["Trading and manufacturing companies", "Educational institutions", "Retail and ecommerce operators", "Professional services in Sharjah", "Businesses expanding from Sharjah into Dubai"],
+    problems: [
+      "The business website is not generating enquiries or leads from search traffic.",
+      "An ecommerce store has poor conversion because checkout or product pages are not optimized.",
+      "Internal team workflows rely on spreadsheets and manual data entry that cause errors.",
+      "The existing website breaks, loads slowly, or cannot be updated without developer help every time."
+    ],
+    features: ["Laravel business web applications", "WordPress CMS websites", "Shopify ecommerce with UAE payments", "Custom admin dashboards", "REST API integrations", "Fast loading and Core Web Vitals", "SEO-ready structure", "Mobile responsive design"],
+    delivery: [
+      "Work starts with a clear understanding of the Sharjah business environment, industry, competitors, and website goal. From there, the platform is planned, built, tested, and launched with full documentation.",
+      "Sharjah clients receive the same quality of development used for Dubai and international clients, delivered remotely with structured communication and practical post-launch support."
+    ],
+    faqs: [
+      { question: "Do you serve clients in Sharjah and across northern UAE?", answer: "Yes. All development work is handled remotely and covers Dubai, Sharjah, Abu Dhabi, Ajman, and other emirates with no difference in service quality or communication." },
+      { question: "Can you fix an existing Sharjah business website?", answer: "Yes. Existing websites can be reviewed for speed issues, SEO problems, broken features, security gaps, and conversion blockers. Fixes are quoted based on actual scope." },
+      { question: "What industries in Sharjah do you commonly work with?", answer: "Trading, manufacturing, logistics, education, retail, hospitality, real estate, and professional services businesses across Sharjah and the northern emirates." }
+    ],
+    related: [
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "Web Developer Abu Dhabi", href: "/web-developer-abu-dhabi" },
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Ecommerce website development", href: "/ecommerce-website-development-dubai" },
+      { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "react-developer-dubai",
+    navLabel: "React Developer Dubai",
+    title: "React Developer Dubai for Fast and Scalable Web Applications",
+    metaTitle: "React Developer Dubai | Next.js, SPA, Dashboard Frontend",
+    metaDescription: "React and Next.js developer in Dubai for fast SPAs, dashboards, trading platforms, ecommerce frontends, and high-performance business web applications.",
+    keywords: ["React Developer Dubai", "Next.js Developer Dubai", "React.js Developer UAE", "Frontend Developer Dubai", "SPA Developer Dubai", "React Dashboard Developer UAE"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "React developer Dubai fast web application and dashboard frontend",
+    intro: [
+      "React and Next.js are the right choice when a web application needs to load fast, update in real time, handle complex UI state, support large data tables, or deliver a premium user experience. Dashboards, trading platforms, SaaS products, ecommerce frontends, and admin panels all benefit from a React-based architecture.",
+      "Anas Tanveer works as a React Developer Dubai profile for businesses that need a frontend built with React, Next.js, Tailwind CSS, and REST or GraphQL API connections to a Laravel, Node.js, or third-party backend. The work covers new builds, React rewrites of slow frontends, dashboard UIs, and performance fixes for existing React applications.",
+      "Full-stack experience means the React frontend is built with awareness of how the backend works, how data flows, what the API returns, and how SEO and Core Web Vitals are maintained alongside interactivity."
+    ],
+    bestFor: ["SaaS product dashboards", "Trading and data platforms", "Ecommerce frontend with custom UX", "Admin and reporting panels", "Next.js SEO-optimized web apps"],
+    problems: [
+      "The current frontend is slow, janky, or breaks when data volume increases.",
+      "A business dashboard needs real-time updates, filters, charts, and role-based views.",
+      "An ecommerce or SaaS product needs a premium React frontend connected to a custom backend.",
+      "SEO rankings are poor because the existing SPA is not server-side rendered."
+    ],
+    features: ["React and Next.js application development", "Tailwind CSS responsive UI", "REST and GraphQL API integration", "Real-time dashboard with charts", "Role-based authentication frontend", "Server-side rendering for SEO", "TypeScript for maintainable code", "Component library and design system"],
+    delivery: [
+      "React projects start with UI planning, component architecture, state management approach, and API contract agreement. Clean, typed, component-driven code is written so the frontend remains maintainable when requirements change.",
+      "The result is a fast, accessible, SEO-friendly, and visually polished React application that works reliably on UAE networks and scales with business growth."
+    ],
+    faqs: [
+      { question: "Do you build React frontends connected to Laravel backends?", answer: "Yes. React or Next.js frontends connected to Laravel REST APIs are a common project type. The full stack can be planned and delivered together." },
+      { question: "Can you improve an existing React application?", answer: "Yes. Existing React apps can be reviewed for performance issues, broken state, bad component structure, missing SEO, or UI problems and improved incrementally." },
+      { question: "Is Next.js better than plain React for business websites?", answer: "For most business websites and applications, Next.js is the stronger choice because it adds server-side rendering, file-based routing, image optimization, and better SEO out of the box." }
+    ],
+    related: [
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "API integration services", href: "/api-integration-services" },
+      { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
+      ...coreRelated
+    ]
   }
 ];
 
