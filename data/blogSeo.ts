@@ -123,7 +123,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Laravel becomes the better choice when the project needs custom workflows, dashboards, accounts, permissions, reports, API integrations, payment logic or complex database relationships.",
           "These features need a software architecture mindset. The developer must think about validation, security, performance, database design, testing and future maintenance, not only page design.",
           "If the platform will handle business operations, Laravel usually gives more control and fewer compromises."
-        ]
+        ],
+        image: {
+          src: "/images/blog/wordpress-vs-custom-laravel.png",
+          alt: "WordPress vs custom Laravel application comparison"
+        }
       },
       {
         heading: "Use Shopify when ecommerce speed and checkout trust matter",
