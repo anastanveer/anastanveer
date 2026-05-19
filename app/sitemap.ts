@@ -11,7 +11,8 @@ function canonicalSitemapUrl(path: string) {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  const now = new Date();
+  const lastModified = now;
 
   return [
     ...routes.map((route) => ({
@@ -24,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .filter((post) => post.publishedAt <= new Date().toISOString().slice(0, 10))
       .map((post) => ({
         url: canonicalSitemapUrl(`/blog/${post.slug}`),
-        lastModified: new Date(post.updatedAt),
+        lastModified: new Date(Math.min(new Date(post.updatedAt).getTime(), now.getTime())),
         changeFrequency: "monthly" as const,
         priority: 0.72
       }))
