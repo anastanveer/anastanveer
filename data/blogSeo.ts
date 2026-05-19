@@ -1509,7 +1509,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Node.js has a genuine advantage in applications that require high concurrency with persistent connections. Real-time collaboration tools, multiplayer systems, live trading dashboards and applications with thousands of simultaneous WebSocket connections benefit from Node.js's non-blocking event loop in ways that a traditional PHP-based Laravel application cannot match without additional infrastructure.",
           "Node.js is also the natural choice when the entire team works in JavaScript — sharing types, validation logic and utilities between frontend and backend reduces duplication. For most standard business web applications — CRMs, dashboards, ecommerce platforms, portals, APIs and management systems — this advantage does not apply and Laravel delivers more functionality per development hour."
-        ]
+        ],
+        image: {
+          src: "/images/blog/laravel-vs-nodejs.png",
+          alt: "Laravel vs Node.js comparison for business web applications"
+        }
       }
     ],
     checklist: ["List your project's core features and check which framework has built-in support.", "Estimate the long-term maintenance team — Laravel developers are easier to find.", "Identify any real-time requirements that would favour Node.js.", "Check if your team already has JavaScript expertise across the full stack.", "Factor in the cost of a custom Node.js stack vs Laravel conventions."],
