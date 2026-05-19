@@ -727,7 +727,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Timezone overlap is the most common concern when hiring remotely. A developer who covers UAE business hours is accessible for Dubai clients. A developer covering GMT works well for UK-based businesses. For Canadian and North American companies, a developer who operates in the EST or PST range removes timezone friction from daily communication.",
           "ARS Developer Ltd (arsdeveloper.co.uk) operates from the UK with flexibility for Dubai and European clients. TorontoBytes (torontobytes.ca) serves the Canadian and North American market with local timezone availability. Both provide dedicated full stack development without agency overhead."
-        ]
+        ],
+        image: {
+          src: "/images/blog/hire-laravel-developer-guide.png",
+          alt: "Guide to hiring a Laravel developer for your business"
+        }
       }
     ],
     checklist: [
