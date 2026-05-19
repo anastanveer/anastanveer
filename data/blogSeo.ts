@@ -1437,7 +1437,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "React's rendering model is efficient by design, but it is easy to build a slow React application with poor component structure. Unnecessary re-renders, unoptimised list rendering, large bundle sizes and missing code splitting are the most common performance problems in production React applications.",
           "Ask the developer how they diagnose re-render problems, when they use React.memo versus useMemo versus useCallback, and how they approach bundle size analysis. A strong candidate will know React DevTools Profiler, will understand when memoisation helps versus when it adds overhead and will have experience using dynamic imports for code splitting on route boundaries. For dashboard or data-heavy applications, ask specifically how they handle large lists — virtual scrolling is often necessary but frequently overlooked."
-        ]
+        ],
+        image: {
+          src: "/images/blog/react-developer-for-hire.png",
+          alt: "React developer for hire performance optimisation guide"
+        }
       }
     ],
     checklist: ["Request a live URL of a React project they built and own.", "Ask how they manage global state in a large application.", "Verify they understand component composition vs prop drilling.", "Ask about their approach to API error handling in React.", "Confirm they can work with TypeScript alongside React."],
