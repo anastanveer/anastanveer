@@ -451,7 +451,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "I would improve service page clarity, blog depth, author credibility, internal links, FAQs, schema, image optimization, Core Web Vitals and local Dubai signals.",
           "Then I would check whether every important page has a clear purpose and a clear next action.",
           "The goal is not to chase every trend. The goal is to make the website easier to understand, easier to trust and easier to recommend."
-        ]
+        ],
+        image: {
+          src: "/images/blog/ai-search-seo-dubai-businesses.png",
+          alt: "AI search SEO strategy for Dubai businesses"
+        }
       }
     ],
     checklist: [
