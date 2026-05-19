@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { blogSeoContent } from "@/data/blogSeo";
@@ -11,6 +11,24 @@ import { pageMetadata } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
 export const revalidate = 86400;
+
+const serviceMap: Record<string, { href: string; label: string }> = {
+  Laravel: { href: "/laravel-developer-dubai", label: "Laravel Developer Dubai" },
+  WordPress: { href: "/wordpress-developer-dubai", label: "WordPress Developer Dubai" },
+  Shopify: { href: "/shopify-developer-dubai", label: "Shopify Developer Dubai" },
+  Performance: { href: "/website-speed-optimization-dubai", label: "Speed Optimization Services" },
+  SEO: { href: "/seo-friendly-website-development", label: "SEO-Friendly Development" },
+  "AI SEO": { href: "/seo-friendly-website-development", label: "SEO-Friendly Development" },
+  "AI Automation": { href: "/laravel-developer-dubai", label: "Laravel Developer Dubai" },
+  "AI Audit": { href: "/website-speed-optimization-dubai", label: "Speed & SEO Audit" },
+  Strategy: { href: "/web-developer-uae", label: "Hire a Web Developer — UAE" },
+  Hiring: { href: "/freelance-web-developer-dubai", label: "Freelance Web Developer Dubai" },
+  API: { href: "/api-integration-services", label: "API Integration Services" },
+  Ecommerce: { href: "/ecommerce-website-development-dubai", label: "Ecommerce Development Dubai" },
+  "Next.js": { href: "/web-developer-uae", label: "Web Developer UAE" },
+  React: { href: "/web-developer-uae", label: "Web Developer UAE" },
+  "Web Development": { href: "/web-developer-uae", label: "Web Developer UAE" },
+};
 
 export function generateStaticParams() {
   const today = new Date().toISOString().slice(0, 10);
@@ -50,8 +68,15 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
     notFound();
   }
 
+  const today = new Date().toISOString().slice(0, 10);
   const seoContent = blogSeoContent[post.slug];
   const allSections = [...post.sections, ...(seoContent?.expandedSections ?? [])];
+  const serviceLink = serviceMap[post.tag] ?? null;
+
+  const relatedPosts = blogs
+    .filter((b) => b.slug !== post.slug && b.tag === post.tag && b.publishedAt <= today)
+    .slice(0, 3);
+
   const actionSection = seoContent
     ? [
         "How to turn this into a real project decision",
@@ -102,6 +127,16 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
     mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`)
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Blog", item: absoluteUrl("/blog") },
+      { "@type": "ListItem", position: 3, name: post.title, item: absoluteUrl(`/blog/${post.slug}`) }
+    ]
+  };
+
   const faqJsonLd =
     seoContent && seoContent.faqs.length
       ? {
@@ -121,6 +156,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
   return (
     <>
       <JsonLd data={jsonLd} id={`${post.slug}-blog-json-ld`} />
+      <JsonLd data={breadcrumbJsonLd} id={`${post.slug}-breadcrumb-json-ld`} />
       {faqJsonLd ? <JsonLd data={faqJsonLd} id={`${post.slug}-faq-json-ld`} /> : null}
       <section className="section-pad page-start">
         <div className="mx-auto max-w-4xl px-5">
@@ -246,6 +282,19 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
               </section>
             ) : null}
 
+            {serviceLink ? (
+              <section className="mt-10 rounded-2xl border border-cyan/20 bg-cyan/10 p-6 light:border-blue-500/20 light:bg-blue-50">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan light:text-blue-700">Related service</p>
+                <p className="mt-2 text-sm text-silver/65 light:text-slate-600">Looking for hands-on help with this?</p>
+                <Link
+                  href={serviceLink.href}
+                  className="mt-4 inline-flex items-center gap-2 rounded-full border border-cyan/25 bg-cyan/10 px-5 py-2.5 text-sm font-semibold text-cyan transition hover:bg-cyan/20 light:border-blue-500/30 light:bg-blue-100 light:text-blue-700 light:hover:bg-blue-200"
+                >
+                  {serviceLink.label} <ArrowUpRight size={14} />
+                </Link>
+              </section>
+            ) : null}
+
             {seoContent?.relatedLinks?.length ? (
               <section className="mt-10 rounded-2xl border border-cyan/20 bg-cyan/10 p-6 light:border-blue-500/20 light:bg-blue-50">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan light:text-blue-700">Related services</p>
@@ -304,9 +353,48 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
           </aside>
         </div>
       </section>
+
+      {relatedPosts.length > 0 ? (
+        <section className="mx-auto max-w-6xl px-5 pb-10">
+          <p className="text-xs font-semibold uppercase tracking-[0.26em] text-cyan">More on {post.tag}</p>
+          <h2 className="mt-3 font-display text-2xl font-semibold text-white light:text-slate-950">Related Articles</h2>
+          <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {relatedPosts.map((related) => (
+              <Link
+                key={related.slug}
+                href={`/blog/${related.slug}`}
+                className="glass group flex flex-col overflow-hidden rounded-2xl transition hover:border-cyan/30"
+              >
+                <div className="relative h-40 overflow-hidden">
+                  <Image
+                    src={related.image}
+                    alt={related.title}
+                    width={640}
+                    height={360}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <span className="absolute bottom-3 left-3 rounded-full border border-cyan/25 bg-cyan/10 px-2.5 py-0.5 text-xs font-semibold text-cyan backdrop-blur-md">
+                    {related.tag}
+                  </span>
+                </div>
+                <div className="flex flex-1 flex-col p-5">
+                  <h3 className="font-display text-base font-semibold leading-snug text-white light:text-slate-950">{related.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-6 text-silver/65 light:text-slate-600 line-clamp-2">{related.excerpt}</p>
+                  <p className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-cyan">
+                    Read article <ArrowUpRight size={14} />
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
       <CTASection
         title="Need help applying this to your website?"
-        text="Send your current website, platform, issue and goal. I’ll help you identify the practical fix for speed, SEO, Shopify, WordPress, Laravel, dashboards, APIs or ecommerce workflows."
+        text="Send your current website, platform, issue and goal. I'll help you identify the practical fix for speed, SEO, Shopify, WordPress, Laravel, dashboards, APIs or ecommerce workflows."
       />
     </>
   );
