@@ -20,23 +20,33 @@ export default function BlogPage() {
   const published = blogs
     .filter((b) => b.publishedAt <= today)
     .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
-  const blogPostingJson = published.map((post) => ({
+  const blogListSchema = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    image: absoluteUrl(post.image),
-    datePublished: post.publishedAt,
-    dateModified: post.updatedAt,
-    author: { "@type": "Person", name: "Anas Tanveer" },
-    publisher: { "@type": "Organization", name: "ARS Developer Ltd" },
-    mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`)
-  }));
+    "@type": "Blog",
+    "@id": absoluteUrl("/blog#blog"),
+    name: "Anas Tanveer Web Development Insights",
+    url: absoluteUrl("/blog"),
+    description: "Decision-focused articles on Laravel, WordPress, Shopify, website speed, technical SEO, ecommerce, dashboards and business systems for Dubai and UAE businesses.",
+    inLanguage: "en",
+    author: { "@id": absoluteUrl("/#person") },
+    publisher: { "@id": "https://arsdeveloper.co.uk/#organization" },
+    blogPost: published.map((post) => ({
+      "@type": "BlogPosting",
+      "@id": absoluteUrl(`/blog/${post.slug}#article`),
+      headline: post.title,
+      url: absoluteUrl(`/blog/${post.slug}`),
+      datePublished: post.publishedAt,
+      dateModified: post.updatedAt,
+      image: absoluteUrl(post.image),
+      author: { "@id": absoluteUrl("/#person") },
+      publisher: { "@id": "https://arsdeveloper.co.uk/#organization" }
+    }))
+  };
 
   return (
     <>
       <JsonLd data={jsonLdForPage("/blog")} id="blog-page-json-ld" />
-      <JsonLd data={blogPostingJson} id="blog-posting-json-ld" />
+      <JsonLd data={blogListSchema} id="blog-list-json-ld" />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <PageHero

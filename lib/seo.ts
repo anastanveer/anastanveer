@@ -81,13 +81,17 @@ export function pageMetadata({
   description,
   path = "/",
   extraKeywords = [],
-  image = "/images/anas-premium-hero.webp"
+  image = "/images/anas-premium-hero.webp",
+  type = "website",
+  article
 }: {
   title: string;
   description: string;
   path?: string;
   extraKeywords?: string[];
   image?: string;
+  type?: "website" | "article";
+  article?: { publishedTime?: string; modifiedTime?: string; authors?: string[] };
 }): Metadata {
   const url = absoluteUrl(path);
   const imageUrl = absoluteUrl(image);
@@ -143,8 +147,15 @@ export function pageMetadata({
       description,
       url,
       siteName: "Anas Tanveer",
-      type: "website",
+      type,
       locale: "en_AE",
+      ...(type === "article" && article
+        ? {
+            publishedTime: article.publishedTime,
+            modifiedTime: article.modifiedTime,
+            authors: article.authors
+          }
+        : {}),
       images: [
         {
           url: imageUrl,

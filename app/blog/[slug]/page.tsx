@@ -56,7 +56,13 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     description: post.seoDescription,
     path: `/blog/${post.slug}`,
     image: post.image,
-    extraKeywords: blogSeoContent[post.slug]?.focusKeywords ?? []
+    extraKeywords: blogSeoContent[post.slug]?.focusKeywords ?? [],
+    type: "article",
+    article: {
+      publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt,
+      authors: [absoluteUrl("/about")]
+    }
   });
 }
 
@@ -106,24 +112,20 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": absoluteUrl(`/blog/${post.slug}#article`),
     headline: post.title,
     description: post.excerpt,
+    url: absoluteUrl(`/blog/${post.slug}`),
     image: absoluteUrl(post.image),
     keywords: seoContent?.focusKeywords ?? [],
     articleSection: [post.tag, "Web Development", "SEO", "Business Systems"],
+    inLanguage: "en",
+    isAccessibleForFree: "True",
     wordCount,
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,
-    author: {
-      "@type": "Person",
-      name: "Anas Tanveer",
-      url: absoluteUrl("/about")
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ARS Developer Ltd",
-      url: "https://arsdeveloper.co.uk"
-    },
+    author: { "@id": absoluteUrl("/#person") },
+    publisher: { "@id": "https://arsdeveloper.co.uk/#organization" },
     mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`)
   };
 
@@ -160,9 +162,15 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
       {faqJsonLd ? <JsonLd data={faqJsonLd} id={`${post.slug}-faq-json-ld`} /> : null}
       <section className="section-pad page-start">
         <div className="mx-auto max-w-4xl px-5">
-          <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-cyan">
-            <ArrowLeft size={16} /> Back to blog
-          </Link>
+          <nav aria-label="breadcrumb">
+            <ol className="flex items-center gap-2 text-sm text-silver/55 light:text-slate-400">
+              <li><Link href="/" className="hover:text-cyan light:hover:text-blue-600">Home</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href="/blog" className="hover:text-cyan light:hover:text-blue-600">Blog</Link></li>
+              <li aria-hidden="true">/</li>
+              <li className="text-silver/85 light:text-slate-600 line-clamp-1">{post.tag}</li>
+            </ol>
+          </nav>
           <div className="mt-7">
             <p className="text-xs font-semibold uppercase tracking-[0.26em] text-cyan">{post.tag}</p>
             <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-white light:text-slate-950 md:text-6xl">
@@ -172,7 +180,8 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
             <div className="mt-6 flex flex-wrap gap-3 text-sm text-silver/60 light:text-slate-500">
               <span>{readingMinutes} min read</span>
               <span>{wordCount.toLocaleString("en-AE")} words</span>
-              <span>Updated {new Date(post.updatedAt).toLocaleDateString("en-AE", { year: "numeric", month: "short", day: "numeric" })}</span>
+              <span>Published <time dateTime={post.publishedAt}>{new Date(post.publishedAt).toLocaleDateString("en-AE", { year: "numeric", month: "short", day: "numeric" })}</time></span>
+              <span>Updated <time dateTime={post.updatedAt}>{new Date(post.updatedAt).toLocaleDateString("en-AE", { year: "numeric", month: "short", day: "numeric" })}</time></span>
             </div>
           </div>
         </div>

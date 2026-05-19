@@ -72,6 +72,15 @@ export function SeoServicePageView({ page }: { page: SeoServicePage }) {
 
       <section className="page-start section-pad">
         <div className="mx-auto max-w-7xl px-5">
+          <nav aria-label="breadcrumb" className="mb-8">
+            <ol className="flex items-center gap-2 text-sm text-silver/55 light:text-slate-400">
+              <li><Link href="/" className="hover:text-cyan light:hover:text-blue-600">Home</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href="/services" className="hover:text-cyan light:hover:text-blue-600">Services</Link></li>
+              <li aria-hidden="true">/</li>
+              <li className="text-silver/85 light:text-slate-600">{page.navLabel}</li>
+            </ol>
+          </nav>
           <PageHero
             eyebrow="Problem-solving service"
             title={page.title}
