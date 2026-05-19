@@ -1313,7 +1313,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Successful ERP development starts with module prioritisation. Identify the three workflows that cost the most time, cause the most errors or produce the weakest reporting. These become the first development modules.",
           "Common first modules for UAE trading and services businesses include procurement and supplier management, job or project tracking, inventory with reorder alerts and financial reporting with approval chains. For UK businesses, project billing, resource scheduling and client portal access are frequent priority modules."
-        ]
+        ],
+        image: {
+          src: "/images/blog/erp-software-development-guide.png",
+          alt: "Custom ERP software development module planning guide"
+        }
       }
     ],
     checklist: [
