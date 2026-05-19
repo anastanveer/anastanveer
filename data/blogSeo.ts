@@ -373,7 +373,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "A page can rank and still fail if the user does not trust it. SEO-friendly development should include fast loading, clear CTAs, mobile readability, helpful sections and a contact path that feels natural.",
           "The strongest pages are written for users first, then structured so search engines can understand them.",
           "That combination is what makes SEO useful for business, not just traffic."
-        ]
+        ],
+        image: {
+          src: "/images/blog/seo-friendly-development-before-marketing.png",
+          alt: "SEO-friendly development structure before marketing campaigns"
+        }
       }
     ],
     checklist: [
