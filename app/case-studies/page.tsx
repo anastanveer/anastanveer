@@ -1,25 +1,33 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PageHero } from "@/components/ui/PageHero";
 import { caseStudies } from "@/data/site";
 import { jsonLdForPage, pageMetadata } from "@/lib/seo";
 
-const relatedCaseStudyLinks = [
-  { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
-  { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
-  { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Contact", href: "/contact" }
-];
-
 export const metadata: Metadata = pageMetadata({
   title: "Case Studies | Web Problems Solved by Anas Tanveer",
   description: "Case studies on trading platforms, dashboards, Shopify conversion, Laravel, APIs, ERP, ecommerce and SEO-ready web solutions.",
   path: "/case-studies"
 });
+
+const accentColors = [
+  { border: "border-cyan/30", bg: "bg-cyan/10", text: "text-cyan", label: "light:border-blue-300/50 light:bg-blue-50 light:text-blue-700" },
+  { border: "border-violet/30", bg: "bg-violet/10", text: "text-violet", label: "light:border-violet-300/50 light:bg-violet-50 light:text-violet-700" },
+  { border: "border-emerald/30", bg: "bg-emerald/10", text: "text-emerald", label: "light:border-emerald-300/50 light:bg-emerald-50 light:text-emerald-700" },
+  { border: "border-amber-400/30", bg: "bg-amber-400/10", text: "text-amber-400", label: "light:border-amber-400/50 light:bg-amber-50 light:text-amber-700" }
+];
+
+const serviceLinks = [
+  { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+  { label: "Dashboard Development", href: "/dashboard-development-dubai" },
+  { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+  { label: "ERP Development UAE", href: "/erp-development-uae" },
+  { label: "API Integration Services", href: "/api-integration-services" }
+];
 
 export default function CaseStudiesPage() {
   return (
@@ -36,76 +44,159 @@ export default function CaseStudiesPage() {
             label="Project planning, technical decisions, implementation and delivery."
             points={["Problem diagnosis", "Technical strategy", "Business impact", "Maintainable delivery"]}
           />
-          <div className="mt-12 grid gap-8">
-            {caseStudies.map((study, index) => (
-              <article className="premium-card glass rounded-lg p-8" key={study.title}>
-                <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-                  <div>
-                    <p className="text-sm font-semibold text-cyan">Case Study 0{index + 1}</p>
-                    <h2 className="mt-4 font-display text-3xl font-semibold text-white light:text-slate-950">{study.title}</h2>
-                    <p className="mt-5 text-sm leading-7 text-silver/72 light:text-slate-600">{study.result}</p>
-                  </div>
-                  <div className="grid gap-5 text-sm leading-7 text-silver/72 light:text-slate-600">
-                    <p><span className="font-semibold text-white light:text-slate-950">Client Requirement:</span> {study.requirement}</p>
-                    <p><span className="font-semibold text-white light:text-slate-950">Problem / Challenge:</span> {study.challenge}</p>
-                    <p><span className="font-semibold text-white light:text-slate-950">Goal:</span> {study.goal}</p>
-                    <p><span className="font-semibold text-white light:text-slate-950">Strategy:</span> {study.strategy}</p>
-                    <p><span className="font-semibold text-white light:text-slate-950">Solution:</span> {study.solution}</p>
-                    <p><span className="font-semibold text-white light:text-slate-950">Business impact:</span> {study.impact}</p>
-                    <div>
-                      <p className="font-semibold text-white light:text-slate-950">Features delivered:</p>
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        {study.features.map((feature) => (
-                          <span key={feature} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs light:border-slate-900/10 light:bg-slate-900/5">{feature}</span>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-white light:text-slate-950">Tech stack:</p>
+
+          <div className="mt-14 grid gap-10">
+            {caseStudies.map((study, index) => {
+              const accent = accentColors[index % accentColors.length];
+              return (
+                <article
+                  key={study.title}
+                  className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025] shadow-[0_4px_60px_rgba(0,0,0,0.3)] light:border-slate-200 light:bg-white light:shadow-xl"
+                >
+                  {/* ── Hero image with overlay ── */}
+                  <div className="relative overflow-hidden">
+                    <Image
+                      src={study.images[0]}
+                      alt={`${study.title} project visual`}
+                      width={1200}
+                      height={514}
+                      className="aspect-[21/9] w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
+                      sizes="(max-width: 1280px) 100vw, 1200px"
+                      priority={index === 0}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10" />
+
+                    {/* Decorative number */}
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute right-6 top-4 select-none font-display text-[7rem] font-bold leading-none text-white/[0.08] md:text-[9rem]"
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    {/* Bottom overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                      <p className={`text-[11px] font-semibold uppercase tracking-[0.26em] ${accent.text}`}>
+                        Case Study {String(index + 1).padStart(2, "0")}
+                      </p>
+                      <h2 className="mt-2 font-display text-2xl font-semibold leading-snug text-white md:text-3xl">
+                        {study.title}
+                      </h2>
                       <div className="mt-3 flex flex-wrap gap-2">
                         {study.stack.map((tech) => (
-                          <span key={tech} className="rounded-full border border-cyan/25 bg-cyan/10 px-3 py-1 text-xs text-cyan">{tech}</span>
+                          <span
+                            key={tech}
+                            className={`rounded-full border px-3 py-1 text-[11px] font-semibold backdrop-blur-sm ${accent.border} ${accent.bg} ${accent.text}`}
+                          >
+                            {tech}
+                          </span>
                         ))}
                       </div>
                     </div>
-                    <div>
-                      <p className="font-semibold text-white light:text-slate-950">Related service paths:</p>
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        {relatedCaseStudyLinks.map((link) => (
+                  </div>
+
+                  {/* ── Card body ── */}
+                  <div className="p-6 md:p-8">
+
+                    {/* Impact result — prominent */}
+                    <div className="mb-6 flex items-start gap-3 rounded-2xl border border-emerald/25 bg-emerald/8 px-5 py-4 light:border-emerald-200 light:bg-emerald-50">
+                      <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-emerald light:text-emerald-600" />
+                      <div>
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-emerald light:text-emerald-700">
+                          Business Result
+                        </p>
+                        <p className="mt-1 text-sm font-medium leading-6 text-emerald/90 light:text-emerald-800">
+                          {study.result}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Challenge + Solution 2 columns */}
+                    <div className="grid gap-4 md:grid-cols-2">
+                      <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-5 light:border-slate-100 light:bg-slate-50">
+                        <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-silver/45 light:text-slate-400">
+                          The Challenge
+                        </p>
+                        <p className="text-sm leading-7 text-silver/72 light:text-slate-600">{study.challenge}</p>
+                      </div>
+                      <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-5 light:border-slate-100 light:bg-slate-50">
+                        <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-silver/45 light:text-slate-400">
+                          The Solution
+                        </p>
+                        <p className="text-sm leading-7 text-silver/72 light:text-slate-600">{study.solution}</p>
+                      </div>
+                    </div>
+
+                    {/* Features */}
+                    <div className="mt-5">
+                      <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-silver/45 light:text-slate-400">
+                        Features Delivered
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {study.features.map((feature) => (
+                          <span
+                            key={feature}
+                            className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-silver/75 light:border-slate-200 light:bg-white light:text-slate-700"
+                          >
+                            <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${accent.bg.replace("/10", "")} ${accent.text}`} />
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Image gallery — 4 thumbs */}
+                    {study.images.length > 1 && (
+                      <div className="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-4">
+                        {study.images.slice(1, 5).map((image, imageIndex) => (
+                          <div
+                            key={image}
+                            className="overflow-hidden rounded-xl border border-white/8 light:border-slate-200"
+                          >
+                            <Image
+                              src={image}
+                              alt={`${study.title} screenshot ${imageIndex + 2}`}
+                              width={400}
+                              height={250}
+                              className="aspect-[16/10] w-full object-cover transition-transform duration-500 hover:scale-105"
+                              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Bottom — related links + CTA */}
+                    <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-white/8 pt-5 light:border-slate-100">
+                      <div className="flex flex-wrap gap-2">
+                        {serviceLinks.slice(0, 3).map((link) => (
                           <Link
-                            className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-silver/72 transition hover:border-cyan/35 hover:text-cyan light:border-slate-900/10 light:bg-slate-50 light:text-slate-700"
-                            href={link.href}
                             key={link.href}
+                            href={link.href}
+                            className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-silver/65 transition hover:border-cyan/30 hover:text-cyan light:border-slate-200 light:text-slate-500 light:hover:border-blue-300 light:hover:text-blue-700"
                           >
                             {link.label}
                           </Link>
                         ))}
                       </div>
+                      <Link
+                        href="/contact"
+                        className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition hover:opacity-80 ${accent.border} ${accent.bg} ${accent.text} ${accent.label}`}
+                      >
+                        Start a similar project <ArrowUpRight size={14} />
+                      </Link>
                     </div>
                   </div>
-                </div>
-                <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {study.images.map((image, imageIndex) => (
-                    <div className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.03] light:border-slate-900/10 light:bg-white" key={image}>
-                      <Image
-                        src={image}
-                        alt={`${study.title} case study visual ${imageIndex + 1}`}
-                        width={640}
-                        height={400}
-                        className="aspect-[16/10] h-full w-full object-cover"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </article>
-            ))}
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
+
       <CTASection
         title="Want your project treated like a case study?"
-        text="Send the problem, current platform, business goal, and deadline. I’ll look at the workflow, users, technical risks, SEO needs, and launch path before suggesting a practical solution."
+        text="Send the problem, current platform, business goal, and deadline. I'll look at the workflow, users, technical risks, SEO needs, and launch path before suggesting a practical solution."
       />
     </>
   );
