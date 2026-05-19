@@ -209,7 +209,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "Shopify stores often become slow because of oversized images, too many apps, tracking scripts, heavy sliders and theme code that was never cleaned.",
           "Mobile users are less patient. If the product page jumps, buttons are hard to tap, images load slowly or content feels cramped, the store loses trust before checkout.",
           "A cleaner mobile-first layout often improves the buying experience more than a new visual redesign."
-        ]
+        ],
+        image: {
+          src: "/images/blog/shopify-conversion-fixes.png",
+          alt: "Shopify store speed and mobile UX optimisation"
+        }
       },
       {
         heading: "What I check during a Shopify conversion review",
