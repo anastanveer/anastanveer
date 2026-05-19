@@ -1359,7 +1359,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "A developer who quotes a price before understanding the full requirement is guessing. A developer who cannot show projects similar to yours is hoping their general skills transfer. A developer who is vague about post-launch support is planning to be unavailable when problems occur.",
           "Also be cautious of portfolios that show only visual design without any explanation of the business problem solved, the technical approach used or the outcome achieved. Beautiful screenshots do not reveal whether the site loads fast, ranks in search or converts visitors."
-        ]
+        ],
+        image: {
+          src: "/images/blog/how-to-choose-web-developer.png",
+          alt: "How to choose the right web developer for your business"
+        }
       }
     ],
     checklist: [
