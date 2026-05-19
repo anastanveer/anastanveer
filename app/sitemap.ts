@@ -20,11 +20,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: route.changeFrequency,
       priority: route.priority
     })),
-    ...blogs.map((post) => ({
-      url: canonicalSitemapUrl(`/blog/${post.slug}`),
-      lastModified: new Date(post.updatedAt),
-      changeFrequency: "monthly" as const,
-      priority: 0.72
-    }))
+    ...blogs
+      .filter((post) => post.publishedAt <= new Date().toISOString().slice(0, 10))
+      .map((post) => ({
+        url: canonicalSitemapUrl(`/blog/${post.slug}`),
+        lastModified: new Date(post.updatedAt),
+        changeFrequency: "monthly" as const,
+        priority: 0.72
+      }))
   ];
 }
