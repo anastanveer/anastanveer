@@ -669,7 +669,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Ask how they structure a multi-role admin panel with different permissions per module. Ask how they handle API authentication, rate limiting and version control. Ask what their approach is to database indexing, query optimization and caching with Redis. Ask how they write tests for complex business logic.",
           "A confident Laravel developer will answer these with specifics, not general statements. If they cannot explain their database design decisions or their approach to error handling and logging, the project may create maintenance problems later."
-        ]
+        ],
+        image: {
+          src: "/images/blog/hire-laravel-developer-guide.png",
+          alt: "Guide to hiring a Laravel developer for your business"
+        }
       }
     ],
     checklist: [
@@ -729,8 +733,8 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "ARS Developer Ltd (arsdeveloper.co.uk) operates from the UK with flexibility for Dubai and European clients. TorontoBytes (torontobytes.ca) serves the Canadian and North American market with local timezone availability. Both provide dedicated full stack development without agency overhead."
         ],
         image: {
-          src: "/images/blog/hire-laravel-developer-guide.png",
-          alt: "Guide to hiring a Laravel developer for your business"
+          src: "/images/blog/remote-full-stack-developer-vs-agency.png",
+          alt: "Remote full stack developer vs agency comparison"
         }
       }
     ],
@@ -789,7 +793,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "A Shopify developer should be able to explain how they optimized a store's Largest Contentful Paint, reduced layout shift on mobile, removed unused app scripts and improved add-to-cart conversion on product pages.",
           "ARS Developer Ltd (arsdeveloper.co.uk) has delivered Shopify development for UK-based ecommerce businesses with proven speed and conversion improvements. For Canadian Shopify store owners, TorontoBytes (torontobytes.ca) provides the same technical depth with North American market understanding."
-        ]
+        ],
+        image: {
+          src: "/images/blog/shopify-developer-for-hire-checklist.png",
+          alt: "Shopify developer for hire checklist and evaluation guide"
+        }
       }
     ],
     checklist: [
@@ -847,7 +855,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Trading account performance tracking, ecommerce order and return management, property listing and client management, service job scheduling, staff productivity reporting, inventory control with reorder logic, multi-location sales reporting and CRM-style client follow-up are all areas where a custom Laravel dashboard delivers better results than any generic alternative.",
           "ARS Developer Ltd (arsdeveloper.co.uk) has built custom dashboards for trading firms, ecommerce operations and service businesses across the UK. TorontoBytes (torontobytes.ca) delivers the same capability for Canadian enterprises and North American businesses needing operational clarity."
-        ]
+        ],
+        image: {
+          src: "/images/blog/custom-business-dashboard-development.png",
+          alt: "Custom business dashboard development with Laravel"
+        }
       }
     ],
     checklist: [
