@@ -24,6 +24,10 @@ import { jsonLdForPage, faqSchema } from "@/lib/seo";
 const homeFaqs = homeFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
 export default function HomePage() {
+  const today = new Date().toISOString().slice(0, 10);
+  const sortedBlogs = [...blogs]
+    .filter((b) => b.publishedAt <= today)
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   return (
     <>
       <JsonLd data={jsonLdForPage("/")} id="home-json-ld" />
@@ -223,13 +227,13 @@ export default function HomePage() {
             {/* ── Large featured post ── */}
             <Reveal>
               <Link
-                href={`/blog/${blogs[0].slug}`}
+                href={`/blog/${sortedBlogs[0].slug}`}
                 className="group relative block h-full overflow-hidden rounded-3xl border border-white/[0.09] bg-white/[0.025] shadow-[0_2px_40px_rgba(0,0,0,0.4)] backdrop-blur-sm transition-all duration-300 hover:border-cyan/30 hover:shadow-[0_4px_60px_rgba(38,217,255,0.09)] light:border-slate-200/80 light:bg-white light:shadow-xl light:hover:border-blue-300/70"
               >
                 <div className="relative h-72 overflow-hidden">
                   <Image
-                    src={blogs[0].image}
-                    alt={blogs[0].title}
+                    src={sortedBlogs[0].image}
+                    alt={sortedBlogs[0].title}
                     width={760}
                     height={428}
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
@@ -247,19 +251,19 @@ export default function HomePage() {
                     </span>
                   </div>
                   <span className="absolute bottom-5 left-5 rounded-full border border-white/20 bg-white/12 px-3 py-1 text-xs font-semibold text-white/90 backdrop-blur-md">
-                    {blogs[0].tag}
+                    {sortedBlogs[0].tag}
                   </span>
                 </div>
                 <div className="p-7">
                   <h3 className="font-display text-xl font-semibold leading-snug text-white transition-colors duration-300 group-hover:text-cyan/90 md:text-2xl light:text-slate-950 light:group-hover:text-blue-700">
-                    {blogs[0].title}
+                    {sortedBlogs[0].title}
                   </h3>
                   <p className="mt-3 line-clamp-2 text-sm leading-7 text-silver/68 light:text-slate-600">
-                    {blogs[0].excerpt}
+                    {sortedBlogs[0].excerpt}
                   </p>
                   <div className="mt-6 flex items-center justify-between border-t border-white/[0.07] pt-5 light:border-slate-100">
                     <span className="flex items-center gap-1.5 text-xs text-silver/50 light:text-slate-400">
-                      <Clock size={12} /> {blogs[0].readingTime}
+                      <Clock size={12} /> {sortedBlogs[0].readingTime}
                     </span>
                     <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-cyan transition-all duration-300 group-hover:gap-3 light:text-blue-700">
                       Read article <ArrowUpRight size={14} />
@@ -271,7 +275,7 @@ export default function HomePage() {
 
             {/* ── Side posts + explore card ── */}
             <div className="flex flex-col gap-4">
-              {blogs.slice(1, 3).map((post, idx) => (
+              {sortedBlogs.slice(1, 3).map((post, idx) => (
                 <Reveal key={post.slug} delay={(idx + 1) * 0.09}>
                   <Link
                     href={`/blog/${post.slug}`}

@@ -17,7 +17,9 @@ export const metadata: Metadata = pageMetadata({
 
 export default function BlogPage() {
   const today = new Date().toISOString().slice(0, 10);
-  const published = blogs.filter((b) => b.publishedAt <= today);
+  const published = blogs
+    .filter((b) => b.publishedAt <= today)
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   const blogPostingJson = published.map((post) => ({
     "@context": "https://schema.org",
     "@type": "BlogPosting",
