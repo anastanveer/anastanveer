@@ -275,6 +275,12 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       telephone: "+971542435418",
       email: "info@anastanveer.com",
       priceRange: "$$",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Dubai",
+        addressRegion: "Dubai",
+        addressCountry: "AE"
+      },
       founder: { "@id": absoluteUrl("/#person") },
       areaServed: [
         { "@type": "City", name: "Dubai" },
