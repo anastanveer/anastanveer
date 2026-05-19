@@ -1175,7 +1175,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "A senior PHP developer writes tests for critical business logic, documents their API endpoints and produces a clear handover package when a project completes. A junior developer often skips these steps because they slow down initial delivery but protect the business significantly after launch.",
           "When evaluating a PHP developer, ask specifically: do you write feature tests? How do you document API endpoints? What does your project handover include? The answers separate developers who build for the long term from those who build for the deadline."
-        ]
+        ],
+        image: {
+          src: "/images/blog/php-developer-for-hire.png",
+          alt: "PHP developer for hire evaluation and quality signals"
+        }
       }
     ],
     checklist: [
