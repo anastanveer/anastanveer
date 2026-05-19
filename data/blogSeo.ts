@@ -917,7 +917,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "A simple five-page business website with a contact form and blog is well-served by a freelance WordPress developer. A WooCommerce store with custom product logic, subscriptions, delivery zones and inventory needs a more senior skill set. An enterprise site with multiple user roles, API integrations, custom workflow and ongoing editorial support needs dedicated development capacity.",
           "ARS Developer Ltd (arsdeveloper.co.uk) provides WordPress development for UK business websites, corporate platforms and WooCommerce stores with full technical accountability. TorontoBytes (torontobytes.ca) delivers the same service quality for Canadian businesses and organizations needing professional WordPress development."
-        ]
+        ],
+        image: {
+          src: "/images/blog/wordpress-developer-for-hire-guide.png",
+          alt: "WordPress developer for hire guide and evaluation"
+        }
       }
     ],
     checklist: [
