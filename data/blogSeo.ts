@@ -1128,7 +1128,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Laravel's ecosystem includes Cashier for subscription billing, Tenancy packages for multi-tenancy, Horizon for queue monitoring, Sanctum and Passport for API authentication and a clean Eloquent ORM that makes complex data relationships manageable.",
           "This makes Laravel a strong foundation for SaaS MVPs that need to go from zero to paying customers quickly without sacrificing the architectural quality required for long-term growth."
-        ]
+        ],
+        image: {
+          src: "/images/blog/saas-web-application-developer.png",
+          alt: "SaaS web application developer and Laravel foundation"
+        }
       }
     ],
     checklist: [
