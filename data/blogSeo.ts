@@ -1545,7 +1545,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Shopify apps inject JavaScript, CSS and tracking pixels into the storefront. A store with ten apps can have three to five seconds of additional load time caused entirely by third-party scripts loading on every page. A skilled Shopify developer tests the full app-installed storefront, not just a clean theme build.",
           "Before handover, the developer should run a PageSpeed Insights test with all apps active, identify which apps are adding render-blocking scripts and either configure them for async loading or recommend removal if they are not essential. Core Web Vitals pass rates on mobile correlate directly with conversion rates on Shopify stores. An optimised Shopify theme that fails Core Web Vitals because of an unoptimised review app or live chat widget has not been properly delivered."
-        ]
+        ],
+        image: {
+          src: "/images/blog/shopify-custom-theme-development.png",
+          alt: "Shopify custom theme development app conflicts and performance testing"
+        }
       }
     ],
     checklist: ["Verify the developer has live Shopify stores in their portfolio.", "Ask how they handle metafields and custom data in themes.", "Confirm they will test Core Web Vitals before handover.", "Agree on an app integration audit as part of the project scope.", "Establish post-launch support terms in writing."],
