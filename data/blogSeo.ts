@@ -1689,7 +1689,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Checkout is where conversion is won or lost, and the two platforms have very different customisation models. WooCommerce gives almost unlimited control over checkout fields, layout, multi-step flows, conditional logic and custom payment flows. This flexibility is valuable for stores with complex product types, B2B ordering, custom delivery options or subscription products with non-standard billing.",
           "Shopify's standard checkout is highly optimised for conversion out of the box but has historically restricted deep customisation to Shopify Plus merchants. The introduction of Checkout Extensibility gives non-Plus merchants more options, but significant structural customisation still requires a Plus plan or a custom checkout alternative. If your store's conversion strategy depends on a non-standard checkout experience — split payments, staged forms, account-based pricing or custom delivery scheduling — verify Shopify's current customisation limits before choosing the platform."
-        ]
+        ],
+        image: {
+          src: "/images/blog/ecommerce-shopify-vs-woocommerce.png",
+          alt: "Shopify vs WooCommerce checkout customisation comparison"
+        }
       }
     ],
     checklist: ["List all apps or plugins your store will need and check availability on both platforms.", "Calculate total monthly cost including platform fee, apps, hosting and transaction fees.", "Evaluate your team's technical comfort level with each platform.", "Confirm your payment gateway is supported on your chosen platform.", "Consider your product catalogue complexity and variant requirements."],
