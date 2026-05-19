@@ -1577,7 +1577,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Many successful business platforms combine both. The public-facing marketing website is a static or server-rendered site optimised for SEO and conversion. Behind a login, clients or staff access a web application with dashboards, forms and data management features. These two layers can share a domain, a design system and a backend, but they have fundamentally different technical requirements.",
           "The most common mistake in hybrid projects is trying to build both layers with the same technology. A WordPress site with WooCommerce and a bolt-on membership plugin is not a viable foundation for a serious client portal. A proper hybrid project uses a headless or decoupled architecture — Next.js or a similar framework for the public layer and Laravel or another backend framework for the application layer. Planning this separation at the start saves significant rebuilding cost later."
-        ]
+        ],
+        image: {
+          src: "/images/blog/web-app-vs-website.png",
+          alt: "Web application vs website hybrid project architecture"
+        }
       }
     ],
     checklist: ["List every feature users need and mark which ones require login or data storage.", "Identify whether staff or clients need to interact with the system.", "Determine if any business process runs in spreadsheets that should move to a system.", "Separate marketing requirements from operational requirements.", "Budget for both if your business needs both."],
