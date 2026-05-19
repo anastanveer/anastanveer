@@ -1473,7 +1473,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Before starting any API integration project, the developer should audit the third-party API documentation. Well-documented APIs with sandbox environments, clear error codes, versioning policies and official SDKs are dramatically faster to integrate than underdocumented APIs with vague error responses and no test environment.",
           "For Dubai and UAE business integrations, common systems include payment gateways like Telr, Network International and Stripe, ERP connectors for Oracle NetSuite or SAP, property listing platforms, government portals and local logistics APIs. Each has a different documentation quality level. A developer who has worked with these systems before has already absorbed the undocumented edge cases — which is why domain-specific experience matters more than general API development skill in most integration projects."
-        ]
+        ],
+        image: {
+          src: "/images/blog/api-integration-services.png",
+          alt: "API integration services documentation and technical planning"
+        }
       }
     ],
     checklist: ["Map every data field that needs to move between systems before development starts.", "Confirm the third-party API has a sandbox environment for testing.", "Define error handling behaviour for every failure scenario.", "Agree on logging and monitoring requirements before launch.", "Plan for API versioning changes from the third party."],
