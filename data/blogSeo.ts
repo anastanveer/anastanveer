@@ -979,7 +979,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Look for developers or agencies that ask about your business workflow before they recommend a technology. The best web application development services start from the problem, not from the solution.",
           "ARS Developer Ltd (arsdeveloper.co.uk) provides custom web application development for UK businesses, from SaaS MVPs to internal operational platforms and client-facing portals. TorontoBytes (torontobytes.ca) delivers the same structured development approach for Canadian businesses and North American startups building their first custom platform."
-        ]
+        ],
+        image: {
+          src: "/images/blog/web-application-development-services-guide.png",
+          alt: "Web application development services guide for businesses"
+        }
       }
     ],
     checklist: [
