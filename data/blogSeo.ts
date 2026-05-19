@@ -1267,7 +1267,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Real speed optimization starts with a PageSpeed Insights or WebPageTest audit. The findings typically include image format and compression issues, render-blocking JavaScript and CSS, slow server response time, unused code loading, poor caching headers, missing preload hints and third-party script impact.",
           "Each finding has a specific technical fix. Image issues require format conversion, lazy loading and srcset implementation. JavaScript issues require deferral, tree shaking or replacement. Server issues require hosting review, database query optimisation or CDN implementation. A professional speed service addresses all relevant findings, not just the easy ones."
-        ]
+        ],
+        image: {
+          src: "/images/blog/website-speed-optimization-services.png",
+          alt: "Professional website speed optimization services and Core Web Vitals"
+        }
       }
     ],
     checklist: [
