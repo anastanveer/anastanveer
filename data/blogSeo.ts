@@ -1401,7 +1401,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "A Next.js developer must understand the implications of each rendering strategy on deployment. A statically exported site, an ISR-heavy site and a fully server-rendered application each have different infrastructure requirements. Vercel handles most of this automatically, but many business projects use custom servers, Docker containers or Laravel-backed APIs that need careful configuration.",
           "Ask whether the developer has deployed Next.js outside of Vercel, how they handle environment variables across staging and production, and whether they have experience optimising cold start performance on edge or serverless environments. For Dubai and UAE-based projects, CDN configuration and regional edge caching can significantly affect real-user performance — ask whether the developer considers this in their deployment setup."
-        ]
+        ],
+        image: {
+          src: "/images/blog/nextjs-developer-for-hire.png",
+          alt: "Next.js developer for hire deployment and infrastructure knowledge"
+        }
       }
     ],
     checklist: ["Confirm experience with Next.js App Router and server components.", "Ask for live URLs of Next.js projects they have shipped.", "Verify they understand ISR and when to use it versus SSG or SSR.", "Check Core Web Vitals scores on their existing Next.js work.", "Confirm they can handle API routes and backend integration."],
