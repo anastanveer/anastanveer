@@ -295,7 +295,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "I usually begin with images, script weight, font loading, unused code, caching, hosting response, layout shift and mobile hero performance.",
           "For WordPress, plugin weight and theme structure matter. For Shopify, app scripts and theme media matter. For Next.js and Laravel, rendering strategy, assets and server response need attention.",
           "The priority is not to chase a perfect score blindly. The priority is to remove the bottlenecks that affect real visitors."
-        ]
+        ],
+        image: {
+          src: "/images/blog/website-speed-checklist-before-ads.png",
+          alt: "Website speed audit checklist before running ads"
+        }
       }
     ],
     checklist: [
