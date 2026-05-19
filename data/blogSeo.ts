@@ -1653,7 +1653,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "Render-blocking resources are the most common cause of poor Largest Contentful Paint scores on WordPress sites. When a browser encounters a CSS or JavaScript file in the HTML head, it stops rendering the page until that file is downloaded and processed. A typical WordPress installation with three to five plugins and a feature-rich theme can have eight to fifteen render-blocking resources on each page.",
           "The solution has two components. First, identify and inline the critical CSS — the styles needed to render the visible portion of the page before the user scrolls. WP Rocket and Flying Pages offer automated approaches, but manual critical CSS extraction produces better results on custom themes. Second, defer all non-critical JavaScript using the defer attribute, and move Google Analytics, Facebook Pixel and other tracking scripts to load after the page becomes interactive. These two changes alone typically improve Largest Contentful Paint by one to two seconds on WordPress sites."
-        ]
+        ],
+        image: {
+          src: "/images/blog/wordpress-speed-optimization.png",
+          alt: "WordPress speed optimization critical CSS and render-blocking fixes"
+        }
       }
     ],
     checklist: ["Measure baseline performance with PageSpeed Insights before any changes.", "Switch to a host with LiteSpeed or Nginx and PHP 8.2.", "Disable and remove all unused plugins.", "Convert all images to WebP and add explicit dimensions.", "Set up Redis object caching.", "Test Core Web Vitals after each change, not all at once."],
