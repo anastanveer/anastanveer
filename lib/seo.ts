@@ -225,7 +225,11 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
         "https://www.linkedin.com/in/anas-fullstackdev/",
         siteUrl,
         "https://arsdeveloper.co.uk",
-        "https://torontobytes.ca"
+        "https://torontobytes.ca",
+        "https://clutch.co/profile/anastanveer",
+        "https://dev.to/anastanveer",
+        "https://github.com/anastanveer",
+        "https://www.goodfirms.co/company/anastanveer"
       ],
       knowsAbout: [
         ...keywords,

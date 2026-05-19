@@ -59,6 +59,8 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Dashboard development in Dubai", href: "/dashboard-development-dubai" },
       { label: "API integration services", href: "/api-integration-services" },
       { label: "ERP development UAE", href: "/erp-development-uae" },
+      { label: "Why choose Laravel instead of a plugin", href: "/blog/choose-laravel-instead-of-plugin" },
+      { label: "Laravel vs Node.js for business", href: "/blog/laravel-vs-nodejs" },
       ...coreRelated
     ]
   },
@@ -96,6 +98,8 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
       { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
       { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
+      { label: "PHP Developer for hire guide", href: "/blog/php-developer-for-hire" },
+      { label: "When to use Laravel over plugins", href: "/blog/choose-laravel-instead-of-plugin" },
       ...coreRelated
     ]
   },
@@ -133,6 +137,8 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "SEO-friendly website development", href: "/seo-friendly-website-development" },
       { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
       { label: "Freelance web developer Dubai", href: "/freelance-web-developer-dubai" },
+      { label: "WordPress vs custom Laravel", href: "/blog/wordpress-vs-custom-laravel" },
+      { label: "WordPress speed optimization guide", href: "/blog/wordpress-speed-optimization" },
       ...coreRelated
     ]
   },
@@ -170,6 +176,8 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Ecommerce website development Dubai", href: "/ecommerce-website-development-dubai" },
       { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
       { label: "API integration services", href: "/api-integration-services" },
+      { label: "Shopify conversion fixes guide", href: "/blog/shopify-conversion-fixes" },
+      { label: "Shopify vs WooCommerce for ecommerce", href: "/blog/ecommerce-shopify-vs-woocommerce" },
       ...coreRelated
     ]
   },
@@ -207,6 +215,8 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Freelance web developer Dubai", href: "/freelance-web-developer-dubai" },
       { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
       { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "How to choose a web developer", href: "/blog/how-to-choose-web-developer" },
+      { label: "Web developer for hire guide", href: "/blog/web-developer-for-hire" },
       ...coreRelated
     ]
   },
@@ -244,6 +254,8 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Web Developer UAE", href: "/web-developer-uae" },
       { label: "Pricing", href: "/pricing" },
       { label: "Resume", href: "/resume" },
+      { label: "Freelance web developer Dubai guide", href: "/blog/freelance-web-developer-dubai" },
+      { label: "Hire a web developer for your business", href: "/blog/hire-web-developer-for-business" },
       ...coreRelated
     ]
   },
@@ -281,6 +293,8 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
       { label: "ERP development UAE", href: "/erp-development-uae" },
       { label: "API integration services", href: "/api-integration-services" },
+      { label: "Custom business dashboard development guide", href: "/blog/custom-business-dashboard-development" },
+      { label: "ERP software development guide", href: "/blog/erp-software-development-guide" },
       ...coreRelated
     ]
   },
@@ -318,6 +332,8 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
       { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
       { label: "API integration services", href: "/api-integration-services" },
+      { label: "ERP software development guide", href: "/blog/erp-software-development-guide" },
+      { label: "Custom business dashboard development", href: "/blog/custom-business-dashboard-development" },
       ...coreRelated
     ]
   },
@@ -355,6 +371,8 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
       { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
       { label: "SEO-friendly website development", href: "/seo-friendly-website-development" },
+      { label: "Shopify vs WooCommerce for ecommerce", href: "/blog/ecommerce-shopify-vs-woocommerce" },
+      { label: "Ecommerce website developer for hire", href: "/blog/ecommerce-website-developer-for-hire" },
       ...coreRelated
     ]
   },
@@ -392,6 +410,8 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
       { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
       { label: "ERP development UAE", href: "/erp-development-uae" },
+      { label: "API integration services guide", href: "/blog/api-integration-services" },
+      { label: "Laravel API development guide", href: "/blog/laravel-api-development" },
       ...coreRelated
     ]
   },
@@ -429,6 +449,8 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "SEO-friendly website development", href: "/seo-friendly-website-development" },
       { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
       { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+      { label: "Website speed checklist before running ads", href: "/blog/website-speed-checklist-before-ads" },
+      { label: "Website speed optimization services guide", href: "/blog/website-speed-optimization-services" },
       ...coreRelated
     ]
   },
@@ -466,6 +488,8 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
       { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
       { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "SEO-friendly development before marketing", href: "/blog/seo-friendly-development-before-marketing" },
+      { label: "AI search SEO for Dubai businesses", href: "/blog/ai-search-seo-dubai-businesses" },
       ...coreRelated
     ]
   }
