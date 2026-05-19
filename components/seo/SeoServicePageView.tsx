@@ -26,6 +26,17 @@ function serviceJsonLd(page: SeoServicePage) {
     serviceType: page.navLabel,
     url,
     image: absoluteUrl(page.image),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      ratingCount: "6",
+      bestRating: "5",
+      worstRating: "1"
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".service-intro"]
+    },
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",

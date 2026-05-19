@@ -308,6 +308,39 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
         "Trading Platform Development",
         "Business Workflow Automation"
       ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        ratingCount: "6",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      review: [
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Steve Barlow" },
+          reviewBody: "Another fantastic project from Anas. He understands the requirements, provides fully functional updates, makes changes quickly, and delivers a truly excellent product. I highly recommend Anas."
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Said B." },
+          reviewBody: "2nd collaboration with Anas — fast, precise and high quality work. Excellent results delivered on time. Will definitely work together again."
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "J. Nagle" },
+          reviewBody: "Anas did a great job as per usual. Reliable, fast and always delivers exactly what is needed. Highly recommended."
+        },
+        {
+          "@type": "Review",
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          author: { "@type": "Person", name: "Rushil C." },
+          reviewBody: "Excellent experience working with Anas Tanveer. His professionalism, attention to detail, and ability to deliver bug-free work were exceptional."
+        }
+      ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Business Web Problem Solving Services",
@@ -356,6 +389,21 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
           closes: "18:00"
         }
       ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        ratingCount: "6",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: "+971542435418",
+        email: "info@anastanveer.com",
+        availableLanguage: "English",
+        areaServed: ["AE", "GB", "CA"]
+      },
       currenciesAccepted: "AED, GBP, USD, CAD",
       paymentAccepted: "Bank Transfer, Online Payment"
     },

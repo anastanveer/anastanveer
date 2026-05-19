@@ -321,6 +321,26 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
                 </div>
               </section>
             ) : null}
+
+            <div className="mt-10 flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5 light:border-slate-200 light:bg-white" itemScope itemType="https://schema.org/Person">
+              <Image
+                src="/images/anas-resume.webp"
+                alt="Anas Tanveer Full-Stack Developer Dubai"
+                width={56}
+                height={56}
+                className="h-14 w-14 shrink-0 rounded-full object-cover"
+                itemProp="image"
+              />
+              <div>
+                <p className="font-display text-base font-semibold text-white light:text-slate-950" itemProp="name">Anas Tanveer</p>
+                <p className="mt-1 text-sm leading-6 text-silver/68 light:text-slate-600" itemProp="description">
+                  Full-Stack Developer in Dubai with 7+ years in Laravel, WordPress, Shopify, business dashboards, APIs, and SEO-ready web systems.
+                </p>
+                <Link href="/about" className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-cyan hover:text-emerald light:text-blue-700 light:hover:text-blue-900" itemProp="url">
+                  View profile <ArrowUpRight size={12} />
+                </Link>
+              </div>
+            </div>
           </article>
 
           <aside className="h-max space-y-5 lg:sticky lg:top-28">
