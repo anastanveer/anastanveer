@@ -4,6 +4,7 @@ export type BlogSeoContent = {
   expandedSections: Array<{
     heading: string;
     body: string[];
+    image?: { src: string; alt: string };
   }>;
   checklist: string[];
   faqs: Array<{
@@ -36,7 +37,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "A plugin is built for a general market. Your business process is usually more specific. When a team begins adding one plugin for roles, another for reports, another for forms, another for API connections and another for dashboards, the website becomes harder to maintain than a custom application.",
           "This is where many WordPress and ecommerce projects slow down. The frontend may still look acceptable, but the admin workflow becomes confusing, data is duplicated, and every small change needs testing across multiple plugin settings.",
           "For UAE companies, agencies and growing businesses, the practical question is simple: is this feature a normal website feature, or is it part of how the business operates every day?"
-        ]
+        ],
+        image: {
+          src: "/images/blog/choose-laravel-instead-of-plugin.png",
+          alt: "Plugin complexity vs clean Laravel application structure"
+        }
       },
       {
         heading: "Laravel is better for business logic, roles and long-term control",

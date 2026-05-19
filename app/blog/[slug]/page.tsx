@@ -181,6 +181,21 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
                     </p>
                   ))}
                 </div>
+                {(() => {
+                  const img = (section as { image?: { src: string; alt: string } }).image;
+                  return img ? (
+                    <div className="mt-7 overflow-hidden rounded-2xl border border-white/10 light:border-slate-200">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        width={900}
+                        height={506}
+                        className="aspect-[16/9] w-full object-cover"
+                        sizes="(max-width: 768px) 100vw, 800px"
+                      />
+                    </div>
+                  ) : null;
+                })()}
               </section>
             ))}
 
