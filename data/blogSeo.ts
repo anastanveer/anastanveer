@@ -607,7 +607,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
           "A good audit should separate urgent fixes, quick wins and strategic improvements. Urgent fixes may include broken forms, huge images or mobile overflow. Quick wins may include metadata, headings and CTA improvements.",
           "Strategic improvements may include rewriting service pages, restructuring blog content, improving internal links or rebuilding slow sections.",
           "This makes the audit useful for business owners, agencies and recruiters who need clear direction."
-        ]
+        ],
+        image: {
+          src: "/images/blog/ai-website-audit-speed-seo-conversion.png",
+          alt: "AI website audit covering speed, SEO and conversion priorities"
+        }
       }
     ],
     checklist: [
