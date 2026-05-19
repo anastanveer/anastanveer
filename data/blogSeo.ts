@@ -1617,7 +1617,11 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
         body: [
           "In the UAE, intellectual property created under a service contract belongs to the creator by default unless a written agreement explicitly transfers ownership to the client. This means that without a clear contract, the developer legally owns the code they wrote for your project. This is a meaningful legal risk on any project where the platform represents core business infrastructure.",
           "A proper freelance contract for Dubai projects should include: full IP ownership transfer to the client upon final payment, source code delivery as a project deliverable, a confidentiality clause covering business data and processes, a post-launch support period with defined scope and response time and explicit terms around what constitutes a revision versus a new feature. A developer who objects to any of these terms is signalling that the engagement may not be structured in your interest."
-        ]
+        ],
+        image: {
+          src: "/images/blog/freelance-web-developer-dubai.png",
+          alt: "Freelance web developer Dubai contract and IP ownership guide"
+        }
       }
     ],
     checklist: ["Request three live URLs of completed projects before any meeting.", "Get a written scope document before any payment.", "Confirm IP ownership transfer clause in the contract.", "Agree on communication frequency and preferred channels.", "Define post-launch bug support duration in writing."],
