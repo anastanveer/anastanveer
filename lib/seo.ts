@@ -240,7 +240,10 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
         "https://clutch.co/profile/anastanveer",
         "https://dev.to/anastanveer",
         "https://github.com/anastanveer",
-        "https://www.goodfirms.co/company/anastanveer"
+        "https://www.goodfirms.co/company/anastanveer",
+        "https://stackoverflow.com/users/anastanveer",
+        "https://www.upwork.com/freelancers/anastanveer",
+        "https://www.fiverr.com/anastanveer"
       ],
       knowsAbout: [
         ...keywords,

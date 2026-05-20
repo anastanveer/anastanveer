@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Code2, Database, Gauge, Linkedin, Mail, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
 import { FAQ } from "@/components/sections/FAQ";
 import { ValueGrid } from "@/components/sections/ValueGrid";
@@ -8,14 +9,16 @@ import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { aboutFaqItems } from "@/data/faqs";
 import { profile } from "@/data/site";
+import { seoServicePages } from "@/data/seo-pages";
 import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
 
 const aboutFaqs = aboutFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
 export const metadata: Metadata = pageMetadata({
-  title: "About Anas Tanveer | Premium Full-Stack Developer in Dubai",
-  description: "Meet Anas Tanveer, a Dubai web problem solver for Laravel, WordPress, Shopify, dashboards, APIs, ERP and SEO-ready systems.",
-  path: "/about"
+  title: "About Anas Tanveer | Full-Stack Web Developer Dubai",
+  description: "Anas Tanveer is a Dubai-based full-stack web developer specialising in Laravel, WordPress, Shopify, React, Next.js, dashboards, ERP, CRM, SaaS and API integrations for UAE and global clients.",
+  path: "/about",
+  extraKeywords: ["About Anas Tanveer", "Full Stack Developer Dubai", "Laravel Developer Dubai", "Web Developer UAE", "Dubai Web Developer Profile", "ARS Developer Ltd"]
 });
 
 const focusAreas = [
@@ -117,6 +120,22 @@ export default function AboutPage() {
                 <MapPin size={18} className="text-cyan" /> Dubai, UAE
               </span>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="section-pad pt-0">
+        <div className="mx-auto max-w-7xl px-5">
+          <SectionHeader eyebrow="Services" title="What I build and where I work." />
+          <div className="mt-8 flex flex-wrap gap-2">
+            {seoServicePages.map((page) => (
+              <Link
+                key={page.slug}
+                href={`/${page.slug}`}
+                className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-sm font-medium text-silver/72 transition hover:border-cyan/35 hover:text-cyan light:border-slate-200 light:bg-white light:text-slate-600 light:hover:border-blue-400 light:hover:text-blue-700"
+              >
+                {page.navLabel}
+              </Link>
+            ))}
           </div>
         </div>
       </section>

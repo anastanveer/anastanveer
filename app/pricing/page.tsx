@@ -12,9 +12,10 @@ import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
 const pricingFaqs = pricingFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
 export const metadata: Metadata = pageMetadata({
-  title: "Pricing | Laravel, WordPress, Shopify Web Packages Dubai",
-  description: "Pricing for website, ecommerce, Laravel platform, dashboard, ERP, Shopify, WordPress, SEO, speed and support problems.",
-  path: "/pricing"
+  title: "Pricing | Web Development Packages Dubai — Laravel, WordPress, Shopify",
+  description: "Transparent pricing for web development in Dubai — WordPress websites, Shopify stores, Laravel platforms, dashboards, ERP, CRM, SaaS MVPs, API integrations and SEO-ready builds.",
+  path: "/pricing",
+  extraKeywords: ["Web Development Pricing Dubai", "Laravel Developer Cost Dubai", "WordPress Website Price UAE", "Shopify Developer Pricing Dubai", "Freelance Developer Rates Dubai"]
 });
 
 export default function PricingPage() {

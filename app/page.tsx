@@ -80,7 +80,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-8 flex flex-wrap gap-2">
-            {seoServicePages.slice(0, 6).map((page) => (
+            {seoServicePages.map((page) => (
               <Link
                 className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-sm font-medium text-silver/72 transition hover:border-cyan/35 hover:text-cyan light:border-slate-200 light:bg-white light:text-slate-600 light:hover:border-blue-400 light:hover:text-blue-700"
                 href={`/${page.slug}`}

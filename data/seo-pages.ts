@@ -612,6 +612,326 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
       ...coreRelated
     ]
+  },
+  {
+    slug: "web-developer-ajman",
+    navLabel: "Web Developer Ajman",
+    title: "Web Developer Ajman for Business Websites and Custom Web Applications",
+    metaTitle: "Web Developer Ajman | WordPress, Laravel, Shopify UAE",
+    metaDescription: "Web developer for Ajman businesses — WordPress websites, Laravel platforms, Shopify stores, ecommerce, dashboards and API integrations across UAE.",
+    keywords: ["Web Developer Ajman", "Website Developer Ajman", "Web Development Ajman UAE", "WordPress Developer Ajman", "Laravel Developer Ajman"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "Web developer Ajman business website development UAE",
+    intro: [
+      "Ajman businesses, free zone companies, trading firms, and retail operators need websites and web platforms that generate leads, support ecommerce, and automate internal operations. A developer who understands UAE market requirements, Arabic content needs, and local payment gateways will deliver faster results with less back-and-forth.",
+      "Anas Tanveer provides web development for Ajman-based businesses covering WordPress business websites, Laravel custom platforms, Shopify ecommerce stores, internal dashboards, REST API integrations, and website speed improvements. The focus is on practical, fast-loading, lead-generating platforms that work for real businesses.",
+      "Located in Dubai and serving all UAE emirates, all projects are managed remotely with consistent communication, structured delivery, and post-launch support."
+    ],
+    bestFor: ["Ajman free zone businesses", "Trading and import-export firms", "Retail and ecommerce operators", "Manufacturing companies", "Professional services in northern UAE"],
+    problems: [
+      "The business website looks unprofessional and does not generate enquiries.",
+      "The ecommerce store has low conversion and high cart abandonment.",
+      "Internal workflows are manual and need a web-based dashboard or automation system.",
+      "The existing website is slow, outdated, or breaks regularly without developer support."
+    ],
+    features: ["WordPress business websites", "Laravel web applications", "Shopify ecommerce with UAE payment gateways", "Custom admin dashboards", "REST API integrations", "Mobile-first responsive design", "SEO-ready page structure", "Fast load and Core Web Vitals"],
+    delivery: [
+      "Every Ajman project starts with understanding the business type, target customers, and operational needs. The right platform is chosen — WordPress, Laravel, or Shopify — based on the actual goal, not personal preference.",
+      "Delivery is structured with clear milestones, regular updates, and full handover documentation so the business can manage the platform confidently after launch."
+    ],
+    faqs: [
+      { question: "Do you work with businesses in Ajman free zones?", answer: "Yes. Free zone businesses, trading companies, logistics firms, and any UAE-registered business can work with this service remotely from any emirate." },
+      { question: "Can you build a bilingual website for Ajman businesses?", answer: "Yes. WordPress, Laravel, and Shopify sites can support Arabic RTL and English LTR with proper language switching and content management." },
+      { question: "What is the best platform for an Ajman ecommerce store?", answer: "Shopify is the fastest option for straightforward ecommerce. WooCommerce works well with WordPress. Custom Laravel or React is better when the catalogue, pricing, or checkout has unique requirements." }
+    ],
+    related: [
+      { label: "Web Developer Sharjah", href: "/web-developer-sharjah" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "Web Developer Abu Dhabi", href: "/web-developer-abu-dhabi" },
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "fullstack-developer-dubai",
+    navLabel: "Full Stack Developer Dubai",
+    title: "Full Stack Developer Dubai for End-to-End Web Solutions",
+    metaTitle: "Full Stack Developer Dubai | Laravel, React, Next.js, PHP",
+    metaDescription: "Hire a full stack developer in Dubai for complete web solutions — Laravel backend, React or Next.js frontend, MySQL databases, REST APIs, and business dashboards.",
+    keywords: ["Full Stack Developer Dubai", "Fullstack Developer Dubai", "Full Stack Web Developer Dubai", "Hire Full Stack Developer Dubai", "Full Stack Developer UAE"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "Full stack developer Dubai end-to-end web solution architecture",
+    intro: [
+      "A full stack developer handles both the frontend and backend of a web application. This matters when the project needs custom logic, a database-driven interface, role-based dashboards, API connections, and a polished user interface — all working together without handoffs between separate teams.",
+      "Anas Tanveer works as a full stack developer Dubai profile using Laravel for backend systems, React and Next.js for frontend interfaces, MySQL for database design, and REST APIs for third-party integrations. The work covers new builds, existing system improvements, performance fixes, and end-to-end product delivery.",
+      "Dubai businesses, agencies, and startups that need one developer to plan and execute the entire technical solution benefit from this service. It removes coordination overhead, reduces misunderstandings between frontend and backend, and produces cleaner results."
+    ],
+    bestFor: ["Startups building SaaS or web products", "Businesses replacing spreadsheets with dashboards", "Agencies needing a reliable tech partner", "Companies launching ecommerce or booking platforms", "Projects needing Laravel + React delivered together"],
+    problems: [
+      "Separate frontend and backend developers are not communicating well and the project is delayed.",
+      "The business needs a dashboard, API, and UI all from one reliable developer.",
+      "A startup needs an MVP built quickly with clean architecture and no technical debt.",
+      "An existing system has bugs across both frontend and backend that need one developer to diagnose and fix."
+    ],
+    features: ["Laravel backend with REST API", "React and Next.js frontend", "MySQL database design and optimization", "Role-based admin panel", "Third-party API integrations", "Full project planning and architecture", "SEO-ready public pages", "Mobile responsive design"],
+    delivery: [
+      "Full stack projects are planned from the database schema outward — data structure, backend logic, API contract, then frontend component design. This order prevents rework and ensures the interface reflects how the data actually works.",
+      "A single point of contact handles the full delivery: requirements, architecture, development, testing, and launch. No handoffs, no blame between teams, and no scope confusion."
+    ],
+    faqs: [
+      { question: "What does a full stack developer in Dubai do?", answer: "A full stack developer handles both backend (Laravel, PHP, database, APIs) and frontend (React, Next.js, HTML, CSS) work. They can build and launch a complete web application independently." },
+      { question: "Is a full stack developer better than separate frontend and backend developers?", answer: "For most small to medium projects, a full stack developer is faster and more cost-effective. For very large systems with separate teams, specialists may be better — but most Dubai business projects benefit from one experienced full stack developer." },
+      { question: "Can a full stack developer handle both the website and the admin panel?", answer: "Yes. Full stack development typically covers the public-facing website, the backend logic, the database, the admin dashboard, and any API integrations — all as a single deliverable." }
+    ],
+    related: [
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "React Developer Dubai", href: "/react-developer-dubai" },
+      { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "API integration services", href: "/api-integration-services" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "nextjs-developer-dubai",
+    navLabel: "Next.js Developer Dubai",
+    title: "Next.js Developer Dubai for Fast SEO-Ready Web Applications",
+    metaTitle: "Next.js Developer Dubai | SSR, SSG, React, App Router",
+    metaDescription: "Next.js developer in Dubai for server-side rendered web apps, static sites, ecommerce frontends, dashboards and high-performance business platforms with great SEO.",
+    keywords: ["Next.js Developer Dubai", "Nextjs Developer Dubai", "Next.js Developer UAE", "Next.js Web Application Dubai", "React Next.js Developer Dubai"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "Next.js developer Dubai fast SEO web application development",
+    intro: [
+      "Next.js is the strongest React-based framework for businesses that need fast page loads, great SEO, server-side rendering, and a modern developer experience. It solves the core problem with plain React SPAs: poor SEO and slow initial load, which directly hurt both search rankings and conversion rates.",
+      "Anas Tanveer works as a Next.js Developer Dubai profile building server-rendered web applications, static marketing sites, ecommerce frontends, dashboard interfaces, and business platforms using the Next.js App Router, React Server Components, Tailwind CSS, and REST or GraphQL APIs.",
+      "Dubai companies that want fast, SEO-friendly web applications connected to Laravel backends, headless CMS platforms, or third-party APIs benefit most from Next.js development."
+    ],
+    bestFor: ["SEO-first business websites", "Headless CMS with Next.js frontend", "Laravel API with Next.js frontend", "Fast ecommerce product pages", "Marketing sites with dynamic data"],
+    problems: [
+      "The existing React SPA has poor SEO because it renders on the client only.",
+      "The website is slow on first load, hurting Core Web Vitals and Google rankings.",
+      "The marketing site needs to be fast, indexed, and connected to a CMS or API.",
+      "A new product needs a Next.js frontend that works well with a Laravel or Node.js backend."
+    ],
+    features: ["Next.js App Router development", "Server-side rendering and static generation", "React Server Components", "Tailwind CSS responsive UI", "REST and GraphQL API connection", "Image optimization and lazy loading", "Core Web Vitals optimization", "TypeScript for maintainability"],
+    delivery: [
+      "Next.js projects are architected around rendering strategy first — which pages are static, which are server-rendered, and which need client interactivity. This avoids the performance traps that come from using client components everywhere.",
+      "The result is a fast, indexable, maintainable Next.js application that scores well on PageSpeed, ranks in search, and provides a smooth user experience across devices."
+    ],
+    faqs: [
+      { question: "Is Next.js good for SEO in Dubai?", answer: "Yes. Next.js server-side rendering ensures Google can index pages fully. Combined with proper schema, meta tags, and page speed, it is one of the strongest choices for SEO-first development in Dubai and UAE." },
+      { question: "Can Next.js connect to a Laravel backend?", answer: "Yes. Next.js works as the frontend and Laravel serves as the REST API backend. This full stack combination is clean, scalable, and widely used for business applications." },
+      { question: "When should I choose Next.js over plain React?", answer: "Choose Next.js when SEO matters, when the site needs fast initial load, or when you want structured routing, image optimization, and server rendering built in. Plain React is better only for internal apps where SEO is irrelevant." }
+    ],
+    related: [
+      { label: "React Developer Dubai", href: "/react-developer-dubai" },
+      { label: "Full Stack Developer Dubai", href: "/fullstack-developer-dubai" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
+      { label: "SEO-friendly website development", href: "/seo-friendly-website-development" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "crm-development-dubai",
+    navLabel: "CRM Development Dubai",
+    title: "CRM Development Dubai for Custom Client and Sales Management Systems",
+    metaTitle: "CRM Development Dubai | Custom CRM Laravel PHP",
+    metaDescription: "Custom CRM development in Dubai for sales pipelines, client management, follow-up automation, reporting dashboards, and business workflow systems built on Laravel.",
+    keywords: ["CRM Development Dubai", "Custom CRM Developer Dubai", "CRM Software Dubai", "CRM System Development UAE", "Laravel CRM Developer Dubai"],
+    image: "/images/projects-suite-760.webp",
+    imageAlt: "CRM development Dubai custom client management system",
+    intro: [
+      "Generic CRM tools often force businesses to adapt their sales process to the software instead of the other way around. A custom CRM built for a specific business — with the exact pipeline stages, follow-up logic, permission levels, reporting views, and integration needs — gives the sales and operations team a tool they will actually use.",
+      "Anas Tanveer builds custom CRM systems in Dubai using Laravel and MySQL. The work covers lead capture, pipeline management, client records, activity logs, email and WhatsApp follow-up automation, role-based access for sales teams, report dashboards, and integrations with payment gateways, booking tools, or third-party platforms.",
+      "This service is most useful for real estate agencies, recruitment firms, professional services, trading companies, ecommerce operators, and any business that manages clients, leads, or accounts across a team."
+    ],
+    bestFor: ["Real estate agencies and brokers", "Recruitment and HR firms", "Professional services with active pipelines", "Trading and B2B sales teams", "Any business managing 50+ clients or leads"],
+    problems: [
+      "The sales team uses spreadsheets or WhatsApp to track leads, causing follow-ups to be missed.",
+      "An off-the-shelf CRM cannot match the business pipeline stages, user roles, or reporting needs.",
+      "Client data is scattered across email, spreadsheets, and chat tools with no central record.",
+      "Management cannot see sales team activity, deal progress, or client history in one place."
+    ],
+    features: ["Lead and pipeline management", "Client and contact records", "Activity logs and follow-up reminders", "Role-based team access", "Email and WhatsApp integration", "Reports and analytics dashboard", "Document and contract management", "API integration with third-party tools"],
+    delivery: [
+      "CRM development starts with mapping the sales or client management workflow: how leads enter, how they move through stages, who manages them, what information matters, and what reports the business needs to see.",
+      "The result is a clean, fast Laravel CRM that fits the actual business process, reduces manual work, improves follow-up rates, and gives management clear visibility into team activity and deal status."
+    ],
+    faqs: [
+      { question: "Is a custom CRM better than Salesforce or HubSpot for a Dubai SME?", answer: "For many Dubai SMEs, a custom CRM is more practical because it matches the exact workflow, costs less over time, needs no per-user licensing, and can integrate with local tools like UAE payment gateways or WhatsApp." },
+      { question: "Can the CRM integrate with WhatsApp for client follow-ups?", answer: "Yes. WhatsApp Business API integration can be added to trigger automated messages, follow-up reminders, or status updates when a lead changes pipeline stage." },
+      { question: "How long does custom CRM development take?", answer: "A basic CRM with lead management, pipeline, client records, and reports typically takes 6 to 10 weeks. Complexity increases with integrations, advanced automation, or multi-team permission systems." }
+    ],
+    related: [
+      { label: "ERP Development UAE", href: "/erp-development-uae" },
+      { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "API integration services", href: "/api-integration-services" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "saas-developer-dubai",
+    navLabel: "SaaS Developer Dubai",
+    title: "SaaS Developer Dubai for Custom Software-as-a-Service Platforms",
+    metaTitle: "SaaS Developer Dubai | Laravel SaaS MVP, Multi-Tenant Platforms",
+    metaDescription: "SaaS developer in Dubai for multi-tenant platforms, subscription billing, user management, dashboards, APIs, and custom software-as-a-service MVPs built on Laravel.",
+    keywords: ["SaaS Developer Dubai", "SaaS Application Developer Dubai", "SaaS MVP Developer UAE", "Laravel SaaS Developer Dubai", "Custom SaaS Platform Dubai"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "SaaS developer Dubai custom software-as-a-service platform development",
+    intro: [
+      "Building a SaaS product is different from building a business website. It needs multi-tenant architecture, subscription billing, user onboarding, role-based access, usage tracking, API endpoints, admin controls, and a frontend experience that works for many different clients at once — all on one platform.",
+      "Anas Tanveer works as a SaaS Developer Dubai profile for founders, agencies, and businesses that need a custom SaaS MVP or a complete subscription platform built on Laravel. The service covers product architecture, multi-tenancy design, Stripe or payment gateway integration, user management, dashboard UI, API development, and deployment.",
+      "Whether launching a first MVP to validate a product idea or expanding an existing tool into a full SaaS platform, the development starts with the business model, not the code."
+    ],
+    bestFor: ["Founders building a SaaS MVP", "Businesses turning internal tools into products", "Agencies launching white-label platforms", "Companies adding subscription billing to existing apps", "Startups that need clean architecture from day one"],
+    problems: [
+      "A great product idea needs a technical co-founder or developer to turn it into a working platform.",
+      "An internal business tool is being used by clients and needs to become a proper multi-tenant SaaS.",
+      "The existing SaaS codebase is messy, hard to scale, and breaking under new users.",
+      "Subscription billing, user onboarding, and team management need to be built from scratch."
+    ],
+    features: ["Multi-tenant Laravel architecture", "Stripe or payment gateway subscription billing", "User onboarding and team management", "Role-based permissions", "Usage tracking and limits", "Admin super-panel", "REST API for integrations", "Scalable deployment on cloud infrastructure"],
+    delivery: [
+      "SaaS projects begin with product scoping: what the platform does, who uses it, how tenants are separated, how billing works, and what the MVP scope should be. This prevents overbuilding and ensures the first version can be shipped and validated quickly.",
+      "The result is a scalable Laravel SaaS platform with clean architecture, subscription management, user isolation, and the technical foundation needed to grow the product with new features over time."
+    ],
+    faqs: [
+      { question: "How long does it take to build a SaaS MVP in Dubai?", answer: "A focused SaaS MVP with user accounts, subscription billing, core feature set, admin panel, and API typically takes 8 to 14 weeks depending on complexity." },
+      { question: "What is multi-tenant architecture for SaaS?", answer: "Multi-tenancy means multiple clients use the same application but their data is fully isolated from each other. It is the standard approach for SaaS products where each customer has their own workspace, users, and settings." },
+      { question: "Can you integrate Stripe or other payment gateways for UAE SaaS?", answer: "Yes. Stripe, Telr, PayTabs, and other UAE-compatible payment gateways can be integrated for subscription billing, one-time payments, trials, and upgrade/downgrade flows." }
+    ],
+    related: [
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Full Stack Developer Dubai", href: "/fullstack-developer-dubai" },
+      { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
+      { label: "API integration services", href: "/api-integration-services" },
+      { label: "ERP Development UAE", href: "/erp-development-uae" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "wordpress-maintenance-dubai",
+    navLabel: "WordPress Maintenance Dubai",
+    title: "WordPress Maintenance Dubai for Secure and Fast Business Websites",
+    metaTitle: "WordPress Maintenance Dubai | Updates, Security, Speed",
+    metaDescription: "WordPress maintenance service in Dubai — plugin updates, security hardening, speed optimization, backups, uptime monitoring, and ongoing developer support for business websites.",
+    keywords: ["WordPress Maintenance Dubai", "WordPress Support Dubai", "WordPress Care Plan Dubai", "WordPress Security Dubai", "WordPress Update Service UAE"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "WordPress maintenance Dubai website security updates and support",
+    intro: [
+      "Most business WordPress websites break, slow down, or get hacked because plugins go out of date, security patches are skipped, backups are missing, or performance optimizations are never applied after launch. WordPress maintenance is not optional for a business that depends on its website for leads and reputation.",
+      "Anas Tanveer provides WordPress maintenance for Dubai and UAE businesses covering monthly plugin and theme updates, security hardening, malware removal, uptime monitoring, speed optimization, Google PageSpeed improvements, and developer support for fixes, changes, and new features.",
+      "This service is suitable for businesses that have a working WordPress website and want a reliable developer to keep it secure, fast, and up to date without needing to hire in-house."
+    ],
+    bestFor: ["Dubai SMEs with existing WordPress sites", "Businesses without an in-house developer", "WooCommerce store owners", "Companies after a launch that need ongoing support", "Agencies managing client WordPress sites"],
+    problems: [
+      "The website is running on outdated plugins and core that create security vulnerabilities.",
+      "The website was hacked or flagged by Google and needs malware removal and hardening.",
+      "Pages have slowed down after updates and Google PageSpeed scores have dropped.",
+      "There is no reliable backup and no one to call when the website breaks."
+    ],
+    features: ["Monthly plugin and core updates", "Security hardening and firewall setup", "Malware detection and removal", "Daily or weekly automated backups", "Uptime monitoring and alerts", "Google PageSpeed and Core Web Vitals fixes", "WooCommerce product and order support", "Developer support for changes and fixes"],
+    delivery: [
+      "Maintenance starts with a site audit — current plugin versions, security status, speed scores, and backup setup. Issues are resolved first, then a monthly maintenance routine is set to keep the site healthy.",
+      "Clients receive a monthly report covering updates applied, security checks, speed scores, and any issues detected. Developer support hours are available for fixes, content updates, or new feature requests."
+    ],
+    faqs: [
+      { question: "What is included in WordPress maintenance?", answer: "Monthly plugin updates, theme updates, core updates, security checks, backup verification, uptime monitoring, speed checks, and developer hours for small fixes or changes." },
+      { question: "Can you fix a WordPress site that has been hacked?", answer: "Yes. Malware removal, security hardening, file restoration, and ongoing protection setup are included in the emergency and ongoing maintenance service." },
+      { question: "Do you offer WooCommerce maintenance as well?", answer: "Yes. WooCommerce-specific maintenance covers plugin compatibility, payment gateway testing after updates, product management, and performance for large catalogues." }
+    ],
+    related: [
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
+      { label: "SEO-friendly website development", href: "/seo-friendly-website-development" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "Ecommerce website development", href: "/ecommerce-website-development-dubai" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "hire-laravel-developer",
+    navLabel: "Hire Laravel Developer",
+    title: "Hire a Laravel Developer for Business Web Applications and Platforms",
+    metaTitle: "Hire Laravel Developer | Remote, Freelance, Project-Based",
+    metaDescription: "Hire a Laravel developer for custom web applications, dashboards, APIs, ERP systems, SaaS platforms, and business workflow automation. Remote, freelance and project-based.",
+    keywords: ["Hire Laravel Developer", "Laravel Developer for Hire", "Freelance Laravel Developer", "Remote Laravel Developer", "Laravel Developer Contract"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "Hire Laravel developer for custom web applications and business systems",
+    intro: [
+      "Hiring the right Laravel developer means finding someone who understands business requirements, not just code syntax. The best Laravel work starts with workflow mapping, database design, and API planning — before a single line of code is written.",
+      "Anas Tanveer is available to hire as a Laravel developer for project-based, freelance, and remote engagements. The work covers Laravel web applications, REST APIs, admin dashboards, ERP and CRM modules, SaaS platforms, ecommerce backends, multi-tenant systems, and Laravel performance improvements.",
+      "Clients from Dubai, UAE, UK, Canada, and globally hire this service for fixed-scope projects, ongoing retainer support, Laravel code reviews, legacy system rewrites, and technical co-founder engagements."
+    ],
+    bestFor: ["Businesses with a defined Laravel project scope", "Agencies needing a reliable Laravel partner", "Startups building an MVP or SaaS product", "Companies needing remote Laravel support", "Teams needing a Laravel code review or audit"],
+    problems: [
+      "The business needs a Laravel developer but cannot justify a full-time hire.",
+      "An existing Laravel project has technical debt, performance problems, or missing features.",
+      "A startup needs a Laravel backend built quickly with clean scalable architecture.",
+      "An agency has a client Laravel project that needs an experienced developer to deliver."
+    ],
+    features: ["Laravel application development from scratch", "API development and third-party integrations", "Admin dashboard and role-based panel", "Database design and query optimization", "Laravel upgrade and legacy code refactoring", "SaaS multi-tenant architecture", "Code review and technical audit", "Remote collaboration and async communication"],
+    delivery: [
+      "Engagements start with a scoping call or written brief. Fixed projects are quoted with milestones and deliverables. Retainer support is quoted as monthly hours with a clear scope of work. All communication is async-friendly with daily or weekly updates.",
+      "Code is delivered with documentation, clean Git history, and a handover session so internal teams can manage the platform independently after delivery."
+    ],
+    faqs: [
+      { question: "What is the best way to hire a Laravel developer for a fixed project?", answer: "Send the project brief, current codebase or database structure if applicable, required features, tech stack, timeline, and budget range. A quote with milestones is prepared from there." },
+      { question: "Do you work as a remote Laravel developer for UK or Canadian clients?", answer: "Yes. Remote Laravel development for UK, Canada, UAE, and global clients is a standard engagement. Communication runs over email, Slack, or video calls with async updates." },
+      { question: "Can you review and improve an existing Laravel codebase?", answer: "Yes. A Laravel code audit covers security, query performance, architecture, missing tests, upgrade readiness, and specific problem areas flagged by the client." }
+    ],
+    related: [
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Full Stack Developer Dubai", href: "/fullstack-developer-dubai" },
+      { label: "ERP Development UAE", href: "/erp-development-uae" },
+      { label: "SaaS Developer Dubai", href: "/saas-developer-dubai" },
+      { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "ecommerce-developer-dubai",
+    navLabel: "Ecommerce Developer Dubai",
+    title: "Ecommerce Developer Dubai for High-Converting Online Stores",
+    metaTitle: "Ecommerce Developer Dubai | Shopify, WooCommerce, Laravel",
+    metaDescription: "Ecommerce developer in Dubai for Shopify stores, WooCommerce websites, custom Laravel carts, product catalogue systems, UAE payment gateways, and conversion optimization.",
+    keywords: ["Ecommerce Developer Dubai", "Online Store Developer Dubai", "Shopify Developer UAE", "WooCommerce Developer Dubai", "Custom Ecommerce Development Dubai"],
+    image: "/images/projects-suite-760.webp",
+    imageAlt: "Ecommerce developer Dubai Shopify WooCommerce custom online store",
+    intro: [
+      "An ecommerce website that loads slowly, has a confusing checkout, does not support UAE payment methods, or fails on mobile is losing sales every day. The platform choice matters, but the execution matters more: product pages, filtering, cart flow, checkout UX, payment integration, and post-purchase automation all need to work together.",
+      "Anas Tanveer works as an ecommerce developer in Dubai for Shopify stores, WooCommerce websites, and custom Laravel or React ecommerce platforms. The work covers new store builds, conversion rate optimization, UAE payment gateway integration (Telr, PayTabs, Stripe, COD), product catalogue setup, performance improvements, and ongoing support.",
+      "Whether starting a new store or improving an existing one that is not converting, the focus is on ecommerce outcomes: more orders, higher average order value, fewer abandoned carts, and better customer retention."
+    ],
+    bestFor: ["Retail brands launching online in UAE", "Stores with low conversion or high cart abandonment", "Businesses needing UAE payment gateway setup", "WooCommerce stores with performance issues", "Shopify stores needing custom features"],
+    problems: [
+      "The ecommerce store has traffic but low conversion — products are not presented well and checkout is confusing.",
+      "UAE customers cannot pay because local payment gateways are not properly integrated.",
+      "The store is slow and gets poor Core Web Vitals scores, hurting SEO and user experience.",
+      "The product catalogue is large and needs proper filtering, search, and category management."
+    ],
+    features: ["Shopify store setup and theme customization", "WooCommerce website development", "Custom Laravel ecommerce platform", "UAE payment gateway integration (Telr, PayTabs, Stripe)", "Product catalogue and variant management", "Conversion rate optimization", "Cart and checkout UX improvements", "Order management and fulfilment integrations"],
+    delivery: [
+      "Ecommerce projects start with defining the product type, target customer, payment requirements, and conversion goal. The platform is then chosen based on the business model — Shopify for fast launch, WooCommerce for content-heavy stores, Laravel for complex logic.",
+      "The result is a fast, mobile-first ecommerce store that loads quickly, converts visitors into buyers, handles UAE payments correctly, and is easy for the business team to manage after launch."
+    ],
+    faqs: [
+      { question: "Which platform is best for ecommerce in Dubai — Shopify or WooCommerce?", answer: "Shopify is better for speed to launch, reliability, and App Store integrations. WooCommerce is better when the store needs deep WordPress content integration or a specific plugin. Custom Laravel is best when the product logic, pricing, or fulfilment is unique." },
+      { question: "Can you integrate UAE payment gateways like Telr and PayTabs?", answer: "Yes. Telr, PayTabs, PayFort (Amazon Payment Services), Stripe, and COD are all supported across Shopify, WooCommerce, and custom platforms." },
+      { question: "How long does it take to build an ecommerce store in Dubai?", answer: "A basic Shopify or WooCommerce store typically takes 3 to 6 weeks. Custom ecommerce with unique logic takes 8 to 14 weeks depending on catalogue size and integrations." }
+    ],
+    related: [
+      { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+      { label: "Ecommerce website development Dubai", href: "/ecommerce-website-development-dubai" },
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
+      { label: "API integration services", href: "/api-integration-services" },
+      ...coreRelated
+    ]
   }
 ];
 

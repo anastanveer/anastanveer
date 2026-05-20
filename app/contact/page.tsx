@@ -13,9 +13,10 @@ import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
 const contactFaqs = contactFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
 export const metadata: Metadata = pageMetadata({
-  title: "Contact Anas Tanveer | Hire Web Problem Solver in Dubai",
-  description: "Contact Anas Tanveer for Laravel, WordPress, Shopify, ecommerce, dashboards, ERP, API integration, SEO and website speed fixes in Dubai.",
-  path: "/contact"
+  title: "Contact Anas Tanveer | Hire a Web Developer in Dubai",
+  description: "Get in touch with Anas Tanveer to hire a web developer in Dubai for Laravel, WordPress, Shopify, React, Next.js, dashboards, ERP, CRM, SaaS, APIs and website speed fixes.",
+  path: "/contact",
+  extraKeywords: ["Hire Web Developer Dubai", "Contact Laravel Developer Dubai", "Hire Full Stack Developer UAE", "Web Developer for Hire Dubai", "Freelance Developer Dubai Contact"]
 });
 
 export default function ContactPage() {
