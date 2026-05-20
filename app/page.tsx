@@ -79,16 +79,13 @@ export default function HomePage() {
               <ServiceCard key={service.title} service={service} index={index} />
             ))}
           </div>
-          <div className="mt-8 flex flex-wrap gap-2">
-            {seoServicePages.map((page) => (
-              <Link
-                className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-sm font-medium text-silver/72 transition hover:border-cyan/35 hover:text-cyan light:border-slate-200 light:bg-white light:text-slate-600 light:hover:border-blue-400 light:hover:text-blue-700"
-                href={`/${page.slug}`}
-                key={page.slug}
-              >
-                {page.navLabel}
-              </Link>
-            ))}
+          <div className="mt-8 flex justify-center">
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-6 py-2.5 text-sm font-semibold text-silver/76 transition hover:border-cyan/35 hover:text-cyan light:border-slate-200 light:bg-white light:text-slate-700 light:hover:border-blue-300 light:hover:text-blue-700"
+            >
+              View all services <ArrowUpRight size={14} />
+            </Link>
           </div>
         </div>
       </section>
