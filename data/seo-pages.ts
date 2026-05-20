@@ -1058,6 +1058,126 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Web Developer UAE", href: "/web-developer-uae" },
       ...coreRelated
     ]
+  },
+  {
+    slug: "nodejs-developer-dubai",
+    navLabel: "Node.js Developer Dubai",
+    title: "Node.js Developer Dubai for APIs, Real-Time Apps and Scalable Backends",
+    metaTitle: "Node.js Developer Dubai | Express, REST API, Real-Time",
+    metaDescription: "Node.js developer in Dubai for REST APIs, real-time applications, microservices, Express backends, WebSocket chat, and scalable server-side JavaScript systems.",
+    keywords: ["Node.js Developer Dubai", "Node Developer Dubai", "Node.js Developer UAE", "Express.js Developer Dubai", "Backend Developer Dubai Node"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "Node.js developer Dubai API and real-time application development",
+    intro: [
+      "Node.js is the right choice when a backend needs to handle many concurrent connections, deliver real-time data, serve as a lightweight API layer, or power a microservices architecture. Its non-blocking I/O makes it especially strong for chat systems, live dashboards, trading platforms, notification services, and high-throughput APIs.",
+      "Anas Tanveer works as a Node.js Developer Dubai profile for businesses that need an Express REST API, a real-time WebSocket application, a Node.js microservice, or a JavaScript full-stack solution with Next.js or React on the frontend and Node.js on the backend.",
+      "This service is most useful when the project needs high concurrency, real-time updates, a lightweight API layer, or a JavaScript-first stack that shares code between frontend and backend."
+    ],
+    bestFor: ["Real-time chat and notification systems", "Trading and live data dashboards", "REST API backends for React or Vue", "Microservices and serverless functions", "High-concurrency applications"],
+    problems: [
+      "A PHP or Python backend is too slow for real-time data requirements.",
+      "A REST API needs to handle thousands of simultaneous connections without blocking.",
+      "A chat system, trading platform, or live feed needs WebSocket integration.",
+      "The team wants a JavaScript-only stack (Next.js frontend + Node.js backend)."
+    ],
+    features: ["Express.js REST API development", "WebSocket and Socket.io real-time apps", "JWT authentication and authorization", "MongoDB or PostgreSQL with Prisma ORM", "Microservices architecture", "Node.js performance optimization", "Docker containerization", "Cloud deployment (AWS, GCP, Vercel)"],
+    delivery: [
+      "Node.js projects are designed around the data flow: what events trigger what responses, how clients subscribe to updates, and how the API contracts are defined. Clean, async, well-tested code prevents the callback hell and race conditions that poorly structured Node apps are known for.",
+      "The result is a fast, scalable Node.js backend that handles real-time requirements, connects cleanly to the frontend, and can be deployed and maintained reliably in production."
+    ],
+    faqs: [
+      { question: "When is Node.js better than Laravel for a Dubai project?", answer: "Node.js is better when real-time communication (chat, live updates), high concurrency, or a JavaScript-only stack is required. Laravel is better for data-heavy business applications with complex CRUD, permissions, and reporting." },
+      { question: "Can Node.js connect to a MySQL database?", answer: "Yes. Node.js works with MySQL via mysql2 or Prisma ORM. It also works well with PostgreSQL, MongoDB, and Redis for caching or queues." },
+      { question: "Do you build Next.js frontends with Node.js backends?", answer: "Yes. A Next.js frontend connected to an Express or Node.js REST API is a clean JavaScript full-stack pattern suitable for product applications and dashboards." }
+    ],
+    related: [
+      { label: "React Developer Dubai", href: "/react-developer-dubai" },
+      { label: "Next.js Developer Dubai", href: "/nextjs-developer-dubai" },
+      { label: "Full Stack Developer Dubai", href: "/fullstack-developer-dubai" },
+      { label: "API integration services", href: "/api-integration-services" },
+      { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "web-developer-ras-al-khaimah",
+    navLabel: "Web Developer Ras Al Khaimah",
+    title: "Web Developer Ras Al Khaimah for Business Websites and Web Applications",
+    metaTitle: "Web Developer Ras Al Khaimah | WordPress, Laravel, UAE",
+    metaDescription: "Web developer for Ras Al Khaimah businesses — WordPress websites, Laravel platforms, Shopify stores, ecommerce, dashboards and custom web applications across UAE.",
+    keywords: ["Web Developer Ras Al Khaimah", "Website Developer RAK", "Web Development Ras Al Khaimah", "WordPress Developer RAK UAE", "Laravel Developer Ras Al Khaimah"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "Web developer Ras Al Khaimah UAE business website development",
+    intro: [
+      "Ras Al Khaimah businesses — including manufacturing companies, tourism and hospitality operators, trading firms, and free zone companies — need websites and web platforms that generate leads, support ecommerce, and present the business professionally to UAE and international audiences.",
+      "Anas Tanveer provides web development for RAK-based businesses covering WordPress business websites, Laravel custom platforms, Shopify ecommerce stores, internal dashboards, REST API integrations, and website performance improvements. All work is managed remotely from Dubai with structured communication and full post-launch support.",
+      "RAK's growing business environment makes this a particularly good time to build a strong web presence that ranks in UAE search and converts visitors into enquiries and orders."
+    ],
+    bestFor: ["RAK free zone businesses", "Manufacturing and industrial firms", "Tourism and hospitality businesses", "Trading and import-export operators", "Professional services across northern UAE"],
+    problems: [
+      "The business website does not appear in Google searches for RAK or UAE keywords.",
+      "The ecommerce store is losing sales because checkout or product pages are not working properly.",
+      "The business has grown and needs a custom web platform for internal operations.",
+      "The existing website is outdated, slow, or not mobile-friendly."
+    ],
+    features: ["WordPress business websites", "Shopify ecommerce stores", "Laravel custom web applications", "UAE payment gateway integration", "SEO-ready page structure", "Mobile-first responsive design", "Admin dashboards", "API integrations"],
+    delivery: [
+      "RAK projects follow the same delivery standard as Dubai and Abu Dhabi clients: scoping, platform selection, development, testing, and launch with full documentation.",
+      "Being UAE-based means the same timezone, understanding of local business culture, and fast response time for all RAK, northern UAE, and nationwide clients."
+    ],
+    faqs: [
+      { question: "Do you serve businesses in RAK and the northern emirates?", answer: "Yes. All projects are handled remotely and serve clients across Ras Al Khaimah, Umm Al Quwain, Fujairah, Ajman, Sharjah, and all UAE emirates." },
+      { question: "Can you build a website for a RAK free zone company?", answer: "Yes. RAK free zone companies — including offshore, trading, and manufacturing businesses — have the same web development needs as mainland companies. Platform and scope are determined by the business model." },
+      { question: "Is WordPress or Laravel better for a RAK business website?", answer: "WordPress is better for content, branding, and lead generation. Laravel is better when the business needs custom workflows, portals, dashboards, or integrations beyond a standard website." }
+    ],
+    related: [
+      { label: "Web Developer Ajman", href: "/web-developer-ajman" },
+      { label: "Web Developer Sharjah", href: "/web-developer-sharjah" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "typescript-developer-dubai",
+    navLabel: "TypeScript Developer Dubai",
+    title: "TypeScript Developer Dubai for Scalable and Maintainable Web Applications",
+    metaTitle: "TypeScript Developer Dubai | React, Next.js, Node.js TypeScript",
+    metaDescription: "TypeScript developer in Dubai for type-safe React, Next.js, Node.js, and full-stack web applications — scalable codebases with fewer bugs and better maintainability.",
+    keywords: ["TypeScript Developer Dubai", "TypeScript Developer UAE", "React TypeScript Developer Dubai", "Next.js TypeScript Developer Dubai", "TypeScript Web Application Dubai"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "TypeScript developer Dubai type-safe web application development",
+    intro: [
+      "TypeScript prevents an entire class of runtime errors by catching type mismatches, undefined values, and API contract violations at build time. For business applications that need to be maintained and extended over months or years, TypeScript pays back its learning curve very quickly — especially in team environments or when handing over code.",
+      "Anas Tanveer writes TypeScript for React, Next.js, Node.js, and full-stack web applications. All portfolio and client projects use TypeScript by default. The work covers new builds, TypeScript migrations of existing JavaScript codebases, type system improvements, and architecture reviews for type safety.",
+      "Dubai businesses building SaaS products, dashboards, ecommerce frontends, or any application that will grow beyond the initial scope benefit most from TypeScript development."
+    ],
+    bestFor: ["SaaS products that will evolve over time", "Large team codebases needing shared types", "React or Next.js apps with complex state", "API-heavy apps where contract safety matters", "Codebases being handed over to client teams"],
+    problems: [
+      "JavaScript bugs are appearing in production that would have been caught at compile time.",
+      "A growing codebase is becoming harder to refactor safely because types are not defined.",
+      "A team project is suffering from undocumented API shapes and missing type contracts.",
+      "An existing JavaScript project needs TypeScript migration for better maintainability."
+    ],
+    features: ["TypeScript React and Next.js development", "Strict mode type safety", "API response typing with Zod or custom types", "Generic utility types for shared logic", "TypeScript Node.js and Express", "JavaScript to TypeScript migration", "TypeScript code review and audit", "Interface and type design for team codebases"],
+    delivery: [
+      "TypeScript projects start with a clear type architecture: what the API shapes look like, what the component props contract is, and where generics add value. This prevents the common mistake of adding TypeScript as an afterthought and using `any` everywhere.",
+      "The result is a codebase where the types serve as living documentation, refactors are safer, IDE support is richer, and new developers onboard faster."
+    ],
+    faqs: [
+      { question: "Should I use TypeScript for a new React project in Dubai?", answer: "Yes. For any project that will grow beyond a prototype, TypeScript is strongly recommended. It prevents runtime bugs, improves IDE support, and makes code reviews and handovers more reliable." },
+      { question: "Can an existing JavaScript project be migrated to TypeScript?", answer: "Yes. Migrations can be done incrementally — starting with new files and gradually converting existing ones. Strict mode can be enabled progressively without a big-bang rewrite." },
+      { question: "Does TypeScript affect performance?", answer: "No. TypeScript is compiled to plain JavaScript before deployment. It adds zero runtime overhead. The benefits are entirely at development time through type checking." }
+    ],
+    related: [
+      { label: "React Developer Dubai", href: "/react-developer-dubai" },
+      { label: "Next.js Developer Dubai", href: "/nextjs-developer-dubai" },
+      { label: "Full Stack Developer Dubai", href: "/fullstack-developer-dubai" },
+      { label: "Node.js Developer Dubai", href: "/nodejs-developer-dubai" },
+      { label: "SaaS Developer Dubai", href: "/saas-developer-dubai" },
+      ...coreRelated
+    ]
   }
 ];
 

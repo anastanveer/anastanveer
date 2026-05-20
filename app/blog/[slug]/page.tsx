@@ -25,9 +25,14 @@ const serviceMap: Record<string, { href: string; label: string }> = {
   Hiring: { href: "/freelance-web-developer-dubai", label: "Freelance Web Developer Dubai" },
   API: { href: "/api-integration-services", label: "API Integration Services" },
   Ecommerce: { href: "/ecommerce-website-development-dubai", label: "Ecommerce Development Dubai" },
-  "Next.js": { href: "/web-developer-uae", label: "Web Developer UAE" },
-  React: { href: "/web-developer-uae", label: "Web Developer UAE" },
-  "Web Development": { href: "/web-developer-uae", label: "Web Developer UAE" },
+  "Next.js": { href: "/nextjs-developer-dubai", label: "Next.js Developer Dubai" },
+  React: { href: "/react-developer-dubai", label: "React Developer Dubai" },
+  "Web Development": { href: "/fullstack-developer-dubai", label: "Full Stack Developer Dubai" },
+  Dashboard: { href: "/dashboard-development-dubai", label: "Dashboard Development Dubai" },
+  CRM: { href: "/crm-development-dubai", label: "CRM Development Dubai" },
+  SaaS: { href: "/saas-developer-dubai", label: "SaaS Developer Dubai" },
+  TypeScript: { href: "/typescript-developer-dubai", label: "TypeScript Developer Dubai" },
+  "Node.js": { href: "/nodejs-developer-dubai", label: "Node.js Developer Dubai" },
 };
 
 export function generateStaticParams() {
@@ -126,7 +131,11 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
     dateModified: post.updatedAt,
     author: { "@id": absoluteUrl("/#person") },
     publisher: { "@id": "https://arsdeveloper.co.uk/#organization" },
-    mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`)
+    mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".blog-intro", ".service-intro"]
+    }
   };
 
   const breadcrumbJsonLd = {
