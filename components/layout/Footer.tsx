@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Building2, ExternalLink, FileText, Home, Linkedin, Mail, MapPin, MessageCircle, Sparkles } from "lucide-react";
+import { Building2, ExternalLink, FileText, Home, Linkedin, Mail, MapPin, MessageCircle } from "lucide-react";
 import { seoServicePages } from "@/data/seo-pages";
+import { BrandIcon, slugToStack } from "@/components/ui/BrandIcon";
 import { navItems, profile } from "@/data/site";
 
 export function Footer() {
-  const pageIcons = [Home, Sparkles, Building2, FileText, ExternalLink, MessageCircle];
+  const pageIcons = [Home, ExternalLink, Building2, FileText, ExternalLink, MessageCircle];
   const featuredServices = seoServicePages.slice(0, 8);
 
   return (
@@ -68,16 +69,21 @@ export function Footer() {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60 light:text-slate-500">
               Popular services
             </span>
-            {featuredServices.map((item) => (
-              <Link
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5 text-xs font-medium text-silver/68 transition hover:border-cyan/35 hover:text-cyan light:border-slate-900/10 light:bg-slate-50 light:text-slate-600"
-                href={`/${item.slug}`}
-                key={item.slug}
-              >
-                <Sparkles size={12} className="text-cyan/80" />
-                {item.navLabel}
-              </Link>
-            ))}
+            {featuredServices.map((item) => {
+              const primaryIcon = slugToStack[item.slug]?.[0];
+              return (
+                <Link
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5 text-xs font-medium text-silver/68 transition hover:border-cyan/35 hover:text-cyan light:border-slate-900/10 light:bg-slate-50 light:text-slate-600"
+                  href={`/${item.slug}`}
+                  key={item.slug}
+                >
+                  {primaryIcon
+                    ? <BrandIcon name={primaryIcon} className="h-[14px] w-[14px] rounded-[3px]" />
+                    : null}
+                  {item.navLabel}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
