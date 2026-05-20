@@ -73,6 +73,8 @@ export const routes = [
   { path: "/resume", name: "Resume", priority: 0.9, changeFrequency: "monthly" },
   { path: "/blog", name: "Blog", priority: 0.75, changeFrequency: "weekly" },
   { path: "/contact", name: "Contact", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/testimonials", name: "Testimonials", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/ar", name: "مطور ويب دبي", priority: 0.85, changeFrequency: "monthly" },
   ...seoRoutes
 ] as const;
 

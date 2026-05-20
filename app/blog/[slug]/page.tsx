@@ -164,11 +164,40 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
         }
       : null;
 
+  const howToSlugs = [
+    "website-speed-checklist-before-ads",
+    "how-to-choose-web-developer",
+    "shopify-conversion-fixes",
+    "seo-friendly-development-before-marketing",
+    "ai-website-audit-speed-seo-conversion",
+    "wordpress-speed-optimization"
+  ];
+  const howToJsonLd =
+    seoContent && howToSlugs.includes(post.slug) && seoContent.checklist.length >= 3
+      ? {
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "@id": absoluteUrl(`/blog/${post.slug}#howto`),
+          name: post.title,
+          description: post.excerpt,
+          image: absoluteUrl(post.image),
+          author: { "@id": absoluteUrl("/#person") },
+          totalTime: `PT${readingMinutes}M`,
+          step: seoContent.checklist.map((item, i) => ({
+            "@type": "HowToStep",
+            position: i + 1,
+            name: item.split(".")[0].trim(),
+            text: item
+          }))
+        }
+      : null;
+
   return (
     <>
       <JsonLd data={jsonLd} id={`${post.slug}-blog-json-ld`} />
       <JsonLd data={breadcrumbJsonLd} id={`${post.slug}-breadcrumb-json-ld`} />
       {faqJsonLd ? <JsonLd data={faqJsonLd} id={`${post.slug}-faq-json-ld`} /> : null}
+      {howToJsonLd ? <JsonLd data={howToJsonLd} id={`${post.slug}-howto-json-ld`} /> : null}
       <section className="section-pad page-start">
         <div className="mx-auto max-w-4xl px-5">
           <nav aria-label="breadcrumb">

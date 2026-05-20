@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { PageHero } from "@/components/ui/PageHero";
 import { caseStudies } from "@/data/site";
 import { jsonLdForPage, pageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/utils";
 
 export const metadata: Metadata = pageMetadata({
   title: "Case Studies | Web Problems Solved by Anas Tanveer",
@@ -29,10 +30,26 @@ const serviceLinks = [
   { label: "API Integration Services", href: "/api-integration-services" }
 ];
 
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": absoluteUrl("/case-studies#list"),
+  name: "Web Development Case Studies by Anas Tanveer",
+  url: absoluteUrl("/case-studies"),
+  numberOfItems: caseStudies.length,
+  itemListElement: caseStudies.map((cs, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: absoluteUrl(`/case-studies/${cs.slug}`),
+    name: cs.title,
+  })),
+};
+
 export default function CaseStudiesPage() {
   return (
     <>
       <JsonLd data={jsonLdForPage("/case-studies")} id="case-studies-json-ld" />
+      <JsonLd data={itemListJsonLd} id="case-studies-list-json-ld" />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <PageHero
@@ -179,12 +196,20 @@ export default function CaseStudiesPage() {
                           </Link>
                         ))}
                       </div>
-                      <Link
-                        href="/contact"
-                        className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition hover:opacity-80 ${accent.border} ${accent.bg} ${accent.text} ${accent.label}`}
-                      >
-                        Start a similar project <ArrowUpRight size={14} />
-                      </Link>
+                      <div className="flex items-center gap-2">
+                        <Link
+                          href={`/case-studies/${study.slug}`}
+                          className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-5 py-2.5 text-sm font-semibold text-silver/76 transition hover:border-cyan/35 hover:text-cyan light:border-slate-200 light:bg-white light:text-slate-700"
+                        >
+                          Read full case study <ArrowUpRight size={14} />
+                        </Link>
+                        <Link
+                          href="/contact"
+                          className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition hover:opacity-80 ${accent.border} ${accent.bg} ${accent.text} ${accent.label}`}
+                        >
+                          Start similar project <ArrowUpRight size={14} />
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </article>

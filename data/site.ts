@@ -591,6 +591,7 @@ export const portfolioProjects = [
 
 export const caseStudies = [
   {
+    slug: "trading-platform-prop-firm-dubai",
     title: "Trading Platform & Calculator System for Prop Firm",
     requirement:
       "The client required a scalable trading platform experience for a prop-firm style business where users could understand funding offers, calculate trading-related values, move through a clear journey and trust the platform before taking action.",
@@ -614,6 +615,7 @@ export const caseStudies = [
     ]
   },
   {
+    slug: "business-finance-dashboard-analytics",
     title: "Business Finance Dashboard & Analytics System",
     requirement:
       "The client needed a business dashboard where managers could see finance-style summaries, operational records, reports, user activity and key business indicators without depending on spreadsheets or disconnected tools.",
@@ -637,6 +639,7 @@ export const caseStudies = [
     ]
   },
   {
+    slug: "shopify-conversion-optimization-size-mapping",
     title: "Shopify Size Mapping & Conversion Optimization System",
     requirement:
       "The client needed Shopify product-page improvements that helped customers choose the right size, understand product options and move toward checkout with more confidence on mobile and desktop.",
@@ -660,6 +663,7 @@ export const caseStudies = [
     ]
   },
   {
+    slug: "erp-operations-workflow-system-dubai",
     title: "ERP Operations & Business Workflow System",
     requirement:
       "The client needed a practical ERP-style system that could bring operational records, staff activity, reporting, customer information and business visibility into one organized digital workflow instead of relying on scattered manual tracking.",
