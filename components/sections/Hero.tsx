@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { CountUp } from "@/components/ui/CountUp";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { BrandIcon } from "@/components/ui/BrandIcon";
 import { stats } from "@/data/site";
 
 const trustItems = [
@@ -45,12 +46,18 @@ export function Hero() {
           </motion.h1>
 
           <motion.div initial={false} className="mt-5 flex max-w-xl flex-wrap items-center gap-2">
-            {["Laravel", "Dashboards", "Ecommerce", "SEO-ready websites"].map((role) => (
+            {[
+              { label: "Laravel", icon: "laravel" as const },
+              { label: "React / Next.js", icon: "react" as const },
+              { label: "WordPress", icon: "wordpress" as const },
+              { label: "Shopify", icon: "shopify" as const },
+            ].map((item) => (
               <span
-                key={role}
-                className="rounded-full border border-white/10 bg-white/[0.045] px-3 py-1.5 text-sm font-medium text-silver/78 light:border-slate-900/10 light:bg-white light:text-slate-700"
+                key={item.label}
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.045] px-3 py-1.5 text-sm font-medium text-silver/78 light:border-slate-900/10 light:bg-white light:text-slate-700"
               >
-                {role}
+                <BrandIcon name={item.icon} className="h-[18px] w-[18px] rounded-sm" />
+                {item.label}
               </span>
             ))}
           </motion.div>

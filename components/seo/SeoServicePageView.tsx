@@ -1,15 +1,15 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, HelpCircle, Link2, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, HelpCircle, Link2, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PageHero } from "@/components/ui/PageHero";
+import { BrandIcon, slugToStack } from "@/components/ui/BrandIcon";
 import type { SeoServicePage } from "@/data/seo-pages";
 import { jsonLdForPage } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
 function serviceJsonLd(page: SeoServicePage) {
   const url = absoluteUrl(`/${page.slug}`);
-
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -26,10 +26,7 @@ function serviceJsonLd(page: SeoServicePage) {
     serviceType: page.navLabel,
     url,
     image: absoluteUrl(page.image),
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: ["h1", "h2", ".service-intro"]
-    },
+    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", ".service-intro"] },
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
@@ -50,16 +47,22 @@ function faqJsonLd(page: SeoServicePage) {
     mainEntity: page.faqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer
-      }
+      acceptedAnswer: { "@type": "Answer", text: faq.answer }
     }))
   };
 }
 
+// Brand name display labels for stack icons
+const brandLabels: Record<string, string> = {
+  laravel: "Laravel", wordpress: "WordPress", shopify: "Shopify",
+  react: "React", nextjs: "Next.js", php: "PHP", mysql: "MySQL",
+  vue: "Vue.js", typescript: "TypeScript", javascript: "JavaScript",
+  nodejs: "Node.js", tailwind: "Tailwind",
+};
+
 export function SeoServicePageView({ page }: { page: SeoServicePage }) {
   const path = `/${page.slug}`;
+  const stackIcons = slugToStack[page.slug] ?? [];
 
   return (
     <>
@@ -94,88 +97,130 @@ export function SeoServicePageView({ page }: { page: SeoServicePage }) {
             label={`${page.navLabel} by Anas Tanveer`}
             points={["Dubai, UAE", "7+ years experience", "Laravel, WordPress, Shopify", "Available for freelance and remote projects"]}
           />
+
+          {/* Tech stack strip */}
+          {stackIcons.length > 0 && (
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <span className="text-xs font-semibold uppercase tracking-[0.22em] text-silver/40 light:text-slate-400">Built with</span>
+              {stackIcons.map((icon) => (
+                <span
+                  key={icon}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-sm font-medium text-silver/80 light:border-slate-200 light:bg-white light:text-slate-700"
+                >
+                  <BrandIcon name={icon} className="h-[18px] w-[18px] rounded-sm" />
+                  {brandLabels[icon] ?? icon}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
       <section className="section-pad pt-0">
         <div className="mx-auto grid max-w-7xl gap-6 px-5 lg:grid-cols-[0.78fr_0.22fr]">
           <article className="space-y-6">
-            <div className="glass rounded-lg p-6 md:p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan">Service overview</p>
-              <div className="mt-5 space-y-5 text-base leading-8 text-silver/76 light:text-slate-600">
-                {page.intro.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
+
+            {/* Service overview */}
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] p-6 shadow-[0_4px_40px_rgba(0,0,0,0.18)] light:border-slate-200 light:bg-white md:p-8">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan/5 via-transparent to-violet/5 light:from-blue-50/80 light:via-transparent light:to-violet-50/40" />
+              <div className="relative">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan">Service overview</p>
+                <div className="service-intro mt-5 space-y-5 text-base leading-8 text-silver/76 light:text-slate-600">
+                  {page.intro.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
               </div>
             </div>
 
+            {/* Problems + Features — 2 col */}
             <div className="grid gap-5 md:grid-cols-2">
-              <div className="premium-card glass rounded-lg p-6">
-                <div className="mb-5 inline-grid h-11 w-11 place-items-center rounded-2xl border border-cyan/20 bg-cyan/10 text-cyan">
-                  <ShieldCheck size={20} />
+
+              {/* Problems */}
+              <div className="relative overflow-hidden rounded-2xl border border-cyan/15 bg-white/[0.02] p-6 light:border-blue-100 light:bg-blue-50/40">
+                <div className="pointer-events-none absolute right-0 top-0 h-40 w-40 rounded-full bg-cyan/8 blur-3xl light:bg-blue-200/40" />
+                <div className="relative">
+                  <div className="mb-5 inline-grid h-11 w-11 place-items-center rounded-2xl border border-cyan/25 bg-cyan/15 text-cyan">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <h2 className="font-display text-xl font-semibold text-white light:text-slate-950">Problems this service solves</h2>
+                  <ul className="mt-5 space-y-3 text-sm leading-7 text-silver/72 light:text-slate-600">
+                    {page.problems.map((item) => (
+                      <li className="flex gap-3" key={item}>
+                        <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-cyan" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h2 className="font-display text-2xl font-semibold text-white light:text-slate-950">Problems this service solves</h2>
-                <ul className="mt-5 space-y-3 text-sm leading-7 text-silver/72 light:text-slate-600">
-                  {page.problems.map((item) => (
-                    <li className="flex gap-3" key={item}>
-                      <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-cyan" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
 
-              <div className="premium-card glass rounded-lg p-6">
-                <div className="mb-5 inline-grid h-11 w-11 place-items-center rounded-2xl border border-emerald/20 bg-emerald/10 text-emerald">
-                  <Sparkles size={20} />
+              {/* Features */}
+              <div className="relative overflow-hidden rounded-2xl border border-emerald/15 bg-white/[0.02] p-6 light:border-emerald-100 light:bg-emerald-50/40">
+                <div className="pointer-events-none absolute right-0 top-0 h-40 w-40 rounded-full bg-emerald/8 blur-3xl light:bg-emerald-200/40" />
+                <div className="relative">
+                  <div className="mb-5 inline-grid h-11 w-11 place-items-center rounded-2xl border border-emerald/25 bg-emerald/15 text-emerald">
+                    <Sparkles size={20} />
+                  </div>
+                  <h2 className="font-display text-xl font-semibold text-white light:text-slate-950">Features delivered</h2>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {page.features.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-emerald/20 bg-emerald/8 px-3 py-1.5 text-xs font-medium text-emerald/85 light:border-emerald-200 light:bg-emerald-50 light:text-emerald-800"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="mt-7 font-display text-base font-semibold text-white light:text-slate-950">Best fit for</h3>
+                  <ul className="mt-4 space-y-2 text-sm text-silver/72 light:text-slate-600">
+                    {page.bestFor.map((item) => (
+                      <li className="flex items-center gap-2" key={item}>
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald shadow-[0_0_6px_rgba(52,211,153,0.6)]" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h2 className="font-display text-2xl font-semibold text-white light:text-slate-950">Features delivered</h2>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {page.features.map((item) => (
-                    <span
-                      className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-silver/76 light:border-slate-900/10 light:bg-slate-50 light:text-slate-700"
-                      key={item}
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-                <h3 className="mt-7 font-display text-lg font-semibold text-white light:text-slate-950">Best fit for</h3>
-                <ul className="mt-4 space-y-2 text-sm text-silver/72 light:text-slate-600">
-                  {page.bestFor.map((item) => (
-                    <li className="flex items-center gap-2" key={item}>
-                      <span className="h-1.5 w-1.5 rounded-full bg-cyan" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div className="glass rounded-lg p-6 md:p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan">Why work with Anas Tanveer</p>
-              <h2 className="mt-4 font-display text-3xl font-semibold text-white light:text-slate-950">
-                Practical full-stack delivery with business context.
-              </h2>
-              <div className="mt-5 space-y-5 text-base leading-8 text-silver/76 light:text-slate-600">
-                {page.delivery.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-                <p>
-                  Anas Tanveer is a Dubai-based full-stack web developer connected with ARS Developer Ltd, working across Laravel, PHP,
-                  WordPress, Shopify, React, Next.js, MySQL, REST APIs, SEO, PageSpeed, dashboards, ERP, CRM, and ecommerce systems for
-                  UAE, UK, Canada, and international project needs.
-                </p>
               </div>
             </div>
 
-            <div className="glass rounded-lg p-6 md:p-8">
+            {/* Why Anas */}
+            <div className="relative overflow-hidden rounded-2xl border border-violet/15 bg-white/[0.02] p-6 light:border-violet-100 light:bg-violet-50/30 md:p-8">
+              <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-violet/8 blur-3xl light:bg-violet-200/40" />
+              <div className="relative">
+                <div className="mb-5 inline-grid h-11 w-11 place-items-center rounded-2xl border border-violet/25 bg-violet/15 text-violet">
+                  <Zap size={20} />
+                </div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-violet light:text-violet-700">Why work with Anas Tanveer</p>
+                <h2 className="mt-4 font-display text-2xl font-semibold text-white light:text-slate-950">
+                  Practical full-stack delivery with business context.
+                </h2>
+                <div className="mt-5 space-y-5 text-base leading-8 text-silver/76 light:text-slate-600">
+                  {page.delivery.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                  <p>
+                    Anas Tanveer is a Dubai-based full-stack web developer connected with ARS Developer Ltd, working across Laravel, PHP,
+                    WordPress, Shopify, React, Next.js, MySQL, REST APIs, SEO, PageSpeed, dashboards, ERP, CRM, and ecommerce systems for
+                    UAE, UK, Canada, and international project needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQs */}
+            <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-6 light:border-slate-200 light:bg-white md:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan">Frequently asked questions</p>
               <div className="mt-5 grid gap-4">
                 {page.faqs.map((faq) => (
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-5 light:border-slate-900/10 light:bg-white" key={faq.question}>
-                    <h3 className="flex items-start gap-3 font-display text-lg font-semibold text-white light:text-slate-950">
-                      <HelpCircle className="mt-1 h-4 w-4 shrink-0 text-cyan" />
+                  <div
+                    key={faq.question}
+                    className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 light:border-slate-100 light:bg-slate-50"
+                  >
+                    <h3 className="flex items-start gap-3 font-display text-base font-semibold text-white light:text-slate-950">
+                      <HelpCircle className="mt-0.5 h-4 w-4 shrink-0 text-cyan" />
                       {faq.question}
                     </h3>
                     <p className="mt-3 text-sm leading-7 text-silver/72 light:text-slate-600">{faq.answer}</p>
@@ -185,15 +230,18 @@ export function SeoServicePageView({ page }: { page: SeoServicePage }) {
             </div>
           </article>
 
+          {/* Sidebar */}
           <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
-            <div className="glass rounded-lg p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan">Internal links</p>
+
+            {/* Related links */}
+            <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-5 light:border-slate-200 light:bg-white">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan">Related services</p>
               <div className="mt-4 grid gap-2">
                 {page.related.map((link) => (
                   <Link
-                    className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3 text-sm font-medium text-silver/76 transition hover:border-cyan/35 hover:text-cyan light:border-slate-900/10 light:bg-white light:text-slate-700"
-                    href={link.href}
                     key={`${link.href}-${link.label}`}
+                    href={link.href}
+                    className="group flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm font-medium text-silver/76 transition hover:border-cyan/35 hover:bg-cyan/5 hover:text-cyan light:border-slate-100 light:bg-white light:text-slate-700"
                   >
                     <span>{link.label}</span>
                     <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
@@ -202,8 +250,26 @@ export function SeoServicePageView({ page }: { page: SeoServicePage }) {
               </div>
             </div>
 
-            <div className="glass rounded-lg p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan">Entity details</p>
+            {/* Stack icons in sidebar */}
+            {stackIcons.length > 0 && (
+              <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-5 light:border-slate-200 light:bg-white">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan">Tech stack</p>
+                <div className="mt-4 grid grid-cols-3 gap-3">
+                  {stackIcons.map((icon) => (
+                    <div key={icon} className="flex flex-col items-center gap-1.5 rounded-xl border border-white/10 bg-white/[0.03] px-2 py-3 light:border-slate-100 light:bg-slate-50">
+                      <BrandIcon name={icon} className="h-7 w-7 rounded-md" />
+                      <span className="text-center text-[10px] font-medium leading-tight text-silver/55 light:text-slate-500">
+                        {brandLabels[icon] ?? icon}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Entity card */}
+            <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-5 light:border-slate-200 light:bg-white">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan">Developer</p>
               <dl className="mt-4 space-y-3 text-sm text-silver/72 light:text-slate-600">
                 <div><dt className="text-white light:text-slate-950">Name</dt><dd>Anas Tanveer</dd></div>
                 <div><dt className="text-white light:text-slate-950">Location</dt><dd>Dubai, UAE</dd></div>
@@ -211,10 +277,10 @@ export function SeoServicePageView({ page }: { page: SeoServicePage }) {
                 <div><dt className="text-white light:text-slate-950">Contact</dt><dd>info@anastanveer.com</dd></div>
               </dl>
               <a
-                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan hover:text-emerald"
                 href="https://www.linkedin.com/in/anas-fullstackdev/"
                 target="_blank"
                 rel="noreferrer"
+                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan hover:text-emerald"
               >
                 <Link2 size={15} />
                 LinkedIn profile
