@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2, Mail, MessageCircle } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Mail, MessageCircle, ArrowUpRight, Star, Clock, Users, Zap, Shield } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { absoluteUrl, siteUrl } from "@/lib/utils";
 
@@ -40,6 +40,43 @@ const jsonLd = {
       { "@type": "ListItem", position: 2, name: "مطور ويب في دبي", item: absoluteUrl("/ar") },
     ],
   },
+  mainEntity: {
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "كم تكلفة تطوير موقع ويب في دبي؟",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "تتراوح تكلفة تطوير المواقع الإلكترونية بين 500 دولار للمواقع البسيطة و5000 دولار أو أكثر للمنصات الكاملة مع لوحات التحكم وتكامل API. تواصل معي لأحدد التكلفة الدقيقة بناءً على متطلبات مشروعك."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "هل تعمل مع شركات في الإمارات العربية المتحدة؟",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "نعم، أعمل مع شركات في دبي، أبوظبي، الشارقة وسائر إمارات الدولة. لديّ خبرة في بوابات الدفع الإماراتية مثل تيلر وبايتابس وسترايب."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "ما هي التقنيات التي تتخصص فيها؟",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "أتخصص في لارافيل، PHP، React، Next.js، ووردبريس، شوبيفاي، MySQL، REST API، Vue.js وTypeScript. بناءً على متطلباتك أختار المنصة الأنسب لمشروعك."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "كم يستغرق تطوير الموقع الإلكتروني؟",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "يستغرق الموقع البسيط 1-2 أسبوع، والمنصات المتوسطة 3-6 أسابيع، والأنظمة الكاملة مع ERP وCRM من 6 إلى 12 أسبوع. أُحدد جدولاً زمنياً دقيقاً بعد مراجعة متطلباتك."
+        }
+      },
+    ]
+  }
 };
 
 const services = [
@@ -60,6 +97,85 @@ const features = [
   "حلول مخصصة تناسب احتياجات عملك",
   "دعم ما بعد الإطلاق والصيانة المستمرة",
   "خبرة في بوابات الدفع الإماراتية (تيلر، بايتابس، ستريب)",
+];
+
+const process = [
+  {
+    step: "01",
+    title: "مراجعة المتطلبات",
+    desc: "أرسل لي وصف المشكلة، المنصة الحالية، الهدف، والميزانية. أراجع كل شيء خلال 24 ساعة.",
+    icon: MessageCircle,
+  },
+  {
+    step: "02",
+    title: "خطة عملية واضحة",
+    desc: "أُحدد التقنية المناسبة، الجدول الزمني، التكلفة، وكل خطوة في المشروع بشفافية.",
+    icon: Zap,
+  },
+  {
+    step: "03",
+    title: "التطوير والتسليم",
+    desc: "أبني المشروع بكود نظيف، أختبره بالكامل، وأُسلّمه مع توثيق واضح وتدريب إذا لزم.",
+    icon: Shield,
+  },
+  {
+    step: "04",
+    title: "الدعم المستمر",
+    desc: "أوفر دعماً ما بعد الإطلاق، تحديثات، وصيانة لضمان استمرارية عمل مشروعك بكفاءة.",
+    icon: Users,
+  },
+];
+
+const projects = [
+  {
+    title: "منصة تداول للشركات المالية",
+    desc: "منصة تداول كاملة مع لوحة تحكم متقدمة، تكامل مع بورصات المال، وإدارة المحافظ الاستثمارية.",
+    tech: ["لارافيل", "Vue.js", "MySQL", "API"],
+    result: "معالجة آلاف العمليات يومياً",
+    href: "/case-studies/trading-platform-prop-firm-dubai",
+  },
+  {
+    title: "نظام ERP لإدارة العمليات",
+    desc: "نظام ERP متكامل لإدارة المخزون، الموارد البشرية، المحاسبة، والمشتريات لشركة إماراتية.",
+    tech: ["لارافيل", "PHP", "MySQL", "REST API"],
+    result: "تقليل وقت العمليات بنسبة 60%",
+    href: "/case-studies/erp-operations-workflow-system-dubai",
+  },
+  {
+    title: "متجر شوبيفاي مع تحسين التحويل",
+    desc: "تحسين منطق الأحجام والفلترة في متجر شوبيفاي لزيادة نسبة التحويل وتجربة المستخدم.",
+    tech: ["شوبيفاي", "Liquid", "JavaScript"],
+    result: "زيادة التحويلات بنسبة 35%",
+    href: "/case-studies/shopify-conversion-optimization-size-mapping",
+  },
+];
+
+const faqs = [
+  {
+    q: "كم تكلفة تطوير موقع ويب في دبي؟",
+    a: "تتراوح التكلفة بين 500 دولار للمواقع البسيطة و5000 دولار أو أكثر للمنصات الكاملة. تواصل معي لأُحدد التكلفة الدقيقة بناءً على متطلبات مشروعك.",
+  },
+  {
+    q: "هل تعمل مع شركات في الإمارات العربية المتحدة؟",
+    a: "نعم، أعمل مع شركات في دبي، أبوظبي، الشارقة وجميع إمارات الدولة. لديّ خبرة في بوابات الدفع الإماراتية مثل تيلر وبايتابس.",
+  },
+  {
+    q: "كم يستغرق تطوير الموقع الإلكتروني؟",
+    a: "المواقع البسيطة 1-2 أسبوع، المنصات المتوسطة 3-6 أسابيع، الأنظمة الكاملة من 6 إلى 12 أسبوع. أُحدد الجدول الزمني الدقيق بعد مراجعة متطلباتك.",
+  },
+  {
+    q: "هل تقدم خدمات الصيانة والدعم بعد الإطلاق؟",
+    a: "نعم، أقدم خدمات الصيانة المستمرة، التحديثات الأمنية، وإضافة المميزات الجديدة لمشروعك بعد إطلاقه.",
+  },
+  {
+    q: "هل يمكنك تحسين موقعي الحالي بدلاً من بناء موقع جديد؟",
+    a: "بالتأكيد. كثير من مشاريعي هي تحسين وتطوير مواقع قائمة — تحسين السرعة، إضافة مميزات، أو إعادة بناء أجزاء محددة دون تغيير كل شيء.",
+  },
+];
+
+const reviews = [
+  { author: "Steve Barlow", location: "المملكة المتحدة", body: "مشروع رائع من أنس. يفهم المتطلبات، يُقدّم نتائج ممتازة، ويُنجز العمل بسرعة وجودة عالية.", rating: 5 },
+  { author: "Said B.", location: "فرنسا", body: "التعاون الثاني مع أنس — سريع، دقيق وعالي الجودة. نتائج ممتازة تُسلَّم في الوقت المحدد.", rating: 5 },
 ];
 
 export default function ArabicLandingPage() {
@@ -133,7 +249,7 @@ export default function ArabicLandingPage() {
           </div>
 
           {/* Services grid */}
-          <div className="mt-8">
+          <div className="mt-10">
             <h2 className="mb-5 font-display text-2xl font-semibold text-white light:text-slate-950">
               خدمات تطوير الويب
             </h2>
@@ -153,8 +269,94 @@ export default function ArabicLandingPage() {
             </div>
           </div>
 
+          {/* How it works — process */}
+          <div className="mt-12">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan">كيف أعمل</p>
+            <h2 className="mt-2 mb-6 font-display text-2xl font-semibold text-white light:text-slate-950">
+              من فكرتك إلى موقع يعمل — 4 خطوات واضحة
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {process.map((p) => {
+                const Icon = p.icon;
+                return (
+                  <div key={p.step} className="rounded-2xl border border-white/10 bg-white/[0.025] p-6 light:border-slate-200 light:bg-white">
+                    <div className="mb-4 flex items-center gap-3">
+                      <span className="font-display text-3xl font-bold text-cyan/30 light:text-blue-200">{p.step}</span>
+                      <Icon size={20} className="text-cyan light:text-blue-600" />
+                    </div>
+                    <p className="mb-2 font-display text-base font-semibold text-white light:text-slate-950">{p.title}</p>
+                    <p className="text-sm leading-7 text-silver/65 light:text-slate-600">{p.desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Projects */}
+          <div className="mt-12">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan">مشاريع منجزة</p>
+            <h2 className="mt-2 mb-6 font-display text-2xl font-semibold text-white light:text-slate-950">
+              أمثلة حقيقية من مشاريع سابقة
+            </h2>
+            <div className="grid gap-5 md:grid-cols-3">
+              {projects.map((proj) => (
+                <Link
+                  key={proj.href}
+                  href={proj.href}
+                  className="group flex flex-col rounded-2xl border border-white/10 bg-white/[0.025] p-5 transition hover:border-cyan/25 light:border-slate-200 light:bg-white"
+                >
+                  <p className="font-display text-base font-semibold text-white group-hover:text-cyan light:text-slate-950 light:group-hover:text-blue-600">
+                    {proj.title}
+                  </p>
+                  <p className="mt-2 text-sm leading-7 text-silver/65 light:text-slate-600">{proj.desc}</p>
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {proj.tech.map((t) => (
+                      <span key={t} className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs text-silver/60 light:border-slate-200 light:bg-slate-50 light:text-slate-600">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-4 flex items-center gap-2 rounded-xl border border-emerald/20 bg-emerald/8 px-3 py-2 light:border-emerald-100 light:bg-emerald-50">
+                    <CheckCircle2 size={13} className="shrink-0 text-emerald light:text-emerald-600" />
+                    <p className="text-xs font-medium text-emerald/85 light:text-emerald-700">{proj.result}</p>
+                  </div>
+                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-cyan/70 group-hover:text-cyan light:text-blue-600">
+                    اقرأ تفاصيل المشروع <ArrowUpRight size={12} />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Client reviews */}
+          <div className="mt-12">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan">آراء العملاء</p>
+            <h2 className="mt-2 mb-6 font-display text-2xl font-semibold text-white light:text-slate-950">
+              ماذا يقول العملاء؟
+            </h2>
+            <div className="grid gap-5 md:grid-cols-2">
+              {reviews.map((r) => (
+                <div key={r.author} className="rounded-2xl border border-white/10 bg-white/[0.025] p-6 light:border-slate-200 light:bg-white">
+                  <div className="mb-3 flex items-center gap-1">
+                    {Array.from({ length: r.rating }).map((_, i) => (
+                      <Star key={i} size={13} className="fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
+                  <p className="text-sm leading-7 text-silver/72 light:text-slate-600">"{r.body}"</p>
+                  <p className="mt-3 text-xs font-semibold text-white light:text-slate-950">{r.author}</p>
+                  <p className="text-[11px] text-silver/45 light:text-slate-400">{r.location} · Fiverr</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 text-center">
+              <Link href="/testimonials" className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan/75 hover:text-cyan light:text-blue-600">
+                عرض جميع التقييمات <ArrowUpRight size={13} />
+              </Link>
+            </div>
+          </div>
+
           {/* Why choose */}
-          <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.025] p-6 light:border-slate-200 light:bg-white md:p-8">
+          <div className="mt-10 rounded-2xl border border-white/10 bg-white/[0.025] p-6 light:border-slate-200 light:bg-white md:p-8">
             <h2 className="mb-5 font-display text-xl font-semibold text-white light:text-slate-950">
               لماذا تختار أنس تنوير لمشروعك في الإمارات؟
             </h2>
@@ -168,8 +370,24 @@ export default function ArabicLandingPage() {
             </ul>
           </div>
 
+          {/* FAQ */}
+          <div className="mt-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan">أسئلة شائعة</p>
+            <h2 className="mt-2 mb-6 font-display text-2xl font-semibold text-white light:text-slate-950">
+              أسئلة شائعة حول تطوير المواقع في دبي
+            </h2>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <div key={faq.q} className="rounded-2xl border border-white/10 bg-white/[0.025] p-5 light:border-slate-200 light:bg-white">
+                  <p className="mb-2 font-display text-base font-semibold text-white light:text-slate-950">{faq.q}</p>
+                  <p className="text-sm leading-7 text-silver/65 light:text-slate-600">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* About */}
-          <div className="mt-6 rounded-2xl border border-white/8 bg-white/[0.02] p-6 light:border-slate-100 light:bg-slate-50">
+          <div className="mt-8 rounded-2xl border border-white/8 bg-white/[0.02] p-6 light:border-slate-100 light:bg-slate-50">
             <h2 className="mb-3 font-display text-lg font-semibold text-white light:text-slate-950">
               من هو أنس تنوير؟
             </h2>
@@ -190,11 +408,15 @@ export default function ArabicLandingPage() {
 
           {/* CTA */}
           <div className="mt-8 rounded-3xl border border-cyan/20 bg-cyan/8 p-8 text-center light:border-blue-200 light:bg-blue-50">
+            <div className="mb-2 flex justify-center">
+              <Clock size={28} className="text-cyan light:text-blue-600" />
+            </div>
             <h2 className="font-display text-2xl font-semibold text-white light:text-slate-950">
               هل لديك مشروع في الإمارات؟
             </h2>
             <p className="mt-3 text-sm leading-7 text-silver/72 light:text-slate-600">
-              أرسل لي وصفاً للمشكلة، المنصة الحالية، الهدف، والميزانية. سأراجعها وأرد بخطة عملية واضحة.
+              أرسل لي وصفاً للمشكلة، المنصة الحالية، الهدف، والميزانية.<br />
+              سأراجعها وأرد بخطة عملية واضحة خلال 24 ساعة.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <a
