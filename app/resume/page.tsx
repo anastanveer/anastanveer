@@ -21,10 +21,10 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { jsonLdForPage, pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Resume | Anas Tanveer Full-Stack Developer Dubai",
-  description:
-    "Resume of Anas Tanveer, Dubai full-stack developer for Laravel, PHP, React, WordPress, Shopify, dashboards, APIs, ecommerce and ERP.",
-  path: "/resume"
+  title: "Resume | Anas Tanveer — Full-Stack Developer Dubai UAE",
+  description: "Resume of Anas Tanveer, Dubai-based full-stack developer with 7+ years experience in Laravel, PHP, React, Next.js, WordPress, Shopify, Vue.js, MySQL, dashboards, APIs, ERP and SaaS platforms.",
+  path: "/resume",
+  extraKeywords: ["Full Stack Developer Resume Dubai", "Laravel Developer CV UAE", "Hire Full Stack Developer Dubai", "Web Developer Resume Dubai", "PHP Developer CV UAE"]
 });
 
 const experiences = [

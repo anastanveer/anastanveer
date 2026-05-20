@@ -91,7 +91,9 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
     ],
     relatedLinks: [
       { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Hire Laravel Developer", href: "/hire-laravel-developer" },
       { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "SaaS Developer Dubai", href: "/saas-developer-dubai" },
       { label: "View pricing", href: "/pricing" },
       { label: "Discuss a Laravel project", href: "/contact" }
     ]
@@ -169,6 +171,8 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
     ],
     relatedLinks: [
       { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "WordPress SEO Dubai", href: "/wordpress-seo-dubai" },
+      { label: "WordPress Maintenance Dubai", href: "/wordpress-maintenance-dubai" },
       { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
       { label: "View pricing", href: "/pricing" },
       { label: "Start a project", href: "/contact" }
@@ -247,6 +251,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
     ],
     relatedLinks: [
       { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+      { label: "Ecommerce Developer Dubai", href: "/ecommerce-developer-dubai" },
       { label: "Ecommerce Development Dubai", href: "/ecommerce-website-development-dubai" },
       { label: "Portfolio examples", href: "/work" },
       { label: "Start a Shopify project", href: "/contact" }
@@ -638,6 +643,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
     relatedLinks: [
       { label: "Website Speed Optimisation Dubai", href: "/website-speed-optimization-dubai" },
       { label: "SEO-Friendly Website Development", href: "/seo-friendly-website-development" },
+      { label: "WordPress SEO Dubai", href: "/wordpress-seo-dubai" },
       { label: "View case studies", href: "/case-studies" },
       { label: "Audit my website", href: "/contact" }
     ]
@@ -699,6 +705,8 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
     ],
     relatedLinks: [
       { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Hire Laravel Developer", href: "/hire-laravel-developer" },
+      { label: "Full Stack Developer Dubai", href: "/fullstack-developer-dubai" },
       { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
       { label: "View pricing", href: "/pricing" },
       { label: "Hire Anas Tanveer", href: "/contact" }
@@ -761,6 +769,7 @@ export const blogSeoContent: Record<string, BlogSeoContent> = {
     ],
     relatedLinks: [
       { label: "Freelance Web Developer Dubai", href: "/freelance-web-developer-dubai" },
+      { label: "Full Stack Developer Dubai", href: "/fullstack-developer-dubai" },
       { label: "Web Developer UAE", href: "/web-developer-uae" },
       { label: "About Anas Tanveer", href: "/about" },
       { label: "Start a project", href: "/contact" }

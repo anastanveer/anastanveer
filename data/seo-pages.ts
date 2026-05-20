@@ -59,6 +59,8 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Dashboard development in Dubai", href: "/dashboard-development-dubai" },
       { label: "API integration services", href: "/api-integration-services" },
       { label: "ERP development UAE", href: "/erp-development-uae" },
+      { label: "Hire Laravel Developer", href: "/hire-laravel-developer" },
+      { label: "SaaS Developer Dubai", href: "/saas-developer-dubai" },
       { label: "Why choose Laravel instead of a plugin", href: "/blog/choose-laravel-instead-of-plugin" },
       { label: "Laravel vs Node.js for business", href: "/blog/laravel-vs-nodejs" },
       ...coreRelated
@@ -134,9 +136,10 @@ export const seoServicePages: SeoServicePage[] = [
       { question: "Do you build WordPress landing pages?", answer: "Yes. Landing pages can be built for local services, paid ads, SEO campaigns, lead generation, and business credibility." }
     ],
     related: [
+      { label: "WordPress SEO Dubai", href: "/wordpress-seo-dubai" },
+      { label: "WordPress maintenance Dubai", href: "/wordpress-maintenance-dubai" },
       { label: "SEO-friendly website development", href: "/seo-friendly-website-development" },
       { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
-      { label: "Freelance web developer Dubai", href: "/freelance-web-developer-dubai" },
       { label: "WordPress vs custom Laravel", href: "/blog/wordpress-vs-custom-laravel" },
       { label: "WordPress speed optimization guide", href: "/blog/wordpress-speed-optimization" },
       ...coreRelated
@@ -173,6 +176,7 @@ export const seoServicePages: SeoServicePage[] = [
       { question: "Do you improve Shopify product pages?", answer: "Yes. Product pages can be improved for variant selection, size guidance, trust signals, mobile UX, speed, and conversion clarity." }
     ],
     related: [
+      { label: "Ecommerce Developer Dubai", href: "/ecommerce-developer-dubai" },
       { label: "Ecommerce website development Dubai", href: "/ecommerce-website-development-dubai" },
       { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
       { label: "API integration services", href: "/api-integration-services" },
@@ -291,10 +295,11 @@ export const seoServicePages: SeoServicePage[] = [
     ],
     related: [
       { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "MySQL Developer Dubai", href: "/mysql-developer-dubai" },
       { label: "ERP development UAE", href: "/erp-development-uae" },
+      { label: "CRM Development Dubai", href: "/crm-development-dubai" },
       { label: "API integration services", href: "/api-integration-services" },
       { label: "Custom business dashboard development guide", href: "/blog/custom-business-dashboard-development" },
-      { label: "ERP software development guide", href: "/blog/erp-software-development-guide" },
       ...coreRelated
     ]
   },
@@ -330,10 +335,11 @@ export const seoServicePages: SeoServicePage[] = [
     ],
     related: [
       { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
+      { label: "CRM Development Dubai", href: "/crm-development-dubai" },
+      { label: "MySQL Developer Dubai", href: "/mysql-developer-dubai" },
       { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
       { label: "API integration services", href: "/api-integration-services" },
       { label: "ERP software development guide", href: "/blog/erp-software-development-guide" },
-      { label: "Custom business dashboard development", href: "/blog/custom-business-dashboard-development" },
       ...coreRelated
     ]
   },
@@ -930,6 +936,126 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
       { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
       { label: "API integration services", href: "/api-integration-services" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "vue-developer-dubai",
+    navLabel: "Vue.js Developer Dubai",
+    title: "Vue.js Developer Dubai for Interactive Web Applications and Dashboards",
+    metaTitle: "Vue.js Developer Dubai | Nuxt.js, SPA, Dashboard UI",
+    metaDescription: "Vue.js and Nuxt.js developer in Dubai for interactive SPAs, admin dashboards, Laravel + Vue integrations, and fast business web applications.",
+    keywords: ["Vue Developer Dubai", "Vue.js Developer Dubai", "Nuxt.js Developer Dubai", "Vue.js Developer UAE", "Vue Frontend Developer Dubai"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "Vue.js developer Dubai interactive web application and dashboard",
+    intro: [
+      "Vue.js is a strong choice for businesses that need interactive admin panels, real-time dashboards, component-based UIs, and fast single-page applications without the complexity overhead of larger frameworks. Nuxt.js adds server-side rendering, making Vue viable for SEO-heavy marketing sites too.",
+      "Anas Tanveer works as a Vue.js Developer Dubai profile building interactive frontends with Vue 3, Nuxt.js, Pinia state management, Tailwind CSS, and Laravel or Node.js backend integrations. The work covers new SPA builds, Vue rewrites of legacy interfaces, dashboard UIs, and performance improvements for existing Vue applications.",
+      "Dubai businesses and agencies that need clean, reactive user interfaces — connected to a Laravel REST API or a third-party data source — benefit most from Vue.js development."
+    ],
+    bestFor: ["Laravel + Vue full-stack applications", "Admin dashboards and internal tools", "Real-time data interfaces", "Interactive product configurators", "Nuxt.js SEO-ready marketing sites"],
+    problems: [
+      "The existing admin panel is slow, built with jQuery, and difficult to maintain.",
+      "A dashboard needs reactive charts, filters, and real-time updates without full page refreshes.",
+      "A new product feature needs a complex interactive UI beyond what a server-rendered template can provide.",
+      "The marketing site needs Vue/Nuxt for SEO while keeping interactive components."
+    ],
+    features: ["Vue 3 and Nuxt.js development", "Pinia state management", "Tailwind CSS responsive design", "Laravel REST API integration", "Real-time dashboard components", "Form validation and complex UX flows", "Component library setup", "TypeScript support"],
+    delivery: [
+      "Vue projects start with component architecture planning: which parts are reactive, which are static, how state flows between components, and how the API is consumed. This prevents unnecessary reactivity and keeps the application fast.",
+      "The result is a clean, typed Vue application with well-structured components, clear state management, and a maintainable codebase that developers can extend without rewriting."
+    ],
+    faqs: [
+      { question: "When should I choose Vue.js over React for a Dubai project?", answer: "Vue is often easier to integrate into existing projects (Laravel, WordPress), has a gentler learning curve, and is excellent for admin dashboards and internal tools. React has a larger ecosystem for complex product UIs." },
+      { question: "Can you build a Nuxt.js site that ranks in UAE search?", answer: "Yes. Nuxt.js server-side rendering means pages are fully indexable. Combined with proper schema, metadata, and page speed optimization, Nuxt.js performs well in UAE and global search." },
+      { question: "Do you connect Vue.js frontends to Laravel backends?", answer: "Yes. Vue 3 or Nuxt.js connected to Laravel REST APIs is a common full-stack pattern. API authentication, CSRF handling, data fetching, and form submission can all be handled cleanly." }
+    ],
+    related: [
+      { label: "React Developer Dubai", href: "/react-developer-dubai" },
+      { label: "Next.js Developer Dubai", href: "/nextjs-developer-dubai" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
+      { label: "Full Stack Developer Dubai", href: "/fullstack-developer-dubai" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "mysql-developer-dubai",
+    navLabel: "MySQL Developer Dubai",
+    title: "MySQL Developer Dubai for Database Design, Optimization and Migrations",
+    metaTitle: "MySQL Developer Dubai | Database Design, Query Optimization",
+    metaDescription: "MySQL developer in Dubai for database design, schema migrations, query optimization, slow query fixes, reporting databases, and Laravel/PHP database architecture.",
+    keywords: ["MySQL Developer Dubai", "Database Developer Dubai", "MySQL Optimization Dubai", "Database Design UAE", "Laravel MySQL Developer Dubai"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "MySQL developer Dubai database design and query optimization",
+    intro: [
+      "A poorly designed database causes slow queries, data integrity problems, difficult reporting, and systems that become harder to change as the business grows. Many UAE business applications slow down not because of the frontend or server, but because of missing indexes, inefficient joins, or tables that were never designed for scale.",
+      "Anas Tanveer works as a MySQL developer in Dubai for database design on new projects, performance optimization on existing systems, schema migration planning, complex query improvement, reporting database design, and Laravel Eloquent optimization. The work covers both new builds and rescue work on slow existing systems.",
+      "This service is useful for businesses with Laravel, PHP, or WordPress applications that are experiencing slow admin panels, slow reports, slow search, or database errors as data volume grows."
+    ],
+    bestFor: ["Laravel applications with slow queries", "Business systems with large data volumes", "ERP or CRM databases needing optimization", "New projects needing clean schema design", "WordPress sites with database performance issues"],
+    problems: [
+      "The admin panel or reports take 10+ seconds to load as the database grows.",
+      "Complex reports cannot be built because the database was not designed for reporting.",
+      "Database queries are missing indexes, causing full table scans on every request.",
+      "Schema migrations are risky because the existing database structure is messy or undocumented."
+    ],
+    features: ["Database schema design and normalization", "Index analysis and optimization", "Slow query identification and rewriting", "Laravel Eloquent and raw query optimization", "Reporting database design", "Schema migration planning", "Database documentation", "MySQL to PostgreSQL migration support"],
+    delivery: [
+      "Database work starts with an audit: slow query log review, EXPLAIN plan analysis, index coverage check, and schema review against the application's actual query patterns. Problems are ranked by impact and fixed in order.",
+      "New database designs start from the business data model: entities, relationships, cardinality, and reporting requirements. The schema is built for both transactional performance and reporting clarity."
+    ],
+    faqs: [
+      { question: "How do you find slow queries in a MySQL database?", answer: "The MySQL slow query log identifies queries exceeding a time threshold. EXPLAIN plans reveal full table scans and missing indexes. Query profiling shows time breakdown per operation." },
+      { question: "Can database optimization fix a slow Laravel admin panel?", answer: "Yes. Most slow Laravel admin panels are caused by N+1 query problems, missing eager loading, or missing indexes. These can often reduce load times from seconds to milliseconds." },
+      { question: "Do you handle database migrations for live production systems?", answer: "Yes. Live database migrations are planned with zero-downtime strategies: additive changes first, backfills in batches, and destructive changes only after the application stops using old columns." }
+    ],
+    related: [
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "ERP Development UAE", href: "/erp-development-uae" },
+      { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
+      { label: "API integration services", href: "/api-integration-services" },
+      { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "wordpress-seo-dubai",
+    navLabel: "WordPress SEO Dubai",
+    title: "WordPress SEO Dubai for Better Google Rankings and Organic Traffic",
+    metaTitle: "WordPress SEO Dubai | Technical SEO, On-Page, Speed",
+    metaDescription: "WordPress SEO in Dubai — technical SEO audits, on-page optimization, schema markup, Core Web Vitals fixes, internal linking, and ranking improvements for UAE businesses.",
+    keywords: ["WordPress SEO Dubai", "WordPress SEO Expert Dubai", "WordPress SEO Services UAE", "WordPress Technical SEO Dubai", "SEO WordPress Developer Dubai"],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "WordPress SEO Dubai technical optimization and ranking improvement",
+    intro: [
+      "WordPress SEO is not just installing Yoast and writing meta descriptions. Real WordPress SEO improvements come from technical foundations: page speed, crawl structure, schema markup, internal linking, Core Web Vitals, canonical tags, indexation control, and content structure that matches search intent.",
+      "Anas Tanveer provides WordPress SEO services in Dubai covering technical SEO audits, Core Web Vitals optimization, schema markup implementation, on-page SEO improvements, image optimization, page speed fixes, internal linking structure, and Google Search Console monitoring for UAE businesses.",
+      "This service is for Dubai and UAE businesses with existing WordPress websites that are not ranking well, have slow load times, have indexation issues, or have never had a proper technical SEO foundation built."
+    ],
+    bestFor: ["Dubai businesses with WordPress sites not ranking", "WooCommerce stores with low organic traffic", "Sites with slow Core Web Vitals scores", "Businesses after a site migration that lost rankings", "WordPress sites with technical indexation problems"],
+    problems: [
+      "The WordPress site has traffic but very few visitors from Google organic search.",
+      "Google Search Console shows crawl errors, coverage issues, or manual actions.",
+      "The website loads slowly and fails Core Web Vitals, which is hurting Google rankings.",
+      "A site migration or theme change caused a significant drop in organic rankings."
+    ],
+    features: ["Technical SEO audit and priority fix list", "Core Web Vitals and PageSpeed optimization", "Schema markup implementation", "On-page title, meta, and heading optimization", "Image compression and lazy loading", "Internal linking structure improvement", "Google Search Console setup and monitoring", "XML sitemap and robots.txt review"],
+    delivery: [
+      "WordPress SEO work starts with a technical audit using Google Search Console, PageSpeed Insights, and crawl analysis. Issues are ranked by impact — critical errors first, then on-page improvements, then content and linking.",
+      "Fixes are implemented directly in the codebase or through configuration, not reliant on plugin bloat. The result is a faster, cleaner, more crawlable WordPress site with better ranking potential in UAE and global search."
+    ],
+    faqs: [
+      { question: "How long does WordPress SEO take to show results in Dubai?", answer: "Technical fixes like speed, crawlability, and schema can show results within 4 to 8 weeks of Google re-crawling. Content and ranking improvements typically take 3 to 6 months depending on competition." },
+      { question: "Is Yoast SEO enough for WordPress SEO in Dubai?", answer: "Yoast handles basics well but does not fix speed, schema accuracy, crawl structure, internal linking, image optimization, or Core Web Vitals. Developer-level SEO is needed for competitive UAE markets." },
+      { question: "Can you fix a WordPress site that lost rankings after a migration?", answer: "Yes. Post-migration ranking drops are usually caused by broken redirects, changed URLs, missing canonical tags, or lost internal link structure. A redirect audit and recrawl usually recovers most rankings." }
+    ],
+    related: [
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
+      { label: "SEO-friendly website development", href: "/seo-friendly-website-development" },
+      { label: "WordPress maintenance Dubai", href: "/wordpress-maintenance-dubai" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
       ...coreRelated
     ]
   }
