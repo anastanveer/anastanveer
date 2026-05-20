@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { blogs } from "@/data/site";
+import { blogs, caseStudies } from "@/data/site";
 import { routes } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
@@ -12,15 +12,25 @@ function canonicalSitemapUrl(path: string) {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const lastModified = now;
 
   return [
+    // Core routes + all service/location pages (via lib/seo routes array)
     ...routes.map((route) => ({
       url: canonicalSitemapUrl(route.path),
-      lastModified,
+      lastModified: now,
       changeFrequency: route.changeFrequency,
       priority: route.priority
     })),
+
+    // Individual case study pages
+    ...caseStudies.map((study) => ({
+      url: canonicalSitemapUrl(`/case-studies/${study.slug}`),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8
+    })),
+
+    // Blog posts (published only)
     ...blogs
       .filter((post) => post.publishedAt <= new Date().toISOString().slice(0, 10))
       .map((post) => ({

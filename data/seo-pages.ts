@@ -1178,6 +1178,195 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "SaaS Developer Dubai", href: "/saas-developer-dubai" },
       ...coreRelated
     ]
+  },
+
+  // ── High-value missing pages ─────────────────────────────────────────────
+  {
+    slug: "web-developer-dubai",
+    navLabel: "Web Developer Dubai",
+    title: "Web Developer Dubai — Full-Stack for Business Websites & Platforms",
+    metaTitle: "Web Developer Dubai | Laravel, WordPress, Shopify, React",
+    metaDescription: "Dubai-based full-stack web developer for Laravel platforms, WordPress websites, Shopify stores, dashboards, ERP, API integrations and SEO-ready business systems.",
+    keywords: [
+      "Web Developer Dubai", "Web Development Dubai", "Website Developer Dubai", "Best Web Developer Dubai",
+      "Hire Web Developer Dubai", "Custom Web Development Dubai", "Web Application Developer Dubai",
+      "Professional Web Developer Dubai", "Expert Web Developer Dubai", "Top Web Developer Dubai"
+    ],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "Web developer Dubai full-stack business website development",
+    intro: [
+      "Anas Tanveer is a Dubai-based full-stack web developer with 7+ years of experience building business websites, custom platforms, Shopify stores, Laravel applications, dashboards, ERP systems, and SEO-ready web solutions for companies in the UAE, UK, Canada and internationally.",
+      "Every project starts with a clear problem: a slow website, a manual admin process, a weak conversion flow, a disconnected tool, or a missing digital presence. The work covers diagnosis, platform selection, technical delivery, and post-launch support — not just writing code.",
+      "Clients in Dubai range from startups and SMEs to established businesses in real estate, finance, retail, trading, logistics, and services — all needing practical, business-focused web development that delivers results."
+    ],
+    bestFor: [
+      "Dubai businesses needing a professional business website",
+      "SMEs and startups building their first custom platform",
+      "Companies replacing slow or outdated WordPress or PHP sites",
+      "Ecommerce businesses in UAE launching or scaling Shopify stores",
+      "Operations teams needing dashboards, ERP, or CRM systems"
+    ],
+    problems: [
+      "Your current website is slow, outdated, or not ranking on Google for Dubai-related searches.",
+      "You need a custom web platform but don't know which technology stack suits your business.",
+      "Manual admin work is slowing operations because the website lacks the right backend tools.",
+      "A previous developer left the project incomplete or delivered poor-quality code.",
+      "You need a trusted Dubai-based web developer who understands local business requirements."
+    ],
+    features: [
+      "Custom business website development",
+      "Laravel platform and web application development",
+      "WordPress business website development",
+      "Shopify store setup and customization",
+      "Dashboard and admin panel development",
+      "REST API and third-party integrations",
+      "ERP and CRM system development",
+      "Website speed and Core Web Vitals optimization",
+      "SEO-ready technical development",
+      "UAE payment gateway integration (Telr, PayTabs, Stripe)"
+    ],
+    delivery: [
+      "Projects are scoped clearly before any development begins — platform choice, timeline, features, and expected outcome are agreed upfront. This prevents scope creep and surprises at delivery.",
+      "Dubai businesses benefit from a developer who understands the UAE market: local payment gateways, bilingual (Arabic/English) requirements, UAE company website needs, and the speed expectations of competitive local markets.",
+      "All work is delivered with clean, maintainable code, documentation, and post-launch support options — whether for a three-page business website or a multi-module business platform."
+    ],
+    faqs: [
+      { question: "How much does a website cost in Dubai?", answer: "A basic business website costs AED 2,000–6,000. A custom WordPress or Shopify site ranges from AED 5,000–18,000. A custom Laravel platform, dashboard, or ERP system starts at AED 12,000 and scales with scope. Contact me with your requirements for a clear estimate." },
+      { question: "How long does it take to build a website in Dubai?", answer: "A business website takes 2–4 weeks. A custom platform or dashboard takes 4–10 weeks depending on scope. ERP and multi-module systems take 8–16 weeks. Timelines are confirmed after the initial brief review." },
+      { question: "Do you work with Dubai businesses on-site or remotely?", answer: "All project work is handled remotely with clear communication over WhatsApp, email, and video calls. This keeps costs lower and timelines faster than agency on-site models. I am based in Dubai and available for UAE timezone meetings." },
+      { question: "What technologies do you use for web development in Dubai?", answer: "Laravel for custom platforms and APIs, WordPress for business and content sites, Shopify for ecommerce, React and Next.js for frontend, MySQL for databases, and UAE payment gateways including Telr, PayTabs, and Stripe." },
+      { question: "Can you help an existing website rather than building from scratch?", answer: "Yes. Many projects involve improving or extending existing websites — speed optimization, adding features, fixing bugs, rebuilding specific modules, or migrating platforms. A full rebuild is only recommended when the existing codebase cannot support the required changes." }
+    ],
+    related: [
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+      { label: "Full Stack Developer Dubai", href: "/fullstack-developer-dubai" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "laravel-developer-abu-dhabi",
+    navLabel: "Laravel Developer Abu Dhabi",
+    title: "Laravel Developer Abu Dhabi for Custom Business Platforms",
+    metaTitle: "Laravel Developer Abu Dhabi | Custom Web Apps & Dashboards",
+    metaDescription: "Laravel developer serving Abu Dhabi businesses with custom web applications, dashboards, ERP systems, REST APIs and business platforms built for scalability and performance.",
+    keywords: [
+      "Laravel Developer Abu Dhabi", "Laravel Web Application Abu Dhabi", "Custom Web Development Abu Dhabi",
+      "PHP Developer Abu Dhabi", "Web Application Developer Abu Dhabi", "Laravel Developer UAE"
+    ],
+    image: "/images/services-architecture-760.webp",
+    imageAlt: "Laravel developer Abu Dhabi custom web application development",
+    intro: [
+      "Abu Dhabi businesses with complex operational requirements — government-adjacent entities, real estate platforms, financial services, trading companies, and enterprise operations — need web systems that go beyond off-the-shelf software. Laravel provides the control, scalability, and security these businesses require.",
+      "Anas Tanveer builds Laravel applications for Abu Dhabi clients remotely, handling everything from initial architecture decisions to post-launch support. Projects include business dashboards, internal admin tools, REST APIs, ERP modules, client portals, and full web platforms.",
+      "Working with a Dubai-based Laravel developer who operates across the UAE means consistent timezone availability, familiarity with UAE business requirements, and no agency communication layers."
+    ],
+    bestFor: [
+      "Abu Dhabi enterprises needing custom internal systems",
+      "Government-adjacent businesses building secure portals",
+      "Real estate and property platforms needing complex search and management tools",
+      "Financial services needing calculators, dashboards, and reporting systems",
+      "Trading companies requiring inventory, workflow, and client management tools"
+    ],
+    problems: [
+      "Off-the-shelf software cannot handle your specific Abu Dhabi business workflow.",
+      "Your current platform cannot integrate with the UAE-specific systems your team uses.",
+      "A previous developer delivered unmaintainable code that is difficult to extend.",
+      "You need a web application that handles complex data relationships your business depends on.",
+      "Your business is growing and the existing system cannot scale reliably."
+    ],
+    features: [
+      "Custom Laravel web application development",
+      "Business dashboard and admin panel",
+      "REST API design and development",
+      "Database architecture and MySQL optimization",
+      "ERP and workflow automation modules",
+      "Client portal development",
+      "UAE payment gateway integration",
+      "Role-based access control and permissions",
+      "Laravel API with React or Vue.js frontend",
+      "Legacy system migration to Laravel"
+    ],
+    delivery: [
+      "Abu Dhabi projects are scoped with the same rigor as Dubai engagements — requirements documented, architecture agreed, timeline set, and delivery phased so the business can validate progress. Remote delivery across the UAE is standard practice.",
+      "Laravel applications are built with clean architecture, proper separation of concerns, and documented codebases that can be handed over to internal teams or extended by future developers without rewriting."
+    ],
+    faqs: [
+      { question: "Do you work with clients in Abu Dhabi?", answer: "Yes. All project work is handled remotely. Abu Dhabi clients are served with the same process as Dubai clients — scoping call, documented brief, phased delivery, and WhatsApp/email communication throughout." },
+      { question: "Is Laravel suitable for Abu Dhabi enterprise projects?", answer: "Yes. Laravel is used by government platforms, financial systems, and enterprise applications globally and in the UAE. It provides the security, scalability, and maintainability that enterprise requirements demand." },
+      { question: "How long does a Laravel project take for an Abu Dhabi business?", answer: "Scope determines timeline. A business dashboard or admin tool takes 4–8 weeks. A full platform with multiple modules takes 8–16 weeks. Complex ERP systems take 12–20 weeks. Timeline is confirmed after reviewing your requirements." }
+    ],
+    related: [
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Web Developer Abu Dhabi", href: "/web-developer-abu-dhabi" },
+      { label: "ERP Development UAE", href: "/erp-development-uae" },
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "API Integration Services", href: "/api-integration-services" },
+      ...coreRelated
+    ]
+  },
+  {
+    slug: "wordpress-developer-sharjah",
+    navLabel: "WordPress Developer Sharjah",
+    title: "WordPress Developer Sharjah for Business Websites & eCommerce",
+    metaTitle: "WordPress Developer Sharjah | Business Websites & WooCommerce",
+    metaDescription: "WordPress developer serving Sharjah businesses with custom business websites, WooCommerce stores, speed optimization, multilingual sites and SEO-ready WordPress development.",
+    keywords: [
+      "WordPress Developer Sharjah", "WordPress Website Development Sharjah", "WooCommerce Developer Sharjah",
+      "Website Developer Sharjah", "Web Developer Sharjah WordPress", "WordPress SEO Sharjah"
+    ],
+    image: "/images/wordpress-hero.webp",
+    imageAlt: "WordPress developer Sharjah business website development",
+    intro: [
+      "Sharjah businesses — across manufacturing, education, healthcare, retail, and services — need professional websites that reflect their brand, generate leads, and rank well on Google. WordPress remains the most practical platform for most business websites: it is maintainable, SEO-friendly, and extensible without heavy ongoing development costs.",
+      "Anas Tanveer builds WordPress websites for Sharjah clients with a focus on performance, proper SEO structure, and practical admin tools your team can use without technical knowledge. Projects range from simple business sites to multilingual Arabic-English sites, WooCommerce stores, and WordPress platforms with custom functionality.",
+      "Being Dubai-based and UAE-timezone means fast communication and an understanding of the Sharjah market — including Arabic content requirements, local hosting preferences, and UAE payment options."
+    ],
+    bestFor: [
+      "Sharjah SMEs needing a professional business website",
+      "Manufacturers, traders, and service businesses needing lead generation sites",
+      "Educational institutions needing content-heavy multilingual websites",
+      "Retailers wanting a WooCommerce store with UAE payment options",
+      "Businesses needing Arabic-English bilingual WordPress sites"
+    ],
+    problems: [
+      "Your current website is slow, outdated, or not generating any leads from Google.",
+      "You need a bilingual Arabic/English website and the current setup does not support it well.",
+      "Your WordPress site has been hacked or is full of unused plugins slowing it down.",
+      "A WooCommerce store needs to accept UAE payment methods like Telr or PayTabs.",
+      "You need a WordPress developer in Sharjah who understands local business requirements."
+    ],
+    features: [
+      "Custom WordPress business website development",
+      "WooCommerce store setup and customization",
+      "Arabic-English bilingual WordPress (WPML / Polylang)",
+      "WordPress speed optimization (Core Web Vitals)",
+      "On-page SEO and technical SEO setup",
+      "UAE payment gateway integration",
+      "Custom theme development and modification",
+      "WordPress security hardening",
+      "ACF and custom fields for flexible content",
+      "WordPress maintenance and support"
+    ],
+    delivery: [
+      "Sharjah WordPress projects follow a clean delivery process: content requirements scoped first, design and structure agreed, development completed, then speed and SEO checks before launch. No surprises on timeline or scope.",
+      "Every WordPress site is delivered with proper SEO foundations — page titles, meta descriptions, schema markup, sitemap, robots.txt, and Core Web Vitals checks — so the site is ready for search traffic from day one."
+    ],
+    faqs: [
+      { question: "Do you work with businesses in Sharjah?", answer: "Yes. All work is done remotely and UAE-timezone. Sharjah businesses are served with the same process as Dubai clients. Arabic-English requirements are handled natively." },
+      { question: "Can you build an Arabic WordPress site for a Sharjah business?", answer: "Yes. Bilingual Arabic-English WordPress sites are a common requirement. WPML or Polylang is used depending on scope, with proper RTL support and Arabic font optimization." },
+      { question: "How much does a WordPress website cost in Sharjah?", answer: "A standard business website costs AED 3,000–8,000. A WooCommerce store with UAE payment integration costs AED 6,000–15,000 depending on product count and customization. Contact with your brief for an accurate estimate." }
+    ],
+    related: [
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Web Developer Sharjah", href: "/web-developer-sharjah" },
+      { label: "WordPress SEO Dubai", href: "/wordpress-seo-dubai" },
+      { label: "WordPress Maintenance Dubai", href: "/wordpress-maintenance-dubai" },
+      { label: "Ecommerce Development Dubai", href: "/ecommerce-website-development-dubai" },
+      ...coreRelated
+    ]
   }
 ];
 
