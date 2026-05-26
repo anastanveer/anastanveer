@@ -25,7 +25,9 @@ ServerSignature Off
 
   RewriteRule ^about-us/?$ /about/ [R=301,L,NC]
   RewriteRule ^projects/?$ /portfolio/ [R=301,L,NC]
+  RewriteRule ^portfolio-archive/?$ /portfolio/ [R=301,L,NC]
   RewriteRule ^portfolio-category/.*$ /portfolio/ [R=301,L,NC]
+  RewriteRule ^resume-Resume/?$ /resume/ [R=301,L,NC]
   RewriteRule ^(category|tag|author)(/.*)?$ - [G,L,NC]
 </IfModule>
 
