@@ -4,11 +4,14 @@ import { CheckCircle2, MessageCircle, ArrowRight, Mail } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { jsonLdForPage, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = pageMetadata({
-  title: "Thank You | Message Received – Anas Tanveer",
-  description: "Your project inquiry has been received. Anas Tanveer will respond within 4 hours with practical direction for your web project.",
-  path: "/thank-you"
-});
+export const metadata: Metadata = {
+  ...pageMetadata({
+    title: "Thank You | Message Received – Anas Tanveer",
+    description: "Your project inquiry has been received. Anas Tanveer will respond within 4 hours with practical direction for your web project.",
+    path: "/thank-you"
+  }),
+  robots: { index: false, follow: false }
+};
 
 export default function ThankYouPage() {
   return (

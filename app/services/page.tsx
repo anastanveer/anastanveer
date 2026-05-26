@@ -11,7 +11,8 @@ import { BrandIcon, slugToStack } from "@/components/ui/BrandIcon";
 import { allFaqs } from "@/data/faqs";
 import { services } from "@/data/site";
 import { seoServicePages } from "@/data/seo-pages";
-import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
+import { jsonLdForPage, faqSchema, pageMetadata, pageTypeSchema } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/utils";
 
 const servicesFaqs = allFaqs.map(({ q, a }) => ({ question: q, answer: a }));
 
@@ -41,6 +42,59 @@ const locationSlugs = [
   "web-developer-sharjah",
   "web-developer-ajman",
   "web-developer-ras-al-khaimah",
+  "web-developer-fujairah",
+  "web-developer-umm-al-quwain",
+];
+
+const globalSlugs = [
+  "web-developer-london",
+  "web-developer-uk",
+  "laravel-developer-uk",
+  "laravel-developer-london",
+  "shopify-developer-uk",
+  "wordpress-developer-uk",
+  "wordpress-developer-london",
+  "react-developer-uk",
+  "fullstack-developer-london",
+  "web-developer-manchester",
+  "web-developer-birmingham",
+  "web-developer-leeds",
+  "web-developer-glasgow",
+  "web-developer-edinburgh",
+  "web-developer-bristol",
+  "web-developer-sheffield",
+  "web-developer-toronto",
+  "web-developer-canada",
+  "laravel-developer-canada",
+  "shopify-developer-canada",
+  "web-developer-vancouver",
+  "web-developer-calgary",
+  "web-developer-ottawa",
+  "web-developer-montreal",
+  "web-developer-edmonton",
+  "wordpress-developer-canada",
+  "react-developer-canada",
+  "fullstack-developer-canada",
+  "nextjs-developer-canada",
+  "laravel-developer-toronto",
+  "shopify-developer-toronto",
+  "web-developer-australia",
+  "web-developer-sydney",
+  "web-developer-melbourne",
+  "web-developer-brisbane",
+  "web-developer-perth",
+  "shopify-developer-australia",
+  "laravel-developer-australia",
+  "wordpress-developer-australia",
+  "fullstack-developer-australia",
+  "nextjs-developer-australia",
+  "react-developer-australia",
+  "php-developer-australia",
+  "web-developer-adelaide",
+  "php-developer-uk",
+  "nextjs-developer-uk",
+  "shopify-developer-london",
+  "php-developer-canada",
 ];
 
 const specialtySlugs = [
@@ -66,9 +120,10 @@ function getPlatformPage(slug: string) {
 const platformPages = platformSlugs.map(getPlatformPage).filter(Boolean) as typeof seoServicePages;
 const locationPages = locationSlugs.map(getPlatformPage).filter(Boolean) as typeof seoServicePages;
 const specialtyPages = specialtySlugs.map(getPlatformPage).filter(Boolean) as typeof seoServicePages;
+const globalPages = globalSlugs.map(getPlatformPage).filter(Boolean) as typeof seoServicePages;
 
 // Remaining pages not in any bucket
-const bucketed = new Set([...platformSlugs, ...locationSlugs, ...specialtySlugs]);
+const bucketed = new Set([...platformSlugs, ...locationSlugs, ...specialtySlugs, ...globalSlugs]);
 const otherPages = seoServicePages.filter((p) => !bucketed.has(p.slug));
 
 const categories = [
@@ -119,6 +174,22 @@ const categories = [
     hoverText: "group-hover:text-emerald",
     arrowColor: "group-hover:text-emerald",
     pages: specialtyPages,
+  },
+  {
+    id: "global",
+    eyebrow: "04 / UK, Canada & Australia",
+    title: "UK, Canada & Australia Web Development",
+    desc: "Laravel, WordPress, Shopify, and full-stack development for businesses across London, the United Kingdom, Toronto, Canada, Sydney, Melbourne, Brisbane, Perth, and Australia.",
+    icon: Globe,
+    accent: "amber-400",
+    borderClass: "border-amber-400/20",
+    bgClass: "bg-amber-400/[0.04]",
+    glowClass: "from-amber-400/8",
+    hoverBorder: "hover:border-amber-400/35",
+    hoverBg: "hover:bg-amber-400/5",
+    hoverText: "group-hover:text-amber-400",
+    arrowColor: "group-hover:text-amber-400",
+    pages: globalPages,
   },
 ];
 
@@ -175,6 +246,18 @@ export default function ServicesPage() {
     <>
       <JsonLd data={jsonLdForPage("/services")} id="services-json-ld" />
       <JsonLd data={faqSchema(servicesFaqs)} id="services-faq-json-ld" />
+      <JsonLd
+        data={pageTypeSchema("ItemListPage", "/services", {
+          name: "Services — Laravel, WordPress, Shopify Developer Dubai",
+          description: "Full-stack web development services in Dubai: Laravel apps, WordPress sites, Shopify stores, dashboards, ERP, CRM, SaaS, APIs, speed optimization and technical SEO.",
+          items: seoServicePages.map((page) => ({
+            name: page.navLabel,
+            url: absoluteUrl(`/${page.slug}`),
+            description: page.metaDescription
+          }))
+        })}
+        id="services-itemlist-json-ld"
+      />
 
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">

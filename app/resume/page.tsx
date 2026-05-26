@@ -18,7 +18,7 @@ import {
 import { CTASection } from "@/components/sections/CTASection";
 import { ResumeStackGraph } from "@/components/sections/ResumeStackGraph";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { jsonLdForPage, pageMetadata } from "@/lib/seo";
+import { jsonLdForPage, pageMetadata, pageTypeSchema } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Resume | Anas Tanveer — Full-Stack Developer Dubai UAE",
@@ -130,6 +130,13 @@ export default function ResumePage() {
   return (
     <>
       <JsonLd data={jsonLdForPage("/resume")} id="resume-json-ld" />
+      <JsonLd
+        data={pageTypeSchema("ProfilePage", "/resume", {
+          name: "Resume — Anas Tanveer Full-Stack Developer Dubai UAE",
+          description: "Professional resume of Anas Tanveer, Dubai-based full-stack developer with 7+ years experience in Laravel, PHP, React, WordPress, Shopify, dashboards, APIs, ERP and SaaS."
+        })}
+        id="resume-profile-page-json-ld"
+      />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <div className="grid gap-8 lg:grid-cols-[320px_1fr] lg:items-start">

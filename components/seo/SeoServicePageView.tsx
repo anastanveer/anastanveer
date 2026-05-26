@@ -8,6 +8,68 @@ import type { SeoServicePage } from "@/data/seo-pages";
 import { jsonLdForPage } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
+const UK_SLUG_KEYWORDS = ["-uk", "-london", "-manchester", "-birmingham", "-leeds", "-glasgow", "-edinburgh", "-bristol", "-sheffield"];
+const CA_SLUG_KEYWORDS = ["-canada", "-toronto", "-vancouver", "-calgary", "-ottawa", "-montreal", "-edmonton"];
+const AU_SLUG_KEYWORDS = ["-australia", "-sydney", "-melbourne", "-brisbane", "-perth", "-adelaide"];
+
+function isUkSlug(slug: string) { return UK_SLUG_KEYWORDS.some((k) => slug.includes(k)); }
+function isCanadaSlug(slug: string) { return CA_SLUG_KEYWORDS.some((k) => slug.includes(k)); }
+function isAustraliaSlug(slug: string) { return AU_SLUG_KEYWORDS.some((k) => slug.includes(k)); }
+
+function getAreaServed(slug: string) {
+  if (isUkSlug(slug)) {
+    return [
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "City", name: "London" },
+      { "@type": "City", name: "Manchester" },
+      { "@type": "City", name: "Birmingham" },
+      { "@type": "City", name: "Leeds" },
+      { "@type": "City", name: "Glasgow" },
+      { "@type": "City", name: "Edinburgh" },
+      { "@type": "City", name: "Bristol" },
+      { "@type": "City", name: "Sheffield" }
+    ];
+  }
+  if (isCanadaSlug(slug)) {
+    return [
+      { "@type": "Country", name: "Canada" },
+      { "@type": "City", name: "Toronto" },
+      { "@type": "City", name: "Vancouver" },
+      { "@type": "City", name: "Calgary" },
+      { "@type": "City", name: "Ottawa" },
+      { "@type": "City", name: "Montreal" },
+      { "@type": "City", name: "Edmonton" }
+    ];
+  }
+  if (isAustraliaSlug(slug)) {
+    return [
+      { "@type": "Country", name: "Australia" },
+      { "@type": "City", name: "Sydney" },
+      { "@type": "City", name: "Melbourne" },
+      { "@type": "City", name: "Brisbane" },
+      { "@type": "City", name: "Perth" },
+      { "@type": "City", name: "Adelaide" }
+    ];
+  }
+  return [
+    { "@type": "City", name: "Dubai" },
+    { "@type": "Country", name: "United Arab Emirates" },
+    { "@type": "AdministrativeArea", name: "Abu Dhabi" },
+    { "@type": "AdministrativeArea", name: "Sharjah" },
+    { "@type": "AdministrativeArea", name: "Ajman" },
+    { "@type": "AdministrativeArea", name: "Ras Al Khaimah" },
+    { "@type": "AdministrativeArea", name: "Fujairah" },
+    { "@type": "AdministrativeArea", name: "Umm Al Quwain" }
+  ];
+}
+
+function getOfferCurrency(slug: string) {
+  if (isUkSlug(slug)) return "GBP";
+  if (isCanadaSlug(slug)) return "CAD";
+  if (isAustraliaSlug(slug)) return "AUD";
+  return "AED";
+}
+
 function serviceJsonLd(page: SeoServicePage) {
   const url = absoluteUrl(`/${page.slug}`);
   return {
@@ -17,24 +79,50 @@ function serviceJsonLd(page: SeoServicePage) {
     name: page.title,
     description: page.metaDescription,
     provider: { "@id": absoluteUrl("/#person") },
-    areaServed: [
-      { "@type": "City", name: "Dubai" },
-      { "@type": "Country", name: "United Arab Emirates" },
-      { "@type": "Country", name: "United Kingdom" },
-      { "@type": "Country", name: "Canada" }
-    ],
+    areaServed: getAreaServed(page.slug),
     serviceType: page.navLabel,
+    category: "Web Development",
     url,
-    image: absoluteUrl(page.image),
+    image: {
+      "@type": "ImageObject",
+      url: absoluteUrl(page.image),
+      width: 760,
+      height: 428,
+      caption: page.title
+    },
+    audience: {
+      "@type": "Audience",
+      audienceType: "Businesses, Startups, Founders, Agencies, Ecommerce Owners"
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: page.title,
+      itemListElement: page.features.map((feature) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: feature }
+      }))
+    },
     speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", ".service-intro"] },
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
       priceSpecification: {
         "@type": "PriceSpecification",
-        priceCurrency: "AED",
+        priceCurrency: getOfferCurrency(page.slug),
         description: "Project pricing depends on scope, platform, integrations, timeline, and required support."
       }
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      ratingCount: "4",
+      bestRating: "5",
+      worstRating: "1"
+    },
+    potentialAction: {
+      "@type": "ContactAction",
+      name: "Get a Quote",
+      target: [absoluteUrl("/contact")]
     }
   };
 }

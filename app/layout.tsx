@@ -28,6 +28,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="gllYNE1pcbGLwfP2PMahnrbVB6fcVfM0x0gbbsiBSCg" />
+        <link rel="alternate" type="application/rss+xml" title="Anas Tanveer Web Development Blog" href="https://anastanveer.com/feed.xml" />
+        <meta name="theme-color" content="#0a0a0f" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DEZL0WXWD" />
         <script
           dangerouslySetInnerHTML={{

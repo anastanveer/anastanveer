@@ -3,7 +3,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { WorkGrid } from "@/components/sections/WorkGrid";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PageHero } from "@/components/ui/PageHero";
-import { jsonLdForPage, pageMetadata } from "@/lib/seo";
+import { jsonLdForPage, pageMetadata, pageTypeSchema } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Portfolio | Web Development Projects Dubai — Laravel, WordPress, Shopify",
@@ -16,6 +16,13 @@ export default function WorkPage() {
   return (
     <>
       <JsonLd data={jsonLdForPage("/work")} id="work-json-ld" />
+      <JsonLd
+        data={pageTypeSchema("CollectionPage", "/work", {
+          name: "Work — Web Development Projects by Anas Tanveer Dubai",
+          description: "Selected web development projects by Anas Tanveer including Laravel applications, WordPress business sites, Shopify stores, dashboards, ERP and API integrations for Dubai and global clients."
+        })}
+        id="work-collection-json-ld"
+      />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <PageHero

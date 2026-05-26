@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Star, Quote, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { jsonLdForPage, pageMetadata } from "@/lib/seo";
+import { jsonLdForPage, pageMetadata, pageTypeSchema } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
 export const metadata: Metadata = pageMetadata({
@@ -66,21 +66,47 @@ const aggregateRatingJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": absoluteUrl("/#local-business"),
-  name: "Anas Tanveer",
+  name: "Anas Tanveer Web Development",
+  url: absoluteUrl("/"),
+  telephone: "+971542435418",
+  email: "info@anastanveer.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Dubai",
+    addressRegion: "Dubai",
+    addressCountry: "AE"
+  },
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
     ratingCount: String(reviews.length),
+    reviewCount: String(reviews.length),
     bestRating: "5",
     worstRating: "1",
   },
   review: reviews.map((r) => ({
     "@type": "Review",
-    reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5" },
-    author: { "@type": "Person", name: r.author },
+    "@id": `${absoluteUrl("/testimonials")}#review-${r.author.replace(/\s/g, "-").toLowerCase()}`,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: String(r.rating),
+      bestRating: "5",
+      worstRating: "1"
+    },
+    author: {
+      "@type": "Person",
+      name: r.author,
+      ...(r.location ? { address: { "@type": "PostalAddress", addressCountry: r.location } } : {})
+    },
     datePublished: r.date,
     reviewBody: r.body,
     name: r.highlight,
+    reviewedItem: {
+      "@type": "ProfessionalService",
+      name: r.project,
+      provider: { "@id": absoluteUrl("/#person") }
+    },
+    publisher: { "@type": "Organization", name: r.platform }
   })),
 };
 
@@ -109,6 +135,18 @@ export default function TestimonialsPage() {
       <JsonLd data={jsonLdForPage("/testimonials")} id="testimonials-page-json-ld" />
       <JsonLd data={aggregateRatingJsonLd} id="testimonials-rating-json-ld" />
       <JsonLd data={pageJsonLd} id="testimonials-breadcrumb-json-ld" />
+      <JsonLd
+        data={pageTypeSchema("CollectionPage", "/testimonials", {
+          name: "Client Reviews & Testimonials — Anas Tanveer Web Developer Dubai",
+          description: "Verified client reviews for Anas Tanveer. Laravel, WordPress, Shopify, dashboard and API projects reviewed by international clients from UK, France, Ireland, Canada and UAE.",
+          items: reviews.map((r) => ({
+            name: `${r.author} — ${r.project}`,
+            url: `${absoluteUrl("/testimonials")}#review-${r.author.replace(/\s/g, "-").toLowerCase()}`,
+            description: r.highlight
+          }))
+        })}
+        id="testimonials-collection-json-ld"
+      />
 
       <section className="page-start section-pad">
         <div className="mx-auto max-w-5xl px-5">

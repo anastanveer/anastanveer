@@ -6,8 +6,9 @@ import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { blogSeoContent } from "@/data/blogSeo";
+import { howToBySlug } from "@/data/howTo";
 import { blogs } from "@/data/site";
-import { pageMetadata } from "@/lib/seo";
+import { pageMetadata, howToSchema } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
 export const revalidate = 86400;
@@ -121,17 +122,41 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
     headline: post.title,
     description: post.excerpt,
     url: absoluteUrl(`/blog/${post.slug}`),
-    image: absoluteUrl(post.image),
+    image: {
+      "@type": "ImageObject",
+      url: absoluteUrl(post.image),
+      width: 1200,
+      height: 630,
+      caption: post.title
+    },
+    thumbnailUrl: absoluteUrl(post.image),
     keywords: seoContent?.focusKeywords ?? [],
     articleSection: [post.tag, "Web Development", "SEO", "Business Systems"],
     inLanguage: "en",
     isAccessibleForFree: "True",
     wordCount,
+    timeRequired: `PT${readingMinutes}M`,
+    copyrightYear: new Date(post.publishedAt).getFullYear(),
+    copyrightHolder: { "@id": absoluteUrl("/#person") },
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,
-    author: { "@id": absoluteUrl("/#person") },
+    author: {
+      "@id": absoluteUrl("/#person"),
+      "@type": "Person",
+      name: "Anas Tanveer",
+      url: absoluteUrl("/about"),
+      image: {
+        "@type": "ImageObject",
+        url: absoluteUrl("/images/anas-resume.webp"),
+        width: 400,
+        height: 400
+      }
+    },
     publisher: { "@id": "https://arsdeveloper.co.uk/#organization" },
-    mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": absoluteUrl(`/blog/${post.slug}`)
+    },
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2", ".blog-intro", ".service-intro"]
@@ -164,33 +189,33 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
         }
       : null;
 
-  const howToSlugs = [
-    "website-speed-checklist-before-ads",
-    "how-to-choose-web-developer",
-    "shopify-conversion-fixes",
-    "seo-friendly-development-before-marketing",
-    "ai-website-audit-speed-seo-conversion",
-    "wordpress-speed-optimization"
-  ];
-  const howToJsonLd =
-    seoContent && howToSlugs.includes(post.slug) && seoContent.checklist.length >= 3
-      ? {
-          "@context": "https://schema.org",
-          "@type": "HowTo",
-          "@id": absoluteUrl(`/blog/${post.slug}#howto`),
-          name: post.title,
-          description: post.excerpt,
-          image: absoluteUrl(post.image),
-          author: { "@id": absoluteUrl("/#person") },
-          totalTime: `PT${readingMinutes}M`,
-          step: seoContent.checklist.map((item, i) => ({
-            "@type": "HowToStep",
-            position: i + 1,
-            name: item.split(".")[0].trim(),
-            text: item
-          }))
-        }
-      : null;
+  const howToData = howToBySlug[post.slug];
+  const howToJsonLd = howToData
+    ? howToSchema({
+        name: howToData.name,
+        description: howToData.description,
+        url: absoluteUrl(`/blog/${post.slug}`),
+        steps: howToData.steps,
+        image: post.image
+      })
+    : seoContent && seoContent.checklist.length >= 5
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "@id": absoluteUrl(`/blog/${post.slug}#howto`),
+        name: post.title,
+        description: post.excerpt,
+        image: { "@type": "ImageObject", url: absoluteUrl(post.image) },
+        author: { "@id": absoluteUrl("/#person") },
+        totalTime: `PT${readingMinutes}M`,
+        step: seoContent.checklist.map((item, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: item.split(".")[0].trim(),
+          text: item
+        }))
+      }
+    : null;
 
   return (
     <>

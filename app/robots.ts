@@ -18,10 +18,7 @@ const disallowedPaths = [
   "/category/",
   "/tag/",
   "/author/",
-  "/*.env$",
-  "/*?*utm_*",
-  "/*?*fbclid=*",
-  "/*?*gclid=*"
+  "/thank-you/"
 ];
 
 export default function robots(): MetadataRoute.Robots {
@@ -44,7 +41,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Bingbot", allow: ["/"] },
       { userAgent: "cohere-ai", allow: ["/"] }
     ],
-    sitemap: absoluteUrl("/sitemap.xml"),
+    sitemap: [absoluteUrl("/sitemap.xml"), absoluteUrl("/feed.xml")],
     host: siteUrl
   };
 }

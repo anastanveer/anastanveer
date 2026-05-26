@@ -6,7 +6,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PageHero } from "@/components/ui/PageHero";
 import { caseStudies } from "@/data/site";
-import { jsonLdForPage, pageMetadata } from "@/lib/seo";
+import { jsonLdForPage, pageMetadata, pageTypeSchema } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
 export const metadata: Metadata = pageMetadata({
@@ -50,6 +50,18 @@ export default function CaseStudiesPage() {
     <>
       <JsonLd data={jsonLdForPage("/case-studies")} id="case-studies-json-ld" />
       <JsonLd data={itemListJsonLd} id="case-studies-list-json-ld" />
+      <JsonLd
+        data={pageTypeSchema("CollectionPage", "/case-studies", {
+          name: "Case Studies — Web Development Projects by Anas Tanveer Dubai",
+          description: "Business-focused case studies showing the challenge, strategy, solution, and outcome behind Laravel platforms, dashboards, Shopify, ERP, and API projects for Dubai and global clients.",
+          items: caseStudies.map((cs) => ({
+            name: cs.title,
+            url: absoluteUrl(`/case-studies/${cs.slug}`),
+            description: cs.result
+          }))
+        })}
+        id="case-studies-collection-json-ld"
+      />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <PageHero

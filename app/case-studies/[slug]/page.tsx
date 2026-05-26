@@ -63,21 +63,38 @@ export default async function CaseStudyDetailPage({ params }: Props) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": ["Article", "TechArticle"],
     "@id": absoluteUrl(`/case-studies/${slug}#article`),
     headline: study.title,
     description: study.challenge,
     url: absoluteUrl(`/case-studies/${slug}`),
-    image: absoluteUrl(study.images[0]),
+    image: {
+      "@type": "ImageObject",
+      url: absoluteUrl(study.images[0]),
+      width: 1200,
+      height: 630,
+      caption: study.title
+    },
+    thumbnailUrl: absoluteUrl(study.images[0]),
+    datePublished: "2024-09-01",
+    dateModified: "2025-05-22",
     author: { "@id": absoluteUrl("/#person") },
     publisher: { "@id": "https://arsdeveloper.co.uk/#organization" },
-    mainEntityOfPage: absoluteUrl(`/case-studies/${slug}`),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": absoluteUrl(`/case-studies/${slug}`)
+    },
     about: {
       "@type": "Service",
       name: study.title,
       provider: { "@id": absoluteUrl("/#person") },
       description: study.solution,
     },
+    result: {
+      "@type": "Thing",
+      name: study.result
+    },
+    keywords: study.stack.join(", "),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2", ".case-intro"],

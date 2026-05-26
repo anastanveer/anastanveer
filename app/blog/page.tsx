@@ -7,11 +7,11 @@ import { blogs } from "@/data/site";
 
 export const revalidate = 86400;
 import { absoluteUrl } from "@/lib/utils";
-import { jsonLdForPage, pageMetadata } from "@/lib/seo";
+import { jsonLdForPage, pageMetadata, pageTypeSchema } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Blog | Laravel, WordPress, Shopify and SEO Insights",
-  description: "Decision-focused articles on Laravel, WordPress, Shopify, website speed, technical SEO, ecommerce, dashboards and business systems.",
+  title: "Web Development Blog | Laravel, WordPress, Shopify & SEO — Anas Tanveer",
+  description: "Decision-focused articles on Laravel, WordPress, Shopify, website speed, technical SEO, ecommerce, dashboards and business systems for Dubai, UK and Canadian businesses.",
   path: "/blog"
 });
 
@@ -26,7 +26,7 @@ export default function BlogPage() {
     "@id": absoluteUrl("/blog#blog"),
     name: "Anas Tanveer Web Development Insights",
     url: absoluteUrl("/blog"),
-    description: "Decision-focused articles on Laravel, WordPress, Shopify, website speed, technical SEO, ecommerce, dashboards and business systems for Dubai and UAE businesses.",
+    description: "Decision-focused articles on Laravel, WordPress, Shopify, website speed, technical SEO, ecommerce, dashboards and business systems for Dubai, UK and Canadian businesses.",
     inLanguage: "en",
     author: { "@id": absoluteUrl("/#person") },
     publisher: { "@id": "https://arsdeveloper.co.uk/#organization" },
@@ -47,6 +47,18 @@ export default function BlogPage() {
     <>
       <JsonLd data={jsonLdForPage("/blog")} id="blog-page-json-ld" />
       <JsonLd data={blogListSchema} id="blog-list-json-ld" />
+      <JsonLd
+        data={pageTypeSchema("CollectionPage", "/blog", {
+          name: "Web Development Blog — Laravel, WordPress, Shopify & SEO by Anas Tanveer Dubai",
+          description: "Practical articles on Laravel, WordPress, Shopify, website speed, technical SEO, ecommerce, dashboards and business web decisions for Dubai and UAE businesses.",
+          items: published.slice(0, 20).map((post) => ({
+            name: post.title,
+            url: absoluteUrl(`/blog/${post.slug}`),
+            description: post.excerpt
+          }))
+        })}
+        id="blog-collection-json-ld"
+      />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <PageHero

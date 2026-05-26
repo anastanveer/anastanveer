@@ -105,6 +105,14 @@ export const pricingFaqItems: FaqItem[] = [
   {
     q: "Is SEO and performance optimization included in project pricing?",
     a: "Basic technical SEO (metadata, canonical URLs, schema, sitemap, Lighthouse 90+ score) is included in all project tiers. Advanced SEO — comprehensive schema types, keyword architecture, page speed above 95, Core Web Vitals passing, local SEO setup — is included in Growth and Premium tiers. A standalone SEO audit is available as a separate engagement."
+  },
+  {
+    q: "What are your web development rates for UK clients in GBP?",
+    a: "For UK clients, rates are quoted in GBP via ARS Developer Ltd (UK-registered). Small fixes and consultations start from £150–450. A complete landing page or single-feature build starts from £800–1,500. Custom Laravel applications, full Shopify builds, and premium WordPress projects start from £2,000–£8,000+. Monthly support retainers start from £400/month. Invoiced in GBP with UK business registration details for UK-based agencies and companies."
+  },
+  {
+    q: "What are your web development rates for Canada clients in CAD?",
+    a: "For Canadian clients, rates are quoted in CAD via TorontoBytes (Canada). Small fixes and consultations start from CAD 200–600. A complete landing page or single-feature build starts from CAD 1,100–2,000. Custom Laravel applications, full Shopify builds, and premium WordPress projects start from CAD 2,800–11,000+. Monthly support retainers start from CAD 550/month. Invoiced in CAD with Canadian business registration details for Ontario, British Columbia, and Alberta-based clients."
   }
 ];
 
@@ -225,5 +233,53 @@ export const allFaqs: FaqItem[] = [
   {
     q: "Is SEO and performance built into every project by default?",
     a: "Yes — always. Every project I deliver includes: semantic HTML with correct heading hierarchy, WebP-optimized images with explicit dimensions, title and meta description targeting primary keywords, Open Graph and Twitter Card tags, canonical URLs, JSON-LD schema (WebPage, BreadcrumbList, Organization/Person), mobile-first responsive design, HTTPS configuration, and a Lighthouse score above 90 for performance and SEO. Advanced schema, deep keyword architecture, and page speed above 95 are included in premium-tier builds."
+  },
+  {
+    q: "How do you implement local SEO for UK city pages — London, Manchester, Birmingham?",
+    a: "UK city-level SEO requires: geo-targeted title tags with city name and region (e.g. 'Web Developer Manchester'), LocalBusiness schema with GeoCoordinates for each city, hreflang en-GB tagging, UK-specific PostalAddress with GB country code, areaServed entities for each city and administrative region (Greater Manchester, West Midlands, West Yorkshire, Scotland), and city-specific service pages with content addressing local business context. Each UK city page also gets individual LocalBusiness JSON-LD with parentOrganization linking to the primary UK entity (ARS Developer Ltd)."
+  },
+  {
+    q: "How do you do local SEO for Canadian cities — Toronto, Vancouver, Calgary?",
+    a: "Canadian city-level SEO requires: geo-targeted title tags with city and province (e.g. 'Web Developer Vancouver BC'), LocalBusiness schema with Canadian GeoCoordinates, hreflang en-CA tagging, Canadian PostalAddress with CA country code and province codes (CA-BC, CA-AB, CA-ON), areaServed entities for each city and province, and city-specific service pages covering Canadian business context (GST/HST, CAD pricing, Canadian platforms). Each Canadian city page gets individual LocalBusiness JSON-LD with parentOrganization linking to TorontoBytes (Canada-registered entity)."
+  },
+  {
+    q: "What is hreflang and how do you implement it correctly for UK and Canada?",
+    a: "Hreflang tells Google which language and region variant of a page to show to which users. For UK pages: <link rel='alternate' hreflang='en-GB'> pointing to the canonical UK URL. For Canadian pages: <link rel='alternate' hreflang='en-CA'>. For UAE/Dubai pages: <link rel='alternate' hreflang='en-AE'>. Crucially: each regional page must also reference all other regional variants with their respective hreflang tags, plus an x-default tag pointing to the primary URL. Incorrect hreflang (missing x-default, broken reciprocal links, wrong ISO codes) causes Google to ignore the entire hreflang set."
+  },
+  {
+    q: "How do you handle multi-region SEO for a developer serving Dubai, UK, and Canada?",
+    a: "Multi-region SEO for a service business serving UAE, UK, and Canada: (1) Separate city/country landing pages for each market with unique content addressing local business problems, rates in local currency, and local platform context. (2) LocalBusiness schema entities for each region with correct PostalAddress, GeoCoordinates, and areaServed. (3) Hreflang alternate tags with correct ISO region codes (en-AE, en-GB, en-CA). (4) Open Graph locale matching region (en_GB, en_CA, en_AE). (5) Geo meta tags (geo.region, geo.placename, ICBM) per page. (6) Internal linking between regional pages building topical authority across all three markets."
+  },
+  {
+    q: "How do you implement local SEO for UK cities like Leeds, Glasgow, Edinburgh, Bristol, and Sheffield?",
+    a: "Each UK city requires: a dedicated service page with city-specific content addressing local business problems, industries, and rate benchmarks in GBP. LocalBusiness JSON-LD with city GeoCoordinates, addressLocality, addressRegion (GB-ENG for English cities, GB-SCT for Scottish cities), and parentOrganization linking to ARS Developer Ltd (arsdeveloper.co.uk). hreflang en-GB on all UK city pages. geo.region and ICBM meta tags matching each city's precise coordinates. City-specific areaServed in the Service schema. Internal links from the UK hub page and blog posts to each city page building topical authority."
+  },
+  {
+    q: "How do you implement local SEO for Canadian cities like Ottawa, Montreal, Edmonton, Calgary, and Vancouver?",
+    a: "Each Canadian city requires: a dedicated service page with city-specific content addressing local industries, provincial tax (GST/HST/PST/QST), and CAD rate benchmarks. LocalBusiness JSON-LD with city GeoCoordinates, addressLocality, addressRegion (CA-ON for Ontario, CA-QC for Quebec, CA-AB for Alberta, CA-BC for British Columbia), and parentOrganization linking to TorontoBytes (torontobytes.ca). hreflang en-CA on all Canadian city pages. geo.region and ICBM meta tags matching each city. City-specific areaServed in the Service schema. Internal links from the Canada hub page and blog posts to each city page."
+  },
+  {
+    q: "How do you do bilingual French-English SEO for Montreal and Quebec?",
+    a: "Bilingual Montreal SEO requires: French-first URL structure (/fr/ as default, /en/ for English) for Quebec audiences, hreflang fr-CA and en-CA on all bilingual pages with correct x-default pointing to the primary URL, French-language title tags and meta descriptions targeting French keyword clusters, French-language Schema.org structured data (name, description, serviceType in French), WPML or Polylang for bilingual WordPress content management, and Quebec-specific LocalBusiness schema with QC province code and QST (Revenue Québec) reference. French content must be unique — not machine-translated from English."
+  },
+  {
+    q: "What does correct Next.js App Router SEO implementation look like?",
+    a: "Next.js App Router SEO: (1) Metadata exported from layout.tsx and page.tsx using the Metadata type — not next/head, which is Pages Router only. (2) generateMetadata() for dynamic routes to produce unique title, description, and Open Graph per page. (3) JSON-LD schema injected as <script type='application/ld+json'> in Server Components — not via useEffect, which delays injection. (4) Static generation (SSG) for all content pages to ensure full HTML is available to Googlebot on initial crawl. (5) robots.ts and sitemap.ts files in the app directory to generate Robots.txt and XML sitemap automatically. (6) Image optimisation with next/image for automatic WebP conversion, lazy loading, and explicit width/height to prevent CLS."
+  },
+  {
+    q: "How do you rank for service + city keywords like 'Web Developer Leeds' or 'Laravel Developer Toronto'?",
+    a: "Ranking for service-plus-city keywords requires three layers: (1) A dedicated landing page for the exact keyword with unique content addressing city-specific business context, local rate benchmarks, and local industry requirements — not a template with the city name swapped in. (2) LocalBusiness schema with city GeoCoordinates and areaServed targeting the specific city, parentOrganization linking to the primary business entity, and correctly geo-coded PostalAddress. (3) Topical authority built through companion blog posts (e.g. 'Web Developer Leeds Guide'), internal links from hub pages, and hreflang correctly implemented for the market. All three must work together — a page without schema or without topical authority will rank below pages that have both."
+  },
+  {
+    q: "How do you implement local SEO for Australian cities like Sydney, Melbourne, Brisbane, Perth, and Adelaide?",
+    a: "Each Australian city requires: a dedicated service page with city-specific content addressing local industries, Australian GST (10%), AUD rate benchmarks, and Privacy Act compliance. LocalBusiness JSON-LD with city GeoCoordinates (Sydney: -33.8688,151.2093; Melbourne: -37.8136,144.9631; Brisbane: -27.4698,153.0251; Perth: -31.9505,115.8605; Adelaide: -34.9285,138.6007), addressRegion using AU state codes (AU-NSW, AU-VIC, AU-QLD, AU-WA, AU-SA), and addressCountry AU. hreflang en-AU on all Australian pages. geo.region and ICBM meta tags matching each city. areaServed targeting both the city and state. Internal links from the Australia hub page and Australian city blog guides building topical authority."
+  },
+  {
+    q: "What are the Australian-specific SEO and compliance requirements for a website?",
+    a: "Australian websites must address: (1) hreflang en-AU for Google Australia (google.com.au) indexing. (2) LocalBusiness schema with Australian GeoCoordinates and areaServed covering Australia or specific states. (3) geo.region AU (or AU-NSW, AU-VIC, etc.) and ICBM meta tags. (4) Privacy Act 1988 compliant cookie consent that technically blocks non-essential scripts before consent — not just a visual banner. (5) Australian GST (10%) correctly configured for any ecommerce functionality. (6) Afterpay integration for retail and lifestyle categories. (7) Australia Post shipping integration for stores shipping nationally. Australian-specific schema and compliance distinguishes pages indexed for google.com.au from generic English-language pages."
+  },
+  {
+    q: "What is the difference between Australian GST and UK VAT or Canadian HST for web development?",
+    a: "Australian GST (10%) applies as a single flat rate on most goods and services nationwide — there are no state-level variations. It contrasts with: UK VAT (20% standard, 5% reduced, 0% zero-rated — three tiers), Canadian tax (province-specific: Alberta 5% GST only, Ontario 13% HST combined, BC 12% GST+PST, Quebec 14.975% GST+QST — five different rates across provinces), and UAE VAT (5% flat rate). Australian ecommerce GST is simpler than Canadian provincial tax but has specific GST-free product category requirements (fresh food, basic foods, medical, educational) that must be configured explicitly in Shopify or WooCommerce. Each market requires a developer who knows its specific tax architecture."
   }
 ];

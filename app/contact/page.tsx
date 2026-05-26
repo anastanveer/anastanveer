@@ -8,15 +8,15 @@ import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { contactFaqItems } from "@/data/faqs";
 import { profile } from "@/data/site";
-import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
+import { jsonLdForPage, faqSchema, pageMetadata, pageTypeSchema } from "@/lib/seo";
 
 const contactFaqs = contactFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
 export const metadata: Metadata = pageMetadata({
-  title: "Contact Anas Tanveer | Hire a Web Developer in Dubai",
-  description: "Get in touch with Anas Tanveer to hire a web developer in Dubai for Laravel, WordPress, Shopify, React, Next.js, dashboards, ERP, CRM, SaaS, APIs and website speed fixes.",
+  title: "Contact Anas Tanveer | Hire a Web Developer — Dubai, UK & Canada",
+  description: "Get in touch with Anas Tanveer to hire a web developer in Dubai, UK or Canada for Laravel, WordPress, Shopify, React, Next.js, dashboards, ERP, CRM, SaaS, APIs and website speed fixes.",
   path: "/contact",
-  extraKeywords: ["Hire Web Developer Dubai", "Contact Laravel Developer Dubai", "Hire Full Stack Developer UAE", "Web Developer for Hire Dubai", "Freelance Developer Dubai Contact"]
+  extraKeywords: ["Hire Web Developer Dubai", "Contact Laravel Developer Dubai", "Hire Full Stack Developer UAE", "Web Developer for Hire Dubai", "Freelance Developer Dubai Contact", "Hire Web Developer London", "Hire Web Developer UK", "Hire Web Developer Canada", "Contact Laravel Developer UK", "Hire Shopify Developer Canada"]
 });
 
 export default function ContactPage() {
@@ -24,6 +24,13 @@ export default function ContactPage() {
     <>
       <JsonLd data={jsonLdForPage("/contact")} id="contact-json-ld" />
       <JsonLd data={faqSchema(contactFaqs)} id="contact-faq-json-ld" />
+      <JsonLd
+        data={pageTypeSchema("ContactPage", "/contact", {
+          name: "Contact Anas Tanveer — Hire a Web Developer in Dubai",
+          description: "Contact Anas Tanveer to hire a web developer in Dubai for Laravel, WordPress, Shopify, ecommerce, dashboards, ERP, CRM, SaaS, APIs and website speed fixes."
+        })}
+        id="contact-page-type-json-ld"
+      />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <PageHero

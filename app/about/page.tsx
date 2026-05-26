@@ -10,15 +10,15 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { aboutFaqItems } from "@/data/faqs";
 import { profile } from "@/data/site";
 import { seoServicePages } from "@/data/seo-pages";
-import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
+import { jsonLdForPage, faqSchema, pageMetadata, pageTypeSchema } from "@/lib/seo";
 
 const aboutFaqs = aboutFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
 export const metadata: Metadata = pageMetadata({
-  title: "About Anas Tanveer | Full-Stack Web Developer Dubai",
-  description: "Anas Tanveer is a Dubai-based full-stack web developer specialising in Laravel, WordPress, Shopify, React, Next.js, dashboards, ERP, CRM, SaaS and API integrations for UAE and global clients.",
+  title: "About Anas Tanveer | Full-Stack Web Developer — Dubai, UK & Canada",
+  description: "Anas Tanveer is a full-stack web developer serving Dubai, UAE, UK and Canada. Specialising in Laravel, WordPress, Shopify, React, Next.js, dashboards, ERP, CRM, SaaS and API integrations.",
   path: "/about",
-  extraKeywords: ["About Anas Tanveer", "Full Stack Developer Dubai", "Laravel Developer Dubai", "Web Developer UAE", "Dubai Web Developer Profile", "ARS Developer Ltd"]
+  extraKeywords: ["About Anas Tanveer", "Full Stack Developer Dubai", "Laravel Developer Dubai", "Web Developer UAE", "Dubai Web Developer Profile", "ARS Developer Ltd", "Web Developer UK", "Web Developer Canada", "Laravel Developer UK", "Shopify Developer Canada"]
 });
 
 const focusAreas = [
@@ -33,6 +33,13 @@ export default function AboutPage() {
     <>
       <JsonLd data={jsonLdForPage("/about")} id="about-json-ld" />
       <JsonLd data={faqSchema(aboutFaqs)} id="about-faq-json-ld" />
+      <JsonLd
+        data={pageTypeSchema("AboutPage", "/about", {
+          name: "About Anas Tanveer — Full-Stack Developer Dubai",
+          description: "Anas Tanveer is a Dubai-based full-stack web developer with 7+ years of experience solving business web problems using Laravel, WordPress, Shopify, React, dashboards, APIs, ERP and SaaS platforms."
+        })}
+        id="about-page-type-json-ld"
+      />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <PageHero

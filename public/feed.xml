@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Anas Tanveer — Web Development Blog</title>
+    <link>https://anastanveer.com/blog/</link>
+    <description>Decision-focused articles on Laravel, WordPress, Shopify, website speed, technical SEO, ecommerce, dashboards and business systems for Dubai, UK and Canadian businesses.</description>
+    <language>en-ae</language>
+    <managingEditor>info@anastanveer.com (Anas Tanveer)</managingEditor>
+    <webMaster>info@anastanveer.com (Anas Tanveer)</webMaster>
+    <lastBuildDate>Thu, 21 May 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://anastanveer.com/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://anastanveer.com/images/anas-premium-hero.webp</url>
+      <title>Anas Tanveer — Web Development Blog</title>
+      <link>https://anastanveer.com/blog/</link>
+    </image>
+    
+  <item>
+    <title>Freelance Web Developer Dubai: Rates, Hiring Guide and Expectations</title>
+    <link>https://anastanveer.com/blog/freelance-web-developer-dubai/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/freelance-web-developer-dubai/</guid>
+    <description>A guide for Dubai businesses considering a freelance web developer — covering rates, expectations, risks and how to structure the engagement.</description>
+    <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Thu, 21 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Hiring</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-8-hd.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Laravel vs Node.js: Which Backend for Your Business Project</title>
+    <link>https://anastanveer.com/blog/laravel-vs-nodejs/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/laravel-vs-nodejs/</guid>
+    <description>A direct comparison of Laravel and Node.js for business web applications — covering speed, cost, team requirements and when each makes sense.</description>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Mon, 18 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Laravel</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-5-hd.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Next.js Developer for Hire: When and Why</title>
+    <link>https://anastanveer.com/blog/nextjs-developer-for-hire/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/nextjs-developer-for-hire/</guid>
+    <description>A practical breakdown of when Next.js is the right choice for your web project and what to look for when hiring a Next.js developer.</description>
+    <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 27 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Next.js</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-2-hd.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Web Developer for Hire: Complete Guide for Business Owners</title>
+    <link>https://anastanveer.com/blog/web-developer-for-hire/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/web-developer-for-hire/</guid>
+    <description>A complete guide to hiring a web developer — what skills matter, how to evaluate portfolios, compare rates and avoid costly mistakes.</description>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Strategy</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/services-architecture-520.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>How to Hire a Web Developer for Your Business</title>
+    <link>https://anastanveer.com/blog/hire-web-developer-for-business/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/hire-web-developer-for-business/</guid>
+    <description>Compare the three main options for hiring a web developer and choose the right engagement type for your project size, timeline and budget.</description>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Strategy</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/about-resume-brand.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>SaaS Web Application Developer: Plan Your First SaaS Platform</title>
+    <link>https://anastanveer.com/blog/saas-web-application-developer/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/saas-web-application-developer/</guid>
+    <description>A founder-focused guide to finding the right SaaS developer and planning a web application that can grow without rebuilding from zero.</description>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Laravel</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/projects-suite-520.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>PHP Developer for Hire: What to Check Before You Hire</title>
+    <link>https://anastanveer.com/blog/php-developer-for-hire/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/php-developer-for-hire/</guid>
+    <description>How to evaluate a PHP developer before hiring — code structure, security knowledge, framework experience, API skills and long-term maintainability.</description>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Laravel</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/contact-pricing.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Ecommerce Website Developer for Hire: Guide for Store Owners</title>
+    <link>https://anastanveer.com/blog/ecommerce-website-developer-for-hire/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/ecommerce-website-developer-for-hire/</guid>
+    <description>How to hire the right ecommerce developer for Shopify, WooCommerce or custom platforms — and what questions reveal real conversion expertise.</description>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Shopify</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/projects-suite-520.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Website Speed Optimization Services: What You&apos;re Paying For</title>
+    <link>https://anastanveer.com/blog/website-speed-optimization-services/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/website-speed-optimization-services/</guid>
+    <description>What real website speed optimization services include — Core Web Vitals, image compression, script management, hosting, caching and what to expect from results.</description>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Performance</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/contact-pricing.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>ERP Software Development: Custom Build vs Off-the-Shelf Guide</title>
+    <link>https://anastanveer.com/blog/erp-software-development-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/erp-software-development-guide/</guid>
+    <description>A practical guide for operations directors and founders on when to choose custom ERP development over SaaS tools and how to plan the build correctly.</description>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Laravel</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/about-resume-brand.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>How to Choose a Web Developer: Questions Before You Hire</title>
+    <link>https://anastanveer.com/blog/how-to-choose-web-developer/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/how-to-choose-web-developer/</guid>
+    <description>A practical framework for choosing the right web developer for your specific project — what questions to ask, what answers to look for and what red flags to avoid.</description>
+    <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Strategy</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/services-architecture-520.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>WordPress Developer for Hire: Freelancer vs Agency vs Dedicated Dev</title>
+    <link>https://anastanveer.com/blog/wordpress-developer-for-hire-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/wordpress-developer-for-hire-guide/</guid>
+    <description>How to choose the right type of WordPress developer for your project — business website, WooCommerce store, speed optimization or ongoing maintenance.</description>
+    <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>WordPress</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/services-architecture-520.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Web Application Development Services: Planning Your First Custom Platform</title>
+    <link>https://anastanveer.com/blog/web-application-development-services-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/web-application-development-services-guide/</guid>
+    <description>A practical guide for business owners and founders planning their first custom web application — from requirements to architecture to launch.</description>
+    <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Strategy</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/about-resume-brand.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Shopify Developer for Hire: Checklist for Store Owners</title>
+    <link>https://anastanveer.com/blog/shopify-developer-for-hire-checklist/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/shopify-developer-for-hire-checklist/</guid>
+    <description>What to look for when you hire a Shopify developer — theme work, Liquid, app integration, conversion focus and post-launch support.</description>
+    <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Shopify</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/projects-suite-520.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Custom Business Dashboard Development: When You Need One</title>
+    <link>https://anastanveer.com/blog/custom-business-dashboard-development/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/custom-business-dashboard-development/</guid>
+    <description>A guide to deciding when a custom Laravel dashboard is better than off-the-shelf tools, and how to plan the development the right way.</description>
+    <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Laravel</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/contact-pricing.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>How to Hire a Laravel Developer: Full Checklist for Business Owners</title>
+    <link>https://anastanveer.com/blog/hire-laravel-developer-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/hire-laravel-developer-guide/</guid>
+    <description>A practical guide for business owners, agencies and recruiters on what to look for when hiring a Laravel developer for custom web applications, dashboards and platforms.</description>
+    <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Laravel</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/services-architecture-520.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Remote Full Stack Developer vs Local Agency: Which Is Better?</title>
+    <link>https://anastanveer.com/blog/remote-full-stack-developer-vs-agency/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/remote-full-stack-developer-vs-agency/</guid>
+    <description>How to decide between hiring a remote full stack developer, a local agency or a dedicated offshore team for your next web project.</description>
+    <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+    <category>Strategy</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/about-resume-brand.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>When to Choose Laravel Instead of a Plugin</title>
+    <link>https://anastanveer.com/blog/choose-laravel-instead-of-plugin/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/choose-laravel-instead-of-plugin/</guid>
+    <description>A practical guide for companies that need dashboards, portals, ERP workflows, API integrations, or scalable backend logic.</description>
+    <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Thu, 30 Apr 2026 00:00:00 GMT</lastBuildDate>
+    <category>Laravel</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-1-hd.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>WordPress vs Laravel: Choosing the Right Web Solution</title>
+    <link>https://anastanveer.com/blog/wordpress-vs-custom-laravel/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/wordpress-vs-custom-laravel/</guid>
+    <description>How to decide between a marketing website, CMS, custom platform, dashboard, or long-term business system.</description>
+    <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Thu, 30 Apr 2026 00:00:00 GMT</lastBuildDate>
+    <category>Strategy</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/about-resume-brand.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Shopify Conversion Fixes That Reduce Customer Doubt</title>
+    <link>https://anastanveer.com/blog/shopify-conversion-fixes/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/shopify-conversion-fixes/</guid>
+    <description>Practical improvements for product pages, size selectors, mobile UX, trust signals, speed, and checkout confidence.</description>
+    <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Thu, 30 Apr 2026 00:00:00 GMT</lastBuildDate>
+    <category>Shopify</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/projects-suite-520.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Website Speed Checklist Before Running Ads</title>
+    <link>https://anastanveer.com/blog/website-speed-checklist-before-ads/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/website-speed-checklist-before-ads/</guid>
+    <description>A technical checklist for Core Web Vitals, image weight, scripts, caching, hosting, SEO readiness, and mobile UX.</description>
+    <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Thu, 30 Apr 2026 00:00:00 GMT</lastBuildDate>
+    <category>Performance</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/contact-pricing.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Why SEO-Friendly Development Starts Before Marketing</title>
+    <link>https://anastanveer.com/blog/seo-friendly-development-before-marketing/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/seo-friendly-development-before-marketing/</guid>
+    <description>Why schema, speed, clean headings, service pages, metadata, internal links, and crawlable content matter before campaigns.</description>
+    <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Thu, 30 Apr 2026 00:00:00 GMT</lastBuildDate>
+    <category>SEO</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/services-architecture-520.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>AI Search SEO for Dubai Business Websites</title>
+    <link>https://anastanveer.com/blog/ai-search-seo-dubai-businesses/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/ai-search-seo-dubai-businesses/</guid>
+    <description>How businesses can prepare websites for AI-assisted search with clear service pages, helpful answers, schema, speed and trust signals.</description>
+    <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Thu, 30 Apr 2026 00:00:00 GMT</lastBuildDate>
+    <category>AI SEO</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/anas-premium-hero-1100.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>AI Chatbots for Laravel, WordPress and Shopify</title>
+    <link>https://anastanveer.com/blog/ai-chatbots-laravel-wordpress-shopify/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/ai-chatbots-laravel-wordpress-shopify/</guid>
+    <description>A practical guide to AI chatbot and automation ideas for lead qualification, support, product questions and internal workflows.</description>
+    <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Thu, 30 Apr 2026 00:00:00 GMT</lastBuildDate>
+    <category>AI Automation</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/projects-suite-520.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>AI Website Audit for Speed, SEO and Conversion</title>
+    <link>https://anastanveer.com/blog/ai-website-audit-speed-seo-conversion/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/ai-website-audit-speed-seo-conversion/</guid>
+    <description>How an AI-assisted website audit can help find slow pages, weak SEO structure, confusing UX and conversion blockers before they cost leads.</description>
+    <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Thu, 30 Apr 2026 00:00:00 GMT</lastBuildDate>
+    <category>AI Audit</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/contact-pricing.webp" type="image/webp" length="0" />
+  </item>
+  </channel>
+</rss>

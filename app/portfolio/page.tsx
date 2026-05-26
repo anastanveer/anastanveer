@@ -3,7 +3,9 @@ import { CTASection } from "@/components/sections/CTASection";
 import { WorkGrid } from "@/components/sections/WorkGrid";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PageHero } from "@/components/ui/PageHero";
-import { jsonLdForPage, pageMetadata } from "@/lib/seo";
+import { projects } from "@/data/site";
+import { jsonLdForPage, pageMetadata, pageTypeSchema } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/utils";
 
 export const metadata: Metadata = pageMetadata({
   title: "Portfolio | Laravel, WordPress, Shopify Projects Dubai",
@@ -11,10 +13,42 @@ export const metadata: Metadata = pageMetadata({
   path: "/portfolio"
 });
 
+const projectsItemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": absoluteUrl("/portfolio#project-list"),
+  name: "Web Development Portfolio Projects by Anas Tanveer",
+  url: absoluteUrl("/portfolio"),
+  numberOfItems: projects.length,
+  itemListElement: projects.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "CreativeWork",
+      name: p.title,
+      description: p.solution,
+      creator: { "@id": absoluteUrl("/#person") },
+      about: p.problem,
+      genre: p.category,
+      keywords: p.stack.join(", "),
+      image: { "@type": "ImageObject", url: absoluteUrl(p.image), width: 520, height: 350 }
+    }
+  }))
+};
+
 export default function PortfolioPage() {
   return (
     <>
       <JsonLd data={jsonLdForPage("/portfolio")} id="portfolio-json-ld" />
+      <JsonLd
+        data={pageTypeSchema("CollectionPage", "/portfolio", {
+          name: "Portfolio — Laravel, WordPress, Shopify Projects by Anas Tanveer Dubai",
+          description: "Portfolio of business web projects: Laravel platforms, WordPress websites, Shopify stores, dashboards, ERP, API integrations, and performance fixes.",
+          items: projects.map((p) => ({ name: p.title, url: absoluteUrl("/portfolio"), description: p.solution }))
+        })}
+        id="portfolio-collection-json-ld"
+      />
+      <JsonLd data={projectsItemListJsonLd} id="portfolio-projects-list-json-ld" />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <PageHero

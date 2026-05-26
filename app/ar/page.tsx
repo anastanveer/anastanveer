@@ -7,76 +7,144 @@ import { absoluteUrl, siteUrl } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "مطور ويب في دبي | لارافيل، ووردبريس، شوبيفاي — أنس تنوير",
   description: "مطور ويب محترف في دبي متخصص في لارافيل، ووردبريس، شوبيفاي، لوحات التحكم، تكامل API، تحسين السرعة وتطوير المتاجر الإلكترونية للشركات في الإمارات.",
+  keywords: ["مطور ويب دبي", "مطور لارافيل دبي", "مطور ووردبريس دبي", "مطور شوبيفاي دبي", "تطوير مواقع الإمارات", "مطور ويب الإمارات", "تطوير تطبيقات الويب دبي", "مطور PHP دبي"],
+  robots: { index: true, follow: true },
   alternates: {
     canonical: absoluteUrl("/ar"),
     languages: {
-      ar: absoluteUrl("/ar"),
-      en: siteUrl,
+      "ar-AE": absoluteUrl("/ar"),
+      "en-AE": siteUrl,
+      "en-US": siteUrl,
+      "en-GB": siteUrl,
       "x-default": siteUrl,
     },
   },
   openGraph: {
-    title: "مطور ويب في دبي | أنس تنوير",
+    title: "مطور ويب في دبي | أنس تنوير — لارافيل، ووردبريس، شوبيفاي",
     description: "مطور ويب محترف في دبي متخصص في لارافيل، ووردبريس، شوبيفاي ولوحات التحكم للشركات في الإمارات.",
     url: absoluteUrl("/ar"),
+    siteName: "أنس تنوير",
     locale: "ar_AE",
     type: "website",
+    images: [{ url: absoluteUrl("/images/anas-premium-hero.webp"), width: 1400, height: 788, alt: "أنس تنوير — مطور ويب دبي" }]
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "مطور ويب في دبي | أنس تنوير",
+    description: "مطور ويب محترف في دبي — لارافيل، ووردبريس، شوبيفاي، لوحات التحكم، API.",
+    images: [absoluteUrl("/images/anas-premium-hero.webp")]
+  }
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": absoluteUrl("/ar#webpage"),
-  url: absoluteUrl("/ar"),
-  name: "مطور ويب في دبي — أنس تنوير",
-  inLanguage: "ar",
-  about: { "@id": absoluteUrl("/#person") },
-  isPartOf: { "@id": absoluteUrl("/#website") },
-  breadcrumb: {
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "الرئيسية", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: "مطور ويب في دبي", item: absoluteUrl("/ar") },
-    ],
-  },
-  mainEntity: {
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "كم تكلفة تطوير موقع ويب في دبي؟",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "تتراوح تكلفة تطوير المواقع الإلكترونية بين 500 دولار للمواقع البسيطة و5000 دولار أو أكثر للمنصات الكاملة مع لوحات التحكم وتكامل API. تواصل معي لأحدد التكلفة الدقيقة بناءً على متطلبات مشروعك."
-        }
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": absoluteUrl("/ar#webpage"),
+      url: absoluteUrl("/ar"),
+      name: "مطور ويب في دبي — أنس تنوير | لارافيل، ووردبريس، شوبيفاي",
+      inLanguage: "ar",
+      about: { "@id": absoluteUrl("/#person") },
+      author: { "@id": absoluteUrl("/#person") },
+      isPartOf: { "@id": absoluteUrl("/#website") },
+      datePublished: "2024-09-01",
+      dateModified: "2025-05-22",
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: absoluteUrl("/images/anas-premium-hero.webp"),
+        width: 1400,
+        height: 788
       },
-      {
-        "@type": "Question",
-        name: "هل تعمل مع شركات في الإمارات العربية المتحدة؟",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "نعم، أعمل مع شركات في دبي، أبوظبي، الشارقة وسائر إمارات الدولة. لديّ خبرة في بوابات الدفع الإماراتية مثل تيلر وبايتابس وسترايب."
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: ["h1", "h2"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": absoluteUrl("/ar#breadcrumb"),
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "الرئيسية", item: siteUrl },
+        { "@type": "ListItem", position: 2, name: "مطور ويب في دبي", item: absoluteUrl("/ar") },
+      ],
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": absoluteUrl("/ar#service-ar"),
+      name: "أنس تنوير — مطور ويب دبي",
+      description: "مطور ويب متكامل في دبي يتخصص في لارافيل، ووردبريس، شوبيفاي، لوحات التحكم، أنظمة ERP وCRM، تكامل API وتطوير المتاجر الإلكترونية للشركات في الإمارات والمملكة المتحدة وكندا.",
+      url: absoluteUrl("/ar"),
+      inLanguage: "ar",
+      provider: { "@id": absoluteUrl("/#person") },
+      areaServed: [
+        { "@type": "City", name: "دبي" },
+        { "@type": "City", name: "أبوظبي" },
+        { "@type": "City", name: "الشارقة" },
+        { "@type": "Country", name: "الإمارات العربية المتحدة" }
+      ],
+      availableLanguage: [
+        { "@type": "Language", name: "Arabic" },
+        { "@type": "Language", name: "English" }
+      ],
+      serviceType: ["تطوير لارافيل", "تطوير ووردبريس", "تطوير شوبيفاي", "لوحات تحكم الأعمال", "تطوير ERP وCRM", "تكامل API"]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": absoluteUrl("/ar#faq"),
+      inLanguage: "ar",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "كم تكلفة تطوير موقع ويب في دبي؟",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "تتراوح تكلفة تطوير المواقع الإلكترونية بين 500 دولار للمواقع البسيطة و5000 دولار أو أكثر للمنصات الكاملة مع لوحات التحكم وتكامل API. تواصل معي لأحدد التكلفة الدقيقة بناءً على متطلبات مشروعك."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "هل تعمل مع شركات في الإمارات العربية المتحدة؟",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "نعم، أعمل مع شركات في دبي، أبوظبي، الشارقة وسائر إمارات الدولة. لديّ خبرة في بوابات الدفع الإماراتية مثل تيلر وبايتابس وسترايب."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "ما هي التقنيات التي تتخصص فيها؟",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "أتخصص في لارافيل، PHP، React، Next.js، ووردبريس، شوبيفاي، MySQL، REST API، Vue.js وTypeScript. بناءً على متطلباتك أختار المنصة الأنسب لمشروعك."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "كم يستغرق تطوير الموقع الإلكتروني؟",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "يستغرق الموقع البسيط 1-2 أسبوع، والمنصات المتوسطة 3-6 أسابيع، والأنظمة الكاملة مع ERP وCRM من 6 إلى 12 أسبوع. أُحدد جدولاً زمنياً دقيقاً بعد مراجعة متطلباتك."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "هل تقدم خدمات الصيانة والدعم بعد الإطلاق؟",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "نعم، أقدم خدمات الصيانة المستمرة، التحديثات الأمنية، وإضافة الميزات الجديدة لمشروعك بعد إطلاقه."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "هل يمكنك تحسين موقعي الحالي بدلاً من بناء موقع جديد؟",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "بالتأكيد. كثير من مشاريعي هي تحسين وتطوير مواقع قائمة — تحسين السرعة، إضافة ميزات، أو إعادة بناء أجزاء محددة دون تغيير كل شيء."
+          }
         }
-      },
-      {
-        "@type": "Question",
-        name: "ما هي التقنيات التي تتخصص فيها؟",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "أتخصص في لارافيل، PHP، React، Next.js، ووردبريس، شوبيفاي، MySQL، REST API، Vue.js وTypeScript. بناءً على متطلباتك أختار المنصة الأنسب لمشروعك."
-        }
-      },
-      {
-        "@type": "Question",
-        name: "كم يستغرق تطوير الموقع الإلكتروني؟",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "يستغرق الموقع البسيط 1-2 أسبوع، والمنصات المتوسطة 3-6 أسابيع، والأنظمة الكاملة مع ERP وCRM من 6 إلى 12 أسبوع. أُحدد جدولاً زمنياً دقيقاً بعد مراجعة متطلباتك."
-        }
-      },
-    ]
-  }
+      ]
+    }
+  ]
 };
 
 const services = [

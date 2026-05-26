@@ -8,14 +8,55 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { pricingFaqItems } from "@/data/faqs";
 import { pricing } from "@/data/site";
 import { jsonLdForPage, faqSchema, pageMetadata } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/utils";
 
 const pricingFaqs = pricingFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
+const pricingOffersJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": absoluteUrl("/pricing#offers"),
+  name: "Web Development Pricing — Dubai, UK & Canada",
+  description: "Transparent pricing packages for web development in Dubai (AED), UK (GBP) and Canada (CAD): websites, Shopify stores, Laravel platforms, dashboards, ERP, and monthly support.",
+  url: absoluteUrl("/pricing"),
+  numberOfItems: pricing.length,
+  itemListElement: pricing.map((plan, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "Offer",
+      "@id": `${absoluteUrl("/pricing")}#offer-${plan.title.replace(/\s/g, "-").toLowerCase()}`,
+      name: plan.title,
+      description: plan.description,
+      url: absoluteUrl("/pricing"),
+      priceCurrency: "AED",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: "AED",
+        description: plan.price,
+        eligibleRegion: [
+          { "@type": "Country", name: "United Arab Emirates" },
+          { "@type": "Country", name: "United Kingdom" },
+          { "@type": "Country", name: "Canada" }
+        ]
+      },
+      availability: "https://schema.org/InStock",
+      seller: { "@id": absoluteUrl("/#person") },
+      itemOffered: {
+        "@type": "Service",
+        name: plan.title,
+        description: plan.description,
+        provider: { "@id": absoluteUrl("/#person") }
+      }
+    }
+  }))
+};
+
 export const metadata: Metadata = pageMetadata({
-  title: "Pricing | Web Development Packages Dubai — Laravel, WordPress, Shopify",
-  description: "Transparent pricing for web development in Dubai — WordPress websites, Shopify stores, Laravel platforms, dashboards, ERP, CRM, SaaS MVPs, API integrations and SEO-ready builds.",
+  title: "Pricing | Web Development Packages — Dubai, UK & Canada | Laravel, WordPress, Shopify",
+  description: "Transparent pricing for web development in Dubai (AED), UK (GBP) and Canada (CAD) — WordPress websites, Shopify stores, Laravel platforms, dashboards, ERP, CRM, SaaS MVPs, API integrations and SEO-ready builds.",
   path: "/pricing",
-  extraKeywords: ["Web Development Pricing Dubai", "Laravel Developer Cost Dubai", "WordPress Website Price UAE", "Shopify Developer Pricing Dubai", "Freelance Developer Rates Dubai"]
+  extraKeywords: ["Web Development Pricing Dubai", "Laravel Developer Cost Dubai", "WordPress Website Price UAE", "Shopify Developer Pricing Dubai", "Freelance Developer Rates Dubai", "Web Development Cost UK", "Laravel Developer UK Rates", "Shopify Developer UK Pricing", "WordPress Developer UK Cost", "Web Development Pricing Canada", "Laravel Developer Canada Rates", "Hire Web Developer UK Cost", "Freelance Web Developer UK Rates", "Web Developer Pricing GBP", "Web Developer Pricing CAD"]
 });
 
 export default function PricingPage() {
@@ -23,6 +64,7 @@ export default function PricingPage() {
     <>
       <JsonLd data={jsonLdForPage("/pricing")} id="pricing-json-ld" />
       <JsonLd data={faqSchema(pricingFaqs)} id="pricing-faq-json-ld" />
+      <JsonLd data={pricingOffersJsonLd} id="pricing-offers-json-ld" />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">
           <PageHero
