@@ -28,7 +28,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="gllYNE1pcbGLwfP2PMahnrbVB6fcVfM0x0gbbsiBSCg" />
+        {/* RSS / Feed */}
         <link rel="alternate" type="application/rss+xml" title="Anas Tanveer Web Development Blog" href="https://anastanveer.com/feed.xml" />
+        {/* Author & identity */}
+        <link rel="author" href="https://anastanveer.com/about" />
+        <link rel="me" href="https://www.linkedin.com/in/anas-fullstackdev/" />
+        <link rel="me" href="https://github.com/anastanveer" />
+        {/* Image sitemap reference */}
+        <link rel="sitemap" type="application/xml" title="Image Sitemap" href="https://anastanveer.com/sitemap-images.xml" />
+        {/* Performance preconnects */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <meta name="theme-color" content="#0a0a0f" media="(prefers-color-scheme: dark)" />
         <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DEZL0WXWD" />

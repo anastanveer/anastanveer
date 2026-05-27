@@ -318,6 +318,23 @@ export function pageMetadata({
     },
     verification: {
       other: getGeoMeta(path)
+    },
+    other: {
+      // Dublin Core metadata for academic / AI citation
+      "dc.title": title,
+      "dc.description": description,
+      "dc.creator": "Anas Tanveer",
+      "dc.publisher": "ARS Developer Ltd",
+      "dc.language": "en",
+      "dc.subject": "Web Development, Laravel, WordPress, Shopify, Dubai",
+      "dc.rights": `Copyright ${new Date().getFullYear()} Anas Tanveer`,
+      // Open Graph locale alternates for international reach
+      "og:locale:alternate": ["en_GB", "en_CA", "en_AU", "ar_AE"],
+      // Twitter rich card labels
+      "twitter:label1": "Location",
+      "twitter:data1": "Dubai, UAE",
+      "twitter:label2": "Services",
+      "twitter:data2": "Laravel · WordPress · Shopify · React"
     }
   };
 }

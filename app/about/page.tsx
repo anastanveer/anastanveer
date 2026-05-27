@@ -11,6 +11,7 @@ import { aboutFaqItems } from "@/data/faqs";
 import { profile } from "@/data/site";
 import { seoServicePages } from "@/data/seo-pages";
 import { jsonLdForPage, faqSchema, pageMetadata, pageTypeSchema } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/utils";
 
 const aboutFaqs = aboutFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
@@ -39,6 +40,29 @@ export default function AboutPage() {
           description: "Anas Tanveer is a Dubai-based full-stack web developer with 7+ years of experience solving business web problems using Laravel, WordPress, Shopify, React, dashboards, APIs, ERP and SaaS platforms."
         })}
         id="about-page-type-json-ld"
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "@id": absoluteUrl("/about#profilepage"),
+          name: "Anas Tanveer — Full-Stack Developer Dubai",
+          url: absoluteUrl("/about"),
+          dateCreated: "2024-01-01",
+          dateModified: "2026-05-27",
+          mainEntity: { "@id": absoluteUrl("/#person") },
+          about: { "@id": absoluteUrl("/#person") },
+          isPartOf: { "@id": absoluteUrl("/#website") },
+          inLanguage: "en-AE",
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+              { "@type": "ListItem", position: 2, name: "About", item: absoluteUrl("/about") }
+            ]
+          }
+        }}
+        id="about-profile-page-json-ld"
       />
       <section className="section-pad page-start">
         <div className="mx-auto max-w-7xl px-5">

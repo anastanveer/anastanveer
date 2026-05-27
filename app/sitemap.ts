@@ -7,7 +7,7 @@ import { absoluteUrl } from "@/lib/utils";
 export const dynamic = "force-static";
 
 // Last time site structure / content was meaningfully updated
-const SITE_LAST_UPDATED = new Date("2026-05-22");
+const SITE_LAST_UPDATED = new Date("2026-05-27");
 
 function canonicalSitemapUrl(path: string) {
   if (path === "/" || path.includes(".")) return absoluteUrl(path);
