@@ -30,12 +30,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="google-site-verification" content="gllYNE1pcbGLwfP2PMahnrbVB6fcVfM0x0gbbsiBSCg" />
         {/* RSS / Feed */}
         <link rel="alternate" type="application/rss+xml" title="Anas Tanveer Web Development Blog" href="https://anastanveer.com/feed.xml" />
+        {/* Sitemaps */}
+        <link rel="sitemap" type="application/xml" title="Main Sitemap" href="https://anastanveer.com/sitemap.xml" />
+        <link rel="sitemap" type="application/xml" title="Image Sitemap" href="https://anastanveer.com/sitemap-images.xml" />
+        <link rel="sitemap" type="application/xml" title="News Sitemap" href="https://anastanveer.com/sitemap-news.xml" />
         {/* Author & identity */}
         <link rel="author" href="https://anastanveer.com/about" />
         <link rel="me" href="https://www.linkedin.com/in/anas-fullstackdev/" />
         <link rel="me" href="https://github.com/anastanveer" />
-        {/* Image sitemap reference */}
-        <link rel="sitemap" type="application/xml" title="Image Sitemap" href="https://anastanveer.com/sitemap-images.xml" />
         {/* Performance preconnects */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />

@@ -41,7 +41,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Bingbot", allow: ["/"] },
       { userAgent: "cohere-ai", allow: ["/"] }
     ],
-    sitemap: [absoluteUrl("/sitemap.xml"), absoluteUrl("/feed.xml")],
+    sitemap: [absoluteUrl("/sitemap.xml"), absoluteUrl("/feed.xml"), absoluteUrl("/sitemap-news.xml"), absoluteUrl("/sitemap-images.xml")],
     host: siteUrl
   };
 }
