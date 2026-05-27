@@ -494,7 +494,46 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
         "Next.js Developer Canada",
         "WordPress Developer Canada",
         "Web Developer Montreal",
-        "Web Developer Edmonton"
+        "Web Developer Edmonton",
+        "Web Developer Dubai Marina",
+        "Web Developer Business Bay",
+        "Web Developer JLT",
+        "Web Developer Jumeirah Lake Towers",
+        "Web Developer Downtown Dubai",
+        "Web Developer Deira",
+        "Web Developer Al Rashidiya",
+        "Web Developer Al Furjan",
+        "Laravel Developer Sharjah",
+        "Shopify Developer Ajman",
+        "Web Developer Australia",
+        "Web Developer Sydney",
+        "Web Developer Melbourne",
+        "Shopify Developer Australia",
+        "Laravel Developer Australia"
+      ],
+      hasOccupation: {
+        "@type": "Occupation",
+        name: "Full-Stack Web Developer",
+        description: "Designs, builds, and delivers custom web applications, Laravel platforms, WordPress websites, Shopify stores, business dashboards, REST APIs, and ERP systems for clients in Dubai, UAE, UK, Canada, and Australia.",
+        occupationLocation: [
+          { "@type": "City", name: "Dubai" },
+          { "@type": "Country", name: "United Arab Emirates" },
+          { "@type": "Country", name: "United Kingdom" },
+          { "@type": "Country", name: "Canada" }
+        ],
+        skills: "Laravel, PHP, WordPress, Shopify, React, Next.js, MySQL, REST APIs, Tailwind CSS, Vue.js, Node.js, AWS, Docker, Redis, Technical SEO"
+      },
+      interactionStatistic: [
+        {
+          "@type": "InteractionCounter",
+          interactionType: "https://schema.org/ReviewAction",
+          userInteractionCount: 100
+        },
+        {
+          "@type": "InteractionCounter",
+          interactionType: "https://schema.org/LikeAction",
+          userInteractionCount: 4900
+        }
       ],
       potentialAction: [
         {
@@ -709,6 +748,17 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       hasMap: "https://maps.google.com/?q=Dubai,UAE",
       areaServed: [
         { "@type": "City", name: "Dubai" },
+        { "@type": "Place", name: "Dubai Marina" },
+        { "@type": "Place", name: "Business Bay" },
+        { "@type": "Place", name: "Jumeirah Lake Towers" },
+        { "@type": "Place", name: "Downtown Dubai" },
+        { "@type": "Place", name: "Deira" },
+        { "@type": "Place", name: "Al Rashidiya" },
+        { "@type": "Place", name: "Al Furjan" },
+        { "@type": "Place", name: "DIFC Dubai" },
+        { "@type": "Place", name: "Dubai Silicon Oasis" },
+        { "@type": "Place", name: "Jumeirah" },
+        { "@type": "Place", name: "Bur Dubai" },
         { "@type": "City", name: "Abu Dhabi" },
         { "@type": "City", name: "Sharjah" },
         { "@type": "City", name: "Ajman" },
@@ -731,7 +781,8 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
         { "@type": "City", name: "Ottawa" },
         { "@type": "City", name: "Montreal" },
         { "@type": "City", name: "Edmonton" },
-        { "@type": "Country", name: "Canada" }
+        { "@type": "Country", name: "Canada" },
+        { "@type": "Country", name: "Australia" }
       ],
       potentialAction: {
         "@type": "ContactAction",
@@ -831,7 +882,7 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       description:
         "Full-stack web developer portfolio for Laravel, WordPress, Shopify, ecommerce, dashboards, ERP, APIs, speed optimization and SEO-friendly web applications — serving Dubai, UAE, UK and Canada.",
       copyrightYear: new Date().getFullYear(),
-      dateModified: "2026-05-22",
+      dateModified: "2026-05-27",
       potentialAction: {
         "@type": "SearchAction",
         target: { "@type": "EntryPoint", urlTemplate: `${siteUrl}/blog?q={search_term_string}` },
@@ -847,7 +898,7 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       about: { "@id": absoluteUrl("/#person") },
       author: { "@id": absoluteUrl("/#person") },
       datePublished: "2024-01-01",
-      dateModified: "2025-05-22",
+      dateModified: "2026-05-27",
       primaryImageOfPage: {
         "@type": "ImageObject",
         url: absoluteUrl("/images/anas-premium-hero.webp"),
@@ -1335,9 +1386,48 @@ export function siteJsonLd() {
     url: absoluteUrl(route.path)
   }));
 
+  const servicesCatalog = {
+    "@type": "ItemList",
+    "@id": absoluteUrl("/services#catalog"),
+    name: "Web Development Services by Anas Tanveer",
+    description: "Complete catalog of web development services available in Dubai, UAE, UK, Canada, and Australia.",
+    numberOfItems: 12,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Laravel Web Application Development", url: absoluteUrl("/laravel-developer-dubai") },
+      { "@type": "ListItem", position: 2, name: "WordPress Development", url: absoluteUrl("/wordpress-developer-dubai") },
+      { "@type": "ListItem", position: 3, name: "Shopify Development", url: absoluteUrl("/shopify-developer-dubai") },
+      { "@type": "ListItem", position: 4, name: "React & Next.js Development", url: absoluteUrl("/react-developer-dubai") },
+      { "@type": "ListItem", position: 5, name: "Business Dashboard Development", url: absoluteUrl("/dashboard-development-dubai") },
+      { "@type": "ListItem", position: 6, name: "Ecommerce Website Development", url: absoluteUrl("/ecommerce-website-development-dubai") },
+      { "@type": "ListItem", position: 7, name: "API Integration Services", url: absoluteUrl("/api-integration-services") },
+      { "@type": "ListItem", position: 8, name: "Website Speed Optimization", url: absoluteUrl("/website-speed-optimization-dubai") },
+      { "@type": "ListItem", position: 9, name: "CRM Development Dubai", url: absoluteUrl("/crm-development-dubai") },
+      { "@type": "ListItem", position: 10, name: "SaaS Developer Dubai", url: absoluteUrl("/saas-developer-dubai") },
+      { "@type": "ListItem", position: 11, name: "Full Stack Developer Dubai", url: absoluteUrl("/fullstack-developer-dubai") },
+      { "@type": "ListItem", position: 12, name: "Freelance Web Developer Dubai", url: absoluteUrl("/freelance-web-developer-dubai") }
+    ]
+  };
+
+  const definedTermSet = {
+    "@type": "DefinedTermSet",
+    "@id": absoluteUrl("/#tech-glossary"),
+    name: "Web Development Technologies — Anas Tanveer",
+    description: "Core technologies and frameworks used by Anas Tanveer for client projects in Dubai and internationally.",
+    hasDefinedTerm: [
+      { "@type": "DefinedTerm", name: "Laravel", description: "PHP framework for building custom web applications, dashboards, ERP systems, REST APIs, and SaaS platforms.", url: absoluteUrl("/laravel-developer-dubai") },
+      { "@type": "DefinedTerm", name: "WordPress", description: "CMS platform for business websites, blogs, and WooCommerce ecommerce stores with SEO-ready structure.", url: absoluteUrl("/wordpress-developer-dubai") },
+      { "@type": "DefinedTerm", name: "Shopify", description: "Ecommerce platform for building online stores with payment gateway integration, product management, and conversion optimisation.", url: absoluteUrl("/shopify-developer-dubai") },
+      { "@type": "DefinedTerm", name: "React", description: "JavaScript library for building fast, interactive frontend web applications and single-page apps.", url: absoluteUrl("/react-developer-dubai") },
+      { "@type": "DefinedTerm", name: "Next.js", description: "React-based framework for server-rendered, SEO-optimised web applications with static export support.", url: absoluteUrl("/nextjs-developer-dubai") },
+      { "@type": "DefinedTerm", name: "PHP", description: "Server-side programming language used with Laravel for secure, scalable web application backends.", url: absoluteUrl("/php-developer-dubai") },
+      { "@type": "DefinedTerm", name: "MySQL", description: "Relational database management system used for storing structured business data in web applications.", url: absoluteUrl("/") },
+      { "@type": "DefinedTerm", name: "REST API", description: "Application Programming Interface standard for integrating web services, payment gateways, CRMs, and third-party platforms.", url: absoluteUrl("/api-integration-services") }
+    ]
+  };
+
   return {
     "@context": "https://schema.org",
-    "@graph": [...graph, ukLocalBusiness, canadaLocalBusiness, ...ukCityLocalBusinesses, ...canadaCityLocalBusinesses, ...australiaCityLocalBusinesses, ...navItems]
+    "@graph": [...graph, ukLocalBusiness, canadaLocalBusiness, ...ukCityLocalBusinesses, ...canadaCityLocalBusinesses, ...australiaCityLocalBusinesses, ...navItems, servicesCatalog, definedTermSet]
   };
 }
 
