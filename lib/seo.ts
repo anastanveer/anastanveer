@@ -991,26 +991,34 @@ export function siteJsonLd() {
           review: [
             {
               "@type": "Review",
-              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+              itemReviewed: { "@id": absoluteUrl("/#local-business") },
+              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
               author: { "@type": "Person", name: "Steve Barlow" },
+              datePublished: "2024-08-10",
               reviewBody: "Another fantastic project from Anas. He understands the requirements, provides fully functional updates, makes changes quickly, and delivers a truly excellent product. I highly recommend Anas."
             },
             {
               "@type": "Review",
-              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+              itemReviewed: { "@id": absoluteUrl("/#local-business") },
+              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
               author: { "@type": "Person", name: "Said B." },
+              datePublished: "2024-06-20",
               reviewBody: "2nd collaboration with Anas — fast, precise and high quality work. Excellent results delivered on time. Will definitely work together again."
             },
             {
               "@type": "Review",
-              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+              itemReviewed: { "@id": absoluteUrl("/#local-business") },
+              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
               author: { "@type": "Person", name: "J. Nagle" },
+              datePublished: "2024-04-15",
               reviewBody: "Anas did a great job as per usual. Reliable, fast and always delivers exactly what is needed. Highly recommended."
             },
             {
               "@type": "Review",
-              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+              itemReviewed: { "@id": absoluteUrl("/#local-business") },
+              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
               author: { "@type": "Person", name: "Rushil C." },
+              datePublished: "2024-02-05",
               reviewBody: "Excellent experience working with Anas Tanveer. His professionalism, attention to detail, and ability to deliver bug-free work were exceptional."
             }
           ],

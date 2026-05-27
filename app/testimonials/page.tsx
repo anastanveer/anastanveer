@@ -101,10 +101,10 @@ const aggregateRatingJsonLd = {
     datePublished: r.date,
     reviewBody: r.body,
     name: r.highlight,
-    reviewedItem: {
-      "@type": "ProfessionalService",
-      name: r.project,
-      provider: { "@id": absoluteUrl("/#person") }
+    itemReviewed: {
+      "@type": "LocalBusiness",
+      "@id": absoluteUrl("/#local-business"),
+      name: "Anas Tanveer Web Development"
     },
     publisher: { "@type": "Organization", name: r.platform }
   })),
