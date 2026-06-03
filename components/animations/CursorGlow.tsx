@@ -10,6 +10,7 @@ export function CursorGlow() {
   const trailTwoRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (window.matchMedia("(pointer: coarse)").matches) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const glow = glowRef.current;
