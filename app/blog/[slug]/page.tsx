@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, CheckCircle2, MessageCircle } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { blogSeoContent } from "@/data/blogSeo";
@@ -351,6 +351,24 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
                     </div>
                   ))}
                 </div>
+              </section>
+            ) : null}
+
+            {seoContent ? (
+              <section className="mt-10 rounded-2xl border border-[#25D366]/25 bg-[#25D366]/8 p-6 light:border-emerald-300 light:bg-emerald-50">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald light:text-emerald-700">Ready to discuss this?</p>
+                <p className="mt-2 text-sm leading-6 text-silver/74 light:text-slate-600">
+                  Send your website URL, platform, issue and goal — I'll reply with a practical direction within 4 hours. Free 20-min discovery call available.
+                </p>
+                <a
+                  href={`https://wa.me/971542435418?text=Hi%20Anas%2C%20I%20read%20your%20blog%20post%20on%20${encodeURIComponent(post.title)}%20and%20have%20a%20project%20to%20discuss.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_2px_14px_rgba(37,211,102,0.35)] transition hover:shadow-[0_4px_22px_rgba(37,211,102,0.55)]"
+                >
+                  <MessageCircle size={15} />
+                  Message on WhatsApp — Free 20-min call
+                </a>
               </section>
             ) : null}
 

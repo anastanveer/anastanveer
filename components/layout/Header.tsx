@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { BriefcaseBusiness, FileText, Home, Linkedin, Menu, Send, X } from "lucide-react";
+import { BriefcaseBusiness, FileText, Home, Linkedin, Menu, MessageCircle, Send, X } from "lucide-react";
 import { useState } from "react";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
@@ -67,6 +67,15 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <ThemeToggle />
+          <a
+            href="https://wa.me/971542435418?text=Hi%20Anas%2C%20I%27d%20like%20to%20discuss%20a%20project."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp Anas Tanveer"
+            className="grid h-9 w-9 place-items-center rounded-full border border-[#25D366]/30 bg-[#25D366]/10 text-[#25D366] transition hover:bg-[#25D366]/20"
+          >
+            <MessageCircle size={17} />
+          </a>
           <MagneticButton href="/contact" size="sm">
             Hire Me
           </MagneticButton>
@@ -133,13 +142,13 @@ export function Header() {
         );
       })}
       <a
-        href="https://www.linkedin.com/in/anas-fullstackdev/"
+        href="https://wa.me/971542435418?text=Hi%20Anas%2C%20I%27d%20like%20to%20discuss%20a%20project."
         target="_blank"
-        rel="noreferrer"
-        className="grid min-h-12 place-items-center rounded-xl text-[11px] font-medium text-silver/70 transition hover:bg-cyan/10 hover:text-cyan light:text-slate-600"
+        rel="noopener noreferrer"
+        className="grid min-h-12 place-items-center rounded-xl text-[11px] font-medium text-[#25D366] transition hover:bg-[#25D366]/10 light:text-emerald-600"
       >
-        <Linkedin size={17} />
-        <span className="mt-0.5">LinkedIn</span>
+        <MessageCircle size={17} />
+        <span className="mt-0.5">WhatsApp</span>
       </a>
     </nav>
     </>

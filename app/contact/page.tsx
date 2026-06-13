@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Clock, Linkedin, Mail, MapPin, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Clock, Linkedin, Mail, MapPin, MessageCircle, PhoneCall } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
 import { FAQ } from "@/components/sections/FAQ";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -52,6 +52,28 @@ export default function ContactPage() {
             <span className="flex items-center gap-2 text-sm text-silver/62 light:text-slate-500">
               <Clock size={14} /> Usually replies within 4 hours
             </span>
+          </div>
+
+          <div className="mt-6 overflow-hidden rounded-2xl border border-[#25D366]/22 bg-[#25D366]/8 light:border-emerald-300 light:bg-emerald-50">
+            <div className="flex flex-wrap items-center justify-between gap-4 px-5 py-4">
+              <div className="flex items-center gap-3">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-[#25D366]/30 bg-[#25D366]/15 text-emerald light:text-emerald-600">
+                  <PhoneCall size={17} />
+                </span>
+                <div>
+                  <p className="text-sm font-semibold text-white light:text-slate-950">Not ready to fill a form? Start with a free 20-min discovery call.</p>
+                  <p className="text-xs text-silver/60 light:text-slate-500">No obligation. Just send your problem and I'll call back within 4 hours.</p>
+                </div>
+              </div>
+              <a
+                href="https://wa.me/971542435418?text=Hi%20Anas%2C%20I%27d%20like%20to%20book%20a%20free%2020-min%20discovery%20call%20to%20discuss%20my%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#25D366] px-4 py-2.5 text-sm font-semibold text-white shadow-[0_2px_14px_rgba(37,211,102,0.35)] transition hover:shadow-[0_4px_22px_rgba(37,211,102,0.5)]"
+              >
+                <MessageCircle size={15} /> Book Free Call <ArrowUpRight size={13} />
+              </a>
+            </div>
           </div>
 
           <div className="mt-6 grid gap-5 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
