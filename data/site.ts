@@ -752,6 +752,43 @@ export type BlogPost = {
 
 export const blogs: BlogPost[] = [
   {
+    title: "How to Print Packing Slips on Shopify — Free App + Complete Guide",
+    slug: "how-to-print-packing-slips-shopify-free-app",
+    excerpt: "Shopify's default packing slip is plain and unbranded. Here is how to print branded packing slips, bulk-fulfill orders and send automated WhatsApp shipping alerts — completely free with PackSlip, a 34-module Shopify app.",
+    tag: "Shopify",
+    image: "/images/blog/packslip-shopify-packing-slip-guide.webp",
+    publishedAt: "2026-06-12",
+    updatedAt: "2026-06-12",
+    readingTime: "8 min read",
+    seoTitle: "How to Print Packing Slips on Shopify Free | PackSlip App",
+    seoDescription: "Step-by-step guide to printing branded packing slips on Shopify. PackSlip gives you packing slips, bulk fulfillment, branded tracking and WhatsApp alerts — all free.",
+    takeaways: ["Shopify's built-in slip is plain and unbranded", "PackSlip prints branded slips and bulk-fulfills for free", "34 fulfillment modules at $0 — no order limits, no card"],
+    sections: [
+      {
+        heading: "Does Shopify have a built-in packing slip feature?",
+        body: [
+          "Technically yes. Shopify lets you print a basic order summary from the order detail page. But it is a plain, unbranded document with no logo, no custom fields and no way to print multiple orders at once. For any serious fulfillment operation, it falls short almost immediately.",
+          "If you ship more than a handful of orders a day, you need a dedicated Shopify packing slip app — one that puts your logo and brand colours on every slip, supports custom fields like gift messages, SKUs and barcodes, and lets you bulk-print dozens or hundreds of orders into a single PDF."
+        ]
+      },
+      {
+        heading: "The problem with most Shopify fulfillment apps",
+        body: [
+          "Search the Shopify App Store for packing slips and you will find dozens of options — most charging $10 to $20 per month, per feature. Add bulk fulfillment, branded tracking and WhatsApp order alerts and you are easily spending $50 or more every month across several separate apps, each with its own dashboard and login.",
+          "This is exactly the gap PackSlip was built to close. Instead of stacking single-purpose paid apps, it bundles the entire post-purchase workflow into one free app that lives inside your Shopify admin."
+        ]
+      },
+      {
+        heading: "What is PackSlip?",
+        body: [
+          "PackSlip is a free Shopify app that bundles 34 fulfillment and post-purchase modules into a single clean dashboard inside your Shopify admin. No extra logins, no separate subscriptions and no credit card required — ever.",
+          "The core modules include branded packing slips, bulk fulfillment via CSV, a branded order-tracking page on your own domain, automated WhatsApp and email shipping alerts, 3PL-ready CSV and XLSX order exports, and storefront tools such as product reviews, abandoned-cart recovery, back-in-stock alerts and trust badges. All 34 modules are completely free, with no usage limits or premium tier.",
+          "PackSlip is built and maintained by ARS Developer Ltd, a UK-registered software company (Co. No. 17039150) based in Stoke-on-Trent. It connects to Shopify through the official Shopify API only, does not sell data and is fully GDPR ready. You can install it from packslip.arsdeveloper.co.uk."
+        ]
+      }
+    ]
+  },
+  {
     title: "When a Business Should Choose Laravel Instead of Another Plugin",
     slug: "choose-laravel-instead-of-plugin",
     excerpt: "A practical guide for companies that need dashboards, portals, ERP workflows, API integrations, or scalable backend logic.",

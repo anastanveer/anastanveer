@@ -18,6 +18,91 @@ export type BlogSeoContent = {
 };
 
 export const blogSeoContent: Record<string, BlogSeoContent> = {
+  "how-to-print-packing-slips-shopify-free-app": {
+    focusKeywords: [
+      "shopify packing slip",
+      "how to print packing slips on shopify",
+      "shopify packing slip app free",
+      "bulk fulfillment shopify",
+      "shopify order tracking app free",
+      "free shopify fulfillment app"
+    ],
+    intro: [
+      "Shopify is excellent at taking orders — but when it comes to fulfillment, the default admin leaves a lot to be desired. There is no real packing slip designer, no bulk fulfillment tool and no branded order-tracking page. Most merchants end up paying for three to five separate apps just to cover the basics.",
+      "This guide walks through exactly how to print packing slips on Shopify, fulfill orders in bulk and send automated shipping notifications — without paying a penny — using PackSlip, a free 34-module Shopify app."
+    ],
+    expandedSections: [
+      {
+        heading: "How to print packing slips on Shopify with PackSlip",
+        body: [
+          "Step 1 — Install PackSlip free. Visit packslip.arsdeveloper.co.uk and click Install Free on Shopify. You are taken to the Shopify App Store to confirm. No credit card is requested at any stage.",
+          "Step 2 — Open your dashboard. Once installed, PackSlip appears directly inside your Shopify admin and all 34 modules unlock immediately — no trial, no paywall and no feature gating.",
+          "Step 3 — Set up your template. Open the Packing Slips module, upload your logo, set your brand colour and choose which fields to show: product name, SKU, quantity, gift note, barcode and more. The template is saved and applied to every future print job automatically.",
+          "Step 4 — Print single or bulk orders. For one order, open it and click the PackSlip action to download a branded PDF. To print in bulk, select multiple orders, open the bulk print view and download a single combined PDF of every slip — no page limits, no order caps."
+        ]
+      },
+      {
+        heading: "Bulk fulfillment — fulfill hundreds of orders in one click",
+        body: [
+          "If your courier or 3PL returns tracking numbers in a spreadsheet, PackSlip's bulk fulfillment module removes hours of manual copy-and-paste every day.",
+          "Export your pending orders from Shopify as a CSV, add the tracking numbers from your courier, then upload the completed CSV into PackSlip. It marks every order as fulfilled in Shopify and triggers the shipping-notification email to each customer automatically. For dropshipping and print-on-demand stores processing 50 to 500 orders a day, this single module alone is worth the install."
+        ]
+      },
+      {
+        heading: "Branded order tracking and WhatsApp alerts",
+        body: [
+          "The default Shopify notification sends customers to a generic courier website. PackSlip replaces that with a fully branded tracking page on your own domain — a visual progress bar, a live event timeline, your logo and a recommended-products section — so customers stay on your store, not a courier site.",
+          "On top of that, PackSlip sends automated WhatsApp and email messages at every stage: order confirmed, shipment dispatched with a tracking link, and delivery confirmed. For merchants serving customers who prefer WhatsApp, this dramatically reduces the volume of where-is-my-order support tickets."
+        ]
+      },
+      {
+        heading: "What does PackSlip cost compared with buying apps separately?",
+        body: [
+          "PackSlip is completely free. All 34 modules are available with no usage limits, no order caps and no premium tier.",
+          "Bought separately, the same functionality is expensive: packing-slip printing is around $10/month, branded order tracking around $12/month, a bulk fulfillment tool around $15/month and WhatsApp or email alerts around $19/month — roughly $56 every month across four different apps. With PackSlip the total is $0.",
+          "It suits dropshipping stores handling bulk tracking CSVs, print-on-demand brands shipping internationally, fashion and lifestyle brands that want on-brand slips, and any growing Shopify store currently paying for several apps to do what one free app handles."
+        ]
+      }
+    ],
+    checklist: [
+      "Install PackSlip free from packslip.arsdeveloper.co.uk — no credit card needed.",
+      "Upload your logo and brand colour in the Packing Slips module once.",
+      "Use bulk print to export every order's slip into a single PDF.",
+      "Upload a tracking-number CSV to bulk-fulfill and notify customers automatically.",
+      "Enable branded tracking and WhatsApp alerts to cut where-is-my-order tickets."
+    ],
+    faqs: [
+      {
+        question: "How do I print packing slips on Shopify for free?",
+        answer: "Install PackSlip free from the Shopify App Store, open the Packing Slips module, upload your logo and brand colour, then print single orders or select multiple orders and download one combined PDF. There is no cost and no order limit."
+      },
+      {
+        question: "Does PackSlip work with my Shopify theme?",
+        answer: "Yes. PackSlip runs inside your Shopify admin and does not touch your theme. Its storefront features — tracking page, trust badges, reviews — install on any theme in one click without code changes."
+      },
+      {
+        question: "Is there a limit on packing slips or orders?",
+        answer: "No. There are no order limits, usage caps or tiered restrictions on any of the 34 modules. Print and fulfill as many orders as your store needs."
+      },
+      {
+        question: "Which Shopify plans does PackSlip support?",
+        answer: "All Shopify plans — Basic, Shopify, Advanced and Shopify Plus. Installation and every feature are available regardless of your plan."
+      },
+      {
+        question: "Do I need to enter card details to install PackSlip?",
+        answer: "No. PackSlip is free to install and free to use indefinitely. No credit card is requested during installation or use."
+      },
+      {
+        question: "Can PackSlip handle bulk tracking-number uploads from my courier?",
+        answer: "Yes. Upload a CSV of order numbers and tracking numbers and PackSlip fulfills every order in Shopify and notifies each customer automatically in one action."
+      }
+    ],
+    relatedLinks: [
+      { label: "Install PackSlip Free on Shopify", href: "https://packslip.arsdeveloper.co.uk/" },
+      { label: "Shopify Developer for Hire", href: "/shopify-developer-dubai" },
+      { label: "Ecommerce Website Development", href: "/ecommerce-website-development-dubai" }
+    ]
+  },
   "choose-laravel-instead-of-plugin": {
     focusKeywords: [
       "Laravel developer Dubai",
