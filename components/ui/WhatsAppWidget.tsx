@@ -9,7 +9,7 @@ export function WhatsAppWidget() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Anas Tanveer on WhatsApp"
-      className="group fixed bottom-6 left-6 z-40 flex items-center gap-2.5 rounded-full bg-[#25D366] py-3 pl-3.5 pr-4 shadow-[0_4px_24px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_36px_rgba(37,211,102,0.62)] sm:pl-4 sm:pr-5 lg:bottom-8 lg:left-8"
+      className="group fixed bottom-8 left-8 z-40 hidden items-center gap-2.5 rounded-full bg-[#25D366] py-3 pl-4 pr-5 shadow-[0_4px_24px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_36px_rgba(37,211,102,0.62)] lg:flex"
     >
       <span className="relative flex h-2 w-2 shrink-0">
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-65" />
