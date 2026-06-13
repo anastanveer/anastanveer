@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Providers } from "@/components/layout/Providers";
 import { FloatingAssistant } from "@/components/ai/FloatingAssistant";
+import { WhatsAppWidget } from "@/components/ui/WhatsAppWidget";
 import { CursorGlow } from "@/components/animations/CursorGlow";
 import { MobileRailEffects } from "@/components/animations/MobileRailEffects";
 import { ScrollProgress } from "@/components/animations/ScrollProgress";
@@ -71,6 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           <main>{children}</main>
           <Footer />
+          <WhatsAppWidget />
           <FloatingAssistant />
         </Providers>
       </body>

@@ -9,6 +9,8 @@ import { homeFaqItems, allFaqs } from "@/data/faqs";
 import { Process } from "@/components/sections/Process";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { ValueGrid } from "@/components/sections/ValueGrid";
+import { GuaranteeBar } from "@/components/sections/GuaranteeBar";
+import { ComparisonSection } from "@/components/sections/ComparisonSection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PricingCard } from "@/components/ui/PricingCard";
 import { ProjectCard } from "@/components/ui/ProjectCard";
@@ -56,6 +58,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <GuaranteeBar />
 
       {/* ── 01 / Services ────────────────────────────────────── */}
       <section className="section-pad relative overflow-hidden">
@@ -186,6 +190,8 @@ export default function HomePage() {
           <ValueGrid />
         </div>
       </section>
+
+      <ComparisonSection />
 
       {/* ── 07 / Pricing ─────────────────────────────────────── */}
       <section className="section-pad relative overflow-hidden">

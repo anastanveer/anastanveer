@@ -16,8 +16,9 @@ import { stats } from "@/data/site";
 
 const trustItems = [
   "Dubai Based",
-  "7+ Years Solving Web Problems",
-  "100+ Projects Delivered"
+  "7+ Years Experience",
+  "100+ Projects Delivered",
+  "UK Registered Business"
 ];
 
 export function Hero() {
@@ -42,7 +43,7 @@ export function Hero() {
             initial={false}
             className="max-w-[14ch] break-words font-display text-4xl font-semibold leading-[1.03] tracking-normal text-white min-[430px]:text-5xl lg:text-6xl light:text-slate-950"
           >
-            Full-Stack Developer for Business Web Systems in Dubai
+            I Build Web Systems That Solve Real Business Problems in Dubai
           </motion.h1>
 
           <motion.div initial={false} className="mt-5 flex max-w-xl flex-wrap items-center gap-2">
@@ -71,14 +72,20 @@ export function Hero() {
           <motion.div initial={false} className="mt-7 max-w-xl">
             <div className="flex flex-wrap items-center gap-3">
               <MagneticButton href="/work">View Portfolio</MagneticButton>
-              <MagneticButton href="/contact" variant="secondary">Hire Me</MagneticButton>
+              <MagneticButton href="/contact" variant="secondary">Get a Free Quote</MagneticButton>
             </div>
-            <div className="mt-4 inline-flex items-center gap-2.5 rounded-full border border-emerald/25 bg-emerald/10 px-4 py-2 text-sm font-semibold text-emerald light:border-emerald-600/25 light:bg-emerald-50 light:text-emerald-700">
+            <p className="mt-3 text-sm text-silver/55 light:text-slate-500">
+              or{" "}
+              <a href="https://wa.me/971542435418?text=Hi%20Anas%2C%20I%27d%20like%20to%20book%20a%20free%2020-min%20discovery%20call." target="_blank" rel="noopener noreferrer" className="font-medium text-emerald underline-offset-2 hover:underline light:text-emerald-600">
+                book a free 20-min discovery call on WhatsApp
+              </a>
+            </p>
+            <div className="mt-4 inline-flex flex-wrap items-center gap-x-2.5 gap-y-1 rounded-full border border-emerald/25 bg-emerald/10 px-4 py-2 text-sm font-semibold text-emerald light:border-emerald-600/25 light:bg-emerald-50 light:text-emerald-700">
               <span className="relative flex h-2 w-2 shrink-0">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald opacity-70 light:bg-emerald-500" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald light:bg-emerald-500" />
               </span>
-              Available for new projects
+              Available — Limited Spots This Quarter
               <span className="text-silver/55 light:text-slate-500">·</span>
               <span className="font-normal text-silver/65 light:text-slate-500">Replies within 4 hours</span>
             </div>
