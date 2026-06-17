@@ -24,8 +24,8 @@ const trustItems = [
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden pt-24 md:pt-28">
-      <div className="absolute left-1/2 top-16 -z-10 h-[34rem] w-[58rem] -translate-x-1/2 rounded-full bg-cyan/10 blur-3xl light:bg-blue-300/24" />
-      <div className="absolute right-0 top-28 -z-10 h-[28rem] w-[28rem] rounded-full bg-violet/12 blur-3xl light:bg-violet-300/24" />
+      <div className="hero-glow-a absolute left-1/2 top-16 -z-10 h-[34rem] w-[58rem] -translate-x-1/2 rounded-full bg-cyan/10 blur-3xl light:bg-blue-300/24" />
+      <div className="hero-glow-b absolute right-0 top-28 -z-10 h-[28rem] w-[28rem] rounded-full bg-violet/12 blur-3xl light:bg-violet-300/24" />
       <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 pb-14 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] xl:gap-12">
         <div className="min-w-0">
           <motion.div
@@ -118,15 +118,9 @@ export function Hero() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.18 }}
-              className="absolute left-3 right-3 top-3 overflow-hidden rounded-full border border-white/18 bg-black/42 px-3 py-2 text-white shadow-glow backdrop-blur-xl light:border-white/50 light:bg-slate-950/70 sm:left-5 sm:right-auto sm:top-5 sm:px-4 sm:py-2.5"
+              className="shimmer-badge absolute left-3 right-3 top-3 overflow-hidden rounded-full border border-white/18 bg-black/42 px-3 py-2 text-white shadow-glow backdrop-blur-xl light:border-white/50 light:bg-slate-950/70 sm:left-5 sm:right-auto sm:top-5 sm:px-4 sm:py-2.5"
             >
-              <motion.span
-                aria-hidden="true"
-                className="absolute inset-y-0 left-[-45%] w-1/3 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                animate={{ x: ["0%", "460%"] }}
-                transition={{ duration: 5.5, repeat: Infinity, ease: "linear" }}
-              />
-              <span className="relative flex items-center gap-2 text-xs font-semibold sm:text-sm">
+              <span className="relative z-[1] flex items-center gap-2 text-xs font-semibold sm:text-sm">
                 <Workflow size={16} className="text-cyan" />
                 Laravel • Dashboards • Ecommerce • SEO
               </span>
