@@ -19,7 +19,8 @@ export const metadata: Metadata = pageMetadata({
   title: "Anas Tanveer | Full-Stack Laravel Developer Dubai",
   description:
     "Dubai web problem solver for Laravel, WordPress, Shopify, dashboards, APIs, ecommerce, speed and SEO-ready business systems.",
-  path: "/"
+  path: "/",
+  image: "/images/anas-hero-ai-1600.webp"
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -866,6 +866,16 @@ html.light body::after,
   to { transform: rotate(1turn); }
 }
 
+/* Cinematic hero background slow zoom (Ken Burns). Desktop only + reduced-motion
+   safe; GPU transform on a single element so it stays cheap and CWV-safe. */
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .hero-kenburns { animation: hero-kenburns 28s ease-in-out infinite alternate; }
+}
+@keyframes hero-kenburns {
+  from { transform: scale(1.03); }
+  to   { transform: scale(1.12); }
+}
+
 /* Gradient edge fade for marquee containers */
 .marquee-fade {
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Download, Star } from "lucide-react";
 import { CountUp } from "@/components/ui/CountUp";
 import { MagneticButton } from "@/components/ui/MagneticButton";
@@ -19,13 +20,23 @@ const heroStats = [
   { value: 3, suffix: " Markets", label: "UAE / UK / Canada" }
 ];
 
-// Cinematic immersive hero: full-bleed AI visual behind the content with layered
-// scrims for readability. Dark by design in both themes (premium dark hero over a
-// light/dark body). No animation on the LCP headline to protect Core Web Vitals.
+// Entrance animation: transform/opacity only (CLS-safe), one-shot (INP-safe). The
+// LCP is the full-bleed background image, which renders instantly (not faded).
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } }
+};
+const item = {
+  hidden: { opacity: 0, y: 16 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const } }
+};
+
+// Cinematic immersive hero: full-bleed AI visual with a slow Ken Burns zoom,
+// layered scrims for readability, and a staggered content entrance.
 export function Hero() {
   return (
     <section className="relative isolate flex min-h-[92vh] items-center overflow-hidden">
-      {/* Full-bleed background image (LCP) */}
+      {/* Full-bleed background image (LCP) with slow zoom */}
       <Image
         src="/images/anas-hero-ai-1600.webp"
         alt="Full-stack developer command center with holographic dashboards overlooking the Dubai skyline at night"
@@ -33,7 +44,7 @@ export function Hero() {
         priority
         fetchPriority="high"
         sizes="100vw"
-        className="-z-20 object-cover object-center"
+        className="hero-kenburns -z-20 object-cover object-center"
       />
       {/* Readability scrims */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/85 to-ink/20" />
@@ -42,50 +53,61 @@ export function Hero() {
       <div className="pointer-events-none absolute -left-32 top-1/4 -z-10 h-80 w-80 rounded-full bg-cyan/15 blur-[120px]" />
       <div className="pointer-events-none absolute right-10 top-10 -z-10 h-72 w-72 rounded-full bg-violet/15 blur-[120px]" />
 
-      <div className="relative mx-auto w-full max-w-7xl px-5 pb-12 pt-28 md:pt-32">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="relative mx-auto w-full max-w-7xl px-5 pb-12 pt-28 md:pt-32"
+      >
         <div className="max-w-2xl">
           {/* eyebrow */}
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm font-medium text-cyan shadow-glow backdrop-blur-md">
+          <motion.div
+            variants={item}
+            className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm font-medium text-cyan shadow-glow backdrop-blur-md"
+          >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald opacity-70" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald" />
             </span>
             Available for new projects · Dubai, UAE
-          </div>
+          </motion.div>
 
           {/* name */}
-          <div className="mb-4 flex items-center gap-2.5">
+          <motion.div variants={item} className="mb-4 flex items-center gap-2.5">
             <span className="h-px w-8 bg-gradient-to-r from-cyan to-violet" aria-hidden="true" />
             <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-white/80">Anas Tanveer</p>
-          </div>
+          </motion.div>
 
           {/* headline */}
-          <h1 className="max-w-[16ch] font-display text-[2.7rem] font-bold leading-[1.0] tracking-[-0.015em] text-white min-[430px]:text-5xl lg:text-6xl xl:text-[4.4rem]">
+          <motion.h1
+            variants={item}
+            className="max-w-[16ch] font-display text-[2.7rem] font-bold leading-[1.0] tracking-[-0.015em] text-white min-[430px]:text-5xl lg:text-6xl xl:text-[4.4rem]"
+          >
             I Build Web Systems That Solve{" "}
             <span className="premium-text">Real Business Problems</span> in Dubai
-          </h1>
+          </motion.h1>
 
           {/* description */}
-          <p className="mt-6 max-w-xl text-base leading-7 text-silver/85 md:text-lg md:leading-8">
+          <motion.p variants={item} className="mt-6 max-w-xl text-base leading-7 text-silver/85 md:text-lg md:leading-8">
             Full-stack Laravel, WordPress, Shopify and Next.js builds — fast, SEO-ready platforms,
             dashboards and stores engineered around real workflow and conversion problems.
-          </p>
+          </motion.p>
 
           {/* tech chips */}
-          <div className="mt-6 flex flex-wrap items-center gap-2">
-            {techChips.map((item) => (
+          <motion.div variants={item} className="mt-6 flex flex-wrap items-center gap-2">
+            {techChips.map((tech) => (
               <span
-                key={item.label}
+                key={tech.label}
                 className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.06] px-3 py-1.5 text-sm font-medium text-silver/85 backdrop-blur-md transition hover:border-cyan/40 hover:text-white"
               >
-                <BrandIcon name={item.icon} className="h-[18px] w-[18px] rounded-sm" />
-                {item.label}
+                <BrandIcon name={tech.icon} className="h-[18px] w-[18px] rounded-sm" />
+                {tech.label}
               </span>
             ))}
-          </div>
+          </motion.div>
 
           {/* CTAs */}
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-3">
             <MagneticButton href="/work">View Portfolio</MagneticButton>
             <MagneticButton href="/contact" variant="secondary">Get a Free Quote</MagneticButton>
             <a
@@ -95,8 +117,8 @@ export function Hero() {
             >
               <Download size={15} /> Download CV
             </a>
-          </div>
-          <p className="mt-3 text-sm text-silver/60">
+          </motion.div>
+          <motion.p variants={item} className="mt-3 text-sm text-silver/60">
             or{" "}
             <a
               href="https://wa.me/971542435418?text=Hi%20Anas%2C%20I%27d%20like%20to%20book%20a%20free%2020-min%20discovery%20call."
@@ -106,11 +128,14 @@ export function Hero() {
             >
               book a free 20-min discovery call on WhatsApp
             </a>
-          </p>
+          </motion.p>
         </div>
 
         {/* Stats strip */}
-        <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-5 border-t border-white/12 pt-6">
+        <motion.div
+          variants={item}
+          className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-5 border-t border-white/12 pt-6"
+        >
           {heroStats.map((s) => (
             <div key={s.label}>
               <p className="font-display text-2xl font-bold leading-none text-white sm:text-3xl">
@@ -138,8 +163,8 @@ export function Hero() {
               Replies within 4 hours
             </span>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
