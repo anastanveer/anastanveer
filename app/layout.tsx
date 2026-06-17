@@ -53,7 +53,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3DEZL0WXWD');gtag('config','AW-658923491');"
           }}
         />
-        <script async src="https://www.google.com/recaptcha/api.js?render=6Lf_8-ksAAAAAJt3RbumC-30_Y6CrVfo5u_uvx7f" />
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
