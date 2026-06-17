@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowUpRight, CheckCircle2, Clock } from "lucide-react";
 import { Hero } from "@/components/sections/Hero";
 import { TechMarquee } from "@/components/sections/TechMarquee";
+import { TrustBar } from "@/components/sections/TrustBar";
 import { CTASection } from "@/components/sections/CTASection";
 import { FAQ } from "@/components/sections/FAQ";
 import { homeFaqItems, allFaqs } from "@/data/faqs";
@@ -35,6 +36,7 @@ export default function HomePage() {
       <JsonLd data={jsonLdForPage("/")} id="home-json-ld" />
       <JsonLd data={faqSchema(homeFaqs)} id="faq-json-ld" />
       <Hero />
+      <TrustBar />
       <TechMarquee />
 
       {/* ── Stats strip ─────────────────────────────────────── */}
