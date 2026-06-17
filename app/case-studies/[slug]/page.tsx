@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!study) return pageMetadata({ title: "Case Study | Anas Tanveer", description: "", path: "/case-studies" });
 
   return pageMetadata({
-    title: `${study.title} — Case Study | Anas Tanveer`,
+    title: `${study.title} | Case Study`,
     description: `${study.challenge.slice(0, 155)}`,
     path: `/case-studies/${slug}`,
     image: study.images[0],

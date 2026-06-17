@@ -1233,7 +1233,7 @@ export const blogs: BlogPost[] = [
     publishedAt: "2026-05-12",
     updatedAt: "2026-05-13",
     readingTime: "7 min read",
-    seoTitle: "Web Application Development Services: Planning Your First Custom Platform",
+    seoTitle: "Web Application Development Services: Planning Your Platform",
     seoDescription: "Plan your first custom web application the right way — requirements, tech stack, user roles, data design, integrations and launch checklist.",
     takeaways: ["Start with the workflow, not the feature list", "Define user roles and data before choosing a stack", "Build a small version first and expand from real usage"],
     sections: [

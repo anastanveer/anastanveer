@@ -54,7 +54,7 @@ const pricingOffersJsonLd = {
 };
 
 export const metadata: Metadata = pageMetadata({
-  title: "Pricing | Web Development Packages — Dubai, UK & Canada | Laravel, WordPress, Shopify",
+  title: "Pricing | Web Development Packages — Dubai, UK & Canada",
   description: "Transparent pricing for web development in Dubai (AED), UK (GBP) and Canada (CAD) — WordPress websites, Shopify stores, Laravel platforms, dashboards, ERP, CRM, SaaS MVPs, API integrations and SEO-ready builds.",
   path: "/pricing",
   extraKeywords: ["Web Development Pricing Dubai", "Laravel Developer Cost Dubai", "WordPress Website Price UAE", "Shopify Developer Pricing Dubai", "Freelance Developer Rates Dubai", "Web Development Cost UK", "Laravel Developer UK Rates", "Shopify Developer UK Pricing", "WordPress Developer UK Cost", "Web Development Pricing Canada", "Laravel Developer Canada Rates", "Hire Web Developer UK Cost", "Freelance Web Developer UK Rates", "Web Developer Pricing GBP", "Web Developer Pricing CAD"]

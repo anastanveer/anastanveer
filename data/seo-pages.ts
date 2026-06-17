@@ -2727,7 +2727,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "wordpress-developer-canada",
     navLabel: "WordPress Developer Canada",
     title: "WordPress Developer Canada — Business Websites & WooCommerce for Canadian Businesses",
-    metaTitle: "WordPress Developer Canada | WooCommerce & Business Websites — TorontoBytes",
+    metaTitle: "WordPress Developer Canada | WooCommerce & Business Sites",
     metaDescription: "Canadian WordPress developer for business websites, WooCommerce stores, CMS development, performance optimisation and technical SEO — serving Toronto, Vancouver, Calgary, Ottawa and Montreal.",
     keywords: [
       "WordPress Developer Canada", "WordPress Development Canada", "WordPress Developer Toronto",
@@ -3662,7 +3662,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "shopify-developer-toronto",
     navLabel: "Shopify Developer Toronto",
     title: "Shopify Developer Toronto — Shopify Stores & Custom Development for Ontario Businesses",
-    metaTitle: "Shopify Developer Toronto | Custom Shopify Themes & Ontario Tax — TorontoBytes",
+    metaTitle: "Shopify Developer Toronto | Custom Themes & Ontario Tax",
     metaDescription: "Toronto Shopify developer for custom theme development, Ontario HST configuration, Shopify Payments Canada, CASL-compliant email setup, and Shopify headless storefronts for Ontario businesses.",
     keywords: [
       "Shopify Developer Toronto", "Shopify Development Toronto", "Shopify Expert Toronto",
@@ -4062,7 +4062,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "shopify-developer-australia",
     navLabel: "Shopify Developer Australia",
     title: "Shopify Developer Australia — Custom Shopify Theme & Store Development",
-    metaTitle: "Shopify Developer Australia | Custom Shopify Stores with Australian GST & Afterpay",
+    metaTitle: "Shopify Developer Australia | Stores with GST & Afterpay",
     metaDescription: "Shopify developer for Australian businesses — custom Shopify theme development, Australian GST (10%) configuration, Afterpay and Zip Pay integration, and Google Australia SEO for your Shopify store.",
     keywords: [
       "Shopify Developer Australia", "Shopify Development Australia", "Hire Shopify Developer Australia",
@@ -4130,7 +4130,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "laravel-developer-australia",
     navLabel: "Laravel Developer Australia",
     title: "Laravel Developer Australia — Custom Laravel Applications for Australian Businesses",
-    metaTitle: "Laravel Developer Australia | Custom Laravel Apps, APIs & Portals for Australian Businesses",
+    metaTitle: "Laravel Developer Australia | Custom Apps, APIs & Portals",
     metaDescription: "Laravel developer for Australian businesses — custom Laravel applications, APIs, dashboards, portals, and business systems built for Australian compliance, GST invoicing, and Google Australia SEO.",
     keywords: [
       "Laravel Developer Australia", "Laravel Development Australia", "Hire Laravel Developer Australia",
@@ -4199,7 +4199,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "wordpress-developer-australia",
     navLabel: "WordPress Developer Australia",
     title: "WordPress Developer Australia — WordPress Websites for Australian Businesses",
-    metaTitle: "WordPress Developer Australia | Custom WordPress Sites with Australian GST & SEO",
+    metaTitle: "WordPress Developer Australia | Sites with GST & SEO",
     metaDescription: "WordPress developer for Australian businesses — custom WordPress websites, WooCommerce stores with Australian GST (10%), Privacy Act compliance, and Google Australia SEO for your WordPress site.",
     keywords: [
       "WordPress Developer Australia", "WordPress Development Australia", "Hire WordPress Developer Australia",
@@ -4266,7 +4266,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "fullstack-developer-australia",
     navLabel: "Full Stack Developer Australia",
     title: "Full Stack Developer Australia — Laravel, React & Next.js for Australian Businesses",
-    metaTitle: "Full Stack Developer Australia | Laravel React Next.js for Australian Businesses",
+    metaTitle: "Full Stack Developer Australia | Laravel, React, Next.js",
     metaDescription: "Full stack developer for Australian businesses — Laravel backend, React and Next.js frontend, Australian GST, Privacy Act compliance, AWS Sydney deployment, and AUD project pricing.",
     keywords: [
       "Full Stack Developer Australia", "Full Stack Development Australia", "Hire Full Stack Developer Australia",
@@ -4335,7 +4335,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "php-developer-australia",
     navLabel: "PHP Developer Australia",
     title: "PHP Developer Australia — Custom PHP Applications for Australian Businesses",
-    metaTitle: "PHP Developer Australia | Custom PHP, Laravel & WordPress for Australian Businesses",
+    metaTitle: "PHP Developer Australia | PHP, Laravel & WordPress Apps",
     metaDescription: "PHP developer for Australian businesses — custom PHP applications, Laravel web apps, WordPress development with Australian GST, Privacy Act compliance, and AWS Sydney deployment.",
     keywords: [
       "PHP Developer Australia", "PHP Development Australia", "Hire PHP Developer Australia",
@@ -4402,7 +4402,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "nextjs-developer-australia",
     navLabel: "Next.js Developer Australia",
     title: "Next.js Developer Australia — App Router, TypeScript & Headless CMS for Australian Businesses",
-    metaTitle: "Next.js Developer Australia | App Router, Core Web Vitals & Headless CMS",
+    metaTitle: "Next.js Developer Australia | App Router & Headless CMS",
     metaDescription: "Next.js developer for Australian businesses — App Router builds, headless Shopify storefronts, Next.js + Contentful/Sanity, Core Web Vitals-optimised for google.com.au, and AUD project pricing.",
     keywords: [
       "Next.js Developer Australia", "Next.js Development Australia", "Next.js Developer Sydney",
@@ -4470,7 +4470,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "react-developer-australia",
     navLabel: "React Developer Australia",
     title: "React Developer Australia — Custom React Applications for Australian Businesses",
-    metaTitle: "React Developer Australia | Custom React Apps, Dashboards & SaaS Frontends",
+    metaTitle: "React Developer Australia | Apps, Dashboards & SaaS",
     metaDescription: "React developer for Australian businesses — custom React applications, dashboards, SaaS frontends, component libraries, and React + Laravel API builds for Australian businesses in AUD.",
     keywords: [
       "React Developer Australia", "React Development Australia", "Hire React Developer Australia",
