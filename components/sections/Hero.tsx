@@ -8,8 +8,7 @@ import {
   Globe2,
   MapPin,
   Sparkles,
-  Star,
-  Workflow
+  Star
 } from "lucide-react";
 import { CountUp } from "@/components/ui/CountUp";
 import { MagneticButton } from "@/components/ui/MagneticButton";
@@ -23,6 +22,12 @@ const techChips = [
 ];
 
 const trustItems = ["Dubai Based", "7+ Years Experience", "100+ Projects", "UK Registered"];
+
+const heroStats = [
+  { num: 7, suffix: "+", label: "Years Experience" },
+  { num: 100, suffix: "+", label: "Projects Delivered" },
+  { num: 3, suffix: " Markets", label: "UAE / UK / Canada" }
+];
 
 export function Hero() {
   return (
@@ -118,8 +123,9 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="relative min-w-0 lg:pl-2"
+          className="relative min-w-0 pb-12 lg:pb-8 lg:pl-2"
         >
+          {/* Image in animated frame */}
           <div className="hero-frame rounded-[1.25rem]">
             <div className="relative z-[1] overflow-hidden rounded-[1.25rem]">
               <Image
@@ -129,50 +135,18 @@ export function Hero() {
                 height={614}
                 priority
                 fetchPriority="high"
-                className="h-[19rem] w-full object-cover object-center sm:h-[25rem] lg:h-[31rem] xl:h-[34rem]"
+                className="block h-[19rem] w-full object-cover object-center sm:h-[24rem] lg:h-[30rem] xl:h-[33rem]"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/78 via-black/8 to-black/30 light:from-slate-950/40 light:via-transparent light:to-slate-950/10" />
-
-              {/* top tag */}
-              <div className="shimmer-badge absolute left-3 right-3 top-3 overflow-hidden rounded-full border border-white/18 bg-black/45 px-3 py-2 text-white shadow-glow backdrop-blur-xl light:border-white/50 light:bg-slate-950/70 sm:left-5 sm:right-auto sm:top-5 sm:px-4 sm:py-2.5">
-                <span className="relative z-[1] flex items-center gap-2 text-xs font-semibold sm:text-sm">
-                  <Workflow size={16} className="text-cyan" />
-                  Laravel • Dashboards • Ecommerce • SEO
-                </span>
-              </div>
-
-              {/* bottom stats */}
-              <div className="absolute bottom-3 left-3 right-3 rounded-2xl border border-white/14 bg-black/55 p-3 backdrop-blur-xl light:border-white/30 light:bg-slate-950/70 sm:bottom-5 sm:left-5 sm:right-5 sm:p-4 sm:shadow-premium">
-                <div className="grid grid-cols-3 gap-3">
-                  {[
-                    { num: 7, suffix: "+", label: "Years Experience" },
-                    { num: 100, suffix: "+", label: "Projects Delivered" },
-                    { num: 3, suffix: " Markets", label: "UAE / UK / Canada" }
-                  ].map(({ num, suffix, label }) => (
-                    <div key={label}>
-                      <p className="font-display text-base font-bold leading-tight text-white sm:text-xl">
-                        <CountUp value={num} suffix={suffix} duration={1400} />
-                      </p>
-                      <p className="mt-1 line-clamp-1 text-[10px] text-white/68 sm:text-xs">{label}</p>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-3 flex w-max max-w-full items-center gap-2 rounded-full border border-cyan/25 bg-cyan/10 px-3 py-1.5 text-xs font-semibold text-cyan sm:mt-4 sm:py-2">
-                  <MapPin size={15} />
-                  Dubai, UAE
-                  <span className="hidden items-center gap-1 text-white/58 sm:inline-flex">
-                    <Globe2 size={13} /> UAE / UK / Canada
-                  </span>
-                </div>
-              </div>
+              {/* subtle scrim for depth (does not hold any text) */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/15 light:from-slate-950/25" />
             </div>
           </div>
 
-          {/* Floating glass HUD chips (desktop) — add depth */}
-          <div className="absolute -top-5 right-10 z-20 hidden items-center gap-2.5 rounded-2xl border border-white/15 bg-black/65 px-4 py-2.5 shadow-premium backdrop-blur-xl lg:flex light:border-slate-200 light:bg-white/90">
+          {/* Floating rating chip — top right, overlaps frame */}
+          <div className="absolute -top-4 right-6 z-20 flex items-center gap-2.5 rounded-2xl border border-white/15 bg-black/70 px-3.5 py-2.5 shadow-premium backdrop-blur-xl light:border-slate-200 light:bg-white/95 sm:right-10">
             <div className="flex" aria-hidden="true">
               {[0, 1, 2, 3, 4].map((i) => (
-                <Star key={i} size={13} className="fill-amber-400 text-amber-400" />
+                <Star key={i} size={12} className="fill-amber-400 text-amber-400" />
               ))}
             </div>
             <div>
@@ -181,13 +155,35 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="absolute -left-5 top-1/2 z-20 hidden -translate-y-1/2 items-center gap-2.5 rounded-2xl border border-white/15 bg-black/65 px-4 py-2.5 shadow-premium backdrop-blur-xl lg:flex light:border-slate-200 light:bg-white/90">
+          {/* Floating Full-Stack chip — left edge (desktop) */}
+          <div className="absolute top-16 -left-4 z-20 hidden items-center gap-2.5 rounded-2xl border border-white/15 bg-black/70 px-3.5 py-2.5 shadow-premium backdrop-blur-xl lg:flex light:border-slate-200 light:bg-white/95">
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald/15 text-emerald">
               <ArrowUpRight size={18} />
             </span>
             <div>
               <p className="font-display text-sm font-bold leading-none text-white light:text-slate-900">Full-Stack</p>
               <p className="mt-1 text-[10px] leading-none text-white/60 light:text-slate-500">Frontend + Backend</p>
+            </div>
+          </div>
+
+          {/* Stats card — straddles the image bottom edge (outside the clip, never cut off) */}
+          <div className="absolute inset-x-3 -bottom-4 z-20 rounded-2xl border border-white/14 bg-black/75 p-4 shadow-premium backdrop-blur-xl light:border-slate-200 light:bg-white/95 sm:inset-x-6">
+            <div className="grid grid-cols-3 gap-3">
+              {heroStats.map(({ num, suffix, label }) => (
+                <div key={label}>
+                  <p className="font-display text-lg font-bold leading-tight text-white light:text-slate-900 sm:text-2xl">
+                    <CountUp value={num} suffix={suffix} duration={1400} />
+                  </p>
+                  <p className="mt-1 line-clamp-1 text-[10px] text-white/60 light:text-slate-500 sm:text-xs">{label}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-3 flex w-max max-w-full items-center gap-2 rounded-full border border-cyan/25 bg-cyan/10 px-3 py-1.5 text-xs font-semibold text-cyan">
+              <MapPin size={14} />
+              Dubai, UAE
+              <span className="hidden items-center gap-1 text-white/55 light:text-slate-500 sm:inline-flex">
+                <Globe2 size={12} /> UAE / UK / Canada
+              </span>
             </div>
           </div>
         </motion.div>
