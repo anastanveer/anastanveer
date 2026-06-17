@@ -37,3 +37,9 @@ jobs:
             **/.git*
             **/.git*/**
             **/node_modules/**
+
+      # After the new files are live, ping IndexNow so Bing/Yandex/Seznam/Naver
+      # re-crawl quickly. Reads URLs from out/sitemap.xml; keyless (no secrets).
+      - name: Submit URLs to IndexNow
+        run: node scripts/indexnow-submit.mjs
+        continue-on-error: true
