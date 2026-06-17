@@ -836,6 +836,36 @@ html.light body::after,
   to   { opacity: 1; transform: scale(1.12); }
 }
 
+/* Hero image frame: animated conic-gradient border glow. Desktop only + reduced
+   motion safe; GPU transform (rotate) so it stays cheap and CWV-safe. */
+.hero-frame {
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: 0 30px 90px -28px rgba(38, 217, 255, 0.32), 0 8px 40px -12px rgba(139, 92, 246, 0.22);
+}
+.hero-frame::before {
+  content: "";
+  position: absolute;
+  inset: -1.5px;
+  z-index: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(38, 217, 255, 0.55), rgba(139, 92, 246, 0.45), rgba(52, 211, 153, 0.35));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .hero-frame::before {
+    background: conic-gradient(from 0deg, transparent 0deg, rgba(38, 217, 255, 0.7) 70deg, rgba(139, 92, 246, 0.55) 150deg, transparent 220deg, transparent 360deg);
+    animation: hero-frame-spin 7s linear infinite;
+  }
+}
+@keyframes hero-frame-spin {
+  to { transform: rotate(1turn); }
+}
+
 /* Gradient edge fade for marquee containers */
 .marquee-fade {
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);

@@ -104,15 +104,16 @@ export function Hero() {
         </div>
 
         <motion.div initial={false} className="relative min-w-0 lg:pl-2">
-          <div className="relative overflow-hidden rounded-2xl">
+          <div className="hero-frame rounded-2xl">
+          <div className="relative z-[1] overflow-hidden rounded-2xl">
             <Image
-              src="/images/anas-premium-hero-1100.webp"
-              alt="Premium full-stack developer command center visual"
+              src="/images/anas-hero-ai-1100.webp"
+              alt="Full-stack developer command center with holographic dashboards overlooking the Dubai skyline at night"
               width={1100}
-              height={619}
+              height={614}
               priority
               fetchPriority="high"
-              className="h-[18rem] w-full rounded-2xl object-cover object-[60%_center] sm:h-[24rem] lg:h-[30rem] xl:h-[33rem]"
+              className="h-[18rem] w-full rounded-2xl object-cover object-center sm:h-[24rem] lg:h-[30rem] xl:h-[33rem]"
             />
             {/* Scrim: makes the composition intentional and keeps overlay text readable */}
             <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-black/72 via-black/5 to-black/28 light:from-slate-950/35 light:via-transparent light:to-slate-950/10" />
@@ -151,6 +152,7 @@ export function Hero() {
                 </span>
               </div>
             </div>
+          </div>
           </div>
         </motion.div>
       </div>
