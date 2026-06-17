@@ -1,8 +1,10 @@
 name: Daily Build & Deploy to Namecheap
 
 on:
+  push:
+    branches: [main]       # Auto-deploy on every push to main (~3 min, no waiting for cron)
   schedule:
-    - cron: "0 5 * * *"   # Runs at 05:00 UTC = 09:00 UAE time (UTC+4) — best time for Google indexing
+    - cron: "0 5 * * *"   # Daily safety run at 05:00 UTC = 09:00 UAE time
   workflow_dispatch:       # Allows manual trigger from GitHub UI
 
 jobs:
