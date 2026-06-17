@@ -209,6 +209,17 @@ function getGeoMeta(path: string): { "geo.region": string; "geo.placename": stri
   return { "geo.region": "AE-DU", "geo.placename": "Dubai", ICBM: "25.2048,55.2708" };
 }
 
+// Bing flags meta descriptions outside 25–160 chars. Clamp at a word boundary so
+// every page (current and future) stays within range without manual edits.
+function clampDescription(text: string, max = 160): string {
+  const t = text.trim();
+  if (t.length <= max) return t;
+  let cut = t.slice(0, max);
+  const lastSpace = cut.lastIndexOf(" ");
+  if (lastSpace > max - 40) cut = cut.slice(0, lastSpace);
+  return cut.replace(/[\s,;:.\-–—]+$/g, "");
+}
+
 export function pageMetadata({
   title,
   description,
@@ -228,6 +239,7 @@ export function pageMetadata({
 }): Metadata {
   const url = absoluteUrl(path);
   const imageUrl = absoluteUrl(image);
+  description = clampDescription(description);
 
   return {
     metadataBase: new URL(siteUrl),

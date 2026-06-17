@@ -29,7 +29,7 @@ export function Header() {
           <span className="grid h-10 w-12 shrink-0 place-items-center rounded-xl border border-cyan/20 bg-white/[0.06] px-1.5 light:border-slate-900/10 light:bg-slate-900/[0.04] lg:h-11 lg:w-14">
             <Image
               src="/images/logo-mark-dark.webp"
-              alt=""
+              alt="Anas Tanveer logo"
               width={180}
               height={112}
               priority
@@ -37,7 +37,7 @@ export function Header() {
             />
             <Image
               src="/images/logo-mark-light.webp"
-              alt=""
+              alt="Anas Tanveer logo"
               width={180}
               height={106}
               priority
