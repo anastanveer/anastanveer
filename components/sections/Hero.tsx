@@ -1,15 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
-import {
-  ArrowUpRight,
-  Download,
-  Globe2,
-  MapPin,
-  Sparkles,
-  Star
-} from "lucide-react";
+import { Download, Star } from "lucide-react";
 import { CountUp } from "@/components/ui/CountUp";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { BrandIcon } from "@/components/ui/BrandIcon";
@@ -21,48 +13,70 @@ const techChips = [
   { label: "Shopify", icon: "shopify" as const }
 ];
 
-const trustItems = ["Dubai Based", "7+ Years Experience", "100+ Projects", "UK Registered"];
-
 const heroStats = [
-  { num: 7, suffix: "+", label: "Years Experience" },
-  { num: 100, suffix: "+", label: "Projects Delivered" },
-  { num: 3, suffix: " Markets", label: "UAE / UK / Canada" }
+  { value: 7, suffix: "+", label: "Years Experience" },
+  { value: 100, suffix: "+", label: "Projects Delivered" },
+  { value: 3, suffix: " Markets", label: "UAE / UK / Canada" }
 ];
 
+// Cinematic immersive hero: full-bleed AI visual behind the content with layered
+// scrims for readability. Dark by design in both themes (premium dark hero over a
+// light/dark body). No animation on the LCP headline to protect Core Web Vitals.
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-24 md:pt-28">
-      {/* Ambient depth */}
-      <div className="hero-glow-a absolute left-1/2 top-10 -z-10 h-[36rem] w-[60rem] -translate-x-1/2 rounded-full bg-cyan/10 blur-3xl light:bg-blue-300/24" />
-      <div className="hero-glow-b absolute right-0 top-24 -z-10 h-[30rem] w-[30rem] rounded-full bg-violet/12 blur-3xl light:bg-violet-300/24" />
-      <div className="pointer-events-none absolute -left-40 bottom-0 -z-10 h-72 w-72 rounded-full bg-emerald/8 blur-[120px] light:bg-emerald-200/30" />
+    <section className="relative isolate flex min-h-[92vh] items-center overflow-hidden">
+      {/* Full-bleed background image (LCP) */}
+      <Image
+        src="/images/anas-hero-ai-1600.webp"
+        alt="Full-stack developer command center with holographic dashboards overlooking the Dubai skyline at night"
+        fill
+        priority
+        fetchPriority="high"
+        sizes="100vw"
+        className="-z-20 object-cover object-center"
+      />
+      {/* Readability scrims */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/85 to-ink/20" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/25 to-ink/55" />
+      {/* Accent glows */}
+      <div className="pointer-events-none absolute -left-32 top-1/4 -z-10 h-80 w-80 rounded-full bg-cyan/15 blur-[120px]" />
+      <div className="pointer-events-none absolute right-10 top-10 -z-10 h-72 w-72 rounded-full bg-violet/15 blur-[120px]" />
 
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 pb-16 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] xl:gap-14">
-        {/* ── LEFT ── */}
-        <div className="min-w-0">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan/25 bg-cyan/10 px-4 py-2 text-sm font-medium text-cyan shadow-glow light:border-blue-500/25 light:bg-blue-50 light:text-blue-700">
+      <div className="relative mx-auto w-full max-w-7xl px-5 pb-12 pt-28 md:pt-32">
+        <div className="max-w-2xl">
+          {/* eyebrow */}
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm font-medium text-cyan shadow-glow backdrop-blur-md">
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan opacity-70" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald opacity-70" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald" />
             </span>
-            <Sparkles size={15} /> Problem-solving developer profile
+            Available for new projects · Dubai, UAE
           </div>
 
+          {/* name */}
           <div className="mb-4 flex items-center gap-2.5">
             <span className="h-px w-8 bg-gradient-to-r from-cyan to-violet" aria-hidden="true" />
-            <p className="font-display text-base font-semibold uppercase tracking-[0.16em] premium-text">Anas Tanveer</p>
+            <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-white/80">Anas Tanveer</p>
           </div>
 
-          <h1 className="max-w-[15ch] break-words font-display text-[2.6rem] font-bold leading-[1.02] tracking-[-0.01em] text-white min-[430px]:text-5xl lg:text-[3.7rem] light:text-slate-950">
+          {/* headline */}
+          <h1 className="max-w-[16ch] font-display text-[2.7rem] font-bold leading-[1.0] tracking-[-0.015em] text-white min-[430px]:text-5xl lg:text-6xl xl:text-[4.4rem]">
             I Build Web Systems That Solve{" "}
-            <span className="premium-text">Real Business Problems</span>
+            <span className="premium-text">Real Business Problems</span> in Dubai
           </h1>
 
-          <div className="mt-5 flex max-w-xl flex-wrap items-center gap-2">
+          {/* description */}
+          <p className="mt-6 max-w-xl text-base leading-7 text-silver/85 md:text-lg md:leading-8">
+            Full-stack Laravel, WordPress, Shopify and Next.js builds — fast, SEO-ready platforms,
+            dashboards and stores engineered around real workflow and conversion problems.
+          </p>
+
+          {/* tech chips */}
+          <div className="mt-6 flex flex-wrap items-center gap-2">
             {techChips.map((item) => (
               <span
                 key={item.label}
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.045] px-3 py-1.5 text-sm font-medium text-silver/78 transition hover:border-cyan/30 hover:text-white light:border-slate-900/10 light:bg-white light:text-slate-700"
+                className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.06] px-3 py-1.5 text-sm font-medium text-silver/85 backdrop-blur-md transition hover:border-cyan/40 hover:text-white"
               >
                 <BrandIcon name={item.icon} className="h-[18px] w-[18px] rounded-sm" />
                 {item.label}
@@ -70,123 +84,61 @@ export function Hero() {
             ))}
           </div>
 
-          <p className="mt-6 max-w-xl border-l-2 border-cyan/40 pl-5 text-base leading-7 text-silver/82 md:text-lg md:leading-8 light:border-blue-500/40 light:text-slate-600">
-            Faster Laravel platforms, WordPress websites, Shopify stores, dashboards and SEO-ready
-            systems — built around real workflow and conversion problems, not templates.
-          </p>
-
-          <div className="mt-7 flex flex-wrap items-center gap-3">
+          {/* CTAs */}
+          <div className="mt-8 flex flex-wrap items-center gap-3">
             <MagneticButton href="/work">View Portfolio</MagneticButton>
             <MagneticButton href="/contact" variant="secondary">Get a Free Quote</MagneticButton>
+            <a
+              href="/files/anas-tanveer-web-developer-cv.pdf"
+              download
+              className="inline-flex items-center gap-2 px-2 text-sm font-medium text-cyan transition hover:text-white"
+            >
+              <Download size={15} /> Download CV
+            </a>
           </div>
-          <p className="mt-3 text-sm text-silver/55 light:text-slate-500">
+          <p className="mt-3 text-sm text-silver/60">
             or{" "}
             <a
               href="https://wa.me/971542435418?text=Hi%20Anas%2C%20I%27d%20like%20to%20book%20a%20free%2020-min%20discovery%20call."
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-emerald underline-offset-2 hover:underline light:text-emerald-600"
+              className="font-medium text-emerald underline-offset-2 hover:underline"
             >
               book a free 20-min discovery call on WhatsApp
             </a>
           </p>
-
-          <div className="mt-5 inline-flex flex-wrap items-center gap-x-2.5 gap-y-1 rounded-full border border-emerald/25 bg-emerald/10 px-4 py-2 text-sm font-semibold text-emerald light:border-emerald-600/25 light:bg-emerald-50 light:text-emerald-700">
-            <span className="relative flex h-2 w-2 shrink-0">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald opacity-70 light:bg-emerald-500" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald light:bg-emerald-500" />
-            </span>
-            Available — Limited Spots This Quarter
-            <span className="text-silver/55 light:text-slate-500">·</span>
-            <span className="font-normal text-silver/65 light:text-slate-500">Replies within 4 hours</span>
-          </div>
-
-          <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-silver/72 light:text-slate-600">
-            {trustItems.map((badge) => (
-              <span key={badge} className="inline-flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-cyan shadow-[0_0_16px_rgba(38,217,255,0.75)]" />
-                {badge}
-              </span>
-            ))}
-            <a
-              href="/files/anas-tanveer-web-developer-cv.pdf"
-              download
-              className="inline-flex items-center gap-2 font-medium text-cyan hover:text-white light:hover:text-blue-700"
-            >
-              <Download size={15} /> Download CV
-            </a>
-          </div>
         </div>
 
-        {/* ── RIGHT (visual) ── */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="relative min-w-0 pb-12 lg:pb-8 lg:pl-2"
-        >
-          {/* Image in animated frame */}
-          <div className="hero-frame rounded-[1.25rem]">
-            <div className="relative z-[1] overflow-hidden rounded-[1.25rem]">
-              <Image
-                src="/images/anas-hero-ai-1100.webp"
-                alt="Full-stack developer command center with holographic dashboards overlooking the Dubai skyline at night"
-                width={1100}
-                height={614}
-                priority
-                fetchPriority="high"
-                className="block h-[19rem] w-full object-cover object-center sm:h-[24rem] lg:h-[30rem] xl:h-[33rem]"
-              />
-              {/* subtle scrim for depth (does not hold any text) */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/15 light:from-slate-950/25" />
+        {/* Stats strip */}
+        <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-5 border-t border-white/12 pt-6">
+          {heroStats.map((s) => (
+            <div key={s.label}>
+              <p className="font-display text-2xl font-bold leading-none text-white sm:text-3xl">
+                <CountUp value={s.value} suffix={s.suffix} duration={1400} />
+              </p>
+              <p className="mt-1.5 text-xs text-silver/60">{s.label}</p>
             </div>
-          </div>
-
-          {/* Floating rating chip — top right, overlaps frame */}
-          <div className="absolute -top-4 right-6 z-20 flex items-center gap-2.5 rounded-2xl border border-white/15 bg-black/70 px-3.5 py-2.5 shadow-premium backdrop-blur-xl light:border-slate-200 light:bg-white/95 sm:right-10">
+          ))}
+          <div className="flex items-center gap-2.5">
             <div className="flex" aria-hidden="true">
               {[0, 1, 2, 3, 4].map((i) => (
-                <Star key={i} size={12} className="fill-amber-400 text-amber-400" />
+                <Star key={i} size={14} className="fill-amber-400 text-amber-400" />
               ))}
             </div>
             <div>
-              <p className="font-display text-sm font-bold leading-none text-white light:text-slate-900">4.9/5</p>
-              <p className="mt-1 text-[10px] leading-none text-white/60 light:text-slate-500">Client rating</p>
+              <p className="font-display text-2xl font-bold leading-none text-white sm:text-3xl">4.9</p>
+              <p className="mt-1.5 text-xs text-silver/60">Client Rating</p>
             </div>
           </div>
-
-          {/* Floating Full-Stack chip — left edge (desktop) */}
-          <div className="absolute top-16 -left-4 z-20 hidden items-center gap-2.5 rounded-2xl border border-white/15 bg-black/70 px-3.5 py-2.5 shadow-premium backdrop-blur-xl lg:flex light:border-slate-200 light:bg-white/95">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald/15 text-emerald">
-              <ArrowUpRight size={18} />
+          <div className="hidden items-center gap-2 sm:flex">
+            <span className="rounded-full border border-emerald/30 bg-emerald/10 px-3 py-1.5 text-xs font-semibold text-emerald">
+              UK Registered Business
             </span>
-            <div>
-              <p className="font-display text-sm font-bold leading-none text-white light:text-slate-900">Full-Stack</p>
-              <p className="mt-1 text-[10px] leading-none text-white/60 light:text-slate-500">Frontend + Backend</p>
-            </div>
+            <span className="rounded-full border border-white/12 bg-white/[0.06] px-3 py-1.5 text-xs font-semibold text-silver/80">
+              Replies within 4 hours
+            </span>
           </div>
-
-          {/* Stats card — straddles the image bottom edge (outside the clip, never cut off) */}
-          <div className="absolute inset-x-3 -bottom-4 z-20 rounded-2xl border border-white/14 bg-black/75 p-4 shadow-premium backdrop-blur-xl light:border-slate-200 light:bg-white/95 sm:inset-x-6">
-            <div className="grid grid-cols-3 gap-3">
-              {heroStats.map(({ num, suffix, label }) => (
-                <div key={label}>
-                  <p className="font-display text-lg font-bold leading-tight text-white light:text-slate-900 sm:text-2xl">
-                    <CountUp value={num} suffix={suffix} duration={1400} />
-                  </p>
-                  <p className="mt-1 line-clamp-1 text-[10px] text-white/60 light:text-slate-500 sm:text-xs">{label}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-3 flex w-max max-w-full items-center gap-2 rounded-full border border-cyan/25 bg-cyan/10 px-3 py-1.5 text-xs font-semibold text-cyan">
-              <MapPin size={14} />
-              Dubai, UAE
-              <span className="hidden items-center gap-1 text-white/55 light:text-slate-500 sm:inline-flex">
-                <Globe2 size={12} /> UAE / UK / Canada
-              </span>
-            </div>
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
