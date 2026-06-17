@@ -35,15 +35,17 @@ export function Hero() {
             <Sparkles size={16} /> Problem-solving developer profile
           </motion.div>
 
-          <p className="mb-3 font-display text-lg font-semibold premium-text md:text-xl">
-            Anas Tanveer
-          </p>
+          <div className="mb-3 flex items-center gap-2.5">
+            <span className="h-px w-8 bg-gradient-to-r from-cyan to-violet" aria-hidden="true" />
+            <p className="font-display text-lg font-semibold premium-text md:text-xl">Anas Tanveer</p>
+          </div>
 
           <motion.h1
             initial={false}
             className="max-w-[14ch] break-words font-display text-4xl font-semibold leading-[1.03] tracking-normal text-white min-[430px]:text-5xl lg:text-6xl light:text-slate-950"
           >
-            I Build Web Systems That Solve Real Business Problems in Dubai
+            I Build Web Systems That Solve{" "}
+            <span className="premium-text">Real Business Problems</span> in Dubai
           </motion.h1>
 
           <motion.div initial={false} className="mt-5 flex max-w-xl flex-wrap items-center gap-2">
