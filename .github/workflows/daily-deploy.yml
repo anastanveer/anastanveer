@@ -7,6 +7,12 @@ on:
     - cron: "0 5 * * *"   # Daily safety run at 05:00 UTC = 09:00 UAE time
   workflow_dispatch:       # Allows manual trigger from GitHub UI
 
+# Only one deploy at a time; a new push cancels older in-progress runs so the
+# latest commit deploys once instead of several runs piling up.
+concurrency:
+  group: deploy-namecheap
+  cancel-in-progress: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
