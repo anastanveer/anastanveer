@@ -112,8 +112,10 @@ export function Hero() {
               height={619}
               priority
               fetchPriority="high"
-              className="h-[18rem] w-full rounded-2xl object-cover sm:h-[24rem] lg:h-[30rem] xl:h-[33rem]"
+              className="h-[18rem] w-full rounded-2xl object-cover object-[60%_center] sm:h-[24rem] lg:h-[30rem] xl:h-[33rem]"
             />
+            {/* Scrim: makes the composition intentional and keeps overlay text readable */}
+            <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-black/72 via-black/5 to-black/28 light:from-slate-950/35 light:via-transparent light:to-slate-950/10" />
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}

@@ -606,6 +606,7 @@ export const caseStudies = [
     stack: ["Laravel", "PHP", "JavaScript", "MySQL", "Tailwind"],
     impact: "The result was a clearer, more professional platform journey with stronger trust, better performance, cleaner user decisions and a maintainable backend direction. It positions the project for future Dashboard Development, payment logic, account flows and deeper Laravel Developer Dubai expansion.",
     result: "A business-ready trading web platform with clearer user journeys, practical dashboards, and maintainable code.",
+    highlights: ["Custom calculator logic","Dashboard-ready Laravel","Payment-ready architecture"],
     images: [
       "/images/Portfolio/Custom/4.avif",
       "/images/Portfolio/Custom/5.avif",
@@ -630,6 +631,7 @@ export const caseStudies = [
     stack: ["Laravel", "MySQL", "Charts", "REST APIs", "Tailwind"],
     impact: "The final system improved business visibility, reduced manual reporting effort and made operational numbers easier to trust. It supports High Performance Web Applications thinking with clean UI, better workflow clarity and scalable dashboard foundations.",
     result: "A premium dashboard system suitable for finance, operations, and leadership reporting.",
+    highlights: ["Role-aware access control","Filterable reports & exports","Analytics-driven views"],
     images: [
       "/images/Portfolio/Crm/continentdispo/crm-main.avif",
       "/images/Portfolio/Crm/continentdispo/crm-1.avif",
@@ -654,6 +656,7 @@ export const caseStudies = [
     stack: ["Shopify", "Liquid", "JavaScript", "Metafields", "Theme Sections"],
     impact: "The improvement reduced customer doubt, made product decisions easier and created a smoother buying path. It supports better conversion, fewer support questions and stronger Ecommerce Optimization without making the Shopify theme feel heavy.",
     result: "A conversion-focused Shopify customization that feels native to the storefront.",
+    highlights: ["Variant-aware size mapping","App-light (Liquid + metafields)","Mobile-first product UX"],
     images: [
       "/images/Portfolio/Shopify/7.avif",
       "/images/Portfolio/Shopify/8.avif",
@@ -679,6 +682,7 @@ export const caseStudies = [
     impact:
       "The ERP direction gives the business a stronger operational base: fewer scattered records, faster management visibility, clearer staff workflows and a system that can grow into invoices, inventory, CRM, approvals and API integrations. It presents the work as Custom Web Solutions Dubai with real business value instead of a simple website or static admin screen.",
     result: "A solution-focused ERP case study showing how business operations can be organized, tracked, and improved through a maintainable web system.",
+    highlights: ["Multi-module operations","Approval workflows","Role-based controls"],
     images: [
       "/images/Portfolio/ERP/1.avif",
       "/images/Portfolio/ERP/2.avif",

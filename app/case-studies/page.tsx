@@ -140,6 +140,21 @@ export default function CaseStudiesPage() {
                       </div>
                     </div>
 
+                    {/* Highlights — honest capability strip */}
+                    {study.highlights?.length ? (
+                      <div className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                        {study.highlights.map((h) => (
+                          <div
+                            key={h}
+                            className={`flex items-center gap-2.5 rounded-2xl border px-4 py-3 ${accent.border} ${accent.bg} light:bg-white`}
+                          >
+                            <CheckCircle2 size={16} className={`shrink-0 ${accent.text}`} />
+                            <span className="text-sm font-semibold leading-snug text-white light:text-slate-800">{h}</span>
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
+
                     {/* Challenge + Solution 2 columns */}
                     <div className="grid gap-4 md:grid-cols-2">
                       <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-5 light:border-slate-100 light:bg-slate-50">
