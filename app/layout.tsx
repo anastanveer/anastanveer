@@ -29,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="gllYNE1pcbGLwfP2PMahnrbVB6fcVfM0x0gbbsiBSCg" />
+        <meta name="msvalidate.01" content="05912E41DB6D3873705967B1875E326A" />
         {/* RSS / Feed */}
         <link rel="alternate" type="application/rss+xml" title="Anas Tanveer Web Development Blog" href="https://anastanveer.com/feed.xml" />
         {/* Sitemaps */}
