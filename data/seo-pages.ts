@@ -94,7 +94,9 @@ export const seoServicePages: SeoServicePage[] = [
     ],
     faqs: [
       { question: "Can you improve existing PHP websites?", answer: "Yes. Existing PHP, Laravel, and WordPress websites can be reviewed for bugs, performance issues, security gaps, and maintainability problems." },
-      { question: "Do you handle PHP API integrations?", answer: "Yes. REST APIs, webhooks, payment gateways, CRM links, data imports, and automation workflows can be planned and implemented." }
+      { question: "Do you handle PHP API integrations?", answer: "Yes. REST APIs, webhooks, payment gateways, CRM links, data imports, and automation workflows can be planned and implemented." },
+      { question: "How long does a custom PHP project take in Dubai?", answer: "Timelines depend on scope. A small PHP or Laravel module typically takes 2–4 weeks, while a mid-sized business platform takes 6–12 weeks. A clear scope and milestone plan are agreed before development starts." },
+      { question: "Do you use a framework or plain PHP?", answer: "Most business systems are built with Laravel for security, structure, and long-term maintainability. Plain PHP is used only for small scripts or when an existing codebase requires it." }
     ],
     related: [
       { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
@@ -133,7 +135,9 @@ export const seoServicePages: SeoServicePage[] = [
     ],
     faqs: [
       { question: "Can WordPress still rank well in Google?", answer: "Yes. WordPress can rank well when technical SEO, content structure, speed, schema, internal links, and mobile experience are handled properly." },
-      { question: "Do you build WordPress landing pages?", answer: "Yes. Landing pages can be built for local services, paid ads, SEO campaigns, lead generation, and business credibility." }
+      { question: "Do you build WordPress landing pages?", answer: "Yes. Landing pages can be built for local services, paid ads, SEO campaigns, lead generation, and business credibility." },
+      { question: "How do you keep WordPress sites fast and secure?", answer: "Speed comes from optimized images, caching, clean themes, and minimal plugins; security from hardened logins, regular updates, trusted plugins, and backups. Both are handled during development, not after problems appear." },
+      { question: "Can you redesign an existing WordPress website?", answer: "Yes. Existing WordPress sites can be redesigned, restructured for SEO, sped up, and moved to cleaner themes without losing content or rankings." }
     ],
     related: [
       { label: "WordPress SEO Dubai", href: "/wordpress-seo-dubai" },
@@ -173,7 +177,9 @@ export const seoServicePages: SeoServicePage[] = [
     ],
     faqs: [
       { question: "Can Shopify be customized without too many apps?", answer: "Yes. Many store improvements can be handled through Liquid sections, metafields, JavaScript, and theme logic without adding unnecessary apps." },
-      { question: "Do you improve Shopify product pages?", answer: "Yes. Product pages can be improved for variant selection, size guidance, trust signals, mobile UX, speed, and conversion clarity." }
+      { question: "Do you improve Shopify product pages?", answer: "Yes. Product pages can be improved for variant selection, size guidance, trust signals, mobile UX, speed, and conversion clarity." },
+      { question: "Can you set up UAE payment gateways on Shopify?", answer: "Yes. Shopify stores can be configured with UAE-friendly gateways and Shopify Payments where available, along with cash on delivery, VAT settings, and local shipping rules." },
+      { question: "Can you migrate a store to Shopify?", answer: "Yes. Products, collections, customers, and content can be migrated to Shopify from WooCommerce or other platforms, with redirects set up to protect existing SEO." }
     ],
     related: [
       { label: "Ecommerce Developer Dubai", href: "/ecommerce-developer-dubai" },
@@ -213,7 +219,9 @@ export const seoServicePages: SeoServicePage[] = [
     ],
     faqs: [
       { question: "Do you work with UAE and international clients?", answer: "Yes. The portfolio supports UAE, UK, Canada, agency, startup, ecommerce, service business, and remote project requirements." },
-      { question: "Can one developer handle both frontend and backend?", answer: "Yes, for many business websites, Laravel systems, WordPress sites, Shopify customizations, dashboards, APIs, and performance improvements." }
+      { question: "Can one developer handle both frontend and backend?", answer: "Yes, for many business websites, Laravel systems, WordPress sites, Shopify customizations, dashboards, APIs, and performance improvements." },
+      { question: "How quickly can a UAE business website be delivered?", answer: "A standard business website is usually delivered in 2–4 weeks, while custom platforms and dashboards take longer depending on features. A timeline is agreed during scoping." },
+      { question: "Do you provide support after launch?", answer: "Yes. Post-launch support covers fixes, updates, performance checks, and new features, arranged per project or on an ongoing basis." }
     ],
     related: [
       { label: "Freelance web developer Dubai", href: "/freelance-web-developer-dubai" },
@@ -252,7 +260,9 @@ export const seoServicePages: SeoServicePage[] = [
     ],
     faqs: [
       { question: "Are you available for freelance projects in Dubai?", answer: "Yes. Anas Tanveer is available for freelance, remote, agency, recruiter, and business web development projects." },
-      { question: "Can you work on fixed scope projects?", answer: "Yes. Fixed scope work is possible when features, pages, integrations, content, and launch requirements are clearly defined." }
+      { question: "Can you work on fixed scope projects?", answer: "Yes. Fixed scope work is possible when features, pages, integrations, content, and launch requirements are clearly defined." },
+      { question: "How do you communicate during a project?", answer: "Communication is handled over WhatsApp, email, and scheduled calls, with regular progress updates and milestone reviews so the project stays clear and on track." },
+      { question: "Do you work with clients outside Dubai?", answer: "Yes. Remote freelance work is delivered for clients across the UAE, UK, Canada, and internationally, with timezone-friendly availability." }
     ],
     related: [
       { label: "Web Developer UAE", href: "/web-developer-uae" },
@@ -291,7 +301,9 @@ export const seoServicePages: SeoServicePage[] = [
     ],
     faqs: [
       { question: "Can dashboards connect to existing systems?", answer: "Yes. Dashboards can connect to APIs, databases, ecommerce platforms, CRMs, payment systems, and custom Laravel modules." },
-      { question: "Do you build role-based admin panels?", answer: "Yes. Role permissions, staff access levels, admin controls, and secure workflows can be included." }
+      { question: "Do you build role-based admin panels?", answer: "Yes. Role permissions, staff access levels, admin controls, and secure workflows can be included." },
+      { question: "How is data kept secure in a custom dashboard?", answer: "Dashboards use secure authentication, role-based permissions, input validation, encrypted connections, and controlled database access so sensitive business data stays protected." },
+      { question: "Can a dashboard show real-time reports?", answer: "Yes. Dashboards can display live metrics, filtered reports, charts, and exportable data pulled from connected systems and databases." }
     ],
     related: [
       { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
@@ -331,7 +343,9 @@ export const seoServicePages: SeoServicePage[] = [
     ],
     faqs: [
       { question: "Can an ERP be built in phases?", answer: "Yes. ERP systems should usually be built in phases, starting with the highest-impact workflows such as records, orders, inventory, reports, or approvals." },
-      { question: "Is Laravel suitable for ERP development?", answer: "Yes. Laravel is a strong fit for ERP modules because it supports secure authentication, database structure, queues, roles, reports, and API integrations." }
+      { question: "Is Laravel suitable for ERP development?", answer: "Yes. Laravel is a strong fit for ERP modules because it supports secure authentication, database structure, queues, roles, reports, and API integrations." },
+      { question: "Can an ERP integrate with accounting or VAT systems?", answer: "Yes. ERP modules can integrate with accounting tools, generate UAE VAT-compliant invoices, and connect to payment, inventory, and reporting systems through APIs." },
+      { question: "Can existing business data be migrated into a new ERP?", answer: "Yes. Records from spreadsheets, legacy systems, or other tools can be cleaned and imported into the new ERP during setup." }
     ],
     related: [
       { label: "Dashboard development Dubai", href: "/dashboard-development-dubai" },
@@ -371,7 +385,9 @@ export const seoServicePages: SeoServicePage[] = [
     ],
     faqs: [
       { question: "Should ecommerce use Shopify or Laravel?", answer: "Shopify is often best for faster store launches and product selling. Laravel is better when the business needs custom workflows, dashboards, or complex backend logic." },
-      { question: "Can you improve an existing ecommerce site?", answer: "Yes. Existing ecommerce websites can be improved for speed, product UX, SEO, theme logic, mobile layout, and conversion clarity." }
+      { question: "Can you improve an existing ecommerce site?", answer: "Yes. Existing ecommerce websites can be improved for speed, product UX, SEO, theme logic, mobile layout, and conversion clarity." },
+      { question: "Which payment gateways work for UAE ecommerce?", answer: "UAE stores commonly use gateways such as Stripe, Telr, PayTabs, Network International, and cash on delivery, configured with correct VAT and shipping rules." },
+      { question: "How long does an ecommerce build take?", answer: "A standard store launch typically takes 3–6 weeks, while custom ecommerce platforms with special workflows take longer depending on scope." }
     ],
     related: [
       { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
@@ -410,7 +426,9 @@ export const seoServicePages: SeoServicePage[] = [
     ],
     faqs: [
       { question: "Can APIs connect Shopify, Laravel, and CRMs?", answer: "Yes. APIs can connect ecommerce stores, Laravel dashboards, CRMs, payment gateways, email platforms, maps, and reporting tools." },
-      { question: "Do API integrations work on static websites?", answer: "Static websites can use external form services and third-party scripts, but secure custom API processing usually needs a backend or external service." }
+      { question: "Do API integrations work on static websites?", answer: "Static websites can use external form services and third-party scripts, but secure custom API processing usually needs a backend or external service." },
+      { question: "What systems can be connected through an API integration?", answer: "Common integrations include payment gateways, CRMs, ERPs, shipping providers, email and SMS platforms, maps, accounting tools, and custom internal systems." },
+      { question: "How do you handle API security?", answer: "Integrations use authentication tokens, secure HTTPS connections, request validation, rate limiting, and careful handling of credentials and sensitive data." }
     ],
     related: [
       { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
@@ -449,7 +467,9 @@ export const seoServicePages: SeoServicePage[] = [
     ],
     faqs: [
       { question: "Can speed be improved without redesigning?", answer: "Yes. Many speed improvements come from image sizing, caching, script cleanup, font loading, and hosting configuration without changing the UI." },
-      { question: "Do speed fixes help SEO?", answer: "Speed is one part of SEO. It supports better user experience, Core Web Vitals, crawl efficiency, conversion, and paid traffic performance." }
+      { question: "Do speed fixes help SEO?", answer: "Speed is one part of SEO. It supports better user experience, Core Web Vitals, crawl efficiency, conversion, and paid traffic performance." },
+      { question: "How do you measure website speed?", answer: "Speed is measured with tools such as Google PageSpeed Insights, Lighthouse, and Core Web Vitals data from Search Console, focusing on LCP, CLS, and INP." },
+      { question: "How much can speed realistically improve?", answer: "Most sites can move from poor to good Core Web Vitals through image optimization, caching, code cleanup, and hosting fixes, though results depend on the platform and starting point." }
     ],
     related: [
       { label: "SEO-friendly website development", href: "/seo-friendly-website-development" },
@@ -488,7 +508,9 @@ export const seoServicePages: SeoServicePage[] = [
     ],
     faqs: [
       { question: "What makes a website SEO-friendly?", answer: "An SEO-friendly website has clear structure, useful content, semantic headings, crawlable links, metadata, schema, fast loading, mobile usability, and clean indexable pages." },
-      { question: "Can SEO be added after launch?", answer: "Yes, but it is stronger when SEO foundations are planned during development because page structure, speed, content, schema, and internal links work together." }
+      { question: "Can SEO be added after launch?", answer: "Yes, but it is stronger when SEO foundations are planned during development because page structure, speed, content, schema, and internal links work together." },
+      { question: "Do you add structured data and schema?", answer: "Yes. Pages can include schema such as Organization, LocalBusiness, FAQ, Breadcrumb, and Article markup so search engines and AI tools understand the content." },
+      { question: "Does an SEO-friendly site help with AI search?", answer: "Yes. Clean structure, clear content, and schema also help AI answer engines like ChatGPT, Claude, and Perplexity find and cite the site accurately." }
     ],
     related: [
       { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
