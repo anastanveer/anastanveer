@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Building2, ExternalLink, FileText, Home, Linkedin, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Building2, ExternalLink, FileText, Home, Linkedin, Mail, MapPin, MessageCircle, Search } from "lucide-react";
 import { seoServicePages } from "@/data/seo-pages";
 import { BrandIcon, slugToStack } from "@/components/ui/BrandIcon";
 import { navItems, profile } from "@/data/site";
@@ -37,6 +37,7 @@ export function Footer() {
             <span className="inline-flex items-center gap-2"><MapPin size={16} />Dubai, UAE</span>
             <a className="inline-flex items-center gap-2 hover:text-cyan sm:col-span-2" href={`mailto:${profile.email}`}><Mail size={16} />{profile.email}</a>
             <a className="inline-flex items-center gap-2 hover:text-cyan" href="https://wa.me/971542435418"><MessageCircle size={16} />WhatsApp</a>
+            <Link className="inline-flex items-center gap-2 font-semibold text-emerald hover:text-emerald/80 sm:col-span-2 light:text-emerald-600" href="/free-website-audit"><Search size={16} />Free Website Audit</Link>
           </div>
         </div>
         <div>
