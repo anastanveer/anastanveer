@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/sections/CTASection";
+import { CostEstimator } from "@/components/sections/CostEstimator";
 import { FAQ } from "@/components/sections/FAQ";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PageHero } from "@/components/ui/PageHero";
@@ -86,6 +87,7 @@ export default function PricingPage() {
           </p>
         </div>
       </section>
+      <CostEstimator />
       <section className="section-pad">
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="FAQs" title="Questions about pricing, scope, deliverables, and what’s included." />
