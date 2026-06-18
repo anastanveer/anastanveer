@@ -162,10 +162,10 @@ export function Hero() {
           </motion.p>
         </div>
 
-        {/* Stats strip */}
+        {/* Stats strip — premium glass card (2x2) on mobile, inline border-top on desktop */}
         <motion.div
           variants={item}
-          className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-5 border-t border-white/12 pt-6"
+          className="mt-10 grid grid-cols-2 gap-x-4 gap-y-6 rounded-2xl border border-white/12 bg-white/[0.05] p-5 shadow-glow backdrop-blur-md sm:mt-12 sm:flex sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-5 sm:rounded-none sm:border-0 sm:border-t sm:border-white/12 sm:bg-transparent sm:p-0 sm:pt-6 sm:shadow-none sm:backdrop-blur-none"
         >
           {heroStats.map((s) => (
             <div key={s.label}>
