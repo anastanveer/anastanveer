@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Download, Star } from "lucide-react";
@@ -34,18 +35,48 @@ const item = {
 // Cinematic immersive hero: full-bleed AI visual with a slow Ken Burns zoom,
 // layered scrims for readability, and a staggered content entrance.
 export function Hero() {
+  // The poster image is the LCP and the mobile/reduced-motion fallback. The
+  // cinematic video only mounts on a desktop fine-pointer device with motion
+  // allowed — so mobile never downloads it (perf + battery safe).
+  const [showVideo, setShowVideo] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
+
+  useEffect(() => {
+    const okMotion = window.matchMedia("(min-width: 768px) and (prefers-reduced-motion: no-preference)").matches;
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (okMotion && finePointer) setShowVideo(true);
+  }, []);
+
   return (
     <section className="relative isolate flex min-h-[92vh] items-center overflow-hidden">
-      {/* Full-bleed background image (LCP) with slow zoom */}
+      {/* Full-bleed background image (LCP + poster + mobile fallback) with slow zoom */}
       <Image
-        src="/images/anas-hero-ai-1600.webp"
-        alt="Full-stack developer command center with holographic dashboards overlooking the Dubai skyline at night"
+        src="/images/hero-ai-command-center.webp"
+        alt="Futuristic full-stack developer command center with holographic dashboards overlooking the Dubai skyline at night"
         fill
         priority
         fetchPriority="high"
         sizes="100vw"
         className="hero-kenburns -z-20 object-cover object-center"
       />
+      {/* Desktop-only cinematic video that fades in over the poster once playing */}
+      {showVideo && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+          onPlaying={() => setVideoReady(true)}
+          className={`absolute inset-0 -z-20 h-full w-full object-cover object-center transition-opacity duration-[1200ms] ease-out ${
+            videoReady ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <source src="/videos/hero-command-center.webm" type="video/webm" />
+          <source src="/videos/hero-command-center.mp4" type="video/mp4" />
+        </video>
+      )}
       {/* Readability scrims */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/85 to-ink/20" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/25 to-ink/55" />
