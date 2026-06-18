@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Download, Star } from "lucide-react";
+import { Briefcase, Download, Globe, Rocket, Star } from "lucide-react";
 import { CountUp } from "@/components/ui/CountUp";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { BrandIcon } from "@/components/ui/BrandIcon";
@@ -16,9 +16,9 @@ const techChips = [
 ];
 
 const heroStats = [
-  { value: 7, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "+", label: "Projects Delivered" },
-  { value: 3, suffix: " Markets", label: "UAE / UK / Canada" }
+  { value: 7, suffix: "+", label: "Years Experience", icon: Briefcase },
+  { value: 100, suffix: "+", label: "Projects Delivered", icon: Rocket },
+  { value: 3, suffix: " Markets", label: "UAE / UK / Canada", icon: Globe }
 ];
 
 // Entrance animation: transform/opacity only (CLS-safe), one-shot (INP-safe). The
@@ -167,16 +167,39 @@ export function Hero() {
           variants={item}
           className="mt-10 grid grid-cols-2 gap-x-4 gap-y-6 rounded-2xl border border-white/12 bg-white/[0.05] p-5 shadow-glow backdrop-blur-md sm:mt-12 sm:flex sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-5 sm:rounded-none sm:border-0 sm:border-t sm:border-white/12 sm:bg-transparent sm:p-0 sm:pt-6 sm:shadow-none sm:backdrop-blur-none"
         >
-          {heroStats.map((s) => (
-            <div key={s.label}>
-              <p className="font-display text-2xl font-bold leading-none text-white sm:text-3xl">
-                <CountUp value={s.value} suffix={s.suffix} duration={1400} />
-              </p>
-              <p className="mt-1.5 text-xs text-silver/60">{s.label}</p>
-            </div>
+          {heroStats.map((s, i) => (
+            <motion.div
+              key={s.label}
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.45 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+              className="flex items-start gap-3"
+            >
+              <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl border border-cyan/25 bg-cyan/10 text-cyan shadow-glow sm:hidden">
+                <s.icon size={17} />
+              </span>
+              <div>
+                <p className="font-display text-2xl font-bold leading-none text-white sm:text-3xl">
+                  <CountUp value={s.value} suffix={s.suffix} duration={1400} />
+                </p>
+                <p className="mt-1.5 text-xs text-silver/60">{s.label}</p>
+              </div>
+            </motion.div>
           ))}
-          <div className="flex items-center gap-2.5">
-            <div className="flex" aria-hidden="true">
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.45 + heroStats.length * 0.12, ease: [0.22, 1, 0.36, 1] }}
+            className="flex items-center gap-2.5"
+          >
+            {/* mobile: single star chip to match the other stat icons */}
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl border border-amber-400/30 bg-amber-400/10 text-amber-400 shadow-glow sm:hidden">
+              <Star size={17} className="fill-amber-400" />
+            </span>
+            {/* desktop: full 5-star row */}
+            <div className="hidden sm:flex" aria-hidden="true">
               {[0, 1, 2, 3, 4].map((i) => (
                 <Star key={i} size={14} className="fill-amber-400 text-amber-400" />
               ))}
@@ -185,7 +208,7 @@ export function Hero() {
               <p className="font-display text-2xl font-bold leading-none text-white sm:text-3xl">4.9</p>
               <p className="mt-1.5 text-xs text-silver/60">Client Rating</p>
             </div>
-          </div>
+          </motion.div>
           <div className="hidden items-center gap-2 sm:flex">
             <span className="rounded-full border border-emerald/30 bg-emerald/10 px-3 py-1.5 text-xs font-semibold text-emerald">
               UK Registered Business
