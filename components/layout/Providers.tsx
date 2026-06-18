@@ -32,7 +32,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
       const card = (event.target as Element | null)?.closest?.(".premium-card") as HTMLElement | null;
       if (!card) return;
 
-      if (card !== activeCard) {
+      // Recompute the rect when the card changes OR when it was invalidated by a
+      // scroll/resize (otherwise the glow/tilt freezes mid-hover while scrolling).
+      if (card !== activeCard || !activeRect) {
         activeCard = card;
         activeRect = card.getBoundingClientRect();
       }
