@@ -112,10 +112,10 @@ export function Hero() {
           {/* headline */}
           <motion.h1
             variants={item}
-            className="max-w-[16ch] font-display text-[2.7rem] font-bold leading-[1.0] tracking-[-0.015em] text-white min-[430px]:text-5xl lg:text-6xl xl:text-[4.4rem]"
+            className="max-w-[24ch] text-balance font-display text-[2.4rem] font-bold leading-[1.04] tracking-[-0.015em] text-white min-[430px]:text-[2.9rem] lg:text-5xl xl:text-[3.4rem]"
           >
-            I Build Web Systems That Solve{" "}
-            <span className="premium-text">Real Business Problems</span> in Dubai
+            Full-Stack Laravel Developer in Dubai — I Build Web Systems That Solve{" "}
+            <span className="premium-text">Real Business Problems</span>
           </motion.h1>
 
           {/* description */}

@@ -26,6 +26,23 @@ import { jsonLdForPage, faqSchema } from "@/lib/seo";
 
 const homeFaqs = homeFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
+// De-orphan high-value SEO service/location landing pages. Every href below maps
+// to a real, pre-rendered route folder under /app and exists in data/seo-pages.ts.
+const popularServiceLinks: Array<{ label: string; href: string }> = [
+  { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+  { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+  { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
+  { label: "React Developer Dubai", href: "/react-developer-dubai" },
+  { label: "Full-Stack Developer Dubai", href: "/fullstack-developer-dubai" },
+  { label: "Web Developer Dubai", href: "/web-developer-dubai" },
+  { label: "Ecommerce Website Development Dubai", href: "/ecommerce-website-development-dubai" },
+  { label: "Web Developer UAE", href: "/web-developer-uae" },
+  { label: "Web Developer London", href: "/web-developer-london" },
+  { label: "Laravel Developer UK", href: "/laravel-developer-uk" },
+  { label: "Web Developer Toronto", href: "/web-developer-toronto" },
+  { label: "Web Developer Canada", href: "/web-developer-canada" }
+];
+
 export default function HomePage() {
   const today = new Date().toISOString().slice(0, 10);
   const sortedBlogs = [...blogs]
@@ -357,6 +374,39 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="10 / FAQs" title="Straight answers before trusting me with a project." />
           <FAQ items={homeFaqItems} />
+        </div>
+      </section>
+
+      {/* ── Popular Services & Locations (internal links) ─────── */}
+      <section className="section-pad relative overflow-hidden">
+        <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-cyan/6 blur-3xl light:bg-blue-200/30" />
+        <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-violet/7 blur-3xl light:bg-violet-200/30" />
+        <div className="mx-auto max-w-7xl px-5">
+          <SectionHeader
+            eyebrow="Explore"
+            title="Popular services &amp; locations"
+            description="Specialist development pages by stack and city — Laravel, WordPress, Shopify, React and full-stack work across the UAE, UK and Canada."
+          />
+          <nav aria-label="Popular services and locations" className="mt-10">
+            <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {popularServiceLinks.map((link, i) => (
+                <Reveal key={link.href} delay={i * 0.04}>
+                  <li>
+                    <Link
+                      href={link.href}
+                      className="group flex items-center justify-between gap-3 rounded-xl border border-white/[0.09] bg-white/[0.025] px-5 py-3.5 text-sm font-medium text-silver/80 backdrop-blur-sm transition-all duration-300 hover:border-cyan/30 hover:bg-white/[0.05] hover:text-white light:border-slate-200 light:bg-white light:text-slate-700 light:hover:border-blue-300 light:hover:text-blue-700"
+                    >
+                      {link.label}
+                      <ArrowUpRight
+                        size={15}
+                        className="shrink-0 text-silver/35 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-cyan light:group-hover:text-blue-600"
+                      />
+                    </Link>
+                  </li>
+                </Reveal>
+              ))}
+            </ul>
+          </nav>
         </div>
       </section>
 
