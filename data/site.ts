@@ -756,6 +756,150 @@ export type BlogPost = {
 
 export const blogs: BlogPost[] = [
   {
+    title: "How Much Does a Custom Laravel Web App Cost in Dubai? (2026 Pricing Guide)",
+    slug: "custom-laravel-web-app-cost-dubai-2026-pricing-guide",
+    excerpt: "A Dubai-focused pricing guide for custom Laravel web apps: scope, complexity, users, integrations, timeline and what a trustworthy quote should show.",
+    tag: "Laravel",
+    image: "/images/blog/custom-laravel-web-app-cost-dubai-2026.png",
+    publishedAt: "2026-07-13",
+    updatedAt: "2026-07-13",
+    readingTime: "5 min read",
+    seoTitle: "Custom Laravel Web App Cost Dubai: 2026 Pricing Guide",
+    seoDescription: "How much does a custom Laravel web app cost in Dubai in 2026? Learn what drives pricing: scope, integrations, users, data, timeline and support.",
+    takeaways: [
+      "Laravel app cost depends on scope, not a flat package price",
+      "Integrations, roles, data and reporting usually drive complexity",
+      "A good quote should be itemised so you know what you are paying for"
+    ],
+    sections: [
+      {
+        heading: "The honest answer: it depends on scope",
+        body: [
+          "\"How much will it cost?\" is the first question every Dubai business asks before building a custom web app. The honest answer is that pricing depends on scope, not on a flat number.",
+          "A small Laravel module costs far less than a full ERP, SaaS product or multi-role customer portal. The risk is accepting a single lump sum with no breakdown, because that usually hides assumptions."
+        ]
+      },
+      {
+        heading: "What drives Laravel app cost in Dubai",
+        body: [
+          "Scope is the first driver: a single dashboard, a booking flow or a reporting module is very different from a platform with roles, permissions, payments and integrations.",
+          "Complexity comes next. Custom workflows, third-party APIs, reporting, data migration and security requirements all add planning and development time.",
+          "Data and user roles matter too. The more teams, approvals and sensitive records the app handles, the more care is needed around database design, access control and testing."
+        ]
+      },
+      {
+        heading: "Timeline and support change the real price",
+        body: [
+          "A rushed timeline usually costs more because it compresses planning, QA and feedback. A sustainable build includes milestones, staging, bug fixing and support after launch.",
+          "When you compare quotes, ask what happens after handover: who owns the code, where the repo lives, how deployment works and what support is included."
+        ]
+      },
+      {
+        heading: "What a trustworthy quote includes",
+        body: [
+          "A trustworthy Laravel estimate is itemised. It separates design, backend, frontend, integrations, testing, deployment and support so you can see exactly what you are buying.",
+          "I am a Dubai-based freelance full-stack developer. If you are scoping a Laravel project, I can give you an honest, itemised estimate without pressure. For larger UK software builds, my agency ARS Developer can help too."
+        ]
+      }
+    ]
+  },
+  {
+    title: "ERP vs Spreadsheets: When Should a UAE Business Move to a Custom System?",
+    slug: "erp-vs-spreadsheets-uae-business-custom-system",
+    excerpt: "A practical guide for UAE businesses deciding when spreadsheets are still enough and when a custom ERP, dashboard or Laravel system becomes safer.",
+    tag: "ERP",
+    image: "/images/blog/erp-vs-spreadsheets-uae-custom-system.png",
+    publishedAt: "2026-07-17",
+    updatedAt: "2026-07-17",
+    readingTime: "5 min read",
+    seoTitle: "ERP vs Spreadsheets UAE: When to Build a Custom System",
+    seoDescription: "When should a UAE business move from spreadsheets to ERP or a custom Laravel system? Learn the warning signs, risks and practical next step.",
+    takeaways: [
+      "Spreadsheets work until they become business-critical and fragile",
+      "Broken formulas, duplicate data and unclear approvals are warning signs",
+      "A custom ERP should protect the workflow, not add unnecessary complexity"
+    ],
+    sections: [
+      {
+        heading: "Spreadsheets are not the enemy",
+        body: [
+          "Most growing UAE businesses do not fail because of spreadsheets. They slow down because of them.",
+          "A spreadsheet is fine when one person owns a simple process. It becomes risky when multiple people depend on it, edit it and make decisions from it every day."
+        ]
+      },
+      {
+        heading: "Signs it is time to move",
+        body: [
+          "If multiple people edit the same data and it keeps breaking, the spreadsheet is no longer a lightweight tool. It is an operational risk.",
+          "If you cannot get a clear report without an hour of copy-paste, your data is working against you.",
+          "If approvals, roles or payments live in someone's head, the business becomes dependent on memory instead of process."
+        ]
+      },
+      {
+        heading: "What a custom system changes",
+        body: [
+          "A custom ERP or dashboard built in Laravel gives you clean data, defined roles and reporting that works one way every time.",
+          "The goal is not to build a huge system for the sake of it. The goal is to remove duplicated data, broken formulas, missing audit trails and unclear responsibility."
+        ]
+      },
+      {
+        heading: "Start with the workflow",
+        body: [
+          "I recently built a fuel-distribution ERP that replaced a tangle of spreadsheets with a clearer operational flow. The value was fewer errors, faster decisions and less dependency on one person knowing the sheet.",
+          "You do not always need ERP. But when the spreadsheet is your operation, a custom system protects the business."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Hiring a Freelance Web Developer in Dubai: Red Flags, Questions & What to Pay",
+    slug: "hiring-freelance-web-developer-dubai-red-flags-questions-cost",
+    excerpt: "A Dubai hiring guide for choosing a freelance web developer: red flags, smart questions, code ownership, staging, support and realistic expectations.",
+    tag: "Hiring",
+    image: "/images/blog/hiring-freelance-web-developer-dubai-2026.png",
+    publishedAt: "2026-07-22",
+    updatedAt: "2026-07-22",
+    readingTime: "5 min read",
+    seoTitle: "Hiring a Freelance Web Developer in Dubai: Red Flags & Cost",
+    seoDescription: "Hiring a freelance web developer in Dubai? Learn the red flags, questions to ask, code ownership rules, support expectations and what to check before paying.",
+    takeaways: [
+      "The wrong developer usually becomes expensive months later",
+      "Ask about code ownership, staging, maintainability and support before hiring",
+      "A good developer explains trade-offs clearly and leaves you in control"
+    ],
+    sections: [
+      {
+        heading: "Why hiring a developer feels risky",
+        body: [
+          "Hiring a developer in Dubai is risky if you do not know what to look for. The wrong choice shows up months later as a slow, insecure site nobody else can maintain.",
+          "A polished proposal is not enough. You need to know how the work will be built, deployed, owned and supported."
+        ]
+      },
+      {
+        heading: "Questions to ask before you hire",
+        body: [
+          "Ask to see real projects and, where possible, the code or repo structure. Screenshots alone do not prove maintainability.",
+          "Ask whether there is a staging site or whether changes are made directly on live. A serious developer tests safely before pushing changes.",
+          "Ask who owns the code, server accounts, domain, analytics and deployment pipeline. The answer should be you."
+        ]
+      },
+      {
+        heading: "The single best question",
+        body: [
+          "Ask this: \"If I moved this project to another developer next year, how hard would it be?\"",
+          "A confident, ethical developer answers easily. They can explain the repo, docs, hosting, dependencies and handover process without making you feel trapped."
+        ]
+      },
+      {
+        heading: "What you should look for",
+        body: [
+          "Look for someone who can explain speed, security and support without jargon. You want a problem-solver, not a template-pusher.",
+          "I am a Dubai-based freelance full-stack developer working with Laravel, React, WordPress and Shopify. My focus is clean code you own, honest pricing and work that another competent developer can understand later."
+        ]
+      }
+    ]
+  },
+  {
     title: "Shopify Custom Theme Development in Dubai: When Custom Pays Off",
     slug: "shopify-custom-theme-development-dubai-when-custom-pays-off",
     excerpt: "A Dubai-focused guide to when custom Shopify theme development is worth the spend, when a fix sprint is smarter, and what a good build must include.",
