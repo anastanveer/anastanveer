@@ -36,9 +36,13 @@ const serviceMap: Record<string, { href: string; label: string }> = {
   "Node.js": { href: "/nodejs-developer-dubai", label: "Node.js Developer Dubai" },
 };
 
-export function generateStaticParams() {
+function isPublished(post: { publishedAt: string }) {
   const today = new Date().toISOString().slice(0, 10);
-  return blogs.filter((post) => post.publishedAt <= today).map((post) => ({ slug: post.slug }));
+  return post.publishedAt <= today;
+}
+
+export function generateStaticParams() {
+  return blogs.filter(isPublished).map((post) => ({ slug: post.slug }));
 }
 
 type BlogPageProps = {
@@ -49,7 +53,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   const { slug } = await params;
   const post = blogs.find((item) => item.slug === slug);
 
-  if (!post) {
+  if (!post || !isPublished(post)) {
     return pageMetadata({
       title: "Blog | Anas Tanveer",
       description: "Web development notes by Anas Tanveer.",
@@ -76,7 +80,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
   const { slug } = await params;
   const post = blogs.find((item) => item.slug === slug);
 
-  if (!post) {
+  if (!post || !isPublished(post)) {
     notFound();
   }
 
