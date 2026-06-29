@@ -10,7 +10,7 @@
     <language>en-ae</language>
     <managingEditor>info@anastanveer.com (Anas Tanveer)</managingEditor>
     <webMaster>info@anastanveer.com (Anas Tanveer)</webMaster>
-    <lastBuildDate>Wed, 24 Jun 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://anastanveer.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://anastanveer.com/images/anas-premium-hero.webp</url>
@@ -18,6 +18,18 @@
       <link>https://anastanveer.com/blog/</link>
     </image>
     
+  <item>
+    <title>Web Developer Manchester: North West UK Hiring Guide</title>
+    <link>https://anastanveer.com/blog/web-developer-manchester-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/web-developer-manchester-guide/</guid>
+    <description>What Manchester and North West UK businesses need to know before hiring a web developer — rates, what to expect from local agencies vs remote developers, and how to structure your project.</description>
+    <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
+    <lastBuildDate>Sun, 28 Jun 2026 00:00:00 GMT</lastBuildDate>
+    <category>Strategy</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-7-hd.webp" type="image/webp" length="0" />
+  </item>
+
   <item>
     <title>WordPress Developer UK: Hiring Guide for British Businesses</title>
     <link>https://anastanveer.com/blog/wordpress-developer-uk-guide/</link>
