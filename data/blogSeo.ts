@@ -18,6 +18,133 @@ export type BlogSeoContent = {
 };
 
 export const blogSeoContent: Record<string, BlogSeoContent> = {
+  "custom-laravel-web-app-cost-dubai-2026-pricing-guide": {
+    focusKeywords: [
+      "laravel web application cost dubai",
+      "custom web app development cost dubai",
+      "hire laravel developer uae"
+    ],
+    intro: [],
+    expandedSections: [],
+    checklist: [
+      "There is no single price. A custom web app development cost in Dubai ranges from a few thousand dirhams for a single module to six figures for a full platform.",
+      "Scope and integrations drive 80% of the cost — not the framework, and not the developer's hourly rate alone.",
+      "Realistic 2026 bands (estimates): small module AED 4,000–15,000; admin dashboard/internal tool AED 18,000–60,000; full platform/ERP/SaaS AED 70,000–300,000+.",
+      "A good quote is itemised. A lump sum with no breakdown is the single biggest red flag.",
+      "You should always own the code. If that is not written into the agreement, walk away."
+    ],
+    faqs: [
+      {
+        question: "How much does a Laravel developer charge in Dubai?",
+        answer: "In 2026, freelance Laravel developers in Dubai typically charge between AED 120 and AED 400 per hour depending on seniority and complexity, while many projects are priced as fixed-fee phases instead of hourly. For comparing total project cost, the itemised scope matters far more than the headline hourly rate — a faster senior developer can be cheaper overall than a slow junior."
+      },
+      {
+        question: "Is a custom Laravel app cheaper than off-the-shelf software?",
+        answer: "Not usually upfront — off-the-shelf is cheaper to start because you share the cost with thousands of other users. Custom Laravel can become cheaper over the long run when you would otherwise pay growing per-seat subscriptions forever, or when no existing tool fits your process and you would lose money working around it. It is a build-versus-buy decision, not a pure price comparison."
+      },
+      {
+        question: "How long does a custom Laravel app take to build?",
+        answer: "A small module takes one to three weeks. A custom dashboard or internal tool typically runs four to ten weeks. A full platform, ERP or SaaS product usually takes three to six months or more. Timelines stretch with integrations, security requirements and review cycles, so building in buffer time keeps both schedule and budget realistic."
+      },
+      {
+        question: "Why are custom web app development costs in Dubai so different between quotes?",
+        answer: "Because each quote often assumes a different scope. One developer may include testing, security and post-launch support while another quotes only the visible build to look cheaper. Always compare itemised quotes feature by feature — when the scope is identical, prices across reputable developers cluster much closer together."
+      },
+      {
+        question: "Will I own the source code of my Laravel app?",
+        answer: "You should, always. With me, you receive full source code and repository access from the start, with no lock-in. If any developer or agency will not put code ownership in writing, treat it as a serious red flag — it usually means they intend to keep you dependent on them for every future change."
+      }
+    ],
+    relatedLinks: [
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Freelance Web Developer Dubai", href: "/freelance-web-developer-dubai" },
+      { label: "ARS Developer UK Software Team", href: "https://arsdeveloper.co.uk/" }
+    ]
+  },
+  "hire-freelance-web-developer-dubai-questions-red-flags-cost": {
+    focusKeywords: [
+      "hire freelance web developer dubai",
+      "freelance laravel developer dubai",
+      "web developer for hire uae"
+    ],
+    intro: [],
+    expandedSections: [],
+    checklist: [
+      "Why Hiring the Wrong Developer Is So Expensive",
+      "Where to Find a Developer in Dubai: Freelance vs Agency vs Marketplace",
+      "The Exact Questions to Ask Before You Hire"
+    ],
+    faqs: [
+      {
+        question: "How much does a freelance web developer cost in Dubai?",
+        answer: "It varies by scope. Simple sites run roughly AED 3,000–8,000, custom WordPress or Shopify stores AED 8,000–25,000, and custom web apps AED 25,000+. Experienced full-stack hourly rates typically sit between AED 180 and 400+ per hour in 2026."
+      },
+      {
+        question: "Should I hire a freelancer or an agency?",
+        answer: "For a single site, store, or app, a vetted freelancer is usually faster, cheaper, and more directly accountable. Agencies make sense for large, multi-stream projects where you need extra structure and continuity — and you pay for that overhead."
+      },
+      {
+        question: "How do I verify a developer's work?",
+        answer: "Ask for live URLs they personally built, request a code sample or GitHub repo, and confirm what they did versus what others contributed. Vague or screenshot-only portfolios are a warning sign. Real developers are happy to show real work."
+      },
+      {
+        question: "Who should own the website code and accounts?",
+        answer: "You should — always. The codebase, hosting, domain, database, and any plugin or theme licences must be registered in your name from day one and transfer to you on payment. Get this in writing before the project starts."
+      },
+      {
+        question: "What's the safest way to pay a freelance developer in the UAE?",
+        answer: "Use milestone payments tied to deliverables — for example a deposit, a payment at a working build, and a final payment on approval. Avoid paying the full amount upfront for anything substantial, and never pay without a written scope."
+      }
+    ],
+    relatedLinks: [
+      { label: "Freelance Web Developer Dubai", href: "/freelance-web-developer-dubai" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Contact Anas", href: "/contact" }
+    ]
+  },
+  "erp-vs-spreadsheets-uae-business-custom-system": {
+    focusKeywords: [
+      "custom erp for small business uae",
+      "erp development dubai",
+      "business dashboard developer uae"
+    ],
+    intro: [],
+    expandedSections: [],
+    checklist: [
+      "Spreadsheets are the right starting point, but they scale poorly and carry hidden costs: silent errors, no audit trail, key-person risk, and wasted hours.",
+      "If you are juggling multiple \"synced\" files, re-keying data, or struggling with simple reporting, it is time to plan a move.",
+      "A custom ERP for small business UAE gives you clean data, roles, automation, real-time reporting, and a full audit trail.",
+      "Off-the-shelf fits standard businesses; a custom dashboard adds visibility fast; a custom ERP fits businesses with specific workflows.",
+      "Frame cost against what the spreadsheet is already costing you, not against zero."
+    ],
+    faqs: [
+      {
+        question: "What is the difference between an ERP and a dashboard?",
+        answer: "A dashboard is for seeing your data: it pulls numbers together and shows you reports and charts in real time. An ERP is for running your business: it is where the work actually happens, where orders are created, stock is managed, and invoices are generated. A dashboard usually sits on top of an ERP or your existing data. Many clients start with a dashboard for visibility, then build out ERP functionality underneath it."
+      },
+      {
+        question: "How much does a custom ERP cost in the UAE?",
+        answer: "It depends entirely on scope. A focused single-workflow module is a fraction of the cost of a full multi-department system, which is why a custom ERP for small business UAE budget is usually more affordable than owners expect. Rather than quoting a number blind, I scope the first painful workflow, price that, and compare it to what your current manual process costs you each year. That comparison almost always makes the decision obvious."
+      },
+      {
+        question: "When is a spreadsheet enough?",
+        answer: "A spreadsheet is genuinely enough when your team is small, your transaction volume is low, only one or two people edit the data, and you are not depending on it for compliance or real-time decisions. If that describes you, do not over-engineer. Stay on the spreadsheet until you start hitting the warning signs in this article."
+      },
+      {
+        question: "Can a custom system work alongside my accounting software?",
+        answer: "Yes. A well-built custom ERP or CRM integrates with the tools you already use rather than replacing them. We can push data into your accounting system automatically, so you stop re-keying invoices and figures by hand. The goal is one source of truth feeding everything else."
+      },
+      {
+        question: "How long does it take to move from spreadsheets to a custom system?",
+        answer: "A single-workflow module can be live in a matter of weeks, not months, which is exactly why I recommend starting small. A full ERP build takes longer, but because we roll it out one workflow at a time, you start getting value from the very first module rather than waiting for the entire system to finish."
+      }
+    ],
+    relatedLinks: [
+      { label: "ERP Development UAE", href: "/erp-development-uae" },
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" }
+    ]
+  },
   "how-to-print-packing-slips-shopify-free-app": {
     focusKeywords: [
       "shopify packing slip",
