@@ -1,5 +1,9 @@
 const DEFAULT_TIMEZONE = "+04:00";
 
+export function publishNow(): Date {
+  return process.env.SITE_BUILD_NOW ? new Date(process.env.SITE_BUILD_NOW) : new Date();
+}
+
 export function publishDate(value: string): Date {
   if (value.includes("T")) {
     return new Date(value);
@@ -8,7 +12,7 @@ export function publishDate(value: string): Date {
   return new Date(`${value}T00:00:00${DEFAULT_TIMEZONE}`);
 }
 
-export function isPublished(value: string, now = new Date()): boolean {
+export function isPublished(value: string, now = publishNow()): boolean {
   return publishDate(value).getTime() <= now.getTime();
 }
 

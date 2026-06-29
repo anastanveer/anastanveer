@@ -19,6 +19,7 @@ const FEED_DESC =
   "Decision-focused articles on Laravel, WordPress, Shopify, website speed, technical SEO, ecommerce, dashboards and business systems for Dubai, UK and Canadian businesses.";
 const AUTHOR_EMAIL = "info@anastanveer.com";
 const AUTHOR_NAME = "Anas Tanveer";
+const DEFAULT_TIMEZONE = "+04:00";
 
 function findMatchingBracket(source, startIndex, openChar, closeChar) {
   let depth = 0;
@@ -97,9 +98,13 @@ function readBlogPosts() {
 
 const POSTS = readBlogPosts();
 
-const today = new Date().toISOString().slice(0, 10);
-const published = POSTS.filter((p) => p.publishedAt <= today).sort(
-  (a, b) => b.publishedAt.localeCompare(a.publishedAt)
+function publishDate(dateStr) {
+  return dateStr.includes("T") ? new Date(dateStr) : new Date(`${dateStr}T00:00:00${DEFAULT_TIMEZONE}`);
+}
+
+const now = process.env.SITE_BUILD_NOW ? new Date(process.env.SITE_BUILD_NOW) : new Date();
+const published = POSTS.filter((p) => publishDate(p.publishedAt) <= now).sort(
+  (a, b) => publishDate(b.publishedAt).getTime() - publishDate(a.publishedAt).getTime()
 );
 
 function escapeXml(str) {
@@ -112,7 +117,7 @@ function escapeXml(str) {
 }
 
 function rfc822(dateStr) {
-  return new Date(dateStr).toUTCString();
+  return publishDate(dateStr).toUTCString();
 }
 
 const items = published
