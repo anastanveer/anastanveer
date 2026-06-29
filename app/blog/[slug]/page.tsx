@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { blogSeoContent } from "@/data/blogSeo";
 import { howToBySlug } from "@/data/howTo";
 import { blogs } from "@/data/site";
+import { compareNewestFirst, isPublished, publishDate } from "@/lib/publishing";
 import { pageMetadata, howToSchema } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
@@ -36,13 +37,12 @@ const serviceMap: Record<string, { href: string; label: string }> = {
   "Node.js": { href: "/nodejs-developer-dubai", label: "Node.js Developer Dubai" },
 };
 
-function isPublished(post: { publishedAt: string }) {
-  const today = new Date().toISOString().slice(0, 10);
-  return post.publishedAt <= today;
+function isPostPublished(post: { publishedAt: string }) {
+  return isPublished(post.publishedAt);
 }
 
 export function generateStaticParams() {
-  return blogs.filter(isPublished).map((post) => ({ slug: post.slug }));
+  return blogs.filter(isPostPublished).map((post) => ({ slug: post.slug }));
 }
 
 type BlogPageProps = {
@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   const { slug } = await params;
   const post = blogs.find((item) => item.slug === slug);
 
-  if (!post || !isPublished(post)) {
+  if (!post || !isPostPublished(post)) {
     return pageMetadata({
       title: "Blog | Anas Tanveer",
       description: "Web development notes by Anas Tanveer.",
@@ -80,17 +80,17 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
   const { slug } = await params;
   const post = blogs.find((item) => item.slug === slug);
 
-  if (!post || !isPublished(post)) {
+  if (!post || !isPostPublished(post)) {
     notFound();
   }
 
-  const today = new Date().toISOString().slice(0, 10);
   const seoContent = blogSeoContent[post.slug];
   const allSections = [...post.sections, ...(seoContent?.expandedSections ?? [])];
   const serviceLink = serviceMap[post.tag] ?? null;
 
   const relatedPosts = blogs
-    .filter((b) => b.slug !== post.slug && b.tag === post.tag && b.publishedAt <= today)
+    .filter((b) => b.slug !== post.slug && b.tag === post.tag && isPublished(b.publishedAt))
+    .sort((a, b) => compareNewestFirst(a.publishedAt, b.publishedAt))
     .slice(0, 3);
 
   const actionSection = seoContent
@@ -140,7 +140,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
     isAccessibleForFree: "True",
     wordCount,
     timeRequired: `PT${readingMinutes}M`,
-    copyrightYear: new Date(post.publishedAt).getFullYear(),
+    copyrightYear: publishDate(post.publishedAt).getFullYear(),
     copyrightHolder: { "@id": absoluteUrl("/#person") },
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,
@@ -247,7 +247,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
             <div className="mt-6 flex flex-wrap gap-3 text-sm text-silver/60 light:text-slate-500">
               <span>{readingMinutes} min read</span>
               <span>{wordCount.toLocaleString("en-AE")} words</span>
-              <span>Published <time dateTime={post.publishedAt}>{new Date(post.publishedAt).toLocaleDateString("en-AE", { year: "numeric", month: "short", day: "numeric" })}</time></span>
+              <span>Published <time dateTime={post.publishedAt}>{publishDate(post.publishedAt).toLocaleDateString("en-AE", { year: "numeric", month: "short", day: "numeric" })}</time></span>
               <span>Updated <time dateTime={post.updatedAt}>{new Date(post.updatedAt).toLocaleDateString("en-AE", { year: "numeric", month: "short", day: "numeric" })}</time></span>
             </div>
           </div>

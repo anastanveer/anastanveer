@@ -1,4 +1,5 @@
 import { blogs } from "@/data/site";
+import { compareNewestFirst, isPublished, toRfc822 } from "@/lib/publishing";
 import { absoluteUrl, siteUrl } from "@/lib/utils";
 
 export const dynamic = "force-static";
@@ -12,15 +13,10 @@ function escape(str: string) {
     .replace(/'/g, "&apos;");
 }
 
-function toRfc822(dateStr: string) {
-  return new Date(dateStr + "T00:00:00Z").toUTCString();
-}
-
 export async function GET() {
-  const today = new Date().toISOString().slice(0, 10);
   const published = blogs
-    .filter((post) => post.publishedAt <= today)
-    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+    .filter((post) => isPublished(post.publishedAt))
+    .sort((a, b) => compareNewestFirst(a.publishedAt, b.publishedAt));
 
   const items = published
     .map((post) => {

@@ -1,4 +1,5 @@
 import { blogs, caseStudies } from "@/data/site";
+import { isPublished } from "@/lib/publishing";
 import { absoluteUrl } from "@/lib/utils";
 
 export const dynamic = "force-static";
@@ -8,8 +9,7 @@ function escape(str: string) {
 }
 
 export async function GET() {
-  const today = new Date().toISOString().slice(0, 10);
-  const publishedBlogs = blogs.filter((post) => post.publishedAt <= today);
+  const publishedBlogs = blogs.filter((post) => isPublished(post.publishedAt));
 
   const blogEntries = publishedBlogs.map((post) => `  <url>
     <loc>${absoluteUrl(`/blog/${post.slug}`)}</loc>

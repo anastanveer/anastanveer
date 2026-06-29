@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { BlogCard } from "@/components/ui/BlogCard";
 import { PageHero } from "@/components/ui/PageHero";
 import { blogs } from "@/data/site";
+import { compareNewestFirst, isPublished } from "@/lib/publishing";
 
 export const revalidate = 86400;
 import { absoluteUrl } from "@/lib/utils";
@@ -16,10 +17,9 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function BlogPage() {
-  const today = new Date().toISOString().slice(0, 10);
   const published = blogs
-    .filter((b) => b.publishedAt <= today)
-    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+    .filter((b) => isPublished(b.publishedAt))
+    .sort((a, b) => compareNewestFirst(a.publishedAt, b.publishedAt));
   const blogListSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",

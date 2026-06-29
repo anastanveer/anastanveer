@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogs, caseStudies } from "@/data/site";
 import { seoServicePages } from "@/data/seo-pages";
+import { isPublished, publishDate } from "@/lib/publishing";
 import { routes } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
@@ -32,8 +33,6 @@ const serviceImageByPath: Record<string, string> = Object.fromEntries(
 );
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const today = new Date().toISOString().slice(0, 10);
-
   return [
     // Core routes + all service/location pages (via lib/seo routes array)
     ...routes.map((route) => {
@@ -61,10 +60,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Blog posts (published only — use actual post dates + featured image)
     ...blogs
-      .filter((post) => post.publishedAt <= today)
+      .filter((post) => isPublished(post.publishedAt))
       .map((post) => ({
         url: canonicalSitemapUrl(`/blog/${post.slug}`),
-        lastModified: new Date(post.updatedAt),
+        lastModified: publishDate(post.updatedAt),
         changeFrequency: "monthly" as const,
         priority: 0.72,
         images: [absoluteUrl(post.image)]

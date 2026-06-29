@@ -1,4 +1,5 @@
 import { blogs } from "@/data/site";
+import { compareNewestFirst, isPublished, publishDate } from "@/lib/publishing";
 import { absoluteUrl } from "@/lib/utils";
 
 export const dynamic = "force-static";
@@ -13,14 +14,13 @@ function escape(str: string) {
 }
 
 export async function GET() {
-  const today = new Date().toISOString().slice(0, 10);
   const published = blogs
-    .filter((post) => post.publishedAt <= today)
-    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+    .filter((post) => isPublished(post.publishedAt))
+    .sort((a, b) => compareNewestFirst(a.publishedAt, b.publishedAt));
 
   const entries = published
     .map((post) => {
-      const pubDate = `${post.publishedAt}T00:00:00+00:00`;
+      const pubDate = publishDate(post.publishedAt).toISOString();
       const imageUrl = absoluteUrl(post.image);
       return `  <url>
     <loc>${absoluteUrl(`/blog/${post.slug}`)}</loc>

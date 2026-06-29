@@ -22,6 +22,7 @@ import { SkillsVisual } from "@/components/sections/SkillsVisual";
 import { VisualPanel } from "@/components/ui/VisualPanel";
 import { blogs, caseStudies, pricing, projects, services, skills } from "@/data/site";
 import { seoServicePages } from "@/data/seo-pages";
+import { compareNewestFirst, isPublished } from "@/lib/publishing";
 import { jsonLdForPage, faqSchema } from "@/lib/seo";
 
 const homeFaqs = homeFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
@@ -44,10 +45,9 @@ const popularServiceLinks: Array<{ label: string; href: string }> = [
 ];
 
 export default function HomePage() {
-  const today = new Date().toISOString().slice(0, 10);
   const sortedBlogs = [...blogs]
-    .filter((b) => b.publishedAt <= today)
-    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+    .filter((b) => isPublished(b.publishedAt))
+    .sort((a, b) => compareNewestFirst(a.publishedAt, b.publishedAt));
   return (
     <>
       <JsonLd data={jsonLdForPage("/")} id="home-json-ld" />
