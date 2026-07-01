@@ -41,6 +41,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: /anastanveer.com/
+          timeout: 120000
           exclude: |
             **/.git*
             **/.git*/**
