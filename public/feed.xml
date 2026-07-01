@@ -10,7 +10,7 @@
     <language>en-ae</language>
     <managingEditor>info@anastanveer.com (Anas Tanveer)</managingEditor>
     <webMaster>info@anastanveer.com (Anas Tanveer)</webMaster>
-    <lastBuildDate>Sat, 27 Jun 2026 20:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 20:00:00 GMT</lastBuildDate>
     <atom:link href="https://anastanveer.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://anastanveer.com/images/anas-premium-hero.webp</url>
@@ -18,6 +18,30 @@
       <link>https://anastanveer.com/blog/</link>
     </image>
     
+  <item>
+    <title>Web Developer Birmingham: West Midlands Hiring Guide</title>
+    <link>https://anastanveer.com/blog/web-developer-birmingham-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/web-developer-birmingham-guide/</guid>
+    <description>What Birmingham and West Midlands businesses need to know before hiring a web developer — rates, platform choices, local vs remote, and how to structure your project for a clean outcome.</description>
+    <pubDate>Tue, 30 Jun 2026 20:00:00 GMT</pubDate>
+    <lastBuildDate>Tue, 30 Jun 2026 20:00:00 GMT</lastBuildDate>
+    <category>Strategy</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-10-hd.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Shopify Custom Theme Development Dubai: When Custom Pays Off</title>
+    <link>https://anastanveer.com/blog/shopify-custom-theme-development-dubai-when-custom-pays-off/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/shopify-custom-theme-development-dubai-when-custom-pays-off/</guid>
+    <description>A Dubai-focused guide to when custom Shopify theme development is worth the spend, when a fix sprint is smarter, and what a good build must include.</description>
+    <pubDate>Mon, 29 Jun 2026 20:00:00 GMT</pubDate>
+    <lastBuildDate>Mon, 29 Jun 2026 20:00:00 GMT</lastBuildDate>
+    <category>Shopify</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/shopify-custom-theme-development-dubai.png" type="image/webp" length="0" />
+  </item>
+
   <item>
     <title>Web Developer Manchester: North West UK Hiring Guide</title>
     <link>https://anastanveer.com/blog/web-developer-manchester-guide/</link>

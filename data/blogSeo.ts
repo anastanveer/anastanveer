@@ -18,6 +18,157 @@ export type BlogSeoContent = {
 };
 
 export const blogSeoContent: Record<string, BlogSeoContent> = {
+  "wordpress-website-cost-dubai-2026-guide": {
+    focusKeywords: [
+      "wordpress website cost dubai"
+    ],
+    intro: [],
+    expandedSections: [],
+    checklist: [
+      "Basic sites: AED 1,500 to AED 5,000. Business sites: AED 6,000 to AED 18,000. Custom builds: AED 20,000 to AED 60,000+.",
+      "The biggest cost levers are design, page count, custom features and who builds it.",
+      "Template is smart money for most SMEs; pay for custom only when your brand or funnel is a real asset.",
+      "A freelance WordPress developer usually beats an agency on price, speed and accountability for SME work.",
+      "Budget for year-two costs — hosting, licences and maintenance — from the start.",
+      "Too-cheap quotes hide their cost somewhere; insist on a written, line-item scope."
+    ],
+    faqs: [
+      {
+        question: "How much does a WordPress website cost in Dubai?",
+        answer: "In 2026, a simple WordPress site in Dubai can start from a few thousand AED, while custom design, multilingual content, booking systems, ecommerce, integrations and ongoing maintenance push the budget higher."
+      },
+      {
+        question: "Why do WordPress quotes vary so much?",
+        answer: "Quotes vary because some include only a template setup while others include strategy, custom design, copy structure, SEO, speed, hosting, security and post-launch support. Compare scope line by line, not just the headline price."
+      },
+      {
+        question: "Should I choose WordPress or a custom Laravel app?",
+        answer: "Choose WordPress for content-led marketing sites, brochure websites and simpler business sites. Choose Laravel when you need custom workflows, dashboards, portals, permissions, integrations or business logic that WordPress plugins cannot handle cleanly."
+      },
+      {
+        question: "Can you build and maintain a WordPress website in Dubai?",
+        answer: "Yes. I can plan, build, optimise and maintain WordPress sites for Dubai and UAE businesses, including speed, SEO structure, hosting, security, forms and conversion-focused pages."
+      }
+    ],
+    relatedLinks: [
+      { label: "WordPress Developer Dubai", href: "/wordpress-developer-dubai" },
+      { label: "Freelance Web Developer Dubai", href: "/freelance-web-developer-dubai" },
+      { label: "Contact Anas", href: "/contact" }
+    ]
+  },
+  "custom-business-dashboard-laravel-react-2026-guide": {
+    focusKeywords: [
+      "business dashboard development dubai"
+    ],
+    intro: [],
+    expandedSections: [],
+    checklist: [
+      "Plan before you code. Define roles, the decisions behind each metric, data sources, and refresh cadence first — that's where dashboards succeed or fail.",
+      "Laravel and React give you a maintainable, integration-friendly stack that lasts years, not weeks.",
+      "Prioritise trust features: role-based access, exports, alerts, and an audit trail beat flashy visuals.",
+      "Match cadence to need — real-time only where it changes a decision; nightly is often enough and far cheaper.",
+      "Phase delivery so the client gets a usable tool early and you refine from real use."
+    ],
+    faqs: [
+      {
+        question: "What should a business dashboard show first?",
+        answer: "A good dashboard should show the few metrics that drive decisions for each role. Start with the decision, data owner, refresh cadence and action needed before adding charts."
+      },
+      {
+        question: "Why use Laravel and React for dashboards?",
+        answer: "Laravel works well for secure APIs, roles, queues and integrations, while React is strong for fast interactive interfaces. Together they suit custom dashboards that need reliability and a polished user experience."
+      },
+      {
+        question: "How much does a custom dashboard cost in Dubai?",
+        answer: "Cost depends on data sources, roles, reports, integrations and real-time needs. A focused internal dashboard costs far less than a full multi-department platform with complex permissions and automation."
+      },
+      {
+        question: "Can an existing spreadsheet become a dashboard?",
+        answer: "Yes. Many dashboard projects start by cleaning spreadsheet data, defining a reliable source of truth, then replacing manual exports with automated database/API feeds."
+      }
+    ],
+    relatedLinks: [
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "React Developer Dubai", href: "/react-developer-dubai" }
+    ]
+  },
+  "custom-api-integration-payments-crm-maps": {
+    focusKeywords: [
+      "custom api integration developer"
+    ],
+    intro: [],
+    expandedSections: [],
+    checklist: [
+      "Most businesses need their existing tools connected, not replaced — integration is cheaper and lower-risk than a rebuild.",
+      "The common connections are payments, CRM, maps, accounting, WhatsApp, and shipping.",
+      "A production integration needs secure auth, retries, webhooks or polling, queues, and thorough logging — the demo is the easy 10%.",
+      "Use REST for commands you initiate and webhooks for events you must react to instantly; reconcile to catch what's missed.",
+      "Payments and personal data bring PCI DSS, PDPL, and GDPR obligations that must shape the design from day one.",
+      "Bad integrations reveal themselves through missing records, duplicates, no logs, and daily manual clean-up."
+    ],
+    faqs: [
+      {
+        question: "What does a custom API integration developer do?",
+        answer: "A custom API integration developer connects separate tools so data moves automatically between payments, CRM, ecommerce, maps, accounting, shipping or internal systems without manual copy-paste."
+      },
+      {
+        question: "What makes API integrations fail?",
+        answer: "Weak integrations fail because they ignore authentication, retries, webhooks, rate limits, logging, validation and edge cases. A reliable integration is designed for failure, not just the happy path."
+      },
+      {
+        question: "Are APIs secure for payments and customer data?",
+        answer: "They can be secure when built with proper authentication, encryption, least-privilege access, audit logs, validation and careful handling of secrets. Security must be part of the integration scope from day one."
+      },
+      {
+        question: "Can you integrate UAE payment gateways and CRMs?",
+        answer: "Yes. I can connect payment gateways, CRMs, maps, ecommerce stores and internal dashboards for Dubai and UAE businesses using secure API and webhook architecture."
+      }
+    ],
+    relatedLinks: [
+      { label: "API Integration Services", href: "/api-integration-services" },
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "Business Automation", href: "/crm-development-dubai" }
+    ]
+  },
+  "prop-firm-website-development-founders-guide": {
+    focusKeywords: [
+      "prop firm website development"
+    ],
+    intro: [],
+    expandedSections: [],
+    checklist: [
+      "Prop firms outgrow spreadsheets and WhatsApp fast; a custom platform pays for itself in reduced ops time and fewer payout errors.",
+      "The core system is four things: a trader dashboard, challenge/evaluation logic, automated payouts, and a role-based admin panel.",
+      "Laravel (PHP) for the backend and React for the frontend is a proven, hire-able stack for trading platform development.",
+      "Integrations — payment gateways, data feeds, and KYC — are where projects stall, so scope them early.",
+      "Security and compliance are not optional; financial data and payouts raise the stakes.",
+      "Start with an MVP. Ship the money-critical path first, then expand."
+    ],
+    faqs: [
+      {
+        question: "What features does a prop firm website need?",
+        answer: "A serious prop firm platform usually needs trader accounts, challenge logic, dashboard reporting, payment flow, payouts, admin controls, KYC or verification hooks, support workflows and audit logs."
+      },
+      {
+        question: "Should a prop firm start with an MVP?",
+        answer: "Yes. Start with the money-critical path: sign-up, payment, challenge tracking, trader dashboard and admin review. Extra gamification and advanced analytics can come after the core flow works."
+      },
+      {
+        question: "Why use Laravel for prop firm platforms?",
+        answer: "Laravel is a strong backend choice for permissions, queues, payments, audit logs, APIs and admin workflows, while a React frontend can handle fast dashboards and trader-facing interfaces."
+      },
+      {
+        question: "Can you build a prop firm or trading platform website?",
+        answer: "Yes. I can help plan and build prop firm websites, dashboards, challenge systems and admin platforms with a practical MVP-first approach."
+      }
+    ],
+    relatedLinks: [
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "SaaS Developer Dubai", href: "/saas-developer-dubai" },
+      { label: "Contact Anas", href: "/contact" }
+    ]
+  },
   "custom-laravel-web-app-cost-dubai-2026-pricing-guide": {
     focusKeywords: [
       "laravel web application cost dubai",
