@@ -22,7 +22,7 @@ const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 
 function collectUrls() {
   const outDir = path.join(ROOT, "out");
-  const sitemaps = ["sitemap.xml", "sitemap-news.xml"]
+  const sitemaps = ["sitemap.xml"]
     .map((f) => path.join(outDir, f))
     .filter((f) => fs.existsSync(f));
   if (sitemaps.length === 0) {

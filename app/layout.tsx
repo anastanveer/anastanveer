@@ -36,7 +36,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Sitemaps */}
         <link rel="sitemap" type="application/xml" title="Main Sitemap" href="https://anastanveer.com/sitemap.xml" />
         <link rel="sitemap" type="application/xml" title="Image Sitemap" href="https://anastanveer.com/sitemap-images.xml" />
-        <link rel="sitemap" type="application/xml" title="News Sitemap" href="https://anastanveer.com/sitemap-news.xml" />
         {/* Author & identity */}
         <link rel="author" href="https://anastanveer.com/about" />
         <link rel="me" href="https://www.linkedin.com/in/anas-fullstackdev/" />

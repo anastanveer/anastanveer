@@ -182,7 +182,7 @@ export default function TestimonialsPage() {
             <div className="h-12 w-px bg-white/10 light:bg-slate-200" />
             <div className="space-y-1">
               <p className="text-sm font-semibold text-white light:text-slate-950">{reviews.length} verified reviews</p>
-              <p className="text-xs text-silver/60 light:text-slate-500">Collected from Fiverr project deliveries</p>
+              <p className="text-xs text-silver/60 light:text-slate-500">Verified client reviews from completed projects</p>
               <div className="flex flex-wrap gap-2 pt-1">
                 {["Laravel", "WordPress", "Shopify", "Dashboard", "API"].map((tag) => (
                   <span key={tag} className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs text-silver/65 light:border-slate-200 light:bg-white light:text-slate-600">
@@ -203,7 +203,7 @@ export default function TestimonialsPage() {
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <p className="font-display text-lg font-semibold text-white light:text-slate-950">{review.author}</p>
-                    <p className="text-xs text-silver/55 light:text-slate-400">{review.location} · via {review.platform}</p>
+                    <p className="text-xs text-silver/55 light:text-slate-400">{review.location} · Verified client review</p>
                   </div>
                   <div className="shrink-0 text-right">
                     <StarRow count={review.rating} />

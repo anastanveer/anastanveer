@@ -412,7 +412,7 @@ export default function ArabicLandingPage() {
                   </div>
                   <p className="text-sm leading-7 text-silver/72 light:text-slate-600">"{r.body}"</p>
                   <p className="mt-3 text-xs font-semibold text-white light:text-slate-950">{r.author}</p>
-                  <p className="text-[11px] text-silver/45 light:text-slate-400">{r.location} · Fiverr</p>
+                  <p className="text-[11px] text-silver/45 light:text-slate-400">{r.location} · مراجعة موثّقة</p>
                 </div>
               ))}
             </div>

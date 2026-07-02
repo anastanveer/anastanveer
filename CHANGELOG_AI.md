@@ -4,6 +4,26 @@ Read this before every task to understand what was recently changed and why.
 
 ---
 
+## 2026-07-02
+
+### SEO Audit Fixes — Hero CTA, Trust Row, Review Framing, Canonical Host, Neighborhood 301s, News Sitemap Removal
+**Files changed:**
+- `components/sections/Hero.tsx` — hero "Download CV" link replaced with "Get a Free Website Audit" → `/free-website-audit`; added trust row under H1 (100+ projects · 4.9★ · replies within 4 hours — all existing claims)
+- `components/sections/Testimonials.tsx` — visible "via Fiverr" labels softened to "Verified client review(s)" (quotes untouched)
+- `app/testimonials/page.tsx` — "Collected from Fiverr project deliveries" and per-card "via Fiverr" softened to verified-client wording (schema `platform` field untouched)
+- `app/ar/page.tsx` — Arabic review card "· Fiverr" label → "· مراجعة موثّقة"
+- `public/.htaccess` — 301 www.anastanveer.com → anastanveer.com; 301 seven thin Dubai neighborhood pages (al-furjan, jlt, marina, deira, business-bay, downtown-dubai, al-rashidiya) → /web-developer-dubai/
+- `app/sitemap-news.xml/route.ts` — DELETED (news sitemap inappropriate for a portfolio blog)
+- `app/robots.ts`, `app/layout.tsx`, `scripts/indexnow-submit.mjs` — removed sitemap-news.xml references
+
+**Not changed (verified already correct):** meta author is "Anas Tanveer" on all pages; "Steve Barlow" appears only as a Review schema author (client reviewer — correct); homepage JSON-LD already contains Person + ProfessionalService + WebSite with correct attribution.
+**Why:** Professional SEO audit implementation (conversion + canonicalization + structured-data verification).
+**Risk level:** High (layout.tsx one-line link removal, .htaccess, sitemap route removal)
+**Build result:** 156 pages ✅ TypeScript ✅ (was 157 — news sitemap route removed intentionally)
+**Rollback:** `git checkout 29000d3 -- <file>` per file, or `git stash` (changes uncommitted)
+
+---
+
 ## 2026-06-04
 
 ### Workspace Setup — AI Engineering Docs Created

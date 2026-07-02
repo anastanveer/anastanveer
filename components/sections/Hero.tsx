@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Briefcase, Download, Globe, Rocket, Star } from "lucide-react";
+import { Briefcase, Globe, Rocket, Search, Star } from "lucide-react";
 import { CountUp } from "@/components/ui/CountUp";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { BrandIcon } from "@/components/ui/BrandIcon";
@@ -118,6 +118,11 @@ export function Hero() {
             <span className="premium-text">Real Business Problems</span>
           </motion.h1>
 
+          {/* trust row — reuses existing site claims (projects, rating, response time) */}
+          <motion.p variants={item} className="mt-4 text-sm font-medium text-silver/70">
+            100+ projects delivered · 4.9★ client rating · Replies within 4 hours
+          </motion.p>
+
           {/* description */}
           <motion.p variants={item} className="mt-6 max-w-xl text-base leading-7 text-silver/85 md:text-lg md:leading-8">
             Full-stack Laravel, WordPress, Shopify and Next.js builds — fast, SEO-ready platforms,
@@ -142,11 +147,10 @@ export function Hero() {
             <MagneticButton href="/work">View Portfolio</MagneticButton>
             <MagneticButton href="/contact" variant="secondary">Get a Free Quote</MagneticButton>
             <a
-              href="/files/anas-tanveer-web-developer-cv.pdf"
-              download
+              href="/free-website-audit"
               className="inline-flex items-center gap-2 px-2 text-sm font-medium text-cyan transition hover:text-white"
             >
-              <Download size={15} /> Download CV
+              <Search size={15} /> Get a Free Website Audit
             </a>
           </motion.div>
           <motion.p variants={item} className="mt-3 text-sm text-silver/60">

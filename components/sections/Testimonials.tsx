@@ -48,7 +48,7 @@ function Card({ t }: { t: Testimonial }) {
       </blockquote>
       <div className="mt-3 flex items-center justify-between border-t border-white/8 pt-3 light:border-slate-100">
         <span className="text-[11px] text-silver/45 light:text-slate-400">{t.service}</span>
-        <span className="text-[11px] font-medium text-silver/40 light:text-slate-400">via Fiverr</span>
+        <span className="text-[11px] font-medium text-silver/40 light:text-slate-400">Verified client review</span>
       </div>
     </article>
   );
@@ -77,7 +77,7 @@ export function Testimonials() {
                 ))}
               </div>
               <span className="text-sm font-semibold text-white light:text-slate-900">4.9 / 5</span>
-              <span className="text-xs text-silver/50 light:text-slate-500">via Fiverr</span>
+              <span className="text-xs text-silver/50 light:text-slate-500">Verified client reviews</span>
             </div>
           </div>
         </Reveal>
