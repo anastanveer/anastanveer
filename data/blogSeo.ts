@@ -18,6 +18,554 @@ export type BlogSeoContent = {
 };
 
 export const blogSeoContent: Record<string, BlogSeoContent> = {
+  "website-cost-dubai-2026": {
+    "focusKeywords": [
+      "website cost in Dubai",
+      "website development cost UAE",
+      "business website price Dubai",
+      "ecommerce website cost UAE",
+      "Dubai web developer",
+      "custom Laravel website cost"
+    ],
+    "intro": [],
+    "expandedSections": [],
+    "checklist": [
+      "Confirm you own the code, content and design fully after final payment, with no vendor lock-in.",
+      "Ensure hosting and domain are registered in your name with logins handed to you.",
+      "Get all recurring costs — hosting, plugins, maintenance — quoted per year in writing.",
+      "Clarify how many pages, revision rounds and integrations the quoted price includes.",
+      "Check post-launch support duration, scope and the hourly rate after it expires.",
+      "Verify mobile responsiveness, fast loading and basic on-page SEO are included as standard.",
+      "Tie the payment schedule to deliverable milestones, not just calendar dates."
+    ],
+    "faqs": [
+      {
+        "question": "How much does a basic website cost in Dubai?",
+        "answer": "A basic brochure website in Dubai costs AED 3,000–5,000 in 2026 for three to five pages, a contact form, mobile responsiveness and basic SEO. A fuller standard business website with a blog and CMS runs AED 5,500–12,000. Add roughly AED 1,000–2,000 yearly for hosting and domain."
+      },
+      {
+        "question": "How much does an ecommerce website cost in UAE?",
+        "answer": "An ecommerce website in the UAE costs AED 7,500–20,000 in 2026, depending on product count, payment gateways and integrations. Budget extra for a local gateway like Telr or Tap, roughly 2–3% per transaction, plus AED 1,200–2,500 yearly for faster hosting to keep checkout quick."
+      },
+      {
+        "question": "Why are agency website prices in Dubai so different?",
+        "answer": "Agency prices differ mainly because of overhead — sales teams, account managers and office rent — not code quality. Two agencies may quote AED 12,000 and AED 45,000 for the same site. Ask who writes the code and request an itemized quote; honest providers break it down in minutes."
+      },
+      {
+        "question": "Is a AED 1,500 website worth it?",
+        "answer": "Rarely, for a real business. A AED 1,500 website usually means a recycled template, no code ownership, weak SEO and no support. Within 12–18 months most owners pay AED 4,000–8,000 to rebuild it properly, effectively paying twice. Start with a small site from a real developer instead."
+      },
+      {
+        "question": "How much is yearly website maintenance in Dubai?",
+        "answer": "Yearly website maintenance in Dubai costs AED 1,000–6,000, covering security patches, backups, updates and small edits. Simple brochure sites sit at the lower end; ecommerce and custom builds cost more. Skipping maintenance risks a hacked-site cleanup that typically starts around AED 2,500."
+      },
+      {
+        "question": "Do I pay for hosting separately from the website build?",
+        "answer": "Usually yes. Hosting is a recurring cost of AED 400–2,500 per year, separate from the one-time build fee, plus AED 45–150 yearly for the domain. Some developers bundle the first year in, so always confirm what happens at renewal and insist the accounts are registered in your name."
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "Laravel vs WordPress for UAE Business Websites: How to Choose in 2026",
+        "href": "/blog/laravel-vs-wordpress-uae-2026"
+      },
+      {
+        "label": "Why Your Website Is Slow — Core Web Vitals Fixes That Actually Work in 2026",
+        "href": "/blog/website-speed-core-web-vitals-2026"
+      },
+      {
+        "label": "Freelance Web Developer vs Agency in Dubai: Cost, Speed & Risk Compared",
+        "href": "/blog/freelance-web-developer-vs-agency-dubai"
+      }
+    ]
+  },
+  "laravel-vs-wordpress-uae-2026": {
+    "focusKeywords": [
+      "Laravel vs WordPress",
+      "Laravel developer Dubai",
+      "WordPress developer Dubai",
+      "custom web application vs CMS",
+      "when to use Laravel"
+    ],
+    "intro": [],
+    "expandedSections": [],
+    "checklist": [
+      "Content or workflow? Content leans WordPress; logins and processes lean Laravel.",
+      "Count the plugins needed — over 20 means you've hit the WordPress plugin ceiling.",
+      "Map user roles — complex permissions across customers, staff and admins favour Laravel.",
+      "Decide who owns the data — if your site must feed CRM/ERP/accounting as the source of truth, choose Laravel.",
+      "Project the 3-year cost of change, not just the launch invoice.",
+      "Match the budget to the problem: AED 4,000-18,000 WordPress vs AED 25,000-120,000+ Laravel.",
+      "Confirm non-technical staff can still edit what they need to edit after launch.",
+      "Check downtime history — repeated plugin-conflict outages are a migration signal."
+    ],
+    "faqs": [
+      {
+        "question": "Is Laravel better than WordPress?",
+        "answer": "Neither is universally better — they solve different problems. Laravel is better for custom applications with logins, workflows, and business logic. WordPress is better for content-led sites you publish and edit often. Ask what your website does, not which platform is superior; the right answer depends entirely on your business problem."
+      },
+      {
+        "question": "Is WordPress good enough for business websites?",
+        "answer": "Yes, for most. WordPress comfortably handles brochure sites, blogs, lead capture, and standard online stores — which covers the majority of UAE small and medium businesses. It stops being enough only when your site becomes a workflow tool with heavy custom logic, complex user roles, or 20-plus plugins holding it together."
+      },
+      {
+        "question": "When should I move from WordPress to Laravel?",
+        "answer": "Move when your website becomes a business process rather than content — customers and staff logging in daily to get work done. Also migrate if plugin conflicts cause real downtime, you're maintaining 20-plus plugins, or your data must be the trusted source feeding your CRM, ERP, or accounting systems."
+      },
+      {
+        "question": "Which is cheaper long-term, Laravel or WordPress?",
+        "answer": "For content sites, WordPress is cheaper over three years. For workflow systems, Laravel is usually cheaper long-term because you avoid escalating plugin subscriptions and emergency fixes. In the UAE, WordPress runs AED 4,000-18,000 upfront; Laravel runs AED 25,000-120,000+, but the real cost is your 3-year cost of change."
+      },
+      {
+        "question": "Can WordPress handle ecommerce in the UAE?",
+        "answer": "Yes. WordPress with WooCommerce runs standard UAE online stores well — products, cart, local payment gateways, and shipping. It's a solid, cost-effective choice for typical retail. Consider Laravel only when you need B2B pricing tiers, unusual order rules, complex logistics, or deep integration with your ERP or accounting system."
+      },
+      {
+        "question": "Is Laravel overkill for a small site?",
+        "answer": "Usually, yes. If your site is a handful of pages and a blog, Laravel means paying AED 30,000-plus to build from scratch what WordPress delivers for a fraction. Choose Laravel for a small site only when it hides genuine custom logic — a booking engine or portal — behind those few pages."
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "How Much Does a Website Cost in Dubai in 2026? (Real Price Breakdown)",
+        "href": "/blog/website-cost-dubai-2026"
+      },
+      {
+        "label": "Why Your Website Is Slow — Core Web Vitals Fixes That Actually Work in 2026",
+        "href": "/blog/website-speed-core-web-vitals-2026"
+      },
+      {
+        "label": "Freelance Web Developer vs Agency in Dubai: Cost, Speed & Risk Compared",
+        "href": "/blog/freelance-web-developer-vs-agency-dubai"
+      }
+    ]
+  },
+  "website-speed-core-web-vitals-2026": {
+    "focusKeywords": [
+      "website speed optimization Dubai",
+      "Core Web Vitals 2026",
+      "why is my website slow",
+      "improve LCP INP CLS",
+      "page speed and conversions",
+      "WordPress speed Dubai"
+    ],
+    "intro": [],
+    "expandedSections": [],
+    "checklist": [
+      "Measure TTFB and confirm it is under 600ms before touching anything else",
+      "Move to UAE/regional hosting or add a CDN edge for GCC visitors",
+      "Convert all images to WebP/AVIF and resize to actual display size",
+      "Enable page and object caching, and upgrade to PHP 8.2+",
+      "Defer non-critical JavaScript and delay third-party chat/analytics tags",
+      "Set explicit width and height on every image, video, and ad slot",
+      "Audit and remove bloated WordPress plugins earning less than their weight",
+      "Verify 75% of real visits pass LCP <2.5s, INP <200ms, CLS <0.1"
+    ],
+    "faqs": [
+      {
+        "question": "What is a good page speed score?",
+        "answer": "A good page speed score means passing all three Core Web Vitals: LCP under 2.5 seconds, INP under 200 milliseconds, and CLS under 0.1, for at least 75% of real visits. On lab tools like PageSpeed Insights, aim for 90+ on mobile — but real-world field data from actual Dubai visitors matters more than any single lab number."
+      },
+      {
+        "question": "Does website speed affect Google ranking?",
+        "answer": "Yes. Core Web Vitals are a confirmed Google ranking factor and act as a tiebreaker between pages of similar relevance — the faster page wins. The larger effect, however, is on conversions: a slow page loses sales and leads before ranking even comes into play, so speed protects both your traffic and your revenue."
+      },
+      {
+        "question": "Why is my WordPress site slow?",
+        "answer": "Most WordPress sites are slow because of plugin bloat and a heavy theme — each active plugin loads its own scripts and database queries on every page. Add uncompressed images, no caching, and overseas hosting, and load times climb past 5 seconds. Auditing plugins, adding caching, and converting images to WebP typically halves load time."
+      },
+      {
+        "question": "What are Core Web Vitals?",
+        "answer": "Core Web Vitals are three Google metrics measuring real user experience: LCP (how fast the main content appears), INP (how quickly the page responds to taps and clicks), and CLS (how much the layout shifts while loading). Good scores are LCP under 2.5s, INP under 200ms, and CLS under 0.1, measured on real mobile visits."
+      },
+      {
+        "question": "How fast should a website load in 2026?",
+        "answer": "In 2026, aim for your largest content to appear within 2.5 seconds on mobile, with the page fully interactive shortly after. A well-optimized WordPress or Shopify site achieves 1.5-2.5 seconds; a custom Laravel or React build can hit under 1.5 seconds. Anything past 3 seconds measurably increases bounce rate and lost sales."
+      },
+      {
+        "question": "Does hosting location matter for UAE visitors?",
+        "answer": "Yes, significantly. A US-based server adds 150-300ms of latency per round trip for UAE visitors due to physical distance, and pages make dozens of round trips. Hosting in the UAE or a nearby region, or adding a regional CDN edge, can cut 200-600ms off real-world load time for your Dubai and GCC customers."
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "How Much Does a Website Cost in Dubai in 2026? (Real Price Breakdown)",
+        "href": "/blog/website-cost-dubai-2026"
+      },
+      {
+        "label": "Laravel vs WordPress for UAE Business Websites: How to Choose in 2026",
+        "href": "/blog/laravel-vs-wordpress-uae-2026"
+      },
+      {
+        "label": "Freelance Web Developer vs Agency in Dubai: Cost, Speed & Risk Compared",
+        "href": "/blog/freelance-web-developer-vs-agency-dubai"
+      }
+    ]
+  },
+  "freelance-web-developer-vs-agency-dubai": {
+    "focusKeywords": [
+      "freelance web developer Dubai",
+      "hire web developer Dubai",
+      "web development agency Dubai cost",
+      "freelancer vs agency website",
+      "web developer Dubai cost"
+    ],
+    "intro": [],
+    "expandedSections": [],
+    "checklist": [
+      "Confirm the developer's registered company name or trade licence number",
+      "Get written confirmation you own 100% of the code, domain, and hosting",
+      "Insist on a written scope of work, not verbal WhatsApp promises",
+      "Structure payment in milestones — never 100% upfront",
+      "Verify a live, clickable portfolio of similar projects",
+      "Confirm a post-launch warranty period of at least 14-30 days",
+      "Test communication speed before you pay, not after",
+      "Ask all 8 pre-hire questions and note who dodges any of them"
+    ],
+    "faqs": [
+      {
+        "question": "How much does a freelance web developer cost in Dubai?",
+        "answer": "A freelance web developer in Dubai costs AED 1,500-8,000 for a basic marketplace build, AED 8,000-40,000 for a specialist developer with a registered company, and AED 25,000-120,000+ for a full agency. Ongoing maintenance runs AED 300-2,500 per month. For the same deliverable, agencies typically quote 2-3x a comparable specialist."
+      },
+      {
+        "question": "Is it safe to hire a freelancer for my business website?",
+        "answer": "Yes, it is safe if you verify accountability first. Confirm a registered company or trade licence, sign a written scope, and get full code, domain, and hosting ownership on delivery. The real risk is not freelancers as a group — it is anonymous ones with no legal entity, no contract, and no code handover."
+      },
+      {
+        "question": "Should I choose a freelancer or agency for a small business website?",
+        "answer": "For most small businesses in Dubai, a specialist independent developer with a registered company beats both a random freelancer and a full agency. You get direct communication, faster delivery, and real accountability at 40-60% lower cost than an agency. Choose a full agency only for large, multi-team projects above AED 100,000."
+      },
+      {
+        "question": "What should I ask a web developer before hiring in Dubai?",
+        "answer": "Ask for their company registration or trade licence number, who exactly builds the site, whether you own 100% of the code and hosting, the post-launch warranty period, and a live portfolio of similar work. Also confirm milestone-based payments and their recommended platform and why — a good developer advises based on your business, not what they sell."
+      },
+      {
+        "question": "Who owns the code after the web development project?",
+        "answer": "You should own 100% of the code, domain, and hosting, with full admin credentials handed over on delivery — but only if it is written into your contract. If the developer keeps everything on their own accounts, you do not own your website, you are renting it. Always confirm ownership in writing before paying."
+      },
+      {
+        "question": "Why is a web development agency in Dubai more expensive than a freelancer?",
+        "answer": "A web development agency in Dubai is more expensive because roughly 40-50% of the invoice covers overhead — project managers, account managers, designers, QA, and office costs — rather than code. You pay for the team structure whether your project needs it or not, which is why a specialist developer often delivers the same result for less."
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "How Much Does a Website Cost in Dubai in 2026? (Real Price Breakdown)",
+        "href": "/blog/website-cost-dubai-2026"
+      },
+      {
+        "label": "Laravel vs WordPress for UAE Business Websites: How to Choose in 2026",
+        "href": "/blog/laravel-vs-wordpress-uae-2026"
+      },
+      {
+        "label": "Why Your Website Is Slow — Core Web Vitals Fixes That Actually Work in 2026",
+        "href": "/blog/website-speed-core-web-vitals-2026"
+      }
+    ]
+  },
+  "shopify-vs-woocommerce-uae-2026": {
+    "focusKeywords": [
+      "ecommerce website development Dubai",
+      "Shopify vs WooCommerce",
+      "Shopify developer Dubai",
+      "online store cost UAE",
+      "WooCommerce UAE payment gateways"
+    ],
+    "intro": [],
+    "expandedSections": [],
+    "checklist": [
+      "Confirm your payment gateways: Tabby and Tamara for BNPL, Telr or Stripe UAE for cards, plus a COD option that flags high-risk orders.",
+      "Enable Arabic/RTL from day one if you sell to Emirati or GCC customers — retrofitting it later doubles the work.",
+      "Connect Aramex (or your 3PL) for automated shipping labels and tracking before launch, not after your first 50 orders.",
+      "Add a VAT-compliant tax setup (5% UAE VAT) and a TRN on invoices if your turnover exceeds AED 375,000.",
+      "Test the full mobile checkout on a real phone over 4G — 70%+ of UAE ecommerce traffic is mobile.",
+      "Set up abandoned-cart recovery and a WhatsApp order-confirmation flow — UAE shoppers expect WhatsApp contact.",
+      "Calculate your true 3-year total cost (build + monthly fees + apps/plugins + maintenance) before committing to a platform.",
+      "Score your store against The UAE Store Readiness Score and fix anything below 6 before spending on ads."
+    ],
+    "faqs": [
+      {
+        "question": "Which is better for UAE, Shopify or WooCommerce?",
+        "answer": "Neither is universally better. Shopify wins for launch speed, reliability and low maintenance, making it ideal for first-time UAE store owners. WooCommerce wins for customisation, data ownership and lower 3-year running costs, making it ideal for WordPress users, large catalogues or heavily custom requirements. Both support Tabby, Tamara, COD, Arabic and Aramex."
+      },
+      {
+        "question": "How much does a Shopify store cost in UAE?",
+        "answer": "A professional UAE Shopify store typically costs AED 8,000-25,000 to build with a Shopify developer in Dubai, depending on design and integrations. Running costs are around AED 1,000-1,200/month for the plan plus AED 200-1,000/month in apps like Tabby, Tamara and COD tools. Budget roughly AED 60,000-110,000 over three years all-in."
+      },
+      {
+        "question": "Does Shopify support cash on delivery in UAE?",
+        "answer": "Yes, Shopify fully supports cash on delivery in the UAE as a built-in payment method, and so does WooCommerce. COD still accounts for roughly 30-50% of UAE ecommerce orders. Add a COD verification step, like an automated WhatsApp or SMS order confirmation before dispatch, to reduce failed deliveries and protect your margin."
+      },
+      {
+        "question": "Can WooCommerce handle Arabic?",
+        "answer": "Yes, WooCommerce handles Arabic and right-to-left (RTL) layouts well using multilingual plugins like WPML or Polylang plus WordPress's native RTL support. Because you control the theme and code, you can fix any Arabic layout quirk directly. Shopify also supports Arabic via translation apps and RTL themes. Build Arabic in from the start, not as a launch-day add-on."
+      },
+      {
+        "question": "Which converts better, Shopify or WooCommerce?",
+        "answer": "Neither converts better by default — conversion depends on mobile speed, checkout friction, trust signals and payment options, all controllable on both platforms. Shopify's built-in checkout is highly optimised out of the box, helping owners without a developer. WooCommerce can match or beat it, but only with deliberate checkout and hosting optimisation."
+      },
+      {
+        "question": "How long does it take to launch an ecommerce store in the UAE?",
+        "answer": "A focused UAE Shopify store typically launches in 2-4 weeks, while a WooCommerce store usually takes 3-6 weeks because more is custom-configured. A large catalogue, custom B2B logic or a fully bilingual Arabic store can add 2-4 weeks to either platform. Having content, products and payment gateways ready speeds this up significantly."
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "How Much Does a Website Cost in Dubai in 2026? (Real Price Breakdown)",
+        "href": "/blog/website-cost-dubai-2026"
+      },
+      {
+        "label": "Laravel vs WordPress for UAE Business Websites: How to Choose in 2026",
+        "href": "/blog/laravel-vs-wordpress-uae-2026"
+      },
+      {
+        "label": "Why Your Website Is Slow — Core Web Vitals Fixes That Actually Work in 2026",
+        "href": "/blog/website-speed-core-web-vitals-2026"
+      }
+    ]
+  },
+  "signs-business-needs-custom-erp-crm-uae": {
+    "focusKeywords": [
+      "custom ERP development UAE",
+      "ERP for small business UAE",
+      "custom CRM Dubai",
+      "replace Excel with software",
+      "business automation Dubai"
+    ],
+    "intro": [],
+    "expandedSections": [],
+    "checklist": [
+      "Map your full process from enquiry to payment before any code is written",
+      "Name one single source of truth for stock, customers and cash",
+      "List the exact weekly reports and decisions the system must support",
+      "Define role-based permissions - who sees and edits what",
+      "List every integration: website, WhatsApp, accounting, payment gateway",
+      "Launch one painful module first instead of replacing everything at once",
+      "Set a measurable ROI target and budget for post-launch maintenance"
+    ],
+    "faqs": [
+      {
+        "question": "How much does a custom ERP cost in the UAE?",
+        "answer": "In 2026, custom ERP development in the UAE typically ranges from AED 35,000-70,000 for a single focused module, AED 90,000-180,000 for a multi-module system, and AED 250,000+ for a full multi-department ERP. Most SMEs start with one module to control cost and prove value fast."
+      },
+      {
+        "question": "What is the difference between ERP and CRM?",
+        "answer": "An ERP runs your internal operations - inventory, invoicing, accounting, HR and purchasing - while a CRM runs your customer relationships - leads, follow-ups, pipeline and deals. Many UAE small businesses actually need a small ERP with a CRM module built in, so sales and operations share one live database."
+      },
+      {
+        "question": "How long does custom ERP development take?",
+        "answer": "A focused single module usually takes 4-8 weeks, while a multi-module system takes 3-5 months. Built properly in phases, your team should be using a useful first version within 6-10 weeks rather than waiting a year for every feature to be finished."
+      },
+      {
+        "question": "Is Excel really bad for business?",
+        "answer": "Excel isn't bad - it's excellent for one person doing one job. It becomes risky when multiple people edit the same file, when there's no live stock visibility, or when one employee is the only one who understands it. At that point spreadsheets quietly cost more than software would."
+      },
+      {
+        "question": "Should I buy off-the-shelf software or build a custom ERP?",
+        "answer": "Buy off-the-shelf tools like Zoho or Odoo when your process is standard and you're happy to adapt to the software. Build a custom Laravel ERP when your workflow is your competitive edge, when per-user licence fees for 20+ staff overtake a build, or when the tool forces you to work slower."
+      },
+      {
+        "question": "Can a custom ERP integrate with my website?",
+        "answer": "Yes. A well-built custom ERP integrates with your website, WhatsApp, payment gateway and accounting software so stock, orders and customer data update in one place in real time. This is a core reason UAE ecommerce and trading businesses move off spreadsheets to reduce duplicate entry and errors."
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "How Much Does a Website Cost in Dubai in 2026? (Real Price Breakdown)",
+        "href": "/blog/website-cost-dubai-2026"
+      },
+      {
+        "label": "Laravel vs WordPress for UAE Business Websites: How to Choose in 2026",
+        "href": "/blog/laravel-vs-wordpress-uae-2026"
+      },
+      {
+        "label": "Why Your Website Is Slow — Core Web Vitals Fixes That Actually Work in 2026",
+        "href": "/blog/website-speed-core-web-vitals-2026"
+      }
+    ]
+  },
+  "technical-seo-checklist-2026-dubai": {
+    "focusKeywords": [
+      "technical SEO checklist 2026",
+      "technical SEO Dubai",
+      "SEO for AI search",
+      "schema markup guide",
+      "Core Web Vitals SEO",
+      "how to rank on Google 2026"
+    ],
+    "intro": [],
+    "expandedSections": [],
+    "checklist": [
+      "Stage 1 Crawl & Index: verify robots.txt, submit a clean XML sitemap, remove stray noindex tags, fix indexation gaps, and set correct canonicals.",
+      "Stage 2 Speed: hit LCP under 2.5s, INP under 200ms, CLS under 0.1 — measured on real mobile visitors in PageSpeed Insights.",
+      "Optimize images to WebP/AVIF with set dimensions, defer non-critical JavaScript, and add a CDN plus full-page caching for your Dubai audience.",
+      "Stage 3 Schema: add Organization, LocalBusiness, FAQPage, Article, and Service/Breadcrumb JSON-LD, then validate at validator.schema.org.",
+      "Stage 4 Architecture: use clean keyword URLs, one H1 per page, descriptive internal links, and keep every key page within three clicks of the homepage.",
+      "Fix orphan and thin pages with Screaming Frog, ensure mobile content matches desktop, and set hreflang for Arabic/English GCC sites.",
+      "Stage 5 AI-readiness: open sections with self-contained definitions, answer questions in the first sentence, and serve content in server-rendered HTML.",
+      "Keep business name, address, and description consistent across site, Google Business Profile, and directories, and include dated, citable AED/percentage stats."
+    ],
+    "faqs": [
+      {
+        "question": "What is technical SEO?",
+        "answer": "Technical SEO is the practice of optimizing a website's code and infrastructure so search engines and AI can crawl, render, understand, and trust it. It covers crawling, indexation, site speed, Core Web Vitals, schema markup, mobile-friendliness, and site architecture — the foundation that lets your content and backlinks actually rank."
+      },
+      {
+        "question": "How do I check technical SEO for free?",
+        "answer": "Use Google Search Console for indexation and Core Web Vitals, PageSpeed Insights for speed metrics, the Rich Results Test and validator.schema.org for schema, and the free Screaming Frog tier (up to 500 URLs) for crawl issues. The Detailed SEO Extension for Chrome checks meta tags and canonicals instantly."
+      },
+      {
+        "question": "Does schema markup help ranking?",
+        "answer": "Schema markup does not directly boost rankings, but it makes your pages eligible for rich results like star ratings, FAQs, and sitelinks, and it helps AI engines quote your content accurately. In 2026 that indirect visibility — in rich snippets and AI answers — often drives more clicks than a small ranking bump would."
+      },
+      {
+        "question": "How is SEO different in 2026 with AI search?",
+        "answer": "In 2026 many searches end in an AI-generated answer instead of a list of links, so being quotable matters as much as ranking. AI engines favor clear definitions, answer-first structure, consistent business entities, and verifiable dated data. The technical fundamentals — speed, schema, crawlability — still serve both classic and AI search."
+      },
+      {
+        "question": "How long does technical SEO take to work?",
+        "answer": "Indexation changes like fixing noindex tags or sitemaps appear within days once Google recrawls. Ranking improvements from speed, schema, and architecture fixes typically show over 4-8 weeks. Larger sites and competitive Dubai niches can take up to three months for full impact as Google re-evaluates the whole domain."
+      },
+      {
+        "question": "Why is my site indexed but not ranking?",
+        "answer": "Being indexed only means Google stored the page; ranking requires relevance, authority, and a solid technical foundation. Common causes are slow Core Web Vitals, thin or duplicate content, weak internal linking to the page, missing schema, or strong competitors. Work through a technical SEO checklist first — most fixes are code, not content."
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "How Much Does a Website Cost in Dubai in 2026? (Real Price Breakdown)",
+        "href": "/blog/website-cost-dubai-2026"
+      },
+      {
+        "label": "Laravel vs WordPress for UAE Business Websites: How to Choose in 2026",
+        "href": "/blog/laravel-vs-wordpress-uae-2026"
+      },
+      {
+        "label": "Why Your Website Is Slow — Core Web Vitals Fixes That Actually Work in 2026",
+        "href": "/blog/website-speed-core-web-vitals-2026"
+      }
+    ]
+  },
+  "aeo-geo-ai-search-optimization-guide": {
+    "focusKeywords": [
+      "generative engine optimization",
+      "AEO answer engine optimization",
+      "GEO SEO",
+      "how to rank in ChatGPT",
+      "AI search optimization for business",
+      "get recommended by ChatGPT"
+    ],
+    "intro": [],
+    "expandedSections": [],
+    "checklist": [
+      "Publish one canonical business description and reuse it identically everywhere",
+      "Make NAP (name, address, phone) match exactly across website, Google Business Profile and all directories",
+      "Add and validate Organization, LocalBusiness and FAQ schema on your site",
+      "Open every key page with a direct, quotable one-sentence answer",
+      "Get cited in at least 5 reputable UAE or industry directories",
+      "Prompt-test ChatGPT, Gemini and Perplexity monthly and log whether you appear"
+    ],
+    "faqs": [
+      {
+        "question": "What is generative engine optimization?",
+        "answer": "Generative engine optimization (GEO) is the practice of structuring your website, content and brand data so AI assistants like ChatGPT, Gemini and Perplexity cite and recommend your business when answering user questions. Instead of ranking a link, GEO earns your business a mention inside the AI-generated answer itself."
+      },
+      {
+        "question": "What is the difference between SEO and AEO?",
+        "answer": "SEO (search engine optimization) aims to rank your page on Google's results so users click it. AEO (answer engine optimization) aims to make your content the single quoted answer in a featured snippet, voice result or AI reply. SEO wins clicks; AEO wins the answer box itself."
+      },
+      {
+        "question": "How do I get my business mentioned by ChatGPT?",
+        "answer": "Get mentioned by ChatGPT by defining a clear business entity, fixing your NAP consistency everywhere, adding Organization and FAQ schema, earning citations from trusted directories, and answering customer questions directly on your pages. ChatGPT recommends businesses it can easily verify and that are mentioned consistently across the web."
+      },
+      {
+        "question": "Does AI search reduce Google traffic?",
+        "answer": "Yes - AI search reduces informational click-through by an estimated 15-40 percent in 2026, because users get answers inside ChatGPT, Gemini or Google AI Overviews without clicking. However, the visitors who do click from an AI recommendation are higher-intent, so qualified leads can rise even as raw traffic falls."
+      },
+      {
+        "question": "Do FAQ schemas help AI visibility?",
+        "answer": "Yes - FAQ schema helps AI visibility by labelling your questions and answers as clean, machine-readable pairs that assistants can trust and reuse. When each answer is a tight 40-60 word direct response, AI models find it easy to quote your page verbatim over less-structured competitors."
+      },
+      {
+        "question": "How do I measure AI search traffic?",
+        "answer": "Measure AI search traffic by tracking referrals from AI domains like chatgpt.com, perplexity.ai and gemini.google.com in your analytics, and by prompt-testing each assistant monthly to see if your business is named. Also watch for growth in branded searches, which often follow an AI recommendation."
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "How Much Does a Website Cost in Dubai in 2026? (Real Price Breakdown)",
+        "href": "/blog/website-cost-dubai-2026"
+      },
+      {
+        "label": "Laravel vs WordPress for UAE Business Websites: How to Choose in 2026",
+        "href": "/blog/laravel-vs-wordpress-uae-2026"
+      },
+      {
+        "label": "Why Your Website Is Slow — Core Web Vitals Fixes That Actually Work in 2026",
+        "href": "/blog/website-speed-core-web-vitals-2026"
+      }
+    ]
+  },
+  "custom-business-dashboard-development-dubai": {
+    "focusKeywords": [
+      "business dashboard development Dubai",
+      "custom admin panel development",
+      "business analytics dashboard",
+      "KPI dashboard for SMEs",
+      "Laravel dashboard development"
+    ],
+    "intro": [],
+    "expandedSections": [],
+    "checklist": [
+      "List the exact business decisions the dashboard must improve before scoping anything.",
+      "Assign one named owner to every KPI and the data source that feeds it.",
+      "Confirm each source tool has an API or a clean, reliable export.",
+      "Set a refresh frequency per metric (real-time, hourly, daily) and alert when a feed breaks.",
+      "Define role-based views up front: owner, sales, finance and operations each see a tailored screen.",
+      "Run the Dashboard ROI Formula and confirm payback lands under 12 months before you commission the build."
+    ],
+    "faqs": [
+      {
+        "question": "How much does a custom business dashboard cost in Dubai?",
+        "answer": "Custom business dashboard development in Dubai typically costs AED 12,000 to 45,000+. A single-department KPI board runs AED 12,000 to 18,000; a multi-role panel connecting several tools with live sync and alerts runs AED 35,000 to 45,000+. Budget an extra AED 500 to 1,500 monthly for hosting, backups and support."
+      },
+      {
+        "question": "What should a business dashboard include?",
+        "answer": "A useful dashboard includes 4 to 6 KPI cards showing the numbers you act on, role-based views so each team sees its own screen, clickable drill-down into the underlying records, filters by date and category, automated alerts, live data pulled from your existing tools, and clean Excel and PDF export."
+      },
+      {
+        "question": "What is the difference between a dashboard and an ERP?",
+        "answer": "A dashboard reads and reports: it sits on top of your tools and shows what is happening so you can decide. An ERP runs your operations, raising invoices, deducting stock, processing payroll, as the system of record. If visibility is broken but tools work, you need a dashboard, not an ERP."
+      },
+      {
+        "question": "Can a dashboard pull data from multiple tools at once?",
+        "answer": "Yes. That is the main point of a custom dashboard. It connects to your POS, accounting software, inventory sheet, CRM and support inbox through their APIs or exports, and combines them into one screen. Integration complexity, not the number of charts, is the biggest driver of build cost and timeline."
+      },
+      {
+        "question": "How long does dashboard development take?",
+        "answer": "A single-department KPI dashboard usually ships in 2 to 3 weeks. A 2 to 3 department build with role-based views and a few integrations takes 4 to 6 weeks. A full multi-department panel with 4+ live integrations, permissions and alerts takes 7 to 10 weeks, depending on how clean your data sources are."
+      },
+      {
+        "question": "Do small businesses in the UAE really need a dashboard?",
+        "answer": "If your team exports spreadsheets or sends WhatsApp updates to answer basic questions, yes. Run the ROI Formula: hours saved per week x hourly cost x 52. Most UAE SMEs recover 15 to 25 hours weekly, so even a modest KPI dashboard for SMEs pays back within 3 to 6 months."
+      }
+    ],
+    "relatedLinks": [
+      {
+        "label": "How Much Does a Website Cost in Dubai in 2026? (Real Price Breakdown)",
+        "href": "/blog/website-cost-dubai-2026"
+      },
+      {
+        "label": "Laravel vs WordPress for UAE Business Websites: How to Choose in 2026",
+        "href": "/blog/laravel-vs-wordpress-uae-2026"
+      },
+      {
+        "label": "Why Your Website Is Slow — Core Web Vitals Fixes That Actually Work in 2026",
+        "href": "/blog/website-speed-core-web-vitals-2026"
+      }
+    ]
+  },
+
   "wordpress-website-cost-dubai-2026-guide": {
     focusKeywords: [
       "wordpress website cost dubai"
