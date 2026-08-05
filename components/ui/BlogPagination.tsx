@@ -12,9 +12,9 @@ const PER_PAGE = 9;
  *
  * Every post stays in the rendered HTML and is hidden with CSS rather than
  * unmounted. On a statically exported, SEO-driven site the /blog page is the main
- * internal link hub — rendering only the current nine would strip 45 crawlable
+ * internal link hub — rendering only the current page would strip the rest of the crawlable
  * links out of the markup. Hiding keeps them in the document while the reader
- * still sees nine at a time.
+ * still sees one page at a time.
  */
 export function BlogPagination({ posts }: { posts: BlogPost[] }) {
   const [page, setPage] = useState(1);
@@ -22,7 +22,24 @@ export function BlogPagination({ posts }: { posts: BlogPost[] }) {
   const isFirstRender = useRef(true);
 
   const pageCount = Math.max(1, Math.ceil(posts.length / PER_PAGE));
-  const pages = useMemo(() => Array.from({ length: pageCount }, (_, i) => i + 1), [pageCount]);
+
+  /**
+   * Page buttons to show. Up to seven pages every number is listed; beyond that
+   * it collapses to first / neighbours-of-current / last with gaps, so the row
+   * stays one clean line no matter how many articles get published. `"gap"`
+   * marks an elided run.
+   */
+  const pages = useMemo<(number | "gap")[]>(() => {
+    if (pageCount <= 7) return Array.from({ length: pageCount }, (_, i) => i + 1);
+    const out: (number | "gap")[] = [1];
+    const from = Math.max(2, page - 1);
+    const to = Math.min(pageCount - 1, page + 1);
+    if (from > 2) out.push("gap");
+    for (let n = from; n <= to; n++) out.push(n);
+    if (to < pageCount - 1) out.push("gap");
+    out.push(pageCount);
+    return out;
+  }, [page, pageCount]);
 
   const go = (next: number) => setPage(Math.min(pageCount, Math.max(1, next)));
 
@@ -70,7 +87,14 @@ export function BlogPagination({ posts }: { posts: BlogPost[] }) {
           <ChevronLeft className="h-4 w-4" />
         </button>
 
-        {pages.map((n) => {
+        {pages.map((n, i) => {
+          if (n === "gap") {
+            return (
+              <span key={`gap-${i}`} aria-hidden="true" className="grid h-10 w-6 place-items-center text-sm text-silver/45 light:text-slate-400">
+                …
+              </span>
+            );
+          }
           const active = n === page;
           return (
             <button
