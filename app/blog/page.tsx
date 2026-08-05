@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/sections/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { BlogCard } from "@/components/ui/BlogCard";
+import { BlogPagination } from "@/components/ui/BlogPagination";
 import { PageHero } from "@/components/ui/PageHero";
 import { blogs } from "@/data/site";
 import { compareNewestFirst, isPublished } from "@/lib/publishing";
@@ -70,11 +70,7 @@ export default function BlogPage() {
             label="Practical notes on Laravel, WordPress, Shopify, ecommerce, speed and SEO."
             points={["Platform decisions", "Conversion fixes", "Speed and SEO", "Business systems"]}
           />
-          <div className="mobile-rail mt-10 grid gap-5 md:mt-12 md:grid-cols-2 lg:grid-cols-3">
-            {published.map((post, index) => (
-              <BlogCard key={post.title} post={post} index={index} />
-            ))}
-          </div>
+          <BlogPagination posts={published} />
         </div>
       </section>
       <CTASection

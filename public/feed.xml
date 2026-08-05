@@ -10,7 +10,7 @@
     <language>en-ae</language>
     <managingEditor>info@anastanveer.com (Anas Tanveer)</managingEditor>
     <webMaster>info@anastanveer.com (Anas Tanveer)</webMaster>
-    <lastBuildDate>Tue, 28 Jul 2026 20:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 20:00:00 GMT</lastBuildDate>
     <atom:link href="https://anastanveer.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://anastanveer.com/images/anas-premium-hero.webp</url>
@@ -18,6 +18,42 @@
       <link>https://anastanveer.com/blog/</link>
     </image>
     
+  <item>
+    <title>PHP Developer UK: What British Businesses Need to Know</title>
+    <link>https://anastanveer.com/blog/php-developer-uk-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/php-developer-uk-guide/</guid>
+    <description>Why UK businesses choose PHP and Laravel for custom web applications — GBP rate benchmarks, UK compliance requirements, and how to evaluate PHP developers for UK projects.</description>
+    <pubDate>Tue, 04 Aug 2026 20:00:00 GMT</pubDate>
+    <lastBuildDate>Tue, 04 Aug 2026 20:00:00 GMT</lastBuildDate>
+    <category>Laravel</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-5-hd.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>WordPress Website Cost Dubai (2026 Guide) | Anas Tanveer</title>
+    <link>https://anastanveer.com/blog/wordpress-website-cost-dubai-2026-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/wordpress-website-cost-dubai-2026-guide/</guid>
+    <description>If you have been quoted anything between AED 800 and AED 60,000 for the same brief, you are not going mad — that is genuinely the spread I see. The honest answer to the question of WordPress website cost in Dubai is &quot;it depends,&quot; but that phrase is...</description>
+    <pubDate>Tue, 04 Aug 2026 06:00:00 GMT</pubDate>
+    <lastBuildDate>Mon, 03 Aug 2026 20:00:00 GMT</lastBuildDate>
+    <category>WordPress</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/growth-2026/wordpress-website-cost-dubai-2026-guide.png" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Full Stack Developer London: Hiring Guide for London Businesses</title>
+    <link>https://anastanveer.com/blog/fullstack-developer-london-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/fullstack-developer-london-guide/</guid>
+    <description>What London businesses need to know before hiring a full stack developer — GBP rates, London&apos;s tech market, Laravel + React/Next.js, and how to structure your project.</description>
+    <pubDate>Sat, 01 Aug 2026 20:00:00 GMT</pubDate>
+    <lastBuildDate>Sat, 01 Aug 2026 20:00:00 GMT</lastBuildDate>
+    <category>Strategy</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-4-hd.webp" type="image/webp" length="0" />
+  </item>
+
   <item>
     <title>React Developer UK: What British Businesses Need to Know</title>
     <link>https://anastanveer.com/blog/react-developer-uk-guide/</link>
