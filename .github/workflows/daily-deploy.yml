@@ -87,13 +87,24 @@ jobs:
           fi
           echo "ssh auth OK"
 
+          echo "runner rsync: $(rsync --version | head -1)"
+          echo "server rsync: $(ssh -i ~/.ssh/deploy_key -p "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" 'rsync --version 2>&1 | head -1' || echo UNAVAILABLE)"
+
+          set +e
           rsync -az --delete --delete-after --stats \
             --exclude '/backend/' \
             --exclude '/.well-known/' \
             --exclude '/.ftp-deploy-sync-state.json' \
             --exclude '/sitemap-news.xml' \
             -e "ssh -i ~/.ssh/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=no" \
-            ./out/ "$SSH_USER@$SSH_HOST:/home/$SSH_USER/anastanveer.com/"
+            ./out/ "$SSH_USER@$SSH_HOST:/home/$SSH_USER/anastanveer.com/" 2>rsync.err
+          rc=$?
+          set -e
+          if [ $rc -ne 0 ]; then
+            echo "::error::rsync exited $rc — $(tr '\n' ' ' < rsync.err | cut -c1-400)"
+            cat rsync.err
+            exit $rc
+          fi
 
           rm -f ~/.ssh/deploy_key
 
