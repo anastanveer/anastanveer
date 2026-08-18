@@ -158,6 +158,11 @@ export const routes = [
   { path: "/free-website-audit", name: "Free Website Audit", priority: 0.85, changeFrequency: "monthly" },
   { path: "/testimonials", name: "Testimonials", priority: 0.85, changeFrequency: "monthly" },
   { path: "/ar", name: "مطور ويب دبي", priority: 0.85, changeFrequency: "monthly" },
+  // Legal pages — indexable and in the sitemap, but low priority: they exist for
+  // trust and AdSense compliance, not to compete for search traffic.
+  { path: "/privacy-policy", name: "Privacy Policy", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/terms", name: "Terms of Use", priority: 0.3, changeFrequency: "yearly" },
+  { path: "/disclaimer", name: "Disclaimer", priority: 0.3, changeFrequency: "yearly" },
   ...seoRoutes
 ] as const;
 

@@ -89,6 +89,11 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 px-5 py-5 text-center text-xs text-silver/55 light:text-slate-500">
+        <div className="mb-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+          <Link className="hover:text-cyan" href="/privacy-policy/">Privacy Policy</Link>
+          <Link className="hover:text-cyan" href="/terms/">Terms of Use</Link>
+          <Link className="hover:text-cyan" href="/disclaimer/">Disclaimer</Link>
+        </div>
         © 2026 Anas Tanveer. Built for practical web problem solving, business systems, SEO-ready development, and digital growth.
       </div>
     </footer>

@@ -10,7 +10,7 @@
     <language>en-ae</language>
     <managingEditor>info@anastanveer.com (Anas Tanveer)</managingEditor>
     <webMaster>info@anastanveer.com (Anas Tanveer)</webMaster>
-    <lastBuildDate>Tue, 04 Aug 2026 20:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 20:00:00 GMT</lastBuildDate>
     <atom:link href="https://anastanveer.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://anastanveer.com/images/anas-premium-hero.webp</url>
@@ -18,6 +18,66 @@
       <link>https://anastanveer.com/blog/</link>
     </image>
     
+  <item>
+    <title>Custom API Integration Developer | Payments, CRM &amp; Maps</title>
+    <link>https://anastanveer.com/blog/custom-api-integration-payments-crm-maps/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/custom-api-integration-payments-crm-maps/</guid>
+    <description>Most businesses I speak with in Dubai don&apos;t actually need a new software platform. They already have tools that work: a payment gateway, a CRM, an accounting package, a shipping account. What they need is for those tools to talk to each other without a...</description>
+    <pubDate>Tue, 18 Aug 2026 06:00:00 GMT</pubDate>
+    <lastBuildDate>Mon, 17 Aug 2026 20:00:00 GMT</lastBuildDate>
+    <category>API</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/growth-2026/custom-api-integration-payments-crm-maps.png" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Shopify Developer London: Hiring Guide for London Store Owners</title>
+    <link>https://anastanveer.com/blog/shopify-developer-london-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/shopify-developer-london-guide/</guid>
+    <description>What London businesses need to know before hiring a Shopify developer — GBP rates, UK VAT configuration, London&apos;s fashion and luxury retail requirements, and how to evaluate Shopify developers for London projects.</description>
+    <pubDate>Sat, 15 Aug 2026 20:00:00 GMT</pubDate>
+    <lastBuildDate>Sat, 15 Aug 2026 20:00:00 GMT</lastBuildDate>
+    <category>Shopify</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-6-hd.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>WordPress Developer London: Hiring Guide for London Businesses</title>
+    <link>https://anastanveer.com/blog/wordpress-developer-london-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/wordpress-developer-london-guide/</guid>
+    <description>What London businesses need to know before hiring a WordPress developer — GBP rates, UK GDPR consent management, London agency vs freelancer, and how to evaluate WordPress developers for London projects.</description>
+    <pubDate>Tue, 11 Aug 2026 20:00:00 GMT</pubDate>
+    <lastBuildDate>Tue, 11 Aug 2026 20:00:00 GMT</lastBuildDate>
+    <category>WordPress</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-2-hd.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Business Dashboard Development Dubai | Laravel &amp; React</title>
+    <link>https://anastanveer.com/blog/custom-business-dashboard-laravel-react-2026-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/custom-business-dashboard-laravel-react-2026-guide/</guid>
+    <description>Most of the failed dashboards I&apos;ve been called in to rescue didn&apos;t break because of bad code. They broke because nobody decided what the dashboard was for before a single line was written. As a freelance full-stack developer working on business dashboard...</description>
+    <pubDate>Tue, 11 Aug 2026 06:00:00 GMT</pubDate>
+    <lastBuildDate>Mon, 10 Aug 2026 20:00:00 GMT</lastBuildDate>
+    <category>Dashboard</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/growth-2026/custom-business-dashboard-laravel-react-2026-guide.png" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Laravel Developer London: Hiring Guide for London Businesses</title>
+    <link>https://anastanveer.com/blog/laravel-developer-london-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/laravel-developer-london-guide/</guid>
+    <description>What London businesses need to know before hiring a Laravel developer — GBP rates, UK GDPR compliance, London&apos;s financial services requirements, and how to evaluate Laravel developers for London projects.</description>
+    <pubDate>Sat, 08 Aug 2026 20:00:00 GMT</pubDate>
+    <lastBuildDate>Sat, 08 Aug 2026 20:00:00 GMT</lastBuildDate>
+    <category>Laravel</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-1-hd.webp" type="image/webp" length="0" />
+  </item>
+
   <item>
     <title>PHP Developer UK: What British Businesses Need to Know</title>
     <link>https://anastanveer.com/blog/php-developer-uk-guide/</link>

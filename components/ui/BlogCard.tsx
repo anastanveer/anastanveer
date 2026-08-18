@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/animations/Reveal";
 import type { BlogPost } from "@/data/site";
+import { publishDate } from "@/lib/publishing";
 
 export function BlogCard({ post, index = 0 }: { post: BlogPost; index?: number }) {
   return (
@@ -27,7 +28,7 @@ export function BlogCard({ post, index = 0 }: { post: BlogPost; index?: number }
           <p className="mt-4 flex-1 text-sm leading-7 text-silver/72 light:text-slate-600">{post.excerpt}</p>
           <div className="mt-5 flex items-center justify-between gap-4 text-xs text-silver/55 light:text-slate-500">
             <span>{post.readingTime}</span>
-            <span>{new Date(post.publishedAt + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}</span>
+            <span>{publishDate(post.publishedAt).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}</span>
           </div>
         </div>
         <Link href={`/blog/${post.slug}`} className="mx-6 mb-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan">
