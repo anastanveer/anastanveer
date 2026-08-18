@@ -137,12 +137,29 @@ const keywords = [
   "WordPress Custom Development Services"
 ];
 
-const seoRoutes = seoServicePages.map((page) => ({
-  path: `/${page.slug}`,
-  name: page.navLabel,
-  priority: 0.78,
-  changeFrequency: "monthly" as const
-}));
+// These seven Dubai neighbourhood pages were consolidated into /web-developer-dubai
+// and are 301-redirected in public/.htaccess. The redirect stays (old inbound links
+// still resolve), but they must not be advertised as indexable: a sitemap entry that
+// answers 301 is reported as "Page with redirect" and never indexed, and the same
+// list feeds robots.txt. Keep this in sync with the RewriteRule in .htaccess.
+const redirectedSlugs = new Set([
+  "web-developer-marina",
+  "web-developer-business-bay",
+  "web-developer-jlt",
+  "web-developer-deira",
+  "web-developer-al-furjan",
+  "web-developer-al-rashidiya",
+  "web-developer-downtown-dubai"
+]);
+
+const seoRoutes = seoServicePages
+  .filter((page) => !redirectedSlugs.has(page.slug))
+  .map((page) => ({
+    path: `/${page.slug}`,
+    name: page.navLabel,
+    priority: 0.78,
+    changeFrequency: "monthly" as const
+  }));
 
 export const routes = [
   { path: "/", name: "Home", priority: 1, changeFrequency: "weekly" },
