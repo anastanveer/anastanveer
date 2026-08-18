@@ -33,19 +33,49 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Deploy to Namecheap via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./out/
-          server-dir: /anastanveer.com/
-          timeout: 120000
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
+      # rsync over SSH, not FTP. The FTP link to this host runs at ~26 KB/s, and the
+      # built site is ~175 MB, so a full transfer could not finish inside the job —
+      # every run since 27 July failed partway and left the deploy half-applied.
+      # Over SSH the same sync takes seconds because rsync sends only changed blocks.
+      #
+      # --delete prunes stale files (old _next chunks accumulate on every build), but
+      # the excludes below are load-bearing: they are server-only paths that are NOT in
+      # the build output, and deleting them would break the site.
+      #   backend/      — the PHP endpoint .htaccess routes /api/contact to
+      #   .well-known/  — ACME / certificate validation
+      - name: Deploy to Namecheap via rsync over SSH
+        env:
+          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: "21098"
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p "$SSH_PORT" -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+
+          rsync -az --delete --delete-after --stats \
+            --exclude '/backend/' \
+            --exclude '/.well-known/' \
+            --exclude '/.ftp-deploy-sync-state.json' \
+            --exclude '/sitemap-news.xml' \
+            -e "ssh -i ~/.ssh/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=yes" \
+            ./out/ "$SSH_USER@$SSH_HOST:/home/$SSH_USER/anastanveer.com/"
+
+          rm -f ~/.ssh/deploy_key
+
+      # A deploy that silently uploads nothing is worse than one that fails loudly,
+      # so confirm a known page is actually being served before calling it done.
+      - name: Verify the site responds
+        run: |
+          set -euo pipefail
+          for path in "" "blog/" "contact/"; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 "https://anastanveer.com/$path")
+            echo "  /$path -> $code"
+            [ "$code" = "200" ] || { echo "::error::https://anastanveer.com/$path returned $code"; exit 1; }
+          done
 
       # After the new files are live, ping IndexNow so Bing/Yandex/Seznam/Naver
       # re-crawl quickly. Reads URLs from out/sitemap.xml; keyless (no secrets).
