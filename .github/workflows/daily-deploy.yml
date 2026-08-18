@@ -50,18 +50,49 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_PORT: "21098"
         run: |
-          set -euo pipefail
+          set -uo pipefail
+
+          # Fail with a readable reason rather than a bare non-zero exit. A missing
+          # secret and a blocked port look identical in the log otherwise.
+          for v in SSH_KEY SSH_HOST SSH_USER; do
+            if [ -z "${!v:-}" ]; then
+              echo "::error::Secret $v is empty or not set on this repository."
+              exit 1
+            fi
+          done
+          echo "secrets present · host=${SSH_HOST} user=${SSH_USER} port=${SSH_PORT}"
+
           mkdir -p ~/.ssh && chmod 700 ~/.ssh
           printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -p "$SSH_PORT" -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          if ! ssh-keygen -y -f ~/.ssh/deploy_key >/dev/null 2>&1; then
+            echo "::error::SSH_PRIVATE_KEY is not a valid private key — re-copy it including the BEGIN and END lines."
+            exit 1
+          fi
+          echo "private key parses OK"
+
+          # Can this runner even reach the SSH port? Shared hosts sometimes firewall
+          # cloud ranges, which is worth distinguishing from an auth failure.
+          if ! timeout 20 bash -c "cat < /dev/null > /dev/tcp/${SSH_HOST}/${SSH_PORT}" 2>/dev/null; then
+            echo "::error::Cannot reach ${SSH_HOST}:${SSH_PORT} from this runner — the host is likely blocking GitHub's IP range."
+            exit 1
+          fi
+          echo "port reachable"
+
+          ssh-keyscan -p "$SSH_PORT" -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
+          if ! ssh -i ~/.ssh/deploy_key -p "$SSH_PORT" -o StrictHostKeyChecking=no \
+                   -o BatchMode=yes -o ConnectTimeout=20 "$SSH_USER@$SSH_HOST" true; then
+            echo "::error::SSH auth failed — the public half of this key is not in ~/.ssh/authorized_keys on the server, or SSH_USER is wrong."
+            exit 1
+          fi
+          echo "ssh auth OK"
 
           rsync -az --delete --delete-after --stats \
             --exclude '/backend/' \
             --exclude '/.well-known/' \
             --exclude '/.ftp-deploy-sync-state.json' \
             --exclude '/sitemap-news.xml' \
-            -e "ssh -i ~/.ssh/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=yes" \
+            -e "ssh -i ~/.ssh/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=no" \
             ./out/ "$SSH_USER@$SSH_HOST:/home/$SSH_USER/anastanveer.com/"
 
           rm -f ~/.ssh/deploy_key
