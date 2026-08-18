@@ -63,10 +63,22 @@ jobs:
           echo "secrets present · host=${SSH_HOST} user=${SSH_USER} port=${SSH_PORT}"
 
           mkdir -p ~/.ssh && chmod 700 ~/.ssh
-          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
+          # Accept the key either as PEM text or as a single base64 line. Pasting a
+          # multi-line PEM into a secret field is easy to get subtly wrong — a stray
+          # CR or a lost final newline is invisible and breaks parsing — so base64
+          # is offered as the shape that cannot be mangled.
+          if printf '%s' "$SSH_KEY" | grep -q 'BEGIN .*PRIVATE KEY'; then
+            printf '%s\n' "$SSH_KEY" | tr -d '\r' > ~/.ssh/deploy_key
+          else
+            printf '%s' "$SSH_KEY" | tr -d '[:space:]' | base64 -d > ~/.ssh/deploy_key 2>/dev/null
+          fi
+          # Guarantee exactly one trailing newline, which OpenSSH requires.
+          printf '%s\n' "$(cat ~/.ssh/deploy_key)" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
+
           if ! ssh-keygen -y -f ~/.ssh/deploy_key >/dev/null 2>&1; then
-            echo "::error::SSH_PRIVATE_KEY is not a valid private key — re-copy it including the BEGIN and END lines."
+            echo "what arrived: $(wc -l < ~/.ssh/deploy_key) lines, first=[$(head -1 ~/.ssh/deploy_key | cut -c1-40)] last=[$(tail -1 ~/.ssh/deploy_key | cut -c1-40)]"
+            echo "::error::SSH_PRIVATE_KEY did not parse. Paste either the full PEM (BEGIN through END) or the single-line base64 form."
             exit 1
           fi
           echo "private key parses OK"
