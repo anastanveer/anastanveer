@@ -88,10 +88,34 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
   const allSections = [...post.sections, ...(seoContent?.expandedSections ?? [])];
   const serviceLink = serviceMap[post.tag] ?? null;
 
-  const relatedPosts = blogs
-    .filter((b) => b.slug !== post.slug && b.tag === post.tag && isPublished(b.publishedAt))
-    .sort((a, b) => compareNewestFirst(a.publishedAt, b.publishedAt))
-    .slice(0, 3);
+  // Related posts rotate rather than always showing a tag's three newest. Taking
+  // the newest three meant every post in a tag linked to the same three, so the rest
+  // of the archive received no internal links at all — measured on the live site,
+  // fifty pages had a single inbound link while /about had 166. Starting the window
+  // at this post's own position spreads those links across the whole tag.
+  const published = blogs
+    .filter((b) => isPublished(b.publishedAt))
+    .sort((a, b) => compareNewestFirst(a.publishedAt, b.publishedAt));
+  const globalIndex = Math.max(0, published.findIndex((b) => b.slug === post.slug));
+
+  const rotate = <T,>(pool: T[], offset: number, take: number): T[] =>
+    pool.length ? Array.from({ length: Math.min(take, pool.length) }, (_, i) => pool[(offset + i) % pool.length]) : [];
+
+  const tagSiblings = published.filter((b) => b.tag === post.tag && b.slug !== post.slug);
+  const related = rotate(tagSiblings, globalIndex, 3);
+
+  // Nine posts sit alone in their tag (Dashboard, ERP, Next.js and so on) and so
+  // have no sibling to link them. Topping up from the full archive on the same
+  // rotation means those posts still get picked up as someone else's related read.
+  if (related.length < 3) {
+    const chosen = new Set([post.slug, ...related.map((b) => b.slug)]);
+    for (const b of rotate(published.filter((x) => !chosen.has(x.slug)), globalIndex, published.length)) {
+      if (related.length >= 3) break;
+      related.push(b);
+      chosen.add(b.slug);
+    }
+  }
+  const relatedPosts = related;
 
   const actionSection = seoContent
     ? [
