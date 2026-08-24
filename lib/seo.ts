@@ -848,11 +848,11 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       name: "ARS Developer Ltd",
       alternateName: "ARS Developer",
       url: "https://arsdeveloper.co.uk",
-      foundingDate: "2020",
+      foundingDate: "2026-02-17",
       numberOfEmployees: { "@type": "QuantitativeValue", value: 1 },
       logo: {
         "@type": "ImageObject",
-        url: "https://arsdeveloper.co.uk/logo.png",
+        url: "https://arsdeveloper.co.uk/assets/images/resources/ars-logo-dark.png",
         width: 200,
         height: 60
       },
@@ -892,7 +892,7 @@ export function jsonLdForPage(path: string, breadcrumbs: Array<{ name: string; u
       numberOfEmployees: { "@type": "QuantitativeValue", value: 1 },
       logo: {
         "@type": "ImageObject",
-        url: "https://torontobytes.ca/logo.png",
+        url: "https://torontobytes.ca/image/toronto_bytes_dark.svg",
         width: 200,
         height: 60
       },
@@ -1014,49 +1014,13 @@ export function siteJsonLd() {
     })
     .map((item) => {
       if (item && typeof item === "object" && "@type" in item && item["@type"] === "LocalBusiness") {
+        // Reviews deliberately do NOT ship here. This map runs on every page, and
+        // Google's review-snippet policy requires the marked-up reviews to be visible
+        // on the same page — self-serving ratings sitewide are ineligible and risk a
+        // manual action. The four real reviews are marked up once, on /testimonials,
+        // via reviewAggregateSchema().
         return {
           ...item,
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            ratingCount: "4",
-            bestRating: "5",
-            worstRating: "1"
-          },
-          review: [
-            {
-              "@type": "Review",
-              itemReviewed: { "@id": absoluteUrl("/#local-business") },
-              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
-              author: { "@type": "Person", name: "Steve Barlow" },
-              datePublished: "2024-08-10",
-              reviewBody: "Another fantastic project from Anas. He understands the requirements, provides fully functional updates, makes changes quickly, and delivers a truly excellent product. I highly recommend Anas."
-            },
-            {
-              "@type": "Review",
-              itemReviewed: { "@id": absoluteUrl("/#local-business") },
-              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
-              author: { "@type": "Person", name: "Said B." },
-              datePublished: "2024-06-20",
-              reviewBody: "2nd collaboration with Anas — fast, precise and high quality work. Excellent results delivered on time. Will definitely work together again."
-            },
-            {
-              "@type": "Review",
-              itemReviewed: { "@id": absoluteUrl("/#local-business") },
-              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
-              author: { "@type": "Person", name: "J. Nagle" },
-              datePublished: "2024-04-15",
-              reviewBody: "Anas did a great job as per usual. Reliable, fast and always delivers exactly what is needed. Highly recommended."
-            },
-            {
-              "@type": "Review",
-              itemReviewed: { "@id": absoluteUrl("/#local-business") },
-              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
-              author: { "@type": "Person", name: "Rushil C." },
-              datePublished: "2024-02-05",
-              reviewBody: "Excellent experience working with Anas Tanveer. His professionalism, attention to detail, and ability to deliver bug-free work were exceptional."
-            }
-          ],
           contactPoint: {
             "@type": "ContactPoint",
             contactType: "customer service",
@@ -1077,7 +1041,7 @@ export function siteJsonLd() {
     name: "ARS Developer Ltd",
     alternateName: "Anas Tanveer UK Web Developer",
     url: "https://arsdeveloper.co.uk",
-    telephone: "+447000000000",
+    telephone: "+447478034328",
     email: "info@anastanveer.com",
     priceRange: "££",
     address: {
@@ -1118,33 +1082,10 @@ export function siteJsonLd() {
       "Web Developer Sheffield"
     ],
     openingHours: ["Mo-Fr 09:00-18:00"],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      ratingCount: "4",
-      reviewCount: "4",
-      bestRating: "5",
-      worstRating: "1"
-    },
-    review: [
-      {
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
-        author: { "@type": "Person", name: "Steve Barlow" },
-        datePublished: "2024-08-10",
-        reviewBody: "Another fantastic project from Anas. He understands the requirements, provides fully functional updates, makes changes quickly, and delivers a truly excellent product. I highly recommend Anas.",
-        itemReviewed: { "@type": "LocalBusiness", name: "ARS Developer", url: "https://arsdeveloper.co.uk" }
-      },
-      {
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
-        author: { "@type": "Person", name: "J. Nagle" },
-        datePublished: "2024-04-15",
-        reviewBody: "Anas did a great job as per usual. Reliable, fast and always delivers exactly what is needed. Highly recommended.",
-        itemReviewed: { "@type": "LocalBusiness", name: "ARS Developer", url: "https://arsdeveloper.co.uk" }
-      }
-    ],
-    sameAs: [
+    // No review/aggregateRating here. These four reviews are for one business and
+    // are marked up once, on /testimonials. Repeating them under a second and third
+    // company entity presented 4 reviews as 12 across three legal entities.
+sameAs: [
       "https://arsdeveloper.co.uk",
       absoluteUrl("/web-developer-uk"),
       absoluteUrl("/web-developer-london"),
@@ -1210,33 +1151,10 @@ export function siteJsonLd() {
       "Full Stack Developer Canada"
     ],
     openingHours: ["Mo-Fr 09:00-18:00"],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      ratingCount: "4",
-      reviewCount: "4",
-      bestRating: "5",
-      worstRating: "1"
-    },
-    review: [
-      {
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
-        author: { "@type": "Person", name: "Rushil C." },
-        datePublished: "2024-02-05",
-        reviewBody: "Excellent experience working with Anas Tanveer. His professionalism, attention to detail, and ability to deliver bug-free work were exceptional.",
-        itemReviewed: { "@type": "LocalBusiness", name: "TorontoBytes", url: "https://torontobytes.ca" }
-      },
-      {
-        "@type": "Review",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
-        author: { "@type": "Person", name: "Said B." },
-        datePublished: "2024-06-20",
-        reviewBody: "2nd collaboration with Anas — fast, precise and high quality work. Excellent results delivered on time. Will definitely work together again.",
-        itemReviewed: { "@type": "LocalBusiness", name: "TorontoBytes", url: "https://torontobytes.ca" }
-      }
-    ],
-    sameAs: [
+    // No review/aggregateRating here. These four reviews are for one business and
+    // are marked up once, on /testimonials. Repeating them under a second and third
+    // company entity presented 4 reviews as 12 across three legal entities.
+sameAs: [
       "https://torontobytes.ca",
       absoluteUrl("/web-developer-canada"),
       absoluteUrl("/web-developer-toronto"),
@@ -1254,90 +1172,80 @@ export function siteJsonLd() {
     ]
   };
 
-  // Individual UK city LocalBusiness entities
+  // City-level Service nodes, NOT LocalBusiness. Each of these pages targets a city
+  // served remotely from Dubai; declaring a LocalBusiness with a PostalAddress and a
+  // GeoCoordinates pin in 18 cities asserts premises that do not exist. Service with
+  // areaServed + provider keeps the same geographic signal and is true.
+  // Individual UK city service entities
   const ukCityLocalBusinesses = [
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-manchester#local-business"),
-      name: "Web Developer Manchester — Anas Tanveer",
+      name: "Web Development — Manchester — Anas Tanveer",
       url: absoluteUrl("/web-developer-manchester"),
-      address: { "@type": "PostalAddress", addressLocality: "Manchester", addressRegion: "GB-ENG", addressCountry: "GB" },
-      geo: { "@type": "GeoCoordinates", latitude: 53.4808, longitude: -2.2426 },
       areaServed: [{ "@type": "City", name: "Manchester" }, { "@type": "AdministrativeArea", name: "Greater Manchester" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
-      parentOrganization: { "@id": "https://arsdeveloper.co.uk/#local-business" },
+      provider: { "@id": "https://arsdeveloper.co.uk/#local-business" },
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-birmingham#local-business"),
-      name: "Web Developer Birmingham — Anas Tanveer",
+      name: "Web Development — Birmingham — Anas Tanveer",
       url: absoluteUrl("/web-developer-birmingham"),
-      address: { "@type": "PostalAddress", addressLocality: "Birmingham", addressRegion: "GB-ENG", addressCountry: "GB" },
-      geo: { "@type": "GeoCoordinates", latitude: 52.4862, longitude: -1.8904 },
       areaServed: [{ "@type": "City", name: "Birmingham" }, { "@type": "AdministrativeArea", name: "West Midlands" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
-      parentOrganization: { "@id": "https://arsdeveloper.co.uk/#local-business" },
+      provider: { "@id": "https://arsdeveloper.co.uk/#local-business" },
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-leeds#local-business"),
-      name: "Web Developer Leeds — Anas Tanveer",
+      name: "Web Development — Leeds — Anas Tanveer",
       url: absoluteUrl("/web-developer-leeds"),
-      address: { "@type": "PostalAddress", addressLocality: "Leeds", addressRegion: "GB-ENG", addressCountry: "GB" },
-      geo: { "@type": "GeoCoordinates", latitude: 53.8008, longitude: -1.5491 },
       areaServed: [{ "@type": "City", name: "Leeds" }, { "@type": "AdministrativeArea", name: "West Yorkshire" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
-      parentOrganization: { "@id": "https://arsdeveloper.co.uk/#local-business" },
+      provider: { "@id": "https://arsdeveloper.co.uk/#local-business" },
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-glasgow#local-business"),
-      name: "Web Developer Glasgow — Anas Tanveer",
+      name: "Web Development — Glasgow — Anas Tanveer",
       url: absoluteUrl("/web-developer-glasgow"),
-      address: { "@type": "PostalAddress", addressLocality: "Glasgow", addressRegion: "GB-SCT", addressCountry: "GB" },
-      geo: { "@type": "GeoCoordinates", latitude: 55.8642, longitude: -4.2518 },
       areaServed: [{ "@type": "City", name: "Glasgow" }, { "@type": "AdministrativeArea", name: "Scotland" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
-      parentOrganization: { "@id": "https://arsdeveloper.co.uk/#local-business" },
+      provider: { "@id": "https://arsdeveloper.co.uk/#local-business" },
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-edinburgh#local-business"),
-      name: "Web Developer Edinburgh — Anas Tanveer",
+      name: "Web Development — Edinburgh — Anas Tanveer",
       url: absoluteUrl("/web-developer-edinburgh"),
-      address: { "@type": "PostalAddress", addressLocality: "Edinburgh", addressRegion: "GB-SCT", addressCountry: "GB" },
-      geo: { "@type": "GeoCoordinates", latitude: 55.9533, longitude: -3.1883 },
       areaServed: [{ "@type": "City", name: "Edinburgh" }, { "@type": "AdministrativeArea", name: "Scotland" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
-      parentOrganization: { "@id": "https://arsdeveloper.co.uk/#local-business" },
+      provider: { "@id": "https://arsdeveloper.co.uk/#local-business" },
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-bristol#local-business"),
-      name: "Web Developer Bristol — Anas Tanveer",
+      name: "Web Development — Bristol — Anas Tanveer",
       url: absoluteUrl("/web-developer-bristol"),
-      address: { "@type": "PostalAddress", addressLocality: "Bristol", addressRegion: "GB-ENG", addressCountry: "GB" },
-      geo: { "@type": "GeoCoordinates", latitude: 51.4545, longitude: -2.5879 },
       areaServed: [{ "@type": "City", name: "Bristol" }, { "@type": "AdministrativeArea", name: "South West England" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
-      parentOrganization: { "@id": "https://arsdeveloper.co.uk/#local-business" },
+      provider: { "@id": "https://arsdeveloper.co.uk/#local-business" },
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-sheffield#local-business"),
-      name: "Web Developer Sheffield — Anas Tanveer",
+      name: "Web Development — Sheffield — Anas Tanveer",
       url: absoluteUrl("/web-developer-sheffield"),
-      address: { "@type": "PostalAddress", addressLocality: "Sheffield", addressRegion: "GB-ENG", addressCountry: "GB" },
-      geo: { "@type": "GeoCoordinates", latitude: 53.3811, longitude: -1.4701 },
       areaServed: [{ "@type": "City", name: "Sheffield" }, { "@type": "AdministrativeArea", name: "South Yorkshire" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
-      parentOrganization: { "@id": "https://arsdeveloper.co.uk/#local-business" },
+      provider: { "@id": "https://arsdeveloper.co.uk/#local-business" },
       founder: { "@id": absoluteUrl("/#person") }
     }
   ];
@@ -1345,72 +1253,60 @@ export function siteJsonLd() {
   // Individual Canadian city LocalBusiness entities
   const canadaCityLocalBusinesses = [
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-toronto#local-business"),
-      name: "Web Developer Toronto — Anas Tanveer",
+      name: "Web Development — Toronto — Anas Tanveer",
       url: absoluteUrl("/web-developer-toronto"),
-      address: { "@type": "PostalAddress", addressLocality: "Toronto", addressRegion: "CA-ON", addressCountry: "CA" },
-      geo: { "@type": "GeoCoordinates", latitude: 43.6532, longitude: -79.3832 },
       areaServed: [{ "@type": "City", name: "Toronto" }, { "@type": "AdministrativeArea", name: "Ontario" }],
       serviceType: ["Web Development", "Laravel Development", "React Development", "Next.js Development", "Shopify Development"],
       parentOrganization: { "@id": "https://torontobytes.ca/#local-business" },
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-vancouver#local-business"),
-      name: "Web Developer Vancouver — Anas Tanveer",
+      name: "Web Development — Vancouver — Anas Tanveer",
       url: absoluteUrl("/web-developer-vancouver"),
-      address: { "@type": "PostalAddress", addressLocality: "Vancouver", addressRegion: "CA-BC", addressCountry: "CA" },
-      geo: { "@type": "GeoCoordinates", latitude: 49.2827, longitude: -123.1207 },
       areaServed: [{ "@type": "City", name: "Vancouver" }, { "@type": "AdministrativeArea", name: "British Columbia" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
       parentOrganization: { "@id": "https://torontobytes.ca/#local-business" },
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-calgary#local-business"),
-      name: "Web Developer Calgary — Anas Tanveer",
+      name: "Web Development — Calgary — Anas Tanveer",
       url: absoluteUrl("/web-developer-calgary"),
-      address: { "@type": "PostalAddress", addressLocality: "Calgary", addressRegion: "CA-AB", addressCountry: "CA" },
-      geo: { "@type": "GeoCoordinates", latitude: 51.0447, longitude: -114.0719 },
       areaServed: [{ "@type": "City", name: "Calgary" }, { "@type": "AdministrativeArea", name: "Alberta" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
       parentOrganization: { "@id": "https://torontobytes.ca/#local-business" },
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-ottawa#local-business"),
-      name: "Web Developer Ottawa — Anas Tanveer",
+      name: "Web Development — Ottawa — Anas Tanveer",
       url: absoluteUrl("/web-developer-ottawa"),
-      address: { "@type": "PostalAddress", addressLocality: "Ottawa", addressRegion: "CA-ON", addressCountry: "CA" },
-      geo: { "@type": "GeoCoordinates", latitude: 45.4215, longitude: -75.6972 },
       areaServed: [{ "@type": "City", name: "Ottawa" }, { "@type": "AdministrativeArea", name: "Ontario" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
       parentOrganization: { "@id": "https://torontobytes.ca/#local-business" },
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-montreal#local-business"),
-      name: "Web Developer Montreal — Anas Tanveer",
+      name: "Web Development — Montreal — Anas Tanveer",
       url: absoluteUrl("/web-developer-montreal"),
-      address: { "@type": "PostalAddress", addressLocality: "Montreal", addressRegion: "CA-QC", addressCountry: "CA" },
-      geo: { "@type": "GeoCoordinates", latitude: 45.5017, longitude: -73.5673 },
       areaServed: [{ "@type": "City", name: "Montreal" }, { "@type": "AdministrativeArea", name: "Quebec" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development", "Bilingual Web Development"],
       parentOrganization: { "@id": "https://torontobytes.ca/#local-business" },
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-edmonton#local-business"),
-      name: "Web Developer Edmonton — Anas Tanveer",
+      name: "Web Development — Edmonton — Anas Tanveer",
       url: absoluteUrl("/web-developer-edmonton"),
-      address: { "@type": "PostalAddress", addressLocality: "Edmonton", addressRegion: "CA-AB", addressCountry: "CA" },
-      geo: { "@type": "GeoCoordinates", latitude: 53.5461, longitude: -113.4938 },
       areaServed: [{ "@type": "City", name: "Edmonton" }, { "@type": "AdministrativeArea", name: "Alberta" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
       parentOrganization: { "@id": "https://torontobytes.ca/#local-business" },
@@ -1420,56 +1316,46 @@ export function siteJsonLd() {
 
   const australiaCityLocalBusinesses = [
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-sydney#local-business"),
-      name: "Web Developer Sydney — Anas Tanveer",
+      name: "Web Development — Sydney — Anas Tanveer",
       url: absoluteUrl("/web-developer-sydney"),
-      address: { "@type": "PostalAddress", addressLocality: "Sydney", addressRegion: "AU-NSW", addressCountry: "AU" },
-      geo: { "@type": "GeoCoordinates", latitude: -33.8688, longitude: 151.2093 },
       areaServed: [{ "@type": "City", name: "Sydney" }, { "@type": "AdministrativeArea", name: "New South Wales" }],
       serviceType: ["Web Development", "Laravel Development", "React Development", "Shopify Development"],
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-melbourne#local-business"),
-      name: "Web Developer Melbourne — Anas Tanveer",
+      name: "Web Development — Melbourne — Anas Tanveer",
       url: absoluteUrl("/web-developer-melbourne"),
-      address: { "@type": "PostalAddress", addressLocality: "Melbourne", addressRegion: "AU-VIC", addressCountry: "AU" },
-      geo: { "@type": "GeoCoordinates", latitude: -37.8136, longitude: 144.9631 },
       areaServed: [{ "@type": "City", name: "Melbourne" }, { "@type": "AdministrativeArea", name: "Victoria" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-brisbane#local-business"),
-      name: "Web Developer Brisbane — Anas Tanveer",
+      name: "Web Development — Brisbane — Anas Tanveer",
       url: absoluteUrl("/web-developer-brisbane"),
-      address: { "@type": "PostalAddress", addressLocality: "Brisbane", addressRegion: "AU-QLD", addressCountry: "AU" },
-      geo: { "@type": "GeoCoordinates", latitude: -27.4698, longitude: 153.0251 },
       areaServed: [{ "@type": "City", name: "Brisbane" }, { "@type": "AdministrativeArea", name: "Queensland" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-perth#local-business"),
-      name: "Web Developer Perth — Anas Tanveer",
+      name: "Web Development — Perth — Anas Tanveer",
       url: absoluteUrl("/web-developer-perth"),
-      address: { "@type": "PostalAddress", addressLocality: "Perth", addressRegion: "AU-WA", addressCountry: "AU" },
-      geo: { "@type": "GeoCoordinates", latitude: -31.9505, longitude: 115.8605 },
       areaServed: [{ "@type": "City", name: "Perth" }, { "@type": "AdministrativeArea", name: "Western Australia" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
       founder: { "@id": absoluteUrl("/#person") }
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "Service",
       "@id": absoluteUrl("/web-developer-adelaide#local-business"),
-      name: "Web Developer Adelaide — Anas Tanveer",
+      name: "Web Development — Adelaide — Anas Tanveer",
       url: absoluteUrl("/web-developer-adelaide"),
-      address: { "@type": "PostalAddress", addressLocality: "Adelaide", addressRegion: "AU-SA", addressCountry: "AU" },
-      geo: { "@type": "GeoCoordinates", latitude: -34.9285, longitude: 138.6007 },
       areaServed: [{ "@type": "City", name: "Adelaide" }, { "@type": "AdministrativeArea", name: "South Australia" }],
       serviceType: ["Web Development", "Laravel Development", "WordPress Development", "Shopify Development"],
       founder: { "@id": absoluteUrl("/#person") }
