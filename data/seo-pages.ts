@@ -1658,7 +1658,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "web-developer-canada",
     navLabel: "Web Developer Canada",
     title: "Web Developer Canada — Laravel, WordPress & Shopify for Canadian Businesses",
-    metaTitle: "Web Developer Canada | Laravel, WordPress, Shopify — TorontoBytes",
+    metaTitle: "Web Developer Canada | Laravel, WordPress & Shopify",
     metaDescription: "Web development services for Canadian businesses — Laravel applications, WordPress websites, Shopify stores, dashboards, ERP, API integrations and SEO-ready systems for companies across Canada.",
     keywords: [
       "Web Developer Canada", "Web Development Canada", "Laravel Developer Canada", "WordPress Developer Canada",
@@ -2324,7 +2324,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "web-developer-bristol",
     navLabel: "Web Developer Bristol",
     title: "Web Developer Bristol — Laravel, WordPress & Shopify for Bristol Businesses",
-    metaTitle: "Web Developer Bristol | Laravel WordPress Shopify South West UK",
+    metaTitle: "Web Developer Bristol | Laravel, WordPress & Shopify",
     metaDescription: "Web developer for Bristol and the South West. Laravel applications, WordPress websites, Shopify stores, dashboards, REST APIs and technical SEO for Bristol SMEs, agencies and startups.",
     keywords: [
       "Web Developer Bristol", "Web Development Bristol", "Hire Web Developer Bristol",
@@ -2458,7 +2458,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "web-developer-calgary",
     navLabel: "Web Developer Calgary",
     title: "Web Developer Calgary — Laravel, WordPress & Shopify for Calgary Businesses",
-    metaTitle: "Web Developer Calgary | Laravel WordPress Shopify Alberta Canada",
+    metaTitle: "Web Developer Calgary | Laravel, WordPress & Shopify",
     metaDescription: "Web developer for Calgary and Alberta. Laravel web applications, WordPress websites, Shopify stores, dashboards and REST APIs for Calgary SMEs, agencies and energy sector businesses.",
     keywords: [
       "Web Developer Calgary", "Web Development Calgary", "Hire Web Developer Calgary",
@@ -2592,7 +2592,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "fullstack-developer-canada",
     navLabel: "Full Stack Developer Canada",
     title: "Full Stack Developer Canada — Laravel, React & Next.js for Canadian Businesses",
-    metaTitle: "Full Stack Developer Canada | Laravel React Next.js — TorontoBytes",
+    metaTitle: "Full Stack Developer Canada | Laravel, React & Next.js",
     metaDescription: "Full stack developer for Canada — building complete web applications with Laravel backends, React/Next.js frontends, REST APIs, dashboards, and SaaS platforms for Toronto, Vancouver, Calgary and Ottawa businesses.",
     keywords: [
       "Full Stack Developer Canada", "Full Stack Developer Toronto", "Full Stack Developer Vancouver",
@@ -2660,7 +2660,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "react-developer-canada",
     navLabel: "React Developer Canada",
     title: "React Developer Canada — Next.js, Dashboards & Frontend Applications",
-    metaTitle: "React Developer Canada | Next.js & Frontend Development — TorontoBytes",
+    metaTitle: "React Developer Canada | Next.js & Frontend Builds",
     metaDescription: "Canadian React developer for Next.js applications, interactive dashboards, TypeScript frontend builds, and React component systems for Toronto, Vancouver, Calgary, Ottawa and Montreal businesses.",
     keywords: [
       "React Developer Canada", "Next.js Developer Canada", "React Developer Toronto",
@@ -3196,7 +3196,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "nextjs-developer-uk",
     navLabel: "Next.js Developer UK",
     title: "Next.js Developer UK — Fast, SEO-Ready Web Applications for British Businesses",
-    metaTitle: "Next.js Developer UK | Next.js App Router & SSR — ARS Developer Ltd",
+    metaTitle: "Next.js Developer UK | App Router & SSR Specialists",
     metaDescription: "UK Next.js developer for App Router applications, server-side rendering, static site generation, TypeScript, and high-performance web apps for London, Manchester and UK businesses.",
     keywords: [
       "Next.js Developer UK", "Next.js Developer London", "Next.js Developer Manchester",
@@ -3263,7 +3263,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "php-developer-uk",
     navLabel: "PHP Developer UK",
     title: "PHP Developer UK — Laravel, WordPress & Custom PHP Applications",
-    metaTitle: "PHP Developer UK | Laravel WordPress Custom PHP — ARS Developer Ltd",
+    metaTitle: "PHP Developer UK | Laravel, WordPress & Custom PHP",
     metaDescription: "UK PHP developer for Laravel applications, WordPress custom development, legacy PHP migration, REST APIs, and custom PHP solutions for British businesses and agencies.",
     keywords: [
       "PHP Developer UK", "PHP Developer London", "PHP Developer Manchester", "PHP Developer Birmingham",
@@ -3530,7 +3530,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "nextjs-developer-canada",
     navLabel: "Next.js Developer Canada",
     title: "Next.js Developer Canada — App Router, TypeScript & Headless CMS for Canadian Businesses",
-    metaTitle: "Next.js Developer Canada | App Router, Headless CMS — TorontoBytes",
+    metaTitle: "Next.js Developer Canada | App Router & Headless CMS",
     metaDescription: "Canadian Next.js developer for App Router builds, headless Shopify storefronts, Next.js + Contentful/Sanity, and Core Web Vitals-optimised sites for businesses across Toronto, Vancouver, Calgary and Ottawa.",
     keywords: [
       "Next.js Developer Canada", "Next.js Development Canada", "Next.js Developer Toronto",
@@ -3597,7 +3597,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "laravel-developer-toronto",
     navLabel: "Laravel Developer Toronto",
     title: "Laravel Developer Toronto — Custom Web Applications & Business Systems for Ontario",
-    metaTitle: "Laravel Developer Toronto | Custom Web Apps & APIs — TorontoBytes",
+    metaTitle: "Laravel Developer Toronto | Custom Web Apps & APIs",
     metaDescription: "Toronto Laravel developer for custom web applications, SaaS platforms, client portals, REST APIs, and business dashboards — serving Ontario businesses with CAD invoicing via TorontoBytes.",
     keywords: [
       "Laravel Developer Toronto", "Laravel Development Toronto", "Laravel Web Application Toronto",
@@ -3727,7 +3727,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "web-developer-australia",
     navLabel: "Web Developer Australia",
     title: "Web Developer Australia — Laravel, WordPress & Shopify for Australian Businesses",
-    metaTitle: "Web Developer Australia | Laravel WordPress Shopify — AUD Pricing",
+    metaTitle: "Web Developer Australia | Laravel, WordPress & Shopify",
     metaDescription: "Web developer for Australian businesses — Laravel applications, WordPress websites, Shopify stores, REST APIs and dashboards for Sydney, Melbourne, Brisbane, Perth and Adelaide businesses.",
     keywords: [
       "Web Developer Australia", "Web Development Australia", "Hire Web Developer Australia",
@@ -4603,7 +4603,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "shopify-developer-london",
     navLabel: "Shopify Developer London",
     title: "Shopify Developer London — Custom Stores, UK VAT & Brand Themes for London Retailers",
-    metaTitle: "Shopify Developer London | UK VAT, Shopify 2.0 & London Ecommerce",
+    metaTitle: "Shopify Developer London | Shopify 2.0 & UK VAT Setup",
     metaDescription: "London Shopify developer for custom Shopify 2.0 theme development, UK VAT configuration, post-Brexit EU markets, Klarna UK, Clearpay, and headless Shopify builds for London fashion and lifestyle brands.",
     keywords: [
       "Shopify Developer London", "Shopify Development London", "Shopify Expert London",
@@ -4669,7 +4669,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "php-developer-canada",
     navLabel: "PHP Developer Canada",
     title: "PHP Developer Canada — Laravel Applications, CASL & GST/HST for Canadian Businesses",
-    metaTitle: "PHP Developer Canada | Laravel, CASL & Canadian Tax Configuration",
+    metaTitle: "PHP Developer Canada | Laravel & CASL-Ready Builds",
     metaDescription: "Canadian PHP and Laravel developer for custom web applications, CASL-compliant email systems, Canadian GST/HST billing modules, PIPEDA-compliant data handling, and business platforms across Toronto, Vancouver, Calgary and Ottawa.",
     keywords: [
       "PHP Developer Canada", "Laravel Developer Canada", "Hire PHP Developer Canada",
@@ -4918,7 +4918,7 @@ export const seoServicePages: SeoServicePage[] = [
     slug: "web-developer-deira",
     navLabel: "Web Developer Deira Dubai",
     title: "Web Developer Deira Dubai — Ecommerce, Shopify & Custom Web Solutions for Trading Businesses",
-    metaTitle: "Web Developer Deira Dubai | Shopify, Ecommerce & Custom Websites",
+    metaTitle: "Web Developer Deira Dubai | Shopify & Custom Websites",
     metaDescription: "Web developer in Deira Dubai for retail, trading, import/export, and wholesale businesses — Shopify stores, custom e-commerce platforms, business websites, and inventory management systems.",
     keywords: [
       "Web Developer Deira", "Website Developer Deira Dubai", "Web Development Company Deira",

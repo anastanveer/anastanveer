@@ -7,7 +7,7 @@ import { jsonLdForPage, pageMetadata, pageTypeSchema } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Client Reviews & Testimonials | Anas Tanveer Web Developer Dubai",
+  title: "Client Reviews & Testimonials | Anas Tanveer",
   description: "Real client reviews for Anas Tanveer — full-stack web developer Dubai. Laravel, WordPress, Shopify, dashboard and API projects reviewed by international clients.",
   path: "/testimonials",
   extraKeywords: [

@@ -16,7 +16,7 @@ import { absoluteUrl } from "@/lib/utils";
 const aboutFaqs = aboutFaqItems.map(({ q, a }) => ({ question: q, answer: a }));
 
 export const metadata: Metadata = pageMetadata({
-  title: "About Anas Tanveer | Full-Stack Web Developer — Dubai, UK & Canada",
+  title: "About Anas Tanveer | Full-Stack Web Developer",
   description: "Anas Tanveer is a full-stack web developer serving Dubai, UAE, UK and Canada. Specialising in Laravel, WordPress, Shopify, React, Next.js, dashboards, ERP, CRM, SaaS and API integrations.",
   path: "/about",
   extraKeywords: ["About Anas Tanveer", "Full Stack Developer Dubai", "Laravel Developer Dubai", "Web Developer UAE", "Dubai Web Developer Profile", "ARS Developer Ltd", "Web Developer UK", "Web Developer Canada", "Laravel Developer UK", "Shopify Developer Canada"]
