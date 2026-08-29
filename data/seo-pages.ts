@@ -1339,7 +1339,7 @@ export const seoServicePages: SeoServicePage[] = [
       "WordPress Developer Sharjah", "WordPress Website Development Sharjah", "WooCommerce Developer Sharjah",
       "Website Developer Sharjah", "Web Developer Sharjah WordPress", "WordPress SEO Sharjah"
     ],
-    image: "/images/wordpress-hero.webp",
+    image: "/images/services-architecture-760.webp",
     imageAlt: "WordPress developer Sharjah business website development",
     intro: [
       "Sharjah businesses — across manufacturing, education, healthcare, retail, and services — need professional websites that reflect their brand, generate leads, and rank well on Google. WordPress remains the most practical platform for most business websites: it is maintainable, SEO-friendly, and extensible without heavy ongoing development costs.",
@@ -5274,9 +5274,7 @@ export const seoServicePages: SeoServicePage[] = [
     related: [
       { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
       { label: "Web Developer Ajman", href: "/web-developer-ajman" },
-      { label: "Shopify Developer Sharjah", href: "/shopify-developer-sharjah" },
       { label: "Ecommerce Development Dubai", href: "/ecommerce-website-development-dubai" },
-      { label: "Shopify Developer UAE", href: "/shopify-developer-uae" },
       ...coreRelated
     ]
   }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowUpRight, CheckCircle2, Layers3, Target, Lightbulb, Zap } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, CheckCircle2, ClipboardList, Layers3, Target, Lightbulb, Zap } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { caseStudies } from "@/data/site";
@@ -169,8 +169,21 @@ export default async function CaseStudyDetailPage({ params }: Props) {
             </div>
           </div>
 
+          {/* The brief the work started from. This was already in the data and simply
+              was not being rendered — it sets up the four blocks that follow, so it
+              runs full width above them rather than becoming a fifth card. */}
+          <div className="mt-6 rounded-2xl border border-white/8 bg-white/[0.03] p-6 light:border-slate-100 light:bg-slate-50">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="grid h-9 w-9 place-items-center rounded-xl border border-amber-400/20 bg-amber-400/10 text-amber-400">
+                <ClipboardList size={16} />
+              </span>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-silver/50 light:text-slate-500">The Requirement</p>
+            </div>
+            <p className="text-sm leading-7 text-silver/72 light:text-slate-600">{study.requirement}</p>
+          </div>
+
           {/* 4-block grid */}
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-6 light:border-slate-100 light:bg-slate-50">
               <div className="mb-4 flex items-center gap-3">
                 <span className="grid h-9 w-9 place-items-center rounded-xl border border-red-400/20 bg-red-400/10 text-red-400">
