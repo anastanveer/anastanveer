@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "rss": "node scripts/generate-rss.mjs"
+    "rss": "node scripts/generate-rss.mjs",
+    "postbuild": "node scripts/strip-ads-from-thin-pages.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
