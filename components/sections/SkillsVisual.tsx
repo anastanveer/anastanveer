@@ -144,7 +144,10 @@ function CountUp({ value, inView, delay }: { value: number; inView: boolean; del
       transition={{ delay }}
     >
       <motion.span>
-        {inView ? <AnimatedNumber value={value} delay={delay} /> : "0"}
+        {/* Before the ring scrolls into view — which includes the server render —
+            show the real figure rather than a literal "0". Otherwise every skill
+            reads 0% in the HTML a crawler sees and with JavaScript disabled. */}
+        {inView ? <AnimatedNumber value={value} delay={delay} /> : value}
       </motion.span>
     </motion.span>
   );
