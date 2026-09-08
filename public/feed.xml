@@ -10,7 +10,7 @@
     <language>en-ae</language>
     <managingEditor>info@anastanveer.com (Anas Tanveer)</managingEditor>
     <webMaster>info@anastanveer.com (Anas Tanveer)</webMaster>
-    <lastBuildDate>Tue, 25 Aug 2026 20:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 20:00:00 GMT</lastBuildDate>
     <atom:link href="https://anastanveer.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://anastanveer.com/images/anas-premium-hero.webp</url>
@@ -18,6 +18,54 @@
       <link>https://anastanveer.com/blog/</link>
     </image>
     
+  <item>
+    <title>UAE eInvoicing 2026: Peppol Software Readiness Guide</title>
+    <link>https://anastanveer.com/blog/uae-einvoicing-peppol-software-readiness-2026/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/uae-einvoicing-peppol-software-readiness-2026/</guid>
+    <description>UAE eInvoicing is no longer a finance-only change. From Peppol-ready invoice data to ASP onboarding, ERP fields, VAT records and approval workflows, this guide shows what UAE businesses should fix inside their software before mandatory rollout begins.</description>
+    <pubDate>Tue, 08 Sep 2026 04:00:00 GMT</pubDate>
+    <lastBuildDate>Mon, 07 Sep 2026 20:00:00 GMT</lastBuildDate>
+    <category>API</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/growth-2026/uae-einvoicing-peppol-software-readiness-2026.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Web Developer Calgary: Alberta Hiring Guide for Businesses</title>
+    <link>https://anastanveer.com/blog/web-developer-calgary-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/web-developer-calgary-guide/</guid>
+    <description>What Calgary and Alberta businesses need to know before hiring a web developer — CAD rates, Alberta&apos;s energy and tech sectors, GST-only tax configuration, and how to evaluate developers.</description>
+    <pubDate>Sat, 05 Sep 2026 20:00:00 GMT</pubDate>
+    <lastBuildDate>Sat, 05 Sep 2026 20:00:00 GMT</lastBuildDate>
+    <category>Strategy</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-3-hd.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Web Developer Vancouver: BC Hiring Guide for Businesses</title>
+    <link>https://anastanveer.com/blog/web-developer-vancouver-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/web-developer-vancouver-guide/</guid>
+    <description>What Vancouver and British Columbia businesses need to know before hiring a web developer — CAD rates, BC&apos;s tech ecosystem, platform choices, and how to structure the project.</description>
+    <pubDate>Tue, 01 Sep 2026 20:00:00 GMT</pubDate>
+    <lastBuildDate>Tue, 01 Sep 2026 20:00:00 GMT</lastBuildDate>
+    <category>Strategy</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-2-hd.webp" type="image/webp" length="0" />
+  </item>
+
+  <item>
+    <title>Web Developer Toronto: Ontario Hiring Guide for Businesses</title>
+    <link>https://anastanveer.com/blog/web-developer-toronto-guide/</link>
+    <guid isPermaLink="true">https://anastanveer.com/blog/web-developer-toronto-guide/</guid>
+    <description>What Toronto and Ontario businesses need to know before hiring a web developer — CAD rates, Toronto&apos;s tech market, platform choices, and how to structure your project for a clean outcome.</description>
+    <pubDate>Sat, 29 Aug 2026 20:00:00 GMT</pubDate>
+    <lastBuildDate>Sat, 29 Aug 2026 20:00:00 GMT</lastBuildDate>
+    <category>Strategy</category>
+    <author>info@anastanveer.com (Anas Tanveer)</author>
+    <enclosure url="https://anastanveer.com/images/blog/blog-1-hd.webp" type="image/webp" length="0" />
+  </item>
+
   <item>
     <title>Full Stack Developer Canada: What Canadian Businesses Need to Know</title>
     <link>https://anastanveer.com/blog/fullstack-developer-canada-guide/</link>

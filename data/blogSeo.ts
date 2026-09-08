@@ -18,6 +18,256 @@ export type BlogSeoContent = {
 };
 
 export const blogSeoContent: Record<string, BlogSeoContent> = {
+  "uae-einvoicing-peppol-software-readiness-2026": {
+    focusKeywords: [
+      "UAE eInvoicing 2026",
+      "Peppol UAE",
+      "eInvoicing software UAE",
+      "UAE ASP integration",
+      "VAT invoice automation UAE",
+      "ERP integration Dubai"
+    ],
+    intro: [
+      "The UAE Ministry of Finance describes eInvoicing as structured invoice data exchanged electronically and reported to the Federal Tax Authority through the UAE eInvoicing ecosystem. That makes software readiness the real work: clean fields, clean owners, clean integrations.",
+      "This article is written for UAE business owners, finance teams and founders who need practical preparation before ASP onboarding turns into deadline pressure."
+    ],
+    expandedSections: [
+      {
+        heading: "Official Timeline to Keep in View",
+        body: [
+          "The Ministry of Finance announced phased implementation, with pilot activity beginning in 2026 and mandatory rollout starting with larger businesses. Public guidance also says businesses in scope appoint an Accredited Service Provider and exchange electronic invoices through the national model.",
+          "Because official dates and technical documents can evolve, treat the Ministry of Finance eInvoicing portal as the source of truth. Treat your internal software plan as the part you control today: master data, approval rules, integration ownership and exception reporting."
+        ]
+      }
+    ],
+    checklist: [
+      "Audit customer, supplier, TRN, address and item/service records before ASP onboarding.",
+      "Identify which system owns invoice source data: CRM, ecommerce, ERP, accounting or custom app.",
+      "Add validation for required invoice fields before finance submits or syncs anything.",
+      "Create approval rules for credit notes, discounts, cancelled orders and payment changes.",
+      "Plan API/webhook logs so failed invoice syncs are visible to finance, not hidden in code.",
+      "Bookmark the UAE Ministry of Finance eInvoicing portal for current rules and timelines."
+    ],
+    faqs: [
+      {
+        question: "Is a PDF invoice an eInvoice in the UAE system?",
+        answer: "No. The UAE eInvoicing guidance distinguishes structured electronic invoice data from unstructured files such as PDFs, scans, Word documents, images and email attachments. Businesses should prepare machine-readable invoice data, not just better-looking invoice documents."
+      },
+      {
+        question: "Do UAE SMEs need to prepare before mandatory eInvoicing reaches them?",
+        answer: "Yes. Even if a smaller business is not in the earliest phase, 2026 is the right time to clean customer, supplier, VAT and item data. Waiting until onboarding starts makes integration more expensive and increases the chance of manual workarounds."
+      },
+      {
+        question: "Can a custom Laravel system connect to UAE eInvoicing workflows?",
+        answer: "Yes, usually through the chosen accounting platform, ASP integration or a middleware layer. The key work is mapping invoice fields, validating data, logging sync status and giving finance a clear exception dashboard."
+      }
+    ],
+    relatedLinks: [
+      { label: "API Integration Services", href: "/api-integration-services" },
+      { label: "CRM Development Dubai", href: "/crm-development-dubai" },
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" }
+    ]
+  },
+  "dubai-ai-data-authority-agentic-ai-business-software-2026": {
+    focusKeywords: [
+      "agentic AI Dubai",
+      "AI automation UAE",
+      "Dubai AI Data Authority",
+      "business AI software Dubai",
+      "AI workflow automation UAE",
+      "custom AI CRM Dubai"
+    ],
+    intro: [
+      "Dubai's AI direction is moving from isolated tools toward connected data, proactive services and governed automation. Businesses can use the same principle at SME scale: small AI agents, clear permissions and human approval where risk is high.",
+      "The point is not to sound futuristic. The point is to answer faster, waste less admin time and keep a clean record of every customer decision."
+    ],
+    expandedSections: [
+      {
+        heading: "The Human-in-the-Loop Rule",
+        body: [
+          "For most UAE businesses, agentic AI should draft, classify, summarise and route. Humans should approve pricing, sensitive replies, legal or medical advice, refunds, complaints and any customer-facing promise that can damage trust.",
+          "That rule keeps automation productive without turning it into an uncontrolled risk. It also gives staff confidence because AI becomes a helper, not a hidden decision-maker."
+        ]
+      }
+    ],
+    checklist: [
+      "Choose one workflow with clear inputs and measurable admin pain.",
+      "Define what the AI agent can read, write and never access.",
+      "Add approval gates before messages, discounts, refunds or contractual promises.",
+      "Record agent actions in an audit log your team can understand.",
+      "Review outputs weekly for the first month and improve prompts, fields and escalation rules.",
+      "Connect AI actions to CRM status so automation improves reporting, not just speed."
+    ],
+    faqs: [
+      {
+        question: "What is agentic AI in business software?",
+        answer: "Agentic AI is software that can complete narrow tasks through a workflow, such as reading a lead, checking CRM context, drafting a reply and asking for approval. It is most useful when the task is clear, repeatable and logged."
+      },
+      {
+        question: "Should Dubai SMEs use AI agents now?",
+        answer: "Yes, but start narrow. Lead triage, reporting summaries, support classification and CRM cleanup are safer first projects than fully autonomous sales or finance decisions."
+      },
+      {
+        question: "How do you make AI automation safer?",
+        answer: "Use least-privilege access, human approval gates, source visibility, audit logs, test cases and clear escalation rules. The AI should show what it used and what it recommends before high-risk actions happen."
+      }
+    ],
+    relatedLinks: [
+      { label: "Laravel Developer Dubai", href: "/laravel-developer-dubai" },
+      { label: "CRM Development Dubai", href: "/crm-development-dubai" },
+      { label: "SaaS Developer Dubai", href: "/saas-developer-dubai" }
+    ]
+  },
+  "uae-ai-scam-defense-cybersecurity-businesses-2026": {
+    focusKeywords: [
+      "AI scams UAE",
+      "UAE cybersecurity business",
+      "payment fraud prevention UAE",
+      "AI scam defence Dubai",
+      "secure customer portal UAE",
+      "business cybersecurity Dubai"
+    ],
+    intro: [
+      "AI-driven fraud is a workflow problem as much as a security problem. If the process lets one convincing message change bank details or release payment, the business is exposed.",
+      "This guide focuses on controls UAE companies can actually adopt: verification routines, portals, approvals and staff scripts."
+    ],
+    expandedSections: [
+      {
+        heading: "Design for the Moment People Are Busy",
+        body: [
+          "Scams succeed when staff are rushed, polite or afraid of delaying an urgent request. A good system assumes people will be busy and builds a pause into high-risk actions.",
+          "That pause can be a second approval, a saved-contact call, a supplier-bank lock, or a CRM warning that a request is unusual. The friction is targeted exactly where the loss would be expensive."
+        ]
+      }
+    ],
+    checklist: [
+      "Require out-of-band verification for bank detail changes and urgent payment requests.",
+      "Set AED approval thresholds and require two people for higher-risk transfers.",
+      "Move official invoices, documents and payment links into a secure customer portal.",
+      "Use named staff accounts and remove shared admin logins.",
+      "Give staff exact suspicious-message scripts and escalation steps.",
+      "Log payment detail changes, refund approvals and customer identity checks."
+    ],
+    faqs: [
+      {
+        question: "What is the biggest AI scam risk for UAE businesses?",
+        answer: "The biggest risk is a trust-based request that triggers money movement or data access: bank detail changes, urgent payment approvals, fake supplier invoices, refund instructions or identity requests."
+      },
+      {
+        question: "Can software stop every AI scam?",
+        answer: "No, but software can make expensive mistakes much harder. Verification workflows, role permissions, payment approvals, customer portals and audit logs reduce the chance that one convincing message causes a loss."
+      },
+      {
+        question: "Why do customer portals help against fraud?",
+        answer: "A portal gives customers one trusted place for invoices, payment links and project updates. If they receive a suspicious message elsewhere, they can compare it with the official record before paying or sharing information."
+      }
+    ],
+    relatedLinks: [
+      { label: "Custom Laravel Web App Cost Dubai 2026", href: "/blog/custom-laravel-web-app-cost-dubai-2026" },
+      { label: "Dashboard Development Dubai", href: "/dashboard-development-dubai" },
+      { label: "API Integration Services", href: "/api-integration-services" }
+    ]
+  },
+  "dubai-api-first-digital-services-business-integrations-2026": {
+    focusKeywords: [
+      "API first Dubai",
+      "Dubai business integrations",
+      "CRM payment integration UAE",
+      "API integration services Dubai",
+      "customer portal integration UAE",
+      "digital services UAE business"
+    ],
+    intro: [
+      "Dubai's digital-service direction is making customers less tolerant of repeated forms and slow handovers. Businesses feel the same pressure: leads, payments, bookings, documents and reports need to move between systems cleanly.",
+      "API-first architecture is the practical answer when your team is spending too much time copying data between tools."
+    ],
+    expandedSections: [
+      {
+        heading: "The Reliability Layer Nobody Sees",
+        body: [
+          "The public part of an integration is the happy path: a form submits, a payment succeeds, a CRM record updates. The valuable part is the reliability layer: retries, logs, alerts, permissions and fallback states when an external API fails.",
+          "That layer is what separates a serious integration from a demo. It lets a business owner trust the workflow during busy weeks, not just during launch."
+        ]
+      }
+    ],
+    checklist: [
+      "Map customer journey from first enquiry to payment and support.",
+      "Decide which platform owns each data field before connecting APIs.",
+      "Use webhooks for time-sensitive updates and polling only where webhooks are not reliable.",
+      "Add retry logic, error alerts and readable logs.",
+      "Protect API keys and separate staff permissions by role.",
+      "Start with the handover that wastes the most weekly staff time."
+    ],
+    faqs: [
+      {
+        question: "What does API-first mean for a Dubai SME?",
+        answer: "API-first means planning your website, CRM, payments, accounting and customer portal so they can exchange reliable data. It does not mean rebuilding everything; it means reducing manual handover and duplicated records."
+      },
+      {
+        question: "When should a business build middleware?",
+        answer: "Build middleware when plugins or native integrations are fragile, missing key fields, or unable to handle your approval and reporting rules. Middleware is often cheaper than replacing several working platforms."
+      },
+      {
+        question: "Which systems should UAE businesses connect first?",
+        answer: "Start with the most expensive manual step: website leads to CRM, payment status to invoices, ecommerce orders to fulfilment, bookings to reminders, or project status to client portals."
+      }
+    ],
+    relatedLinks: [
+      { label: "API Integration Services", href: "/api-integration-services" },
+      { label: "Web Developer UAE", href: "/web-developer-uae" },
+      { label: "Custom Business Dashboard Development Dubai", href: "/blog/custom-business-dashboard-development-dubai" }
+    ]
+  },
+  "uae-ai-search-local-trust-signals-2026": {
+    focusKeywords: [
+      "AI search UAE",
+      "AI SEO Dubai",
+      "local trust signals UAE",
+      "schema markup Dubai business",
+      "Arabic English SEO UAE",
+      "generative engine optimization Dubai"
+    ],
+    intro: [
+      "AI search is not replacing SEO fundamentals; it is exposing weak trust signals faster. UAE businesses need content that humans trust and machines can understand.",
+      "This means clearer entities, stronger proof, better schema, useful Arabic-English content and fewer low-value location pages."
+    ],
+    expandedSections: [
+      {
+        heading: "The Proof Stack",
+        body: [
+          "A UAE business should build a proof stack: visible team or founder information, service pages with examples, portfolio or case studies, customer reviews, contact details, schema and consistent external profiles.",
+          "Each signal is useful alone. Together they help search engines and AI assistants understand that the business is real, specialised and relevant to a local buyer."
+        ]
+      }
+    ],
+    checklist: [
+      "Make name, phone, email, location/service area and social profiles consistent.",
+      "Add LocalBusiness, Organization, Service, Article, FAQ and Breadcrumb schema where relevant.",
+      "Publish real case studies with outcomes, screenshots or project detail.",
+      "Collect and display genuine reviews with enough context to be useful.",
+      "Write Arabic and English pages for real users, not machine translation coverage.",
+      "Consolidate thin location pages into fewer stronger pages where necessary."
+    ],
+    faqs: [
+      {
+        question: "How can UAE businesses appear in AI search answers?",
+        answer: "They need clear service pages, strong proof, schema, reviews, consistent business details and answer-first content. AI systems are more likely to recommend a business when the evidence is specific and easy to verify."
+      },
+      {
+        question: "Does schema guarantee AI search visibility?",
+        answer: "No. Schema helps machines understand content, but it must match visible proof on the page. Reviews, case studies, author context and useful answers matter just as much."
+      },
+      {
+        question: "Should every UAE city have its own SEO page?",
+        answer: "Only if the page adds genuine local value. Thin city pages that swap place names can look low-value. Stronger service-area pages with real examples usually perform better long-term."
+      }
+    ],
+    relatedLinks: [
+      { label: "AEO & GEO Explained", href: "/blog/aeo-geo-ai-search-optimization-guide" },
+      { label: "Technical SEO Checklist 2026", href: "/blog/technical-seo-checklist-2026-dubai" },
+      { label: "SEO-Friendly Website Development", href: "/seo-friendly-website-development" }
+    ]
+  },
   "website-cost-dubai-2026": {
     "focusKeywords": [
       "website cost in Dubai",
