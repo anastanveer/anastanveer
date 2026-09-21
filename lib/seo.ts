@@ -150,6 +150,16 @@ const keywords = [
 //
 // The pages still resolve — anyone holding a link lands on a real page. They are simply no
 // longer advertised: noindex, and out of both the sitemap and robots.txt.
+// /portfolio and /work render the same component with the same content — two URLs,
+// one page, and Google was splitting the signal between them (50 impressions at
+// position 14.2 against 30 at position 7.9). The site's own navigation points at
+// /work, so that is the one kept; /portfolio stays reachable for anyone holding a
+// link but points its canonical there, and it leaves the sitemap so the duplicate
+// is not advertised.
+const canonicalOverrides: Record<string, string> = {
+  "/portfolio": "/work"
+};
+
 const deindexedSlugs = new Set([
   // Smaller-emirate duplicates of /web-developer-dubai. Between them: 27 impressions
   // and no clicks in three months, with the same four section headings as the Dubai
@@ -237,7 +247,6 @@ export const routes = [
   { path: "/about", name: "About", priority: 0.9, changeFrequency: "monthly" },
   { path: "/services", name: "Services", priority: 0.95, changeFrequency: "weekly" },
   { path: "/work", name: "Work", priority: 0.9, changeFrequency: "weekly" },
-  { path: "/portfolio", name: "Portfolio", priority: 0.9, changeFrequency: "weekly" },
   { path: "/case-studies", name: "Case Studies", priority: 0.85, changeFrequency: "monthly" },
   { path: "/pricing", name: "Pricing", priority: 0.8, changeFrequency: "monthly" },
   { path: "/resume", name: "Resume", priority: 0.9, changeFrequency: "monthly" },
@@ -334,6 +343,7 @@ export function pageMetadata({
   const imageUrl = absoluteUrl(image);
   description = clampDescription(description);
   const indexable = !deindexedSlugs.has(path.replace(/^\/|\/$/g, ""));
+  const canonicalUrl = absoluteUrl(canonicalOverrides[path.replace(/\/$/, "")] ?? path);
 
   return {
     metadataBase: new URL(siteUrl),
@@ -357,7 +367,7 @@ export function pageMetadata({
     referrer: "origin-when-cross-origin",
     keywords: [...keywords, ...extraKeywords],
     alternates: {
-      canonical: url,
+      canonical: canonicalUrl,
       languages: (() => {
         const geo = getGeoMeta(path);
         const isUK = geo["geo.region"].startsWith("GB");

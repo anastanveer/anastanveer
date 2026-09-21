@@ -114,13 +114,13 @@ function serviceJsonLd(page: SeoServicePage) {
         description: "Project pricing depends on scope, platform, integrations, timeline, and required support."
       }
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      ratingCount: "4",
-      bestRating: "5",
-      worstRating: "1"
-    },
+      // No aggregateRating. A hardcoded 4.9 from four reviews was being emitted on
+      // all ~90 service pages, none of which display a review. Google's review-snippet
+      // policy requires the marked-up reviews to be visible on the page carrying them,
+      // and treats self-serving ratings as ineligible — the same fault already removed
+      // from the sitewide graph in lib/seo.ts. This is manual-action territory, not
+      // markup that is merely ignored. The four real reviews are marked up once, on
+      // /testimonials, where they are actually shown.
     potentialAction: {
       "@type": "ContactAction",
       name: "Get a Quote",
