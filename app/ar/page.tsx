@@ -241,9 +241,13 @@ const faqs = [
   },
 ];
 
+// Same two reviews as the English pages, and the same correction: this page had
+// Steve Barlow in the United Kingdom where Fiverr records stevebarlow265 in the
+// United States. Usernames and countries now match the platform exactly — a
+// translated page is still the same claim about the same customer.
 const reviews = [
-  { author: "Steve Barlow", location: "المملكة المتحدة", body: "مشروع رائع من أنس. يفهم المتطلبات، يُقدّم نتائج ممتازة، ويُنجز العمل بسرعة وجودة عالية.", rating: 5 },
-  { author: "Said B.", location: "فرنسا", body: "التعاون الثاني مع أنس — سريع، دقيق وعالي الجودة. نتائج ممتازة تُسلَّم في الوقت المحدد.", rating: 5 },
+  { author: "stevebarlow265", location: "الولايات المتحدة", body: "مشروع رائع من أنس. يفهم المتطلبات، يُقدّم نتائج ممتازة، ويُنجز العمل بسرعة وجودة عالية.", rating: 5 },
+  { author: "saidbt2a", location: "فرنسا", body: "التعاون الثاني مع أنس — سريع، دقيق وعالي الجودة. نتائج ممتازة تُسلَّم في الوقت المحدد.", rating: 5 },
 ];
 
 export default function ArabicLandingPage() {
