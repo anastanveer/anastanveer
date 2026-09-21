@@ -21,6 +21,120 @@ export interface DepthSection {
 }
 
 export const serviceDepth: Record<string, DepthSection[]> = {
+
+  "laravel-developer-dubai": [
+    {
+      heading: "What Laravel is actually the right answer for",
+      body: [
+        "Laravel earns its place when a business has rules of its own. Approval chains, pricing that depends on customer and quantity, jobs that move through stages, permissions that differ by role, integrations with accounting or a payment gateway — these are the things that turn into a fight against a page builder and a straightforward afternoon in a framework.",
+        "It is the wrong answer for a five-page brochure site, and saying so costs a project but saves a client money. If the requirement is a homepage, an about page and a contact form, WordPress will do it faster and cheaper, and the honest recommendation is to use it."
+      ]
+    },
+    {
+      heading: "What a Laravel project in Dubai costs, and why quotes differ so widely",
+      body: [
+        "The spread on the same brief here is wide enough to be confusing — a system quoted at AED 12,000 by one developer and AED 60,000 by another is normal, and the difference is rarely quality of code. It is scope, and specifically who is absorbing the unknowns.",
+        "The low quote usually excludes the integrations, assumes content is supplied, counts one round of changes, and prices the happy path. The higher one has priced error handling, a staging environment, data migration from whatever the business runs today, and the two weeks at the end that every project has. Neither is dishonest; they are answering different questions. Ask any quote what happens when the payment gateway returns an error, and the gap explains itself."
+      ]
+    },
+    {
+      heading: "How to judge a Laravel developer before you commit",
+      body: [
+        "Ask to see a system, not a website — something with a login, roles, and data that changes. Anyone can show a landing page. Ask how they handle database migrations, because a developer who edits the live database by hand will eventually lose you data. Ask what happens when an external API is down, and listen for whether they have thought about it at all.",
+        "Ask about the Laravel version they build on and how upgrades are handled. A system built on a version that left support two years ago is a security liability that grows quietly. And ask who holds the code: a private repository you own, or a folder on their laptop."
+      ]
+    },
+    {
+      heading: "Building for the UAE specifically",
+      body: [
+        "Shopify Payments is unavailable here, so ecommerce and checkout flows run through Telr, PayTabs, Network International or Stripe depending on the entity — each with its own onboarding and settlement behaviour that has to be built around rather than assumed.",
+        "Then VAT at five per cent with compliant tax invoices carrying the TRN, Arabic alongside English where the audience expects it — which reverses the entire layout rather than translating strings — and hosting close enough to the region that the latency does not undo the work. None of it is difficult, but a system built on European defaults needs all of it retrofitted."
+      ]
+    },
+    {
+      heading: "Working with a developer rather than an agency",
+      body: [
+        "An agency gives you a process, a project manager and cover when someone is unavailable, and you pay for that structure. Working directly means the person writing the code is the person on the call, which removes a translation layer that is usually where requirements get lost.",
+        "The honest trade is capacity. One developer cannot run four projects at the pace four developers can, so timelines are longer on large builds, and that should be in the plan rather than discovered in month two. For most single systems in the range these projects sit in, the direct route is faster in practice because the decisions are made by the person who will implement them."
+      ]
+    }
+  ],
+
+  "php-developer-dubai": [
+    {
+      heading: "PHP in 2026 is not the PHP people remember",
+      body: [
+        "The objection to PHP is usually a memory of PHP 5 — loose typing, functions with inconsistent argument order, code that grew rather than was designed. PHP 8 has typed properties, enums, match expressions, named arguments, fibers and a JIT compiler, and it is meaningfully faster than the version most of those opinions were formed on.",
+        "What matters commercially is that it runs almost everywhere, hosting is cheap and available regionally, and the pool of people who can maintain it is large. A system nobody local can pick up is a liability regardless of how fashionable the language is."
+      ]
+    },
+    {
+      heading: "Inheriting somebody else's PHP",
+      body: [
+        "A good share of this work is not new builds. It is a system that runs the business, was written by someone no longer reachable, has no tests, and cannot be touched without something breaking elsewhere. The first job is not to rewrite it — it is to make it safe to change.",
+        "That means getting it into version control if it is not already, standing up a staging copy so changes are not tested in production, adding logging where things fail silently, and getting the dependencies to a supported version. Only then does feature work become predictable rather than a gamble. A developer who opens with \"it needs a full rebuild\" before reading the code is quoting the expensive answer first."
+      ]
+    },
+    {
+      heading: "Where PHP applications actually go wrong",
+      body: [
+        "Almost always the database, and almost always the same way: a query inside a loop. A page that runs one query to fetch fifty records and then one more per record to fetch its details issues fifty-one queries where two would do, and it degrades exactly as the business grows. It is the single most common cause of a system that was fine last year and is slow now.",
+        "After that: no indexes on the columns people actually filter by, sessions and cache on the filesystem so nothing can scale beyond one server, and secrets committed to the repository. None of these are exotic, and all of them are cheaper to fix than to live with."
+      ]
+    },
+    {
+      heading: "Security, and the parts that matter in practice",
+      body: [
+        "Prepared statements everywhere, so user input cannot become SQL. Output escaped by the template engine rather than by hand. CSRF tokens on every state-changing form. File uploads validated by actual content rather than by the extension in the filename. Password hashing with the language's own functions, never a home-made scheme.",
+        "For most small-business systems in this region, the realistic threat is not a targeted attacker — it is an automated scanner finding an abandoned dependency with a published vulnerability. Keeping the stack current is the single highest-value security measure available, and it is a maintenance decision rather than a technical one."
+      ]
+    },
+    {
+      heading: "Knowing when PHP is the wrong tool",
+      body: [
+        "It is a poor fit for anything that needs to hold thousands of open connections at once — live chat, real-time collaboration, streaming telemetry. Node or Go suits that shape better, and pretending otherwise produces a system that fights its runtime.",
+        "It is also not the answer when the requirement is genuinely a spreadsheet, which happens more often than software people like to admit. A business running comfortably on a shared sheet does not always need an application, and the useful advice is sometimes to fix the sheet."
+      ]
+    }
+  ],
+
+  "wordpress-developer-dubai": [
+    {
+      heading: "WordPress is a good answer until it suddenly is not",
+      body: [
+        "For a brochure site, a blog, a small catalogue or anything where the client needs to edit content without calling a developer, WordPress is hard to beat: fast to build, cheap to host, and a system most people already understand.",
+        "The line is crossed when the business logic gets specific. Multi-step approvals, pricing that depends on who is logged in, stock synchronised with another system, role permissions that do not map to WordPress's own — each is possible with enough plugins, and each plugin adds a dependency, a subscription and a way for an update to break the site. Around the fourth such requirement, a framework is cheaper."
+      ]
+    },
+    {
+      heading: "Plugins are the thing that goes wrong",
+      body: [
+        "Almost every compromised or broken WordPress site traces back to a plugin — abandoned by its author, updated with a breaking change, or simply one of thirty each loading assets on every page. A site running forty plugins is not forty times more capable; it is forty separate things that can fail on someone else's schedule.",
+        "So each one has to earn its place: is it actively maintained, when was it last updated, how many sites depend on it, and could twenty lines in the theme do the same job without a subscription. Most page-builder installations can drop half their plugins and get measurably faster without losing anything a visitor sees."
+      ]
+    },
+    {
+      heading: "Speed, which on WordPress is mostly self-inflicted",
+      body: [
+        "Sites here routinely ship four megabytes of images to a phone because a photograph was uploaded at camera resolution and displayed at 400 pixels. Add a page builder that loads its entire framework on every page, a slider nobody scrolls past, three analytics tags and a chat widget, and the result is a site that takes eight seconds on a mobile connection.",
+        "Fixing it rarely requires a rebuild. Correctly sized images in a modern format, caching and compression configured properly, a hosting account in or near the region, and an audit of what is loading on pages that do not need it usually gets a site into acceptable Core Web Vitals without touching the design."
+      ]
+    },
+    {
+      heading: "Keeping it alive after launch",
+      body: [
+        "WordPress core, themes and plugins publish security updates constantly, and a site nobody updates is a site waiting to be defaced by a scanner. But updating blindly on a live site is how a business discovers its checkout is broken on a Saturday.",
+        "Maintenance that works looks like this: a staging copy where updates are applied and checked first, backups that are actually restored occasionally to prove they work, uptime monitoring so you hear about an outage before a customer does, and a record of what changed and when. It is unglamorous and it is the difference between a site that runs for five years and one that is rebuilt every eighteen months."
+      ]
+    },
+    {
+      heading: "WooCommerce in the UAE",
+      body: [
+        "WooCommerce is viable here and gives more control than Shopify over checkout and pricing logic, at the cost of owning the hosting, security, PCI scope and updates yourself. That trade is fine for a business with someone responsible for it and poor for one without.",
+        "Practically it means a local payment gateway — Telr, PayTabs or Stripe — rather than the defaults the plugin assumes, VAT at five per cent configured to produce compliant invoices, and hosting sized for a real catalogue rather than the cheapest shared plan. A WooCommerce store on a two-dollar host is the most common version of a store that does not work."
+      ]
+    }
+  ],
   "dashboard-development-dubai": [
     {
       heading: "Most dashboards fail before a line of code is written",
