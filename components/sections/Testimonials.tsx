@@ -77,7 +77,7 @@ export function Testimonials() {
                 ))}
               </div>
               <span className="text-sm font-semibold text-white light:text-slate-900">4.9 / 5</span>
-              <span className="text-xs text-silver/50 light:text-slate-500">Verified client reviews</span>
+              <span className="text-xs text-silver/50 light:text-slate-500">from 6 Fiverr reviews</span>
             </div>
           </div>
         </Reveal>

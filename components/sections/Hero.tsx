@@ -118,9 +118,11 @@ export function Hero() {
             <span className="premium-text">Real Business Problems</span>
           </motion.h1>
 
-          {/* trust row — reuses existing site claims (projects, rating, response time) */}
+          {/* Trust row. The rating names its source: 4.9 is the real average of the six
+                Fiverr reviews shown on /testimonials, and a figure that can be checked carries
+                more than a larger one that cannot. */}
           <motion.p variants={item} className="mt-4 text-sm font-medium text-silver/70">
-            100+ projects delivered · 4.9★ client rating · Replies within 4 hours
+            100+ projects delivered · 4.9★ across 6 Fiverr reviews · Replies within 4 hours
           </motion.p>
 
           {/* description */}
@@ -210,7 +212,7 @@ export function Hero() {
             </div>
             <div>
               <p className="font-display text-2xl font-bold leading-none text-white sm:text-3xl">4.9</p>
-              <p className="mt-1.5 text-xs text-silver/60">Client Rating</p>
+              <p className="mt-1.5 text-xs text-silver/60">Fiverr rating</p>
             </div>
           </motion.div>
           <div className="hidden items-center gap-2 sm:flex">

@@ -19,48 +19,85 @@ export const metadata: Metadata = pageMetadata({
   ]
 });
 
+// Reviews as Fiverr actually records them.
+//
+// This page previously carried its own tidied copy: Steve Barlow shown in the United
+// Kingdom, J. Nagle in Ireland and Rushil C. in Canada, where the platform records all
+// three in the United States — and four reviews where there are six, because Steve
+// Barlow is a repeat client with three. Changing a customer's stated country, or
+// dropping reviews from the count, is altering their review even when the words are
+// their own. The ratings were always right: 4.9 is the true average of 5, 4.7, 5, 4.7,
+// 5, 5.
+//
+// Names are shown as the platform shows them. A username is less flattering than a
+// full name and is what can actually be checked.
 const reviews = [
   {
-    author: "Steve Barlow",
+    author: "stevebarlow265",
     platform: "Fiverr",
     rating: 5,
     date: "2024-08-10",
     project: "Laravel Web Platform",
-    location: "United Kingdom",
-    body: "Another fantastic project from Anas. He understands the requirements, provides fully functional updates, makes changes quickly, and delivers a truly excellent product. I highly recommend Anas.",
+    location: "United States",
+    body: "Another fantastic project update from Anas. It is great working with him. He understands the requirements, provides fully functional updates, makes changes quickly, and delivers a truly excellent product.",
     highlight: "Understands requirements and delivers excellent results."
   },
   {
-    author: "Said B.",
+    author: "stevebarlow265",
+    platform: "Fiverr",
+    rating: 5,
+    date: "2024-07-02",
+    project: "Laravel Web Platform",
+    location: "United States",
+    body: "Anas was extremely responsive and easy to work with. He understood my requirements and quickly delivered exactly what was needed.",
+    highlight: "Responsive, and delivered exactly what was needed."
+  },
+  {
+    author: "stevebarlow265",
+    platform: "Fiverr",
+    rating: 4.7,
+    date: "2024-05-18",
+    project: "Laravel Web Platform",
+    location: "United States",
+    body: "My project needed a quick change and Anas delivered as usual. He has exceptional technical talent and is straightforward to work with.",
+    highlight: "Quick changes, delivered as usual."
+  },
+  {
+    author: "saidbt2a",
     platform: "Fiverr",
     rating: 5,
     date: "2024-06-20",
     project: "Laravel Dashboard System",
     location: "France",
-    body: "2nd collaboration with Anas — fast, precise and high quality work. Excellent results delivered on time. Will definitely work together again.",
+    body: "2nd collaboration with Anas — fast, precise and high quality work. As usual, excellent results delivered on time. Will definitely work together again.",
     highlight: "Fast, precise, high quality. Will work together again."
   },
   {
-    author: "J. Nagle",
+    author: "jdnagle",
     platform: "Fiverr",
     rating: 5,
     date: "2024-04-15",
     project: "Custom Web Application",
-    location: "Ireland",
+    location: "United States",
     body: "Anas did a great job as per usual. Reliable, fast and always delivers exactly what is needed. Highly recommended.",
     highlight: "Reliable, fast, always delivers exactly what is needed."
   },
   {
-    author: "Rushil C.",
+    author: "rushilc",
     platform: "Fiverr",
-    rating: 5,
+    rating: 4.7,
     date: "2024-02-05",
     project: "Shopify Customization",
-    location: "Canada",
-    body: "Excellent experience working with Anas Tanveer. His professionalism, attention to detail, and ability to deliver bug-free work were exceptional.",
+    location: "United States",
+    body: "I had an excellent experience working with Anas Tanveer on my software development project. His professionalism, attention to detail, and ability to deliver bug-free work were exceptional.",
     highlight: "Professionalism, attention to detail, bug-free delivery."
-  },
+  }
 ];
+
+// Averaged from the reviews above rather than written in by hand, so the figure can
+// never drift away from what is actually displayed.
+const avgRating = Math.round((reviews.reduce((a, r) => a + r.rating, 0) / reviews.length) * 10) / 10;
+
 
 const aggregateRatingJsonLd = {
   "@context": "https://schema.org",
@@ -78,7 +115,7 @@ const aggregateRatingJsonLd = {
   },
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.9",
+    ratingValue: String(avgRating),
     ratingCount: String(reviews.length),
     reviewCount: String(reviews.length),
     bestRating: "5",
@@ -175,7 +212,7 @@ export default function TestimonialsPage() {
           {/* Aggregate score */}
           <div className="mb-10 flex flex-wrap items-center gap-6 rounded-2xl border border-amber-400/20 bg-amber-400/8 px-6 py-5 light:border-amber-200 light:bg-amber-50">
             <div className="text-center">
-              <p className="font-display text-5xl font-bold text-amber-400">4.9</p>
+              <p className="font-display text-5xl font-bold text-amber-400">{avgRating}</p>
               <StarRow count={5} />
               <p className="mt-1 text-xs text-silver/55 light:text-slate-500">out of 5</p>
             </div>

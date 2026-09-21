@@ -1,13 +1,23 @@
 import { BadgeCheck, Clock, Globe2, ShieldCheck, Wallet } from "lucide-react";
 
-// Static, server-rendered trust strip placed under the hero. All claims are
-// factual (UK registered entity, multi-region reach, stated reply time,
-// fixed-price options on the pricing page). No client JS, no layout shift.
+// Static, server-rendered trust strip placed under the hero.
+//
+// This used to read "Trusted by businesses across" over four flags including
+// Australia, which is a claim about past clients. The evidence on the site is six
+// Fiverr reviews from the United States and France, and the Australia service pages
+// were de-indexed precisely because they are not a market this domain serves. A claim
+// the site's own content contradicts is the kind of thing an AdSense reviewer opens
+// two tabs to check.
+//
+// It now states where the work is done from and for, which is true and checkable:
+// based in the UAE, trading as a UK registered company, working with clients in North
+// America and Europe. Everything in `signals` is likewise verifiable — Companies House
+// 17039150, a stated reply time, and fixed-price options that exist on /pricing.
 const regions = [
-  { flag: "🇦🇪", label: "UAE" },
-  { flag: "🇬🇧", label: "UK" },
-  { flag: "🇨🇦", label: "Canada" },
-  { flag: "🇦🇺", label: "Australia" }
+  { flag: "🇦🇪", label: "Based in UAE" },
+  { flag: "🇬🇧", label: "UK registered" },
+  { flag: "🇺🇸", label: "US clients" },
+  { flag: "🇫🇷", label: "EU clients" }
 ];
 
 const signals = [
@@ -23,7 +33,7 @@ export function TrustBar() {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 px-5 md:flex-row md:gap-8">
         <div className="flex items-center gap-2 text-sm text-silver/70 light:text-slate-600">
           <Globe2 size={16} className="text-cyan light:text-blue-600" />
-          <span className="font-medium">Trusted by businesses across</span>
+          <span className="font-medium">Working across</span>
           <span className="flex items-center gap-2">
             {regions.map((r) => (
               <span key={r.label} className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs font-semibold text-silver/85 light:border-slate-200 light:bg-white light:text-slate-700">

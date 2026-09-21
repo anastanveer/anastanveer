@@ -64,7 +64,7 @@ export default function HomePage() {
             {[
               { value: "7+", label: "Years Experience", color: "text-cyan light:text-blue-600" },
               { value: "100+", label: "Projects Delivered", color: "text-violet light:text-violet-600" },
-              { value: "4.9★", label: "Client Rating", color: "text-amber-400 light:text-amber-500" },
+              { value: "4.9★", label: "Fiverr Rating", color: "text-amber-400 light:text-amber-500" },
               { value: "3", label: "Global Markets", color: "text-emerald light:text-emerald-600" },
             ].map((s, i) => (
               <Reveal key={s.label} delay={i * 0.07}>
