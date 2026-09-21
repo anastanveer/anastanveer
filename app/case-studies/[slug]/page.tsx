@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { caseStudyDepth } from "@/data/case-study-depth";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -56,6 +57,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
   const study = caseStudies.find((cs) => cs.slug === slug);
   if (!study) notFound();
 
+  const depth = caseStudyDepth[study.slug] ?? [];
   const index = caseStudies.indexOf(study);
   const prev = index > 0 ? caseStudies[index - 1] : null;
   const next = index < caseStudies.length - 1 ? caseStudies[index + 1] : null;
@@ -243,6 +245,24 @@ export default async function CaseStudyDetailPage({ params }: Props) {
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-silver/50 light:text-slate-500">Business Impact</p>
             <p className="text-sm leading-7 text-silver/72 light:text-slate-600">{study.impact}</p>
           </div>
+
+          {/* How it was actually built. The client's side of the story is above; this is
+              the engineering, which is the part a technical reader came for. */}
+          {depth.length > 0 && (
+            <div className="mt-5 rounded-2xl border border-white/8 bg-white/[0.03] p-6 light:border-slate-100 light:bg-slate-50">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-silver/50 light:text-slate-500">How it was built</p>
+              <div className="grid gap-8">
+                {depth.map((sec) => (
+                  <div key={sec.heading}>
+                    <h2 className="font-display text-base font-semibold text-white light:text-slate-950">{sec.heading}</h2>
+                    {sec.body.map((para) => (
+                      <p key={para} className="mt-3 text-sm leading-7 text-silver/72 light:text-slate-600">{para}</p>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Screenshot gallery */}
           {study.images.length > 1 && (

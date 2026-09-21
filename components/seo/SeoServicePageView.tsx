@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { serviceDepth } from "@/data/service-depth";
 import { serviceHeadings } from "@/lib/service-headings";
 import { ArrowRight, CheckCircle2, HelpCircle, Link2, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
@@ -152,6 +153,7 @@ const brandLabels: Record<string, string> = {
 export function SeoServicePageView({ page }: { page: SeoServicePage }) {
   const path = `/${page.slug}`;
   const heads = serviceHeadings(page.navLabel, page.slug);
+  const depth = serviceDepth[page.slug] ?? [];
   const stackIcons = slugToStack[page.slug] ?? [];
 
   return (
@@ -299,6 +301,23 @@ export function SeoServicePageView({ page }: { page: SeoServicePage }) {
                 </div>
               </div>
             </div>
+
+            {/* The substantive, page-specific part. Only the pages that were running
+                thin carry one; the rest fall through to the FAQs below unchanged. */}
+            {depth.length > 0 && (
+              <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.025] p-6 light:border-slate-200 light:bg-white md:p-8">
+                <div className="grid gap-10">
+                  {depth.map((section) => (
+                    <div key={section.heading}>
+                      <h2 className="font-display text-xl font-semibold text-white light:text-slate-950">{section.heading}</h2>
+                      {section.body.map((para) => (
+                        <p key={para} className="mt-4 text-sm leading-8 text-silver/78 light:text-slate-600">{para}</p>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* FAQs */}
             <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-6 light:border-slate-200 light:bg-white md:p-8">

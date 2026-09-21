@@ -60,6 +60,41 @@ export const metadata: Metadata = pageMetadata({
   extraKeywords: ["Web Development Pricing Dubai", "Laravel Developer Cost Dubai", "WordPress Website Price UAE", "Shopify Developer Pricing Dubai", "Freelance Developer Rates Dubai", "Web Development Cost UK", "Laravel Developer UK Rates", "Shopify Developer UK Pricing", "WordPress Developer UK Cost", "Web Development Pricing Canada", "Laravel Developer Canada Rates", "Hire Web Developer UK Cost", "Freelance Web Developer UK Rates", "Web Developer Pricing GBP", "Web Developer Pricing CAD"]
 });
 
+
+// The four things that actually change a number, written out so a reader can work out
+// roughly where they sit before the first call \u2014 and so a low quote from elsewhere
+// can be compared on what it excludes rather than on the figure alone.
+const PRICING_NOTES: { heading: string; body: string[] }[] = [
+  {
+    heading: "Pages are not the unit of work",
+    body: [
+      "A quote is rarely driven by page count. Twenty pages built from three templates is a smaller job than five pages that each behave differently, because the cost sits in distinct behaviour \u2014 a booking flow, a filtered catalogue, a member area \u2014 not in repeating a layout.",
+      "So the useful question at the start is not how many pages, but how many things the site has to do. Two sites of the same size can differ by a factor of three on that alone."
+    ]
+  },
+  {
+    heading: "Content is the most common delay",
+    body: [
+      "Text, photographs and product data supplied on time keep a project on its dates. Supplied late, and the build stalls at exactly the point where it needs real material \u2014 usually after the design is approved and everyone expects it to be nearly finished.",
+      "Where copy is written for you, that is quoted separately rather than folded in invisibly, because it is genuine work and hiding it inside a round number helps nobody."
+    ]
+  },
+  {
+    heading: "Integrations carry the risk",
+    body: [
+      "Connecting to a payment gateway, an accounting package, a CRM or a courier is where estimates move most, and the variable is the other system rather than this one. A provider with clean documentation and a sandbox is predictable. One with no sandbox, or an API that changes without notice, is not.",
+      "Those are scoped once the other system has been seen, rather than guessed at up front. A fixed price quoted before anyone has looked at the API is a price that will be revisited."
+    ]
+  },
+  {
+    heading: "What continues after launch",
+    body: [
+      "Hosting, domain renewal, SSL, platform and plugin updates and backups do not stop when the site goes live. On a package build these are included for a stated period and then quoted openly, so there is no month where the site quietly stops being maintained.",
+      "Ownership stays with you throughout: the domain in your registrar account, the hosting in your name, analytics under your Google account. A site you cannot move is not really yours, and that costs nothing to get right at the start."
+    ]
+  }
+];
+
 export default function PricingPage() {
   return (
     <>
@@ -88,6 +123,24 @@ export default function PricingPage() {
         </div>
       </section>
       <CostEstimator />
+      {/* What the numbers above actually mean. A price list with no explanation of
+          what moves it leaves the reader to guess, and guessing is why quotes get
+          compared on the figure alone. */}
+      <section className="section-pad">
+        <div className="mx-auto max-w-7xl px-5">
+          <SectionHeader eyebrow="How pricing works" title="What moves a quote up or down." />
+          <div className="mt-10 grid gap-10 lg:grid-cols-2">
+            {PRICING_NOTES.map((n) => (
+              <div key={n.heading}>
+                <h3 className="font-display text-lg font-semibold text-white light:text-slate-950">{n.heading}</h3>
+                {n.body.map((para) => (
+                  <p key={para} className="mt-3 text-sm leading-8 text-silver/78 light:text-slate-600">{para}</p>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="section-pad">
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="FAQs" title="Questions about pricing, scope, deliverables, and what’s included." />
