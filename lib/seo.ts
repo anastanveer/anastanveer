@@ -137,6 +137,77 @@ const keywords = [
   "WordPress Custom Development Services"
 ];
 
+// Service+city pages for the UK, Canada and Australia that earn nothing and are not
+// this domain's market. anastanveer.com is the Dubai/UAE site; the UK is arsdeveloper.co.uk
+// and Canada is torontobytes.ca, so these were competing with the sister sites for the same
+// queries and losing. Between them, over three months, they produced 417 impressions and
+// one click.
+//
+// They also carried the cost that mattered most: 5 of the 8 headings on every one of these
+// pages are word-for-word identical to every other, which is the "scaled content" pattern
+// AdSense rejected this site for twice. De-indexing them removes most of that pattern while
+// keeping 97% of what the service pages actually earn.
+//
+// The pages still resolve — anyone holding a link lands on a real page. They are simply no
+// longer advertised: noindex, and out of both the sitemap and robots.txt.
+const deindexedSlugs = new Set([
+  // Smaller-emirate duplicates of /web-developer-dubai. Between them: 27 impressions
+  // and no clicks in three months, with the same four section headings as the Dubai
+  // page because they are the same service in the same country. /web-developer-uae
+  // and /web-developer-dubai already cover this market and do earn.
+  "web-developer-sharjah",
+  "web-developer-ras-al-khaimah",
+  "web-developer-ajman",
+  "web-developer-umm-al-quwain",
+  "web-developer-abu-dhabi",
+  "web-developer-fujairah",
+  "fullstack-developer-australia",
+  "fullstack-developer-canada",
+  "fullstack-developer-london",
+  "laravel-developer-australia",
+  "laravel-developer-canada",
+  "laravel-developer-london",
+  "laravel-developer-toronto",
+  "nextjs-developer-australia",
+  "nextjs-developer-canada",
+  "nextjs-developer-uk",
+  "php-developer-australia",
+  "php-developer-canada",
+  "php-developer-uk",
+  "react-developer-australia",
+  "react-developer-canada",
+  "react-developer-uk",
+  "shopify-developer-australia",
+  "shopify-developer-canada",
+  "shopify-developer-london",
+  "shopify-developer-toronto",
+  "shopify-developer-uk",
+  "web-developer-adelaide",
+  "web-developer-australia",
+  "web-developer-birmingham",
+  "web-developer-brisbane",
+  "web-developer-bristol",
+  "web-developer-calgary",
+  "web-developer-edinburgh",
+  "web-developer-edmonton",
+  "web-developer-glasgow",
+  "web-developer-leeds",
+  "web-developer-manchester",
+  "web-developer-melbourne",
+  "web-developer-montreal",
+  "web-developer-ottawa",
+  "web-developer-perth",
+  "web-developer-sheffield",
+  "web-developer-sydney",
+  "web-developer-toronto",
+  "web-developer-uk",
+  "web-developer-vancouver",
+  "wordpress-developer-australia",
+  "wordpress-developer-canada",
+  "wordpress-developer-london",
+  "wordpress-developer-uk"
+]);
+
 // These seven Dubai neighbourhood pages were consolidated into /web-developer-dubai
 // and are 301-redirected in public/.htaccess. The redirect stays (old inbound links
 // still resolve), but they must not be advertised as indexable: a sitemap entry that
@@ -153,7 +224,7 @@ const redirectedSlugs = new Set([
 ]);
 
 const seoRoutes = seoServicePages
-  .filter((page) => !redirectedSlugs.has(page.slug))
+  .filter((page) => !redirectedSlugs.has(page.slug) && !deindexedSlugs.has(page.slug))
   .map((page) => ({
     path: `/${page.slug}`,
     name: page.navLabel,
@@ -262,6 +333,7 @@ export function pageMetadata({
   const url = absoluteUrl(path);
   const imageUrl = absoluteUrl(image);
   description = clampDescription(description);
+  const indexable = !deindexedSlugs.has(path.replace(/^\/|\/$/g, ""));
 
   return {
     metadataBase: new URL(siteUrl),
@@ -300,10 +372,12 @@ export function pageMetadata({
       })()
     },
     robots: {
-      index: true,
+      // follow stays true either way: these pages link on to the Dubai pages that do earn,
+      // and that link equity should keep flowing.
+      index: indexable,
       follow: true,
       googleBot: {
-        index: true,
+        index: indexable,
         follow: true,
         "max-image-preview": "large",
         "max-snippet": -1,

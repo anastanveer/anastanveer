@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { serviceHeadings } from "@/lib/service-headings";
 import { ArrowRight, CheckCircle2, HelpCircle, Link2, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -150,6 +151,7 @@ const brandLabels: Record<string, string> = {
 
 export function SeoServicePageView({ page }: { page: SeoServicePage }) {
   const path = `/${page.slug}`;
+  const heads = serviceHeadings(page.navLabel, page.slug);
   const stackIcons = slugToStack[page.slug] ?? [];
 
   return (
@@ -177,7 +179,7 @@ export function SeoServicePageView({ page }: { page: SeoServicePage }) {
             </ol>
           </nav>
           <PageHero
-            eyebrow="Problem-solving service"
+            eyebrow={heads.eyebrow}
             title={page.title}
             description={page.intro[0]}
             image={page.image}
@@ -231,7 +233,7 @@ export function SeoServicePageView({ page }: { page: SeoServicePage }) {
                   <div className="mb-5 inline-grid h-11 w-11 place-items-center rounded-2xl border border-cyan/25 bg-cyan/15 text-cyan">
                     <ShieldCheck size={20} />
                   </div>
-                  <h2 className="font-display text-xl font-semibold text-white light:text-slate-950">Problems this service solves</h2>
+                  <h2 className="font-display text-xl font-semibold text-white light:text-slate-950">{heads.problems}</h2>
                   <ul className="mt-5 space-y-3 text-sm leading-7 text-silver/72 light:text-slate-600">
                     {page.problems.map((item) => (
                       <li className="flex gap-3" key={item}>
@@ -250,7 +252,7 @@ export function SeoServicePageView({ page }: { page: SeoServicePage }) {
                   <div className="mb-5 inline-grid h-11 w-11 place-items-center rounded-2xl border border-emerald/25 bg-emerald/15 text-emerald">
                     <Sparkles size={20} />
                   </div>
-                  <h2 className="font-display text-xl font-semibold text-white light:text-slate-950">Features delivered</h2>
+                  <h2 className="font-display text-xl font-semibold text-white light:text-slate-950">{heads.features}</h2>
                   <div className="mt-5 flex flex-wrap gap-2">
                     {page.features.map((item) => (
                       <span
@@ -261,7 +263,7 @@ export function SeoServicePageView({ page }: { page: SeoServicePage }) {
                       </span>
                     ))}
                   </div>
-                  <h3 className="mt-7 font-display text-base font-semibold text-white light:text-slate-950">Best fit for</h3>
+                  <h3 className="mt-7 font-display text-base font-semibold text-white light:text-slate-950">{heads.bestFor}</h3>
                   <ul className="mt-4 space-y-2 text-sm text-silver/72 light:text-slate-600">
                     {page.bestFor.map((item) => (
                       <li className="flex items-center gap-2" key={item}>
@@ -283,7 +285,7 @@ export function SeoServicePageView({ page }: { page: SeoServicePage }) {
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-violet light:text-violet-700">Why work with Anas Tanveer</p>
                 <h2 className="mt-4 font-display text-2xl font-semibold text-white light:text-slate-950">
-                  Practical full-stack delivery with business context.
+                  {heads.delivery}
                 </h2>
                 <div className="mt-5 space-y-5 text-base leading-8 text-silver/76 light:text-slate-600">
                   {page.delivery.map((paragraph) => (
