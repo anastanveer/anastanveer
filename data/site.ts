@@ -462,24 +462,6 @@ export const portfolioProjects = [
     image: "/images/Portfolio/Custom/4.avif"
   },
   {
-    title: "4PropTrader Platform Website",
-    category: "Custom Coding",
-    problem: "The platform needed a modern website that explains funding, features and user value clearly.",
-    solution: "Delivered a custom trading platform website with structured content, responsive layout and CTA strategy.",
-    stack: ["Custom Coding", "Trading", "Dashboard UX", "Frontend"],
-    accent: "from-violet-400 to-cyan-400",
-    image: "/images/Portfolio/Custom/5.avif"
-  },
-  {
-    title: "Travel & Membership Landing Page",
-    category: "Custom Coding",
-    problem: "The business needed a high-impact landing page for membership and travel-related conversion.",
-    solution: "Built a custom landing page with premium visuals, trust messaging and clear conversion actions.",
-    stack: ["Custom Coding", "Landing Page", "Travel", "Conversion"],
-    accent: "from-amber-400 to-violet-500",
-    image: "/images/Portfolio/Custom/6.avif"
-  },
-  {
     title: "Members Club Landing Page",
     category: "Landing Pages",
     problem: "A lifestyle brand needed a landing page that feels exclusive and guides visitors to join.",
@@ -609,8 +591,6 @@ export const caseStudies = [
     highlights: ["Custom calculator logic","Dashboard-ready Laravel","Payment-ready architecture"],
     images: [
       "/images/Portfolio/Custom/4.avif",
-      "/images/Portfolio/Custom/5.avif",
-      "/images/Portfolio/Custom/6.avif",
       "/images/projects-suite-520.webp",
       "/images/services-architecture-520.webp"
     ]

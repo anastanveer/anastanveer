@@ -68,16 +68,6 @@ const experiences = [
 
 const projects = [
   {
-    name: "4PropTrader Platform",
-    period: "2024 - Current",
-    text: "Prop trading platform built with Laravel, PHP, React and MySQL. Solved trading workflow, account management, payment and data integration needs through Rithmic/DXFeed APIs, dashboards and secure backend architecture."
-  },
-  {
-    name: "Traivend",
-    period: "2025 - Current",
-    text: "CRM and LMS platform for trading education. Built course management, live classes, training modules, admin dashboards and secure APIs to organize learning, users and trading education operations."
-  },
-  {
     name: "ReviseMRCEM Medical Platform",
     period: "2025 - 2026",
     text: "Medical exam preparation platform with MCQ exams, course modules, live training classes, progress analytics, question management and admin controls for content and student workflows."
