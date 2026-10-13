@@ -99,54 +99,8 @@ const reviews = [
 const avgRating = Math.round((reviews.reduce((a, r) => a + r.rating, 0) / reviews.length) * 10) / 10;
 
 
-const aggregateRatingJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": absoluteUrl("/#local-business"),
-  name: "Anas Tanveer Web Development",
-  url: absoluteUrl("/"),
-  telephone: "+971542435418",
-  email: "info@anastanveer.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Dubai",
-    addressRegion: "Dubai",
-    addressCountry: "AE"
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: String(avgRating),
-    ratingCount: String(reviews.length),
-    reviewCount: String(reviews.length),
-    bestRating: "5",
-    worstRating: "1",
-  },
-  review: reviews.map((r) => ({
-    "@type": "Review",
-    "@id": `${absoluteUrl("/testimonials")}#review-${r.author.replace(/\s/g, "-").toLowerCase()}`,
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: String(r.rating),
-      bestRating: "5",
-      worstRating: "1"
-    },
-    author: {
-      "@type": "Person",
-      name: r.author,
-      ...(r.location ? { address: { "@type": "PostalAddress", addressCountry: r.location } } : {})
-    },
-    datePublished: r.date,
-    reviewBody: r.body,
-    name: r.highlight,
-    itemReviewed: {
-      "@type": "LocalBusiness",
-      "@id": absoluteUrl("/#local-business"),
-      name: "Anas Tanveer Web Development"
-    },
-    publisher: { "@type": "Organization", name: r.platform }
-  })),
-};
-
+// Client feedback remains visible. Self-serving LocalBusiness review markup
+// is ineligible for Google review snippets and is deliberately not emitted.
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -170,15 +124,14 @@ export default function TestimonialsPage() {
   return (
     <>
       <JsonLd data={jsonLdForPage("/testimonials")} id="testimonials-page-json-ld" />
-      <JsonLd data={aggregateRatingJsonLd} id="testimonials-rating-json-ld" />
       <JsonLd data={pageJsonLd} id="testimonials-breadcrumb-json-ld" />
       <JsonLd
         data={pageTypeSchema("CollectionPage", "/testimonials", {
           name: "Client Reviews & Testimonials — Anas Tanveer Web Developer Dubai",
           description: "Verified client reviews for Anas Tanveer. Laravel, WordPress, Shopify, dashboard and API projects reviewed by international clients from UK, France, Ireland, Canada and UAE.",
-          items: reviews.map((r) => ({
+          items: reviews.map((r, index) => ({
             name: `${r.author} — ${r.project}`,
-            url: `${absoluteUrl("/testimonials")}#review-${r.author.replace(/\s/g, "-").toLowerCase()}`,
+            url: `${absoluteUrl("/testimonials")}#review-${index + 1}`,
             description: r.highlight
           }))
         })}
@@ -232,9 +185,10 @@ export default function TestimonialsPage() {
 
           {/* Review cards */}
           <div className="grid gap-5 md:grid-cols-2">
-            {reviews.map((review) => (
+            {reviews.map((review, index) => (
               <div
-                key={review.author}
+                key={`${review.author}-${index}`}
+                id={`review-${index + 1}`}
                 className="flex flex-col rounded-3xl border border-white/10 bg-white/[0.025] p-6 shadow-[0_4px_40px_rgba(0,0,0,0.2)] light:border-slate-200 light:bg-white light:shadow-md"
               >
                 <div className="flex items-start justify-between gap-4">

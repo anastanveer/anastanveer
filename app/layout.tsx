@@ -45,8 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
-        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        <meta name="google-adsense-account" content="ca-pub-9027630763788678" />
         <meta name="theme-color" content="#0a0a0f" media="(prefers-color-scheme: dark)" />
         <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DEZL0WXWD" />
@@ -56,14 +55,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-3DEZL0WXWD');gtag('config','AW-658923491');"
           }}
         />
-        {/* Google AdSense. Loads on every page, which is what AdSense verification
-            and later ad serving both require. The hosts it pulls from are allow-listed
-            in the CSP in public/.htaccess — remove them there and ads go blank. */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9027630763788678"
-          crossOrigin="anonymous"
-        />
+        {/* Ownership is verified by the meta tag and ads.txt. Ad serving is
+            intentionally disabled during editorial review. After approval,
+            enable it only on reviewed content with the published Google CMP. */}
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{

@@ -54,7 +54,7 @@ function findMatchingBracket(source, startIndex, openChar, closeChar) {
 }
 
 function getStringField(block, field) {
-  const match = block.match(new RegExp(`${field}:\\s*"((?:\\\\.|[^"\\\\])*)"`));
+  const match = block.match(new RegExp(`["\']?${field}["\']?:\\s*"((?:\\\\.|[^"\\\\])*)"`));
   return match ? match[1].replace(/\\"/g, '"') : "";
 }
 

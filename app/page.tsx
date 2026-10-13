@@ -47,7 +47,7 @@ const popularServiceLinks: Array<{ label: string; href: string }> = [
 export default function HomePage() {
   const sortedBlogs = [...blogs]
     .filter((b) => isPublished(b.publishedAt))
-    .sort((a, b) => compareNewestFirst(a.publishedAt, b.publishedAt));
+    .sort((a, b) => Number(Boolean(b.editoriallyRevised)) - Number(Boolean(a.editoriallyRevised)) || compareNewestFirst(a.updatedAt, b.updatedAt));
   return (
     <>
       <JsonLd data={jsonLdForPage("/")} id="home-json-ld" />

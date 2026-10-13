@@ -19,6 +19,13 @@ export function ProjectCard({
   };
   index?: number;
 }) {
+  const caseStudyByTitle: Record<string, string> = {
+    "Trading Platform & Calculator System for Prop Firm": "trading-platform-prop-firm-dubai",
+    "Business Finance Dashboard & Analytics System": "business-finance-dashboard-analytics",
+    "Shopify Size Mapping & Conversion Optimization System": "shopify-conversion-optimization-size-mapping",
+    "Fuel Distribution ERP System for Business Operations": "erp-operations-workflow-system-dubai"
+  };
+  const caseStudy = caseStudyByTitle[project.title];
   return (
     <motion.article
       initial={{ opacity: 0, y: 28 }}
@@ -62,8 +69,8 @@ export function ProjectCard({
           ))}
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link href="/case-studies" className="rounded-full bg-white px-4 py-2 text-xs font-semibold text-ink transition hover:bg-cyan light:bg-slate-950 light:text-white light:hover:bg-blue-700">
-            View Case Study
+          <Link href={caseStudy ? `/case-studies/${caseStudy}/` : "/case-studies/"} className="rounded-full bg-white px-4 py-2 text-xs font-semibold text-ink transition hover:bg-cyan light:bg-slate-950 light:text-white light:hover:bg-blue-700">
+            {caseStudy ? "View Case Study" : "Explore case studies"}
           </Link>
         </div>
       </div>

@@ -11,8 +11,10 @@ import { BrandIcon, slugToStack } from "@/components/ui/BrandIcon";
 import { allFaqs } from "@/data/faqs";
 import { services } from "@/data/site";
 import { seoServicePages } from "@/data/seo-pages";
-import { jsonLdForPage, faqSchema, pageMetadata, pageTypeSchema } from "@/lib/seo";
+import { jsonLdForPage, faqSchema, pageMetadata, pageTypeSchema, routes } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
+
+const publicServicePages = seoServicePages.filter((page) => routes.some((route) => route.path === `/${page.slug}`));
 
 const servicesFaqs = allFaqs.map(({ q, a }) => ({ question: q, answer: a }));
 
@@ -114,7 +116,7 @@ const specialtySlugs = [
 ];
 
 function getPlatformPage(slug: string) {
-  return seoServicePages.find((p) => p.slug === slug);
+  return publicServicePages.find((p) => p.slug === slug);
 }
 
 const platformPages = platformSlugs.map(getPlatformPage).filter(Boolean) as typeof seoServicePages;
@@ -124,7 +126,7 @@ const globalPages = globalSlugs.map(getPlatformPage).filter(Boolean) as typeof s
 
 // Remaining pages not in any bucket
 const bucketed = new Set([...platformSlugs, ...locationSlugs, ...specialtySlugs, ...globalSlugs]);
-const otherPages = seoServicePages.filter((p) => !bucketed.has(p.slug));
+const otherPages = publicServicePages.filter((p) => !bucketed.has(p.slug));
 
 const categories = [
   {
@@ -250,7 +252,7 @@ export default function ServicesPage() {
         data={pageTypeSchema("ItemListPage", "/services", {
           name: "Services — Laravel, WordPress, Shopify Developer Dubai",
           description: "Full-stack web development services in Dubai: Laravel apps, WordPress sites, Shopify stores, dashboards, ERP, CRM, SaaS, APIs, speed optimization and technical SEO.",
-          items: seoServicePages.map((page) => ({
+          items: publicServicePages.map((page) => ({
             name: page.navLabel,
             url: absoluteUrl(`/${page.slug}`),
             description: page.metaDescription

@@ -9,7 +9,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { aboutFaqItems } from "@/data/faqs";
 import { profile } from "@/data/site";
-import { seoServicePages } from "@/data/seo-pages";
+
 import { jsonLdForPage, faqSchema, pageMetadata, pageTypeSchema } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/utils";
 
@@ -48,9 +48,8 @@ export default function AboutPage() {
           "@id": absoluteUrl("/about#profilepage"),
           name: "Anas Tanveer — Full-Stack Developer Dubai",
           url: absoluteUrl("/about"),
-          dateCreated: "2024-01-01T00:00:00+00:00",
-          dateModified: "2026-06-10T00:00:00+00:00",
-          mainEntity: { "@id": absoluteUrl("/#person") },
+          dateModified: "2026-10-13T00:00:00+04:00",
+          mainEntity: { "@type": "Person", name: "Anas Tanveer", url: absoluteUrl("/about") },
           about: { "@id": absoluteUrl("/#person") },
           isPartOf: { "@id": absoluteUrl("/#website") },
           inLanguage: "en-AE",
@@ -158,14 +157,13 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="Services" title="What I build and where I work." />
           <div className="mt-8 flex flex-wrap gap-2">
-            {seoServicePages.map((page) => (
-              <Link
-                key={page.slug}
-                href={`/${page.slug}`}
-                className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-sm font-medium text-silver/72 transition hover:border-cyan/35 hover:text-cyan light:border-slate-200 light:bg-white light:text-slate-600 light:hover:border-blue-400 light:hover:text-blue-700"
-              >
-                {page.navLabel}
-              </Link>
+            {[
+              { href: "/services/", label: "Development services" },
+              { href: "/case-studies/", label: "Technical case studies" },
+              { href: "/blog/", label: "Practical development guides" },
+              { href: "/contact/", label: "Discuss a project" }
+            ].map((item) => (
+              <Link key={item.href} href={item.href} className="rounded-full border border-white/10 px-4 py-2 text-sm text-cyan light:border-slate-200 light:text-blue-700">{item.label}</Link>
             ))}
           </div>
         </div>

@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     description: post.seoDescription,
     path: `/blog/${post.slug}`,
     image: post.image,
-    extraKeywords: blogSeoContent[post.slug]?.focusKeywords ?? [],
+    extraKeywords: post.editoriallyRevised ? [] : blogSeoContent[post.slug]?.focusKeywords ?? [],
     type: "article",
     article: {
       publishedTime: post.publishedAt,
@@ -84,7 +84,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
     notFound();
   }
 
-  const seoContent = blogSeoContent[post.slug];
+  const seoContent = post.editoriallyRevised ? undefined : blogSeoContent[post.slug];
   const allSections = [...post.sections, ...(seoContent?.expandedSections ?? [])];
   const serviceLink = serviceMap[post.tag] ?? null;
 
@@ -117,14 +117,6 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
   }
   const relatedPosts = related;
 
-  const actionSection = seoContent
-    ? [
-        "How to turn this into a real project decision",
-        "Start by writing the business problem in one line. For example: the website is slow, the Shopify product page is confusing, the WordPress site does not generate quality leads, or the Laravel dashboard cannot support the workflow anymore. A clear problem statement makes the technical decision easier.",
-        "Next, separate the requirement into user experience, backend logic, SEO, speed, integrations and content. This prevents the common mistake of redesigning a page when the real issue is data structure, plugin conflict, weak copy, poor mobile UX or missing automation.",
-        "For Dubai, UAE and international clients, the strongest web solution is usually the one that improves trust, reduces manual work, loads fast on mobile and gives visitors a clear reason to contact the business. That is the standard I use when planning Laravel, WordPress, Shopify, ecommerce, dashboard and SEO-focused work."
-      ]
-    : [];
   const articleText = [
     post.title,
     post.excerpt,
@@ -134,7 +126,6 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
       return items;
     }, []),
     ...(seoContent?.checklist ?? []),
-    ...actionSection,
     ...(seoContent?.faqs.reduce<string[]>((items, item) => {
       items.push(item.question, item.answer);
       return items;
@@ -217,7 +208,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
         }
       : null;
 
-  const howToData = howToBySlug[post.slug];
+  const howToData = post.editoriallyRevised ? undefined : howToBySlug[post.slug];
   const howToJsonLd = howToData
     ? howToSchema({
         name: howToData.name,
@@ -269,6 +260,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
             </h1>
             <p className="mt-6 text-lg leading-8 text-silver/76 light:text-slate-600">{post.excerpt}</p>
             <div className="mt-6 flex flex-wrap gap-3 text-sm text-silver/60 light:text-slate-500">
+              <Link href="/about/" className="font-semibold text-cyan light:text-blue-700">By Anas Tanveer</Link>
               <span>{readingMinutes} min read</span>
               <span>{wordCount.toLocaleString("en-AE")} words</span>
               <span>Published <time dateTime={post.publishedAt}>{publishDate(post.publishedAt).toLocaleDateString("en-AE", { year: "numeric", month: "short", day: "numeric" })}</time></span>
@@ -307,6 +299,10 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
               </div>
             ) : null}
 
+            {post.revisionNote ? (
+              <p className="mb-8 border-l-2 border-cyan pl-4 text-sm leading-7 text-silver/75 light:text-slate-600">{post.revisionNote}</p>
+            ) : null}
+
             {allSections.map((section) => (
               <section className="mb-10 last:mb-0" key={section.heading}>
                 <h2 className="font-display text-2xl font-semibold text-white light:text-slate-950 md:text-3xl">{section.heading}</h2>
@@ -335,6 +331,17 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
               </section>
             ))}
 
+            {post.sources?.length ? (
+              <section className="my-10 border-t border-white/10 pt-6 light:border-slate-200" aria-label="Sources and further reading">
+                <h2 className="font-display text-2xl font-semibold text-white light:text-slate-950">Sources and further reading</h2>
+                <ul className="mt-4 space-y-3">
+                  {post.sources.map((source) => (
+                    <li key={source.url}><a href={source.url} className="text-cyan underline underline-offset-4 light:text-blue-700">{source.label}</a></li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+
             {seoContent?.checklist?.length ? (
               <section className="mt-10 rounded-2xl border border-white/10 bg-white/[0.04] p-5 light:border-slate-200 light:bg-white">
                 <h2 className="font-display text-2xl font-semibold text-white light:text-slate-950 md:text-3xl">Practical checklist</h2>
@@ -345,25 +352,6 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
                       {item}
                     </p>
                   ))}
-                </div>
-              </section>
-            ) : null}
-
-            {seoContent ? (
-              <section className="mt-10">
-                <h2 className="font-display text-2xl font-semibold text-white light:text-slate-950 md:text-3xl">
-                  How to turn this into a real project decision
-                </h2>
-                <div className="mt-5 space-y-4">
-                  <p className="text-base leading-8 text-silver/74 light:text-slate-600">
-                    Start by writing the business problem in one line. For example: the website is slow, the Shopify product page is confusing, the WordPress site does not generate quality leads, or the Laravel dashboard cannot support the workflow anymore. A clear problem statement makes the technical decision easier.
-                  </p>
-                  <p className="text-base leading-8 text-silver/74 light:text-slate-600">
-                    Next, separate the requirement into user experience, backend logic, SEO, speed, integrations and content. This prevents the common mistake of redesigning a page when the real issue is data structure, plugin conflict, weak copy, poor mobile UX or missing automation.
-                  </p>
-                  <p className="text-base leading-8 text-silver/74 light:text-slate-600">
-                    For Dubai, UAE and international clients, the strongest web solution is usually the one that improves trust, reduces manual work, loads fast on mobile and gives visitors a clear reason to contact the business. That is the standard I use when planning Laravel, WordPress, Shopify, ecommerce, dashboard and SEO-focused work.
-                  </p>
                 </div>
               </section>
             ) : null}
@@ -410,24 +398,6 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
                 >
                   {serviceLink.label} <ArrowUpRight size={14} />
                 </Link>
-              </section>
-            ) : null}
-
-            {seoContent?.relatedLinks?.length ? (
-              <section className="mt-10 rounded-2xl border border-cyan/20 bg-cyan/10 p-6 light:border-blue-500/20 light:bg-blue-50">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan light:text-blue-700">Related services</p>
-                <p className="mt-2 text-sm text-silver/65 light:text-slate-600">Need help applying this to your project?</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {seoContent.relatedLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-cyan/25 bg-cyan/10 px-4 py-2 text-sm font-semibold text-cyan transition hover:bg-cyan/20 light:border-blue-500/30 light:bg-blue-100 light:text-blue-700 light:hover:bg-blue-200"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
               </section>
             ) : null}
 

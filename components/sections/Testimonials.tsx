@@ -25,7 +25,7 @@ function StarRating({ rating }: { rating: number }) {
 
 function Card({ t }: { t: Testimonial }) {
   return (
-    <article className="premium-card glass mx-3 w-80 shrink-0 rounded-2xl p-5 light:border-slate-200/80">
+    <article className="premium-card glass h-full rounded-2xl p-5 light:border-slate-200/80">
       <div className="flex items-start justify-between gap-2">
         <div className="flex items-center gap-2.5">
           <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-cyan/30 to-cyan/10 text-xs font-bold text-cyan ring-1 ring-cyan/20">
@@ -54,9 +54,6 @@ function Card({ t }: { t: Testimonial }) {
   );
 }
 
-const row1 = [...testimonials, ...testimonials, ...testimonials];
-const row2 = [...testimonials].reverse().concat([...testimonials].reverse(), [...testimonials].reverse());
-
 export function Testimonials() {
   return (
     <section className="section-pad overflow-hidden">
@@ -83,20 +80,8 @@ export function Testimonials() {
         </Reveal>
       </div>
 
-      <div className="mt-10 space-y-4">
-        {/* Row 1 — scrolls left */}
-        <div className="marquee-fade">
-          <div className="flex animate-marquee marquee-track">
-            {row1.map((t, i) => <Card key={`r1-${i}`} t={t} />)}
-          </div>
-        </div>
-
-        {/* Row 2 — scrolls right */}
-        <div className="marquee-fade">
-          <div className="flex animate-marquee-reverse marquee-track">
-            {row2.map((t, i) => <Card key={`r2-${i}`} t={t} />)}
-          </div>
-        </div>
+      <div className="mx-auto mt-10 grid max-w-6xl gap-5 px-5 md:grid-cols-2 lg:grid-cols-3">
+        {testimonials.map((t, i) => <Card key={`${t.name}-${i}`} t={t} />)}
       </div>
     </section>
   );

@@ -4,6 +4,24 @@ Read this before every task to understand what was recently changed and why.
 
 ---
 
+## 2026-10-13 — AdSense content-quality remediation
+
+**Authorization:** User approved the audit's eight-part plan, implementation, GitHub push and automatic production deployment. Work isolated from the original checkout and its pre-existing feed changes.
+
+**Problem and change:** Repeated filler, overlapping geographic articles, unsupported numerical claims and sitewide ad loading weakened the publication. Removed the shared filler; rewrote 15 guides with concrete decision/test procedures and clearly labelled examples; consolidated 49 definitions (37 previously published and 12 future drafts) into relevant guides using permanent redirects. The blog now has 52 published articles. Removed obsolete expanded sections/FAQ claims from revised and retired guides. Publication dates remain original; revision dates reflect this work. Updated internal links, metadata and RSS; fixed RSS parsing of quoted property names.
+
+**Trust and navigation:** Visible article bylines and sources; six homepage testimonials displayed once; homepage case-study links point to the matching case study where one exists; about-page keyword directory replaced with useful navigation. Services navigation excludes already deindexed/redirected landing pages. About ProfilePage mainEntity now explicitly describes a Person. Removed self-serving review-snippet markup from testimonials while retaining the authentic visible reviews, and fixed duplicate review anchors/React keys.
+
+**Ads:** Verification uses the official google-adsense-account meta tag and existing authorized ads.txt. Removed the global ad loader, including error/noindex/utility pages. Postbuild now checks every HTML/Flight export for accidental loader reintroduction and ownership-marker presence. Ad placements remain disabled until approval and a deliberate placement/consent review; removing ads does not itself cure low-value content.
+
+**Risk:** High — content consolidation changes URLs and search signals; root layout affects every page; Apache rewrites affect retired URLs. Existing contact backend/security rules remain intact. Google indexing/rankings and AdSense approval are not guaranteed. No fabricated traffic, client results or evidence added.
+
+**Validation:** TypeScript and production export pass (171 generated routes; 167 HTML files; 52 blog posts). Export link/schema/sitemap checks and live deployment checks are recorded in the audit artifacts. Validate final build and redirects before re-review. No package/dependency changes.
+
+**Rollback:** Baseline b4f062d555fcd77bab7afefb34f63508ebe72306. Revert the remediation commit on main and push; the existing deployment workflow rebuilds/restores the prior content. Do not reset or overwrite another contributor's changes.
+
+---
+
 ## 2026-07-02
 
 ### SEO Audit Fixes — Hero CTA, Trust Row, Review Framing, Canonical Host, Neighborhood 301s, News Sitemap Removal

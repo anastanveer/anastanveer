@@ -187,7 +187,7 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
       { label: "API integration services", href: "/api-integration-services" },
       { label: "Shopify conversion fixes guide", href: "/blog/shopify-conversion-fixes" },
-      { label: "Shopify vs WooCommerce for ecommerce", href: "/blog/ecommerce-shopify-vs-woocommerce" },
+      { label: "Shopify vs WooCommerce for ecommerce", href: "/blog/shopify-vs-woocommerce-uae-2026" },
       ...coreRelated
     ]
   },
@@ -311,7 +311,7 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "ERP development UAE", href: "/erp-development-uae" },
       { label: "CRM Development Dubai", href: "/crm-development-dubai" },
       { label: "API integration services", href: "/api-integration-services" },
-      { label: "Custom business dashboard development guide", href: "/blog/custom-business-dashboard-development" },
+      { label: "Custom business dashboard development guide", href: "/blog/custom-business-dashboard-development-dubai" },
       ...coreRelated
     ]
   },
@@ -393,7 +393,7 @@ export const seoServicePages: SeoServicePage[] = [
       { label: "Shopify Developer Dubai", href: "/shopify-developer-dubai" },
       { label: "Website speed optimization Dubai", href: "/website-speed-optimization-dubai" },
       { label: "SEO-friendly website development", href: "/seo-friendly-website-development" },
-      { label: "Shopify vs WooCommerce for ecommerce", href: "/blog/ecommerce-shopify-vs-woocommerce" },
+      { label: "Shopify vs WooCommerce for ecommerce", href: "/blog/shopify-vs-woocommerce-uae-2026" },
       { label: "Ecommerce website developer for hire", href: "/blog/ecommerce-website-developer-for-hire" },
       ...coreRelated
     ]
