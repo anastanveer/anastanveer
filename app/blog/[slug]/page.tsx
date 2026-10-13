@@ -263,8 +263,8 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
               <Link href="/about/" className="font-semibold text-cyan light:text-blue-700">By Anas Tanveer</Link>
               <span>{readingMinutes} min read</span>
               <span>{wordCount.toLocaleString("en-AE")} words</span>
-              <span>Published <time dateTime={post.publishedAt}>{publishDate(post.publishedAt).toLocaleDateString("en-AE", { year: "numeric", month: "short", day: "numeric" })}</time></span>
-              <span>Updated <time dateTime={post.updatedAt}>{new Date(post.updatedAt).toLocaleDateString("en-AE", { year: "numeric", month: "short", day: "numeric" })}</time></span>
+              <span>Published <time dateTime={post.publishedAt}>{publishDate(post.publishedAt).toLocaleDateString("en-AE", { year: "numeric", month: "short", day: "numeric", timeZone: "Asia/Dubai" })}</time></span>
+              <span>Updated <time dateTime={post.updatedAt}>{publishDate(post.updatedAt).toLocaleDateString("en-AE", { year: "numeric", month: "short", day: "numeric", timeZone: "Asia/Dubai" })}</time></span>
             </div>
           </div>
         </div>
